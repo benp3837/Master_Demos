@@ -25,7 +25,7 @@ create table datatypes (
 	numbers_normal int,
 	numbers_also_normal int4,
 	numbers_large int8,
-	standard_number numeric(10, 2), --2 parameters: #total digits, #decimals
+	standard_number decimal(10, 2), --2 parameters: #total digits, #decimals
 	
 	"boolean" boolean, --double quotes lets you use assign keywords to things
 	
