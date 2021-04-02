@@ -8,7 +8,7 @@
 
 alter table users add user_age int;
 
-drop table users;*/
+drop table users;*/ --ctrl + shift + backslash
 
 --Not seen: truncate - drops all RECORDS in a table (we added no records here)
 --Syntax: truncate table table_name
@@ -33,6 +33,7 @@ create table datatypes (
 	variable_length_text varchar(10), --from 0-10 characters, ok practice
 	unlimited_length_text text, --best practice, unlimited length
 	
+	"date" date, --YYYY-MM-DD
 	"timestamp" timestamp --YYYY-MM-DD HH-MM-SS
 	
 	--This is NOT all of the datatypes. There are so many.
