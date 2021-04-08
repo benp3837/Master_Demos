@@ -17,8 +17,10 @@ create table employees (
 	f_name text,
 	l_name text,
 	hire_date date, --YYYY-MM-DD
-	role_id int references Roles (role_id)
+	role_id int references Roles (role_id) --foreign key
 );
+
+--remember to show them the ERD
 
 
 insert into roles (role_title, role_salary) 
@@ -38,12 +40,22 @@ insert into employees (f_name, l_name, hire_date, role_id)
 			   		  ('Sheldon', 'Plankton', '1998-01-02', 4),
 			   		  ('Pearl', 'Krabs', '1998-01-01', 5),
 			   		  ('Pete', 'Fishman', '1998-01-15', 2);
-		   	
-select * from employees;
+	
+select * from employees;			   		 
+			   		 
+/*
+  Worth mentioning that don't have to name all the columns in your insert, 
+  BUT you'd have to specify "default" for the serial primary key field
+  
+  insert into employees 
+  values (default, 'test', 'testington', '1998-04-07', 5);
+  
+  This WILL work! But it's good practice to just list out the columns 
+  for the sake of clarity and your own readability.
+  The less readable your code is, the more your coworkers will spite you >:0
+ */			   		 
+			   		 
 
-/*select * from employees 
-inner join roles 
-on employees.role_id = roles.role_id;*/
 --------------------------------------------
 
 --I want to demonstrate functions, group by/having, 
@@ -118,12 +130,39 @@ select f_name as "First Name", l_name as "Last Name" from employees;
 
 
 --Concatenation puts two columns together in a query, often used with aliases
+--You can put text between the single quotes, or leave it blank
 
 select f_name ||' '|| l_name as "Full Name" from employees;
 
-select f_name ||' was hired on '|| hire_date as "Hire Info" from employees;
+
+--5 minute challenge:
+--Select employee first name and hire date as one concatenated column 
+--and have the data display in the row as "(name) was hired on (hire date)". 
+--Then, give the concatenated column the alias "Hire Info".
+--Finally, order the result set by hire date ascending.
+
+select f_name ||' was hired on '|| hire_date as "Hire Info" from employees
+order by hire_date;
+
 
 --Subqueries are queries nested inside another query. woah :o
 
+--This subquery is pointless... but shows subquery syntax.
+--selecting employees with role_id 2 from all employee data
+select * from (select * from employees) as pointless_subquery
+where role_id = 2;
 
 
+--This one is less pointless
+--It would delete all rows where role_id = 2
+
+ /*
+ 
+ delete from employees where role_id in 
+ (select role_id from roles where role _id = 2);
+ 
+ */
+
+--subqueries are more useful in big, robust DBs
+--not too necessary in schemas of this size
+--but make sure you know WHAT they are 

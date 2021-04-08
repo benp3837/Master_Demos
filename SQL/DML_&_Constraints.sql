@@ -21,6 +21,8 @@ create table Dogs(
 	owner_id int references Owners (owner_id)
 );
 
+--Remember to show them the ERD 
+
 --Since the dogs table has a refence to the owner table, there's a relationship
 --In this case, one owner can have many dogs. A "one to many" relationship. 
 --we'll talk about cardinality later. (one-to-one, one-to-many, many-to-many)
@@ -102,12 +104,13 @@ select name from dogs order by name asc;
 --update Sparky's age to 6
 update dogs set age = 6 where name = 'Sparky'; --happy birthday!
 
---update Spud's name to "Spudwick" **5 minute challenge before a break etc.
+--Finally we can DELETE rows. I usually don't use this, it can be dangerous
+--Like with update, remember to always use the where clause, or everything will go.
+delete from dogs where name = 'Fido'; --will delete Fido. do you rly want to delete Fido? :(
+
+
+--**5 minute challenge before a break etc.
+--update Spud's name to "Spudwick" 
 --try to use a column besides name after the where clause
 update dogs set name = 'Spudwick' where dog_id = 4;
 
---Finally we can DELETE rows. I usually don't use this, it can be dangerous
---Especially if a table has a relationship with another, it can mess stuff up
---Like with update, remember to always use the where clause, or everything will go.
-
---delete from dogs where name = 'Fido';
