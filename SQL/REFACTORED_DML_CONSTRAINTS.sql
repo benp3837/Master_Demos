@@ -7,7 +7,7 @@ set schema 'dawg_pound'; --assign this script to the newly created schema
 --owner table
 create table Owners(
 	owner_id serial primary key, --serial an auto incrementing, don't need to input a value for it!
-	owner_name text not null
+	name text not null
 );
 
 --dog table
@@ -39,7 +39,7 @@ create table Dogs(
 --after each insert, use SELECT to show that the tables have been populated
 
 --write out the insert then explain the parts
-insert into owners (owner_name) values ('Ben'), ('Gus'), ('Scotty'), ('Nancy');
+insert into owners (name) values ('Ben'), ('Gus'), ('Scotty'), ('Nancy');
 
 select * from owners; --returns all the owner records (rows) we just created
 
@@ -104,3 +104,34 @@ update dogs set age = 6 where name = 'Sparky'; --happy birthday!
 --Finally we can DELETE rows. I usually don't use this, it can be dangerous
 --Like with update, remember to always use the where clause, or everything will go.
 delete from dogs where name = 'Fido'; --will delete Fido. do you rly want to delete Fido? :(
+
+--we're actually doing to come back to this demo before lunch so don't close the tab out
+
+--Let's talk about JOINS to wrap up before lunch-------------------------------
+
+--The main types of joins are inner, left outer, right outer, and full outer
+--We use joins to get values from multiple tables in our queries! (Multi-table queries)
+
+--inner joins return matching values in both tables
+select dogs.name, owners.name
+from dogs 
+inner join owners on dogs.owner_id = owners.owner_id; --return dog names next to owner names
+
+
+--left outer joins return every row from the left table,
+--and all matching rows from the right table
+select employees.f_name, employees.l_name, roles.role_title
+from employees 
+left join roles on employees.role_id = roles.role_id
+where roles.role_id = 2;
+
+--right outer joins return every row from the rightt table,
+--and all matching rows from the leftt table
+
+
+--left outer joins return every row from each table
+
+
+
+
+
