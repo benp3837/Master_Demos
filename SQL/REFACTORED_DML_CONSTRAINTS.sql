@@ -107,6 +107,9 @@ delete from dogs where name = 'Fido'; --will delete Fido. do you rly want to del
 
 --we're actually doing to come back to this demo before lunch so don't close the tab out
 
+
+
+
 --Let's talk about JOINS to wrap up before lunch-------------------------------
 
 --The main types of joins are inner, left outer, right outer, and full outer
@@ -117,20 +120,22 @@ select dogs.name, owners.name
 from dogs 
 inner join owners on dogs.owner_id = owners.owner_id; --return dog names next to owner names
 
-
 --left outer joins return every row from the left table,
 --and all matching rows from the right table
-select employees.f_name, employees.l_name, roles.role_title
-from employees 
-left join roles on employees.role_id = roles.role_id
-where roles.role_id = 2;
+select owners.name, dogs.name
+from owners 
+left join dogs on owners.owner_id = dogs.owner_id;
 
---right outer joins return every row from the rightt table,
+--right outer joins return every row from the right table,
 --and all matching rows from the leftt table
+select dogs.name, owners.name
+from dogs 
+right join owners on dogs.owner_id = owners.owner_id;
 
-
---left outer joins return every row from each table
-
+--full outer joins return every row from each table
+select dogs.name, owners.name
+from dogs 
+full outer join owners on dogs.owner_id = owners.owner_id;
 
 
 

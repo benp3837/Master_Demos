@@ -70,7 +70,7 @@ select * from employees;
 --------------------------------------------
 
 --I want to demonstrate functions, group by/having, 
---limit, aliases (as), concatenation, and subqueries 
+--limit, aliases (as), and concatenation 
 
 
 --scalar functions: upper, lower, length, now
