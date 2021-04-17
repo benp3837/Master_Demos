@@ -3,11 +3,12 @@ set schema 'avengers';
 
 --This script will demonstrate Normal Forms 0NF - 3NF 
 
---I also want to go over joins for a second at the end
+--I also want to go over joins and set ops at the end
 
 
 
 -- 0NF
+--We have a table. No other rules. Wild West.
 
 CREATE TABLE avengers (
 	superhero_name VARCHAR(30),
@@ -22,7 +23,10 @@ INSERT INTO avengers (superhero_name, superhero_power, real_name, power_level, h
 	VALUES ('Capt. America', 'Super Strong Frisbee', 'Steve Rogers', 20, 'Stark Tower', '123 Stark Ave New York NY 10709'),
 	('Hawkeye', 'plucky can-do attitude', 'Clint Barton', 55, 'Stark Tower', '123 Stark Ave New York NY 10709');
 	
+
 --1NF
+--Tables must have a primary key (can be a composite key!)
+--Columns must be atomic 
 
 DROP TABLE IF EXISTS avengers; 
 
@@ -50,6 +54,9 @@ INSERT INTO avengers (superhero_name, superhero_power, first_name, last_name, po
 
 
 --2NF
+--Remove partial dependencies
+--ELIMINATE partial dependencies by having a single column PK
+
 DROP TABLE IF EXISTS avengers; 
 
 CREATE TABLE avengers (
@@ -71,7 +78,11 @@ INSERT INTO avengers (superhero_name, superhero_power, first_name, last_name, po
 	('Hawkeye', 'plucky can-do attitude', 'Clint', 'Barton', 55, 'Stark Tower', '123 Stark Ave', 'New York', 'NY', '10709'),
 	('Capt. America', 'Super Strong Frisbee', 'Bucky', 'Barnes', 20, 'Stark Tower', '123 Stark Ave', 'New York', 'NY', '10709');
 
+
 --3NF
+--remove transitive dependencies
+--(by separating them into new tables)
+--the only columns depended on should be primary keys!!
 
 DROP TABLE IF EXISTS avengers; 
 DROP TABLE IF EXISTS homes CASCADE; 
@@ -121,6 +132,12 @@ SELECT * FROM avengers LEFT JOIN homes ON home_base = home_base_fk;
 SELECT * FROM avengers FULL JOIN homes ON home_base = home_base_fk;
 
 
---cross join?
+--Cross Join?
+
+
+--Set Operators?
+
+
+
 
 
