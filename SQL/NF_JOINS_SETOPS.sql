@@ -115,6 +115,25 @@ INSERT INTO avengers (superhero_name, superhero_power, first_name, last_name, ho
 
 SELECT * FROM avengers;
 
+--Simple Transaction below... (TCL)
+
+alter table avengers add column active boolean; 
+alter table avengers alter column active set default true; 
+truncate table avengers;
+--(not the transaction, just setting up)
+
+--ok NOW here's the transaction
+BEGIN;
+INSERT INTO avengers (superhero_name, superhero_power, first_name, last_name)
+	VALUES ('Capt. America', 'Super Strong Frisbee', 'Steve', 'Rogers'),
+	('Hawkeye', 'plucky can-do attitude', 'Clint', 'Barton');
+UPDATE avengers SET active = false WHERE superhero_name = 'Capt. America';
+UPDATE avengers SET active = true WHERE superhero_name = 'Hawkeye';
+COMMIT; 
+
+--coolz
+
+--------------------------------------------------------------------------
 
 
 --Joins Review
