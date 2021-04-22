@@ -36,9 +36,11 @@ public class Launcher {
 		
 		myPokemon.add(4, new Pokemon("Absol", "Dark")); //we can also .add elements at specific indices
 		
-		System.out.println(myPokemon.get(4)); // .get(index) is how we specify a certain index in a List
+		System.out.println("The Pokemon at index 4 is: " + myPokemon.get(4)); 
+		// .get(index) is how we specify a certain index in a List
 		
-		System.out.println(myPokemon.size()); // .size() is analogous to .length for Arrays
+		System.out.println("The size of the pokemon ArrayList is: " + myPokemon.size()); 
+		// .size() is analogous to .length for Arrays
 		
 		
 		//creating two new Pokemon objects to experiment with
@@ -97,6 +99,19 @@ public class Launcher {
 		
 		System.out.println(trainers); //notice the default order given to the Map!!
 		//Because TreeMaps niche is that they have sorted keys :)
+		
+		System.out.println("=====================================");
+		
+		//comparator
+		
+		
+		
+		
+		System.out.println("=====================================");
+		
+		//small lambda expression for fun
+		
+		
 		
 	}	
 	
