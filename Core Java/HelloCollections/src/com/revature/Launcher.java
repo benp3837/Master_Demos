@@ -2,7 +2,7 @@ package com.revature;
 
 import java.util.*; //This import gives us access to all of our Collections
 
-import models.Pokemon; //Import the Pokemon model so we can instantiate & use Pokemon objects
+import com.revature.models.Pokemon; //Import the Pokemon model so we can instantiate & use Pokemon objects
 
 //Collections are like Arrays in that they are objects that hold things
 //but specifically, they hold references to other objects
@@ -103,7 +103,7 @@ public class Launcher {
 		System.out.println("=====================================");
 		
 		//comparator
-		
+		//hi
 		
 		
 		
