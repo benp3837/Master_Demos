@@ -172,7 +172,7 @@ select * from avengers left outer join homes on home_base = home_base_fk;
 
 --RIGHT OUTER JOIN
 --return everything in the right, + matches on the left
-select * from avengers right join homes on home_base = home_base_fk; --pizza joint will up!
+select * from avengers right join homes on home_base = home_base_fk; --pizza joint will show up!
 select * from avengers right outer join homes on home_base = home_base_fk;
 
 --CROSS JOIN 

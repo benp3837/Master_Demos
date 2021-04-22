@@ -31,55 +31,69 @@ select * from aerosmith_songs;
 
 --messing around with some subqueries
 
+--I want to select the names tracks of the TV Shows and Jazz
+select name from track where genre_id in 
+	(select genre_id from genre where name in ('TV Shows', 'Jazz'));
 
---I want to select all tracks of the Metal and Jazz genres
-select name from track where genre_id in
-	(select genre_id from genre where name in ('Metal', 'Jazz'));
 
---I want to select all albums that have any Classical tracks in them
-select title from album where album_id in
-	(select album_id from track where genre_id =
-		(select genre_id from genre where name = 'Classical'));
+--I want to select names of albums with any tracks of the Hip Hop/Rap genre
+select title from album where album_id in 
+	(select album_id from track where genre_id in 
+		(select genre_id from genre where name in ('Hip Hop/Rap')));
 
---we can also use subqueries after the "from" 	
---it requires us to use an alias
-(select name as "Track Names" from 
-	(select * from track) as "Track Info");
---pointless subquery... but educational!
-	
+
+--We can also use subqueries after the "from"
+--it requires us to use an alias because they're temporary unnamed tables otherwise
+(select name from 
+	(select * from track) as "Track Name");
+--sort of pointless subquery... but educational!
 
 
 --I want to update all Comedy tracks to be named something dumb
-
-update track set name = "bogagog" where name in 
---if we run these two tracks alone, we can see what will get updated
+update track set name = 'snickerboodle' where name in 
+--running these two queries below will show what will get effected by the update
 	(select name from track where genre_id in
 		(select genre_id from genre where name = 'Comedy'));
 
 
-
---I want to delete all invoice lines from some particular person
+--I want to delete all invoice lines from a particular person
 
 delete from invoice_line where invoice_id in 
---if we were to just run these two lines alone, we can see what will get deleted
-	(select invoice_id from invoice where customer_id = 
-		(select customer_id from customer where first_name = 'Astrid')); 
+--running these two queries below will show what will get effected by the delete
+	(select invoice_id from invoice where customer_id = 7);
 
 
+	
+select * from customer;	
+select * from invoice where customer_id = 7; --we want to delete Astrid's invoice lines
 
-select * from customer;
-select * from invoice where customer_id = 7;
----------------------------------------------------------------
+
+--------------------------------------------------------------------------
 
 --indexes
 
---open the public schema dropdown, there are probably a bunch of indexes already
-
---show them how many indexes already exist and maybe even look through the script (ctrl + f)
---good learning opportunity in the foreign keys indexes
+--open the public schema dropdown, there are a bunch of indexes that have already been created
+--PKs automatically, Fks in the actual script
 
 --let's create an index on track names, something that may be queried often
-create index idx_track_name on track (name);
+
+create index idx_track_name on track(name);
 
 
-		
+-----------------------
+
+--test
+
+select name || 'yes', unit_price from track;
+
+select distinct(name) from track;
+
+select * from customer where company is not null;
+
+
+
+
+
+	
+
+	

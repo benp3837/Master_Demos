@@ -40,6 +40,8 @@ create table project_assignments (
 );
 
 
+alter table employees add age int;
+
 
 insert into managers (f_name, l_name, salary) 
 			values ('Bob', 'Ross', 100000),
@@ -55,10 +57,9 @@ insert into robots (name, color, manager_id_fk)
 											 --for the sake of 1-to-1 functionality
 
 		
-		
-insert into employees (f_name, l_name, salary, manager_id_fk)
-			values ('Ben', 'Petruzziello', 30000, 1),
-				   ('Bon', 'Potruzziello', 40000, 1);
+insert into employees (f_name, l_name, salary, age, manager_id_fk)
+			values ('Ben', 'Petruzziello', 30000, 22, 1),
+				   ('Bon', 'Potruzziello', 40000, 23, 1);
 				  
 insert into projects (project_name, start_date)	
 			values ('automatic cereal bowl', '1990-05-09'),
@@ -69,4 +70,16 @@ insert into project_assignments (employee_id_fk, project_id_fk)
 				   (2,1);
 				  
 				  
+select * from managers order by salary asc; 
+
+
+update managers set salary = salary/2 where salary = 100000;
+
+
+select avg(salary) from employees;
+
+
+select f_name ||' is age '|| age as "Age Info" from employees;
+
+
 
