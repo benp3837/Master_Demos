@@ -14,8 +14,10 @@ public class Launcher {
 
 	public static void main(String[] args) {
 		
-		List<Pokemon> myPokemon = new ArrayList<>(); //ArrayList is an implementation of List interface
+		//ArrayList is a very common implementation of the List interface
+		List<Pokemon> myPokemon = new ArrayList<>(); //empty Arraylist
 		
+		//.add method can add elements to your Collection
 		myPokemon.add(new Pokemon("Pikachu", "Electric"));
 		myPokemon.add(new Pokemon("Mudkip", "Water/Ground"));
 		myPokemon.add(new Pokemon("Charizard", "Fire"));
@@ -28,13 +30,14 @@ public class Launcher {
 		
 		//and we can use an enhanced for loop to iterate over the data structure
 		for(Pokemon p : myPokemon) {
-			System.out.println(p.name + " is " + p.type + " type."); //print the names and types one by one
+			System.out.println(p.name + " is " + p.type + " type."); 
+			//will print the names and types one by one
 		}
 		
 		
 		//explore some other List methods (could also go into documentation and read some)----------------------
 		
-		myPokemon.add(4, new Pokemon("Absol", "Dark")); //we can also .add elements at specific indices
+		myPokemon.add(4, new Pokemon("Absol", "Dark")); //we can also .add elements at specific indexes
 		
 		System.out.println("The Pokemon at index 4 is: " + myPokemon.get(4)); 
 		// .get(index) is how we specify a certain index in a List
@@ -44,22 +47,28 @@ public class Launcher {
 		
 		
 		//creating two new Pokemon objects to experiment with
+		//note that we haven't added either to the ArrayList!
 		Pokemon pikachu = new Pokemon("Pikachu", "Electric");
 		Pokemon duskull = new Pokemon("Duskull", "Ghost");
 		
 		//.contains checks if the List contains a certain object
-		System.out.println(myPokemon.contains(pikachu)); 
-		System.out.println(myPokemon.contains(duskull)); 
+		System.out.println(myPokemon.contains(pikachu)); //true
+		System.out.println(myPokemon.contains(duskull)); //false
 		
-		//forEach will perform a given action FOR EACH element
-		myPokemon.forEach(pokemon -> System.out.println(pokemon.name + " Attacked!")); 
+		
+		//using a lambda to make some pokemon "fight"
+		//forEach will loop through our collection and perform a given action FOR EACH element
+		myPokemon.forEach(pokemon -> System.out.println(pokemon.name + " Attacked!"));
+			
 
-		//.remove will remove an element at a specific index, OR a specific element
+		//.remove will remove a specific element OR an element at a specific index,
 		myPokemon.remove(pikachu); //goodbye Pikachu :(
 		myPokemon.remove(4); //goodbye Gengar :(
 		
-		System.out.println("two Pokemon have been removed...");
+		System.out.println("two Pokemon have fainted...");
 		
+		//using a lambda to see which pokemon remain
+		//forEach will perform a given action FOR EACH element
 		myPokemon.forEach(pokemon -> System.out.println(pokemon.name + " Remains")); 
 		
 		
@@ -84,17 +93,15 @@ public class Launcher {
 			System.out.println(p);
 		}
 		
-		//do some more with sets or we good?
+		//remember, sets have no order... what happens when we try to .get()?
+		//myPokemonSet.get(4);
 		
 		System.out.println("=====================================");
-		
-		
+			
 		Map<String, Pokemon> trainers = new TreeMap<>(); 
 		
-		
-		trainers.put("Brittany", new Pokemon("Ditto", "Normal"));
+		trainers.put("Joey", new Pokemon("Ditto", "Normal"));
 		trainers.put("Nancy", new  Pokemon("Squirtle", "Water"));
-		trainers.put("Elizabeth", new Pokemon("Magneton", "Electric"));
 		trainers.put("Alex", myPokemon.get(3)); //getting the 3rd Pokemon from the ArrayList above!		
 		
 		System.out.println(trainers); //notice the default order given to the Map!!
@@ -102,15 +109,20 @@ public class Launcher {
 		
 		System.out.println("=====================================");
 		
-		//comparator
-		//hi
+		//using the .sort method, providing an ArrayList and a Comparator as arguments
+		Collections.sort(myPokemon, new ComparePokeName());
 		
+		for(Pokemon p : myPokemon) {
+			System.out.println(p);
+		}
 		
+		Collections.reverse(myPokemon);
 		
-		System.out.println("=====================================");
+		System.out.println("-----Now we've reversed the order-----");
 		
-		//small lambda expression for fun
-		
+		for(Pokemon p : myPokemon) {
+			System.out.println(p);
+		}
 		
 		
 	}	
