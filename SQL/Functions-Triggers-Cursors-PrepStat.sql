@@ -1,10 +1,9 @@
-create schema krusty_krab;
+CREATE SCHEMA krusty_krab;
 set schema 'krusty_krab';
 
 --In each demo I want to create a new schema to get them used to creating tables
 --It was something I always had to relearn because we'd only ever do it once 
 
---employees (include plankton as marketing director - it's a conspiracy)
 
 create table roles(
 	role_id serial primary key,
@@ -28,7 +27,7 @@ insert into roles (role_title, role_salary)
 		   		  ('Fry Cook', 50000),
 		   		  ('Cashier', 40000),
 		   		  ('Marketing Director', 100000),
-		   		  ('Nepotism', 100000); --add later
+		   		  ('Nepotism', 100000); 
 		   		  
 	   		 
 select * from roles;
@@ -39,20 +38,11 @@ insert into employees (f_name, l_name, hire_date, role_id)
 			   		  ('Pete', 'Fishman', '1998-01-15', 2),
 			   		  ('Squidward', 'Tennisballs', '1998-01-15', 3),
 			   		  ('Sheldon', 'Plankton', '1998-01-02', 4),
-			   		  ('Pearl', 'Krabs', '1998-01-01', 5); --add after
+			   		  ('Pearl', 'Krabs', '1998-01-01', 5); 
 
 	
 select * from employees;	
-
-
-/*
-   insert into roles (role_title, role_salary) 
-		   values ('Nepotism', 100000);
-  
-   insert into employees (f_name, l_name, hire_date, role_id)
-			   values ('Pearl', 'Krabs', '1998-01-01', 5),
- */
-	   		 
+ 		 
 			   		 
 
 --------------------------------------------
@@ -83,21 +73,22 @@ select min(hire_date) from employees; --earliest hire date
 select max(hire_date) from employees; --latest hire date
 
 select count(employee_id) from employees; --how many employees are there?
---I like to use count on the primary key, but you can use any column 
+--It's common to use count on the primary key, but you can use any column 
 
 --slight aside, the distinct keyword will ignore any duplicate values
 select count(distinct hire_date) from employees; --how many different hire dates are there?
 
 
---User Defined Statements--------------------------------------------------------------------------------
+--User Defined Functions--------------------------------------------------------------------------------
 
 create function kill_pete() returns void as '
 	delete from employees where f_name = ''Pete'';
 ' language sql;
 
-select kill_pete();
+select kill_pete(); --Pete has been vanquished
 
-select * from employees; --Pete has been vanquished
+select * from employees; 
+
 
 --Now let's explore using GROUP BY and HAVING-----------------------------------------------------------
 --For the most part, we use these with aggregate functions
@@ -122,23 +113,21 @@ group by role_id having count(employee_id) > 1; --select roles with more than on
 select role_salary, count(role_id) from roles
 group by role_salary having count(role_id) >=3; --select salaries assigned to 3 or more roles
 
+
+--Let's also use Order By since Tim forgot >.> ----------------------------------------------------------
+
+--text-based datatypes will order alphabetically, int datatypes will order numerically
+
+select * from employees order by f_name; --order by is ascending by default
+
+select * from employees order by f_name asc; --same as above!
+
+select * from roles order by role_salary desc;
+
 -----------------------------------------------------------------------------
 
 
-
-
---Trigger
-
-
-
-
---Cursor
-
-
-
-
 --Prepared Statement
-
 prepare create_employee as 
 insert into employees (f_name, l_name, hire_date, role_id) values ($1, $2, $3, $4);
 
@@ -147,3 +136,47 @@ execute create_employee('Pete', 'Fishman', '1998-01-15', 2); --Pete lives!
 select * from employees;
 
 
+
+--Triggers-------------------------------------------------------------
+
+--saved this for last so we can do some complicated stuff (more realistic use case)
+
+--We want to adjust role salaries every time an employee is added or removed
+
+--creating two functions to put in our triggers
+create function employee_removed() returns trigger as '
+begin
+	update roles set role_salary = role_salary + 10000;
+return null;
+end;
+' language plpgsql; 
+
+create function employee_added() returns trigger as '
+begin
+	update roles set role_salary = role_salary - 10000;
+return null;
+end;
+' language plpgsql; 
+
+--Now let's create some triggers to update salaries when employees are added/removed
+--We're TRIGGERING an event to happen after a certain event happens
+create TRIGGER employee_removed after delete on employees
+for each row execute procedure employee_removed();
+
+create TRIGGER employee_added after insert on employees
+for each row execute procedure employee_added();
+
+
+
+select role_salary from roles; --show salaries before manipulation
+
+
+select kill_pete(); --kill pete function from earlier
+
+select * from roles; --trigger works! salaries are lowered
+
+
+execute create_employee('Pete', 'Fishman', '1998-01-15', 2); 
+--ressurect pete with the prepared statement from earlier
+
+select * from roles; --trigger works! salaries are raised
