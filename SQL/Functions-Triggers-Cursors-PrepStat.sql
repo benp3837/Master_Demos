@@ -28,7 +28,7 @@ insert into roles (role_title, role_salary)
 		   		  ('Fry Cook', 50000),
 		   		  ('Cashier', 40000),
 		   		  ('Marketing Director', 100000),
-		   		  ('Nepotism', 100000);
+		   		  ('Nepotism', 100000); --add later
 		   		  
 	   		 
 select * from roles;
@@ -36,33 +36,32 @@ select * from roles;
 insert into employees (f_name, l_name, hire_date, role_id)
 			   values ('Eugene', 'Krabs', '1998-01-01', 1),
 			   		  ('Spongebob', 'Squarepants', '1998-09-20', 2),
+			   		  ('Pete', 'Fishman', '1998-01-15', 2),
 			   		  ('Squidward', 'Tennisballs', '1998-01-15', 3),
 			   		  ('Sheldon', 'Plankton', '1998-01-02', 4),
-			   		  ('Pearl', 'Krabs', '1998-01-01', 5),
-			   		  ('Pete', 'Fishman', '1998-01-15', 2);
+			   		  ('Pearl', 'Krabs', '1998-01-01', 5); --add after
+
 	
-select * from employees;			   		 
-			   		 
+select * from employees;	
+
+
 /*
-  Worth mentioning that don't have to name all the columns in your insert, 
-  BUT you'd have to specify "default" for the serial primary key field
+   insert into roles (role_title, role_salary) 
+		   values ('Nepotism', 100000);
   
-  insert into employees 
-  values (default, 'test', 'testington', '1998-04-07', 5);
-  
-  This WILL work! But it's good practice to just list out the columns 
-  for the sake of clarity and your own readability.
-  The less readable your code is, the more your coworkers will spite you >:0
- */			   		 
+   insert into employees (f_name, l_name, hire_date, role_id)
+			   values ('Pearl', 'Krabs', '1998-01-01', 5),
+ */
+	   		 
 			   		 
 
 --------------------------------------------
 
 --I want to demonstrate functions, group by/having, 
---limit, aliases (as), concatenation, and subqueries 
+--limit, aliases (as), and concatenation 
 
 
---scalar functions: upper, lower, length, now
+--scalar functions: upper, lower, length, now---------------------------------------------------
 
 select upper(role_title) from roles; --returns data in uppercase
 
@@ -73,7 +72,7 @@ select f_name from employees where length(f_name) > 8; --returns names longer th
 select now(); --just for fun, also a scalar function
 
 
---aggregate functions: avg, max, min, sum, count
+--aggregate functions: avg, max, min, sum, count-----------------------------------------------------
 
 select avg(role_salary) from roles;
 
@@ -86,8 +85,21 @@ select max(hire_date) from employees; --latest hire date
 select count(employee_id) from employees; --how many employees are there?
 --I like to use count on the primary key, but you can use any column 
 
+--slight aside, the distinct keyword will ignore any duplicate values
+select count(distinct hire_date) from employees; --how many different hire dates are there?
 
---Now let's explore using GROUP BY and HAVING
+
+--User Defined Statements--------------------------------------------------------------------------------
+
+create function kill_pete() returns void as '
+	delete from employees where f_name = ''Pete'';
+' language sql;
+
+select kill_pete();
+
+select * from employees; --Pete has been vanquished
+
+--Now let's explore using GROUP BY and HAVING-----------------------------------------------------------
 --For the most part, we use these with aggregate functions
 
 --Group by lets us combine records based on equivalent values
@@ -110,59 +122,28 @@ group by role_id having count(employee_id) > 1; --select roles with more than on
 select role_salary, count(role_id) from roles
 group by role_salary having count(role_id) >=3; --select salaries assigned to 3 or more roles
 
+-----------------------------------------------------------------------------
 
 
---Advanced Selecting concepts below...... we'll try to make some more complicated queries too
 
 
---Limit will limit the number of results returned from your query
-
-select * from employees 
-order by hire_date desc limit 3; --latest three hires 
-
-select role_title, role_salary from roles 
-where role_salary > 40000 order by role_salary limit 1; --lowest salary above 40,000
+--Trigger
 
 
---Aliases are temporary names given to a column. Use the "as" keyword 
-
-select f_name as "First Name", l_name as "Last Name" from employees;
 
 
---Concatenation puts two columns together in a query, often used with aliases
---You can put text between the single quotes, or leave it blank
-
-select f_name ||' '|| l_name as "Full Name" from employees;
+--Cursor
 
 
---5 minute challenge:
---Select employee first name and hire date as one concatenated column 
---and have the data display in the row as "(name) was hired on (hire date)". 
---Then, give the concatenated column the alias "Hire Info".
---Finally, order the result set by hire date ascending.
-
-select f_name ||' was hired on '|| hire_date as "Hire Info" from employees
-order by hire_date;
 
 
---Subqueries are queries nested inside another query. woah :o
+--Prepared Statement
 
---This subquery is pointless... but shows subquery syntax.
---selecting employees with role_id 2 from all employee data
-select * from (select * from employees) as pointless_subquery
-where role_id = 2;
+prepare create_employee as 
+insert into employees (f_name, l_name, hire_date, role_id) values ($1, $2, $3, $4);
+
+execute create_employee('Pete', 'Fishman', '1998-01-15', 2); --Pete lives!
+
+select * from employees;
 
 
---This one is less pointless
---It would delete all rows where role_id = 2
-
- /*
- 
- delete from employees where role_id in 
- (select role_id from roles where role _id = 2);
- 
- */
-
---subqueries are more useful in big, robust DBs
---not too necessary in schemas of this size
---but make sure you know WHAT they are 
