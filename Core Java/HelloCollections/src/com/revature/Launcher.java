@@ -1,6 +1,7 @@
 package com.revature;
 
 import java.util.*; //This import gives us access to all of our Collections
+//this is MEMORY INTENSIVE so if you wanted only one or two classes from .util, just import them specifically
 
 import com.revature.models.Pokemon; //Import the Pokemon model so we can instantiate & use Pokemon objects
 
@@ -13,6 +14,8 @@ import com.revature.models.Pokemon; //Import the Pokemon model so we can instant
 public class Launcher {
 
 	public static void main(String[] args) {
+		
+		System.out.println("=======================================================(Lists)");
 		
 		//ArrayList is a very common implementation of the List interface
 		List<Pokemon> myPokemon = new ArrayList<>(); //empty Arraylist
@@ -41,6 +44,7 @@ public class Launcher {
 		
 		System.out.println("The Pokemon at index 4 is: " + myPokemon.get(4)); 
 		// .get(index) is how we specify a certain index in a List
+		// NOTE: because of zero-indexing, Absol is at index 4, but it's technically 5th in the ArrayList
 		
 		System.out.println("The size of the pokemon ArrayList is: " + myPokemon.size()); 
 		// .size() is analogous to .length for Arrays
@@ -52,11 +56,11 @@ public class Launcher {
 		Pokemon duskull = new Pokemon("Duskull", "Ghost");
 		
 		//.contains checks if the List contains a certain object
-		System.out.println(myPokemon.contains(pikachu)); //true
-		System.out.println(myPokemon.contains(duskull)); //false
+		System.out.println(myPokemon.contains(pikachu)); //true - there's a pikachu object in the Arraylist
+		System.out.println(myPokemon.contains(duskull)); //false - there's no duskull object though...
 		
 		
-		//using a lambda to make some pokemon "fight"
+		//using a lambda to make the pokemon "fight"
 		//forEach will loop through our collection and perform a given action FOR EACH element
 		myPokemon.forEach(pokemon -> System.out.println(pokemon.name + " Attacked!"));
 			
@@ -72,7 +76,7 @@ public class Launcher {
 		myPokemon.forEach(pokemon -> System.out.println(pokemon.name + " Remains")); 
 		
 		
-		System.out.println("=====================================");
+		System.out.println("====================================================(Sets)");
 		
 		
 		Set<Pokemon> myPokemonSet = new HashSet<>(); //HashSet is an implementation of Set interface
@@ -86,19 +90,20 @@ public class Launcher {
 		myPokemonSet.add(new Pokemon("Gengar", "Ghost"));
 		myPokemonSet.add(new Pokemon("Squirtle", "Water"));
 		
-		System.out.println(myPokemonSet); //notice how the results aren't ordered! Sets are unordered. 
+		System.out.println(myPokemonSet); 
+		//notice how the results aren't ordered! Sets are unordered. 
 		//also notice how the duplicate record isn't shown
 
 		for(Pokemon p : myPokemonSet) {
 			System.out.println(p);
 		}
 		
-		//remember, sets have no order... what happens when we try to .get()?
+		//remember, sets have no order... what happens when we try to use .get()?
 		//myPokemonSet.get(4);
 		
-		System.out.println("=====================================");
+		System.out.println("=====================================================(Maps)");
 			
-		Map<String, Pokemon> trainers = new TreeMap<>(); 
+		Map<String, Pokemon> trainers = new TreeMap<>();  
 		
 		trainers.put("Joey", new Pokemon("Ditto", "Normal"));
 		trainers.put("Nancy", new  Pokemon("Squirtle", "Water"));
@@ -107,7 +112,22 @@ public class Launcher {
 		System.out.println(trainers); //notice the default order given to the Map!!
 		//Because TreeMaps niche is that they have sorted keys :)
 		
+		//Now let's use a map with an int as a key
+		Map<Integer, Pokemon> pokemonIds = new TreeMap<>(); 
+		//remember, Maps (and Collections in general) only take objects! So we need Integer, not int.
+		
+		pokemonIds.put(1, new Pokemon("Ditto", "Normal"));
+		pokemonIds.put(2, new  Pokemon("Squirtle", "Water"));
+		pokemonIds.put(3, myPokemon.get(3)); //getting the 3rd Pokemon from the ArrayList above!		
+		
+		//a way to perform Iterable functionality with maps
+		for (Map.Entry<Integer, Pokemon> entry : pokemonIds.entrySet()) {
+		    System.out.println(entry.getKey() + ":" + entry.getValue().toString());
+		}
+
 		System.out.println("=====================================");
+		
+		//Let's sort our ArrayList alphabetically 
 		
 		//using the .sort method, providing an ArrayList and a Comparator as arguments
 		Collections.sort(myPokemon, new ComparePokeName());
@@ -116,6 +136,7 @@ public class Launcher {
 			System.out.println(p);
 		}
 		
+		//reverse the alphabetical order that was to the ArrayList
 		Collections.reverse(myPokemon);
 		
 		System.out.println("-----Now we've reversed the order-----");
