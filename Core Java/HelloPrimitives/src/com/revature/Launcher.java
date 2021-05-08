@@ -71,7 +71,7 @@ public class Launcher {
 		
 		System.out.println("======================================(Arithmetic Operators)");
 
-		//Let's quickly run through the arithmetic operators
+		//Let's quickly run through the arithmetic operators and then I'll jot them in the notes
 		
 		//creating some variables to play with
 		
@@ -104,8 +104,8 @@ public class Launcher {
 		
 		//Difference between putting the increment/decrement before and after the variable?
 		
-		//A prefix increment/decrement returns the value of a variable AFTER it has been incremented.
-		//A suffix increment/decrement returns the value of a variable BEFORE it has been incremented.
+		//A prefix increment/decrement will return the value of a variable AFTER incrementing.
+		//A suffix increment/decrement will return the value of a variable BEFORE incrementing.
 		
 		int incTest = 20;
 		
