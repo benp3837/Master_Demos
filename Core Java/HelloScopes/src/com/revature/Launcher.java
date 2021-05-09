@@ -70,6 +70,7 @@ public class Launcher {
 		
 	}
 	
+	//Remember, a method defines some behavior of a class.
 	public void example(boolean b) {
 		
 		System.out.println(b);
