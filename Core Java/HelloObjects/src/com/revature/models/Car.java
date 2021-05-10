@@ -21,7 +21,7 @@ public class Car {
 	//If you create a Car object without arguments, this no args constructor will be called
 	//Essentially providing default values to the Car object's fields.
 	public Car() {
-		super(); //The parent class of Car is Object (more on this later) 
+		super(); //The parent class of Car is Object (The root Class of all Objects - more on this later) 
 				 //thus, this super(); calls the no args constructor of the Object class
 		this.tires = 4;
 		this.color = "white";

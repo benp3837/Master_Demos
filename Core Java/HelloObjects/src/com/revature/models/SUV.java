@@ -33,6 +33,7 @@ public class SUV extends Car{
 	//The SUV would have the same "drive" method as the Car class
 	//But here, we declare the same method signature, with a different implementation (method body).
 	//This is an example of METHOD OVERRIDING
+	@Override
 	public String drive(int speed) {
 		return "You are going " + speed + " miles per hour in your SUV";
 	}
