@@ -60,7 +60,8 @@ public class Launcher {
 		}
 		//The loop executed 10 times, once i = 10, the loop completed and didn't execute again
 		
-		System.out.println("----------------Enhanced For loop below----------------");
+		
+	    //More complicated use of For loop below...
 		
 		//This is an Array, which we'll talk more about tomorrow
 		char[] myName = {'B', 'E', ' ', 'N', 'A', 'A', 'A'};
@@ -69,19 +70,19 @@ public class Launcher {
 		
 		//now let's use some control flow statements to print only the chars that we want
 		
-		for(char c : myName) { //enhanced For loop - "for every char in myName, do this"
+		for(int i = 0; i < myName.length; i++) { //.length returns the length of the Array as an int
 			
-			if(c == ' ') {
+			if(myName[i] == ' ') {
 				continue;
-				//continue will skip the current iteration of the loop if c == ' '
+				//if the char at position i = ' ', skip the current iteration of the loop.
 			} 
 			
-			if (c == 'A') {
+			if (myName[i] == 'A') {
 				break;
-				//break will end the loop if c == 'A'
+				//if the char at position i = 'A', break (end) the loop.
 			}
 			
-			System.out.println(c); //if c isn't ' ' or 'A', print it out.
+			System.out.println(myName[i]); //if none of those if statements run, the char at position i will print.
 			
 		}
 		
