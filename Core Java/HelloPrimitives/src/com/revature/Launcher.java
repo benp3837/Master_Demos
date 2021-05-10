@@ -104,26 +104,26 @@ public class Launcher {
 		
 		//Difference between putting the increment/decrement before and after the variable?
 		
-		//A prefix increment/decrement will return the value of a variable AFTER incrementing.
-		//A suffix increment/decrement will return the value of a variable BEFORE incrementing.
+		//A pre increment/decrement will return the value of a variable AFTER incrementing.
+		//A post increment/decrement will return the value of a variable BEFORE incrementing.
 		
 		int incTest = 20;
 		
 		System.out.println("incTest before change: " + incTest);
 	
-		System.out.println("During prefix increment: " + ++incTest);
+		System.out.println("During pre increment: " + ++incTest);
 		//increment incTest, and print the new value
 		
-		System.out.println("After prefix increment: " + incTest);
+		System.out.println("After pre increment: " + incTest);
 		
 		incTest = 20; //set incTest back to 20
 		
 		System.out.println("Resetting incTest: " + incTest);
 		
-		System.out.println("During suffix increment: " + incTest++);
+		System.out.println("During post increment: " + incTest++);
 		//print the value of incTest, then increment it
 		
-		System.out.println("After suffix increment: " + incTest);
+		System.out.println("After post increment: " + incTest);
 		
 	}
 	
