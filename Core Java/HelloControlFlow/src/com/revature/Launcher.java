@@ -1,6 +1,7 @@
 package com.revature;
 
 import java.lang.*; //we don't need to do this - the .lang package is implicitly imported!
+//but if it wasn't, this is how we'd import the Math Class from the .lang package
 
 public class Launcher {
 
@@ -57,8 +58,9 @@ public class Launcher {
 			loopVictim += 5;
 			System.out.println("Our loop victim is now: " + loopVictim);
 			System.out.println("Our loop variable is now: " + i);
+			//notice "Our loop variable is now: 10" never prints, since the loop ends once i = 10.
 		}
-		//The loop executed 10 times, once i = 10, the loop completed and didn't execute again
+		//The loop executed 10 (0-9) times. Once i = 10, the loop completed and didn't execute again
 		
 		
 	    //More complicated use of For loop below...
