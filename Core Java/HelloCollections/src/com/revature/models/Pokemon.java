@@ -2,9 +2,14 @@ package com.revature.models;
 
 	public class Pokemon {
 	
-		public String name;
-		public String type;
+		//private fields and getter/setter methods (below) are an example of ENCAPSULATION
+		private String name;
+		private String type;
 	
+		
+		public void fight() {
+			System.out.println(this.name + " attacked!");
+		}
 		
 		
 		
@@ -19,6 +24,8 @@ package com.revature.models;
 			this.name = name;
 			this.type = type;
 		}
+		
+		//Overloaded Constructors are an example of POLYMORPHISM
 	
 	
 		@Override
@@ -58,6 +65,27 @@ package com.revature.models;
 		public String toString() {
 			return "pokemon [name=" + name + ", type=" + type + "]";
 		}
+
+
+
+		//private fields and getter/setter methods are an example of ENCAPSULATION
+		//getters and setters are how the fields can be accessed/modified despite the fields being private
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public String getType() {
+			return type;
+		}
+
+		public void setType(String type) {
+			this.type = type;
+		}
 		
-	
+		
+		
 }

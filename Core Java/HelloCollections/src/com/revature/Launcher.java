@@ -33,7 +33,7 @@ public class Launcher {
 		
 		//and we can use an enhanced for loop to iterate over the data structure
 		for(Pokemon p : myPokemon) {
-			System.out.println(p.name + " is " + p.type + " type."); 
+			System.out.println(p.getName() + " is " + p.getType() + " type."); 
 			//will print the names and types one by one
 		}
 		
@@ -60,9 +60,9 @@ public class Launcher {
 		System.out.println(myPokemon.contains(duskull)); //false - there's no duskull object though...
 		
 		
-		//using a lambda to make the pokemon "fight"
+		//using a lambda to make the pokemon "fight". Example of ABSTRACTION***
 		//forEach will loop through our collection and perform a given action FOR EACH element
-		myPokemon.forEach(pokemon -> System.out.println(pokemon.name + " Attacked!"));
+		myPokemon.forEach(pokemon -> pokemon.fight()); 
 			
 
 		//.remove will remove a specific element OR an element at a specific index,
@@ -73,7 +73,7 @@ public class Launcher {
 		
 		//using a lambda to see which pokemon remain
 		//forEach will perform a given action FOR EACH element
-		myPokemon.forEach(pokemon -> System.out.println(pokemon.name + " Remains")); 
+		myPokemon.forEach(pokemon -> System.out.println(pokemon.getName() + " Remains")); 
 		
 		
 		System.out.println("====================================================(Sets)");
