@@ -70,18 +70,18 @@ public class Launcher {
 		
 		System.out.println(myName); //print the Array as it is, without processing
 		
-		//now let's use some control flow statements to print only the chars that we want
+		//now let's use some control flow statements to print only the chars in the Array that we want
 		
 		for(int i = 0; i < myName.length; i++) { //.length returns the length of the Array as an int
 			
 			if(myName[i] == ' ') {
 				continue;
-				//if the char at position i = ' ', skip the current iteration of the loop.
+				//if the char at position i == ' ', skip the current iteration of the loop.
 			} 
 			
 			if (myName[i] == 'A') {
 				break;
-				//if the char at position i = 'A', break (end) the loop.
+				//if the char at position i == 'A', break (end) the loop.
 			}
 			
 			System.out.println(myName[i]); //if none of those if statements run, the char at position i will print.
