@@ -3,8 +3,10 @@ package com.revature;
 import com.revature.throwables.*; //import all our throwables
 
 public class Launcher {
+	
 
 	public static void main(String[] args) {
+		
 		
 		//the compiler will let you call these methods straight up...
 		//but it'll just end up crashing your program once the first Error is thrown via throwError().
@@ -46,20 +48,17 @@ public class Launcher {
 			System.out.println(nums[3]);
 		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("ArrayIndexOutOfBoundsException caught! That index doesn't exist...");
-		} finally {
-			
-		}
 
 		
 		try {
 			System.out.println("I am going to try dividing by zero!");
 			int i = 5/0;
-		} catch (ArithmeticException e) {
+		} catch (ArithmeticException a) {
 			System.out.println("ArithmeticException caught! You really shouldn't be doing that...");
 		}
 	
 		
-		//this won't run! The generic exception renders the more specific exception unreachable
+		//this won't run! The generic exception catch renders the more specific exception catch unreachable
 //		try {
 //			System.out.println("I am going to try dividing by zero!");
 //			int i = 5/0;
@@ -71,7 +70,8 @@ public class Launcher {
 		
 			
 	}
-	
+
+	}
 	
 	//creating some methods that throw our errors/exceptions
 	
@@ -89,6 +89,7 @@ public class Launcher {
 		System.out.println("I'm about to throw an unchecked Exception!!!");
 		throw new MyUncheckedException();
 	}
+	
 	
 	
 }
