@@ -53,14 +53,14 @@ public class MathOpsTests {
 	//And the @AfterEach method resets result = 0. 
 	//We could technically use one or the other method to do it all, but I'm showing both for education!
 	
-	@Test
+	@Test //We need the @Test annotation for the method to be recognized as a Test
 	public void testAdd() {
 		System.out.println("TESTING ADD...");
 		result = mo.add(i, j);
 		assertTrue(result == 10);
 	}
 	
-	@Test
+	@Test //run these two methods first, without the @Test annotation on the second. Only one will run.
 	public void TestAdd2() {
 		System.out.println("TESTING ADD once again...");
 		result = mo.add(i, k);
