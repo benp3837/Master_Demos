@@ -27,7 +27,8 @@ package com.revature.models;
 		
 		//Overloaded Constructors are an example of POLYMORPHISM
 	
-	
+		//Hashcode will give each instantiated objects a hash value 
+		//(a unique value)	
 		@Override
 		public int hashCode() {
 			final int prime = 31;
@@ -37,7 +38,7 @@ package com.revature.models;
 			return result;
 		}
 	
-	
+		//Equals will let you compare your objects by hashcode	
 		@Override
 		public boolean equals(Object obj) {
 			if (this == obj)
@@ -60,7 +61,7 @@ package com.revature.models;
 			return true;
 		}
 	
-	
+		//toString returns a String representation of the object when we print 	
 		@Override
 		public String toString() {
 			return "pokemon [name=" + name + ", type=" + type + "]";

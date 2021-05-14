@@ -13,8 +13,7 @@ public class Launcher {
 
 	public static void main(String[] args) {
 		
-		//here we're just testing whether our connection (from ConnectionUtil) is working
-		
+		//here we're just testing whether our connection (from the ConnectionUtil class) is working
 		try(Connection conn = ConnectionUtil.getConnection()){
 			System.out.println("connection successful");
 		} catch(SQLException e) {
