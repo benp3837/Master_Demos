@@ -18,4 +18,12 @@ public class EmployeeService {
 		return ed.getEmployeeByRoleTitle(title); //send the user-inputted title for the DAO method's query
 	}
 	
+	public void addEmployee(Employee employee) {
+		ed.addEmployee(employee);
+	}
+	
+	public void removeEmployee(String fName) {
+		ed.removeEmployee(fName);
+	}
+	
 }

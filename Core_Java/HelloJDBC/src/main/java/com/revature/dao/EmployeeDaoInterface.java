@@ -10,8 +10,8 @@ public interface EmployeeDaoInterface {
 	
 	public List<Employee> getEmployeeByRoleTitle(String title); //this one will get employees of certain roles
 	
-	public void addEmployee(); 
+	public void addEmployee(Employee employee); 
 	
-	public void removeEmployee();
+	public void removeEmployee(String fName);
 	
 }

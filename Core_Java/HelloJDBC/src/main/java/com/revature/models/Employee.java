@@ -15,7 +15,17 @@ public class Employee {
 		// TODO Auto-generated constructor stub
 	}
 
-
+	
+	//Constructor without employee_id for the add functionality
+	public Employee(String f_name, String l_name, String hire_date, int role_id) {
+		super();
+		this.f_name = f_name;
+		this.l_name = l_name;
+		this.hire_date = hire_date;
+		this.role_id = role_id;
+	}
+	
+	
 	public Employee(int employee_id, String f_name, String l_name, String hire_date, int role_id) {
 		super();
 		this.employee_id = employee_id;
@@ -24,6 +34,8 @@ public class Employee {
 		this.hire_date = hire_date;
 		this.role_id = role_id;
 	}
+
+
 
 
 	@Override

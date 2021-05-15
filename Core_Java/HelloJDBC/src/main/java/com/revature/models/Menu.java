@@ -34,6 +34,7 @@ public class Menu {
 			System.out.println("employeeByRole -> get employees by their role title (search roles for a list of roles)");
 			System.out.println("roles -> show all roles");
 			System.out.println("changeSalary -> update a role salary");
+			System.out.println("roster -> manage active employees");
 			System.out.println("exit -> exit EMS");
 			
 			//parse user input after they ponder menu options
@@ -90,6 +91,42 @@ public class Menu {
 				rs.changeSalary(salaryInput, titleInput);
 				
 				System.out.println(titleInput + " Salary has been changed to " + salaryInput);
+				break;
+			}
+			
+			//Add/remove employee functionality works fine but could be much more elegant
+			//Learning opportunity for associates to try and clean it up. Brainstorm solutions?
+			//or even leave the two add/remove methods unimplemented if you don't want to give them all the keys
+			case "roster": {
+				System.out.println("Would you like to 'add' or 'remove' Employee?");
+				String addOrRemove = scan.nextLine();
+				
+				//parse the user's input and do one of three options
+				
+				//if add, create a new employee with the given fields
+				if(addOrRemove.equalsIgnoreCase("add")) {
+					System.out.println("Enter Employee First Name");
+					String fName = scan.nextLine();
+					System.out.println("Enter Employee Last Name");
+					String lName = scan.nextLine();
+					System.out.println("Enter Employee Role id");
+					int roleId = scan.nextInt();
+					scan.nextLine();
+					
+					Employee newEmployee = new Employee(fName, lName, "xxx", roleId);
+					
+					es.addEmployee(newEmployee);
+					
+				} else if(addOrRemove.equalsIgnoreCase("remove")){
+					System.out.println("Enter the First Name of Employee to Remove");
+					String fName = scan.nextLine();
+					
+					es.removeEmployee(fName);
+					
+				} else {
+					System.out.println("Choose a valid option.");
+				}
+				
 				break;
 			}
 				

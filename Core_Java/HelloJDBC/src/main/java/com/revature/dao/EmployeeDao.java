@@ -4,11 +4,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import com.revature.models.Employee;
-import com.revature.models.Role;
 import com.revature.utils.ConnectionUtil;
 
 public class EmployeeDao implements EmployeeDaoInterface{
@@ -97,15 +99,54 @@ public class EmployeeDao implements EmployeeDaoInterface{
 
 	
 	@Override
-	public void addEmployee() {
-		// TODO Auto-generated method stub
-		
+	public void addEmployee(Employee employee) {
+		try(Connection conn = ConnectionUtil.getConnection()){
+			
+			//This was my quick/dirty solution to get the current date in appropriate format. (see setString 3)
+			//Surely there has to be a more elegant way!!! Figure it out associates
+			 DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		     Date date = new Date();
+		     String currentDate = dateFormat.format(date);
+			
+		    //then the rest proceeds pretty much as normal
+			String sql = "INSERT INTO employees (f_name, l_name, hire_date, role_id)"
+		+ "VALUES (?, ?, ?, ?);";
+			
+			PreparedStatement ps = conn.prepareStatement(sql);
+			
+			ps.setString(1, employee.getF_name());
+			ps.setString(2, employee.getL_name());
+			ps.setDate(3, java.sql.Date.valueOf(currentDate));
+			ps.setInt(4, employee.getRole_id());
+			ps.executeUpdate();
+			
+			//send confirmation to the console if successful
+			System.out.println("Employee " + employee.getF_name() + " created. Welcome Aboard!");
+			
+		} catch (SQLException e) {
+			System.out.println("Add Employee Failed :(");
+			e.printStackTrace();
+		}	
 	}
 
 	
 	@Override
-	public void removeEmployee() {
-		// TODO Auto-generated method stub
+	public void removeEmployee(String fName) {
+		try(Connection conn = ConnectionUtil.getConnection()){
+			
+			String sql = "delete from employees where f_name = ?;";
+						
+			PreparedStatement ps = conn.prepareStatement(sql);
+			
+			ps.setString(1, fName);
+			ps.executeUpdate();
+			
+			System.out.println("Get out of here " + fName + " yer costin' me money!!!");
+						
+		} catch(SQLException e) {
+			System.out.println("Remove employee failed!");
+			e.printStackTrace();
+		}
 		
 	}
 
