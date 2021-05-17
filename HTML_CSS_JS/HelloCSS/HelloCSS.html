@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--REMEMBER to ust copy over HelloHTML and add CSS to it-->
+<html>
+    <head>
+        <title>HELLOCSS</title>
+        <!--Show external after showing head-->
+        <link rel="stylesheet" href="HelloCSS.css">
+        <!--show bootstrap last, maybe look into how to find templates yourself-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <style> /*Do Inline styling before showing Head*/
+            
+            #p1 {
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode';
+                font-size: 15mm;
+                font-weight: bolder;
+            }
+            
+            th {
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 15mm;
+            }
+
+            td{
+                font-size: 10mm;
+            }
+
+            .favtable {
+                border: 3px dashed rebeccapurple;
+            }
+
+            table {
+                border: 3px dashed rgb(98, 197, 32);
+                padding:3px 5px;
+            }
+
+            table * {
+                border: 3px dashed rgb(98, 197, 32);
+            }
+
+            div>span{
+                color: darkmagenta;
+            }
+
+            div {
+                border: 3px black solid;
+            }
+
+            </style>
+    </head>
+
+    <body class="container-fluid"> <!--The actual content of the webpage goes in here-->
+        <h1>Hello CSS</h1> 
+        
+        <p id="p1">I just built my own webpage!</p> <p>I'm a front end developer now.</p>
+
+        <div>
+            <span style="color:olive";
+            background-color: black; border-color: deeppink; padding: 5px 10px 25px;
+            >What's your favorite element?</span>
+            <span>Mine is a span...</span> <span>The rest are cool too.</span>
+            <!--"The rest are cool too" is a good time to show them hot reload-->
+        </div>
+
+    <br>
+
+    <table class="favtable">
+        <thead> <!--The header row(s) of the table-->
+            <tr> <!--A row in the head-->
+                <th>Name</th> <!--Cell data for header cells-->
+                <th>Favorite Animal</th>
+            </tr>
+        </thead>
+
+        <tbody> <!--The body row(s) of the table-->
+            <tr> <!--A row in the body-->
+                <td>Alex</td> <!--"table data" the values in the row cells-->
+                <td>Kangaroo</td>
+            </tr>
+            <tr>
+                <td>Nancy</td>
+                <td>Penguin</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div>
+        <h2 style="color:red; background-color: burlywood;">Ben's Favorite Animals</h2>
+        <ol> <!--Ordered list-->
+            <li>Axolotl</li> <!--List item-->
+            <li>Dawg</li>
+            <li>Capybara</li>
+            <h3>Honorable Mentions:</h3> <!--Nested header-->
+            <ul> <!--Nested unordered list-->
+                <li>Hippo</li>
+                <li>Bippo</li>
+            </ul>
+        </ol>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="col-sm-3">I'm just a div</div>
+        <div class="col-sm-3">I'm just another div</div>
+        <div class="col-sm-6">I'm a SUPER div</div>
+    </div>
+
+    </body>
+</html>
