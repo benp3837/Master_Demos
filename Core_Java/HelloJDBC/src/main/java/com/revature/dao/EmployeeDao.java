@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -23,9 +24,9 @@ public class EmployeeDao implements EmployeeDaoInterface{
 			
 			String sql = "select * from employees;"; //write out the SQL query
 			
-			PreparedStatement ps = conn.prepareStatement(sql); //put the SQL query into a PreparedStatement
+			Statement ps = conn.createStatement(); //put the SQL query into a Statement
 			
-			rs = ps.executeQuery(); //execute the query, putting the results into our ResultSet variable
+			rs = ps.executeQuery(sql); //execute the query, putting the results into our ResultSet variable
 			
 			List<Employee> employeeList = new ArrayList<>(); //create the List we want to return
 			

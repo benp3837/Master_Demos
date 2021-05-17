@@ -17,10 +17,12 @@ public class ConnectionUtil {
 			e.printStackTrace();
 		}
 				
-		//these are hardcoded... which is horrible practice.
-		String url = "jdbc:postgresql://localhost:5432/postgres?currentSchema=krusty_krab"; 
-		String username = "postgres";
-		String password = "Sparky2014!!"; 
+		//these are no longer hardcoded!
+		//I hid the secrets in the Environment variables!!!
+		//Run -> Run Configuration -> Environment -> Then I created key value pairs for these credentials
+		String url = System.getenv("url"); 
+		String username = System.getenv("DB_USERNAME");
+		String password = System.getenv("DB_PASSWORD"); 
 		
 		return DriverManager.getConnection(url, username, password);
 		
