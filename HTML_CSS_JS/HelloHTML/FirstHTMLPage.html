@@ -1,0 +1,86 @@
+<!DOCTYPE html> <!--doctype declaration (not actually a tag)-->
+<html> <!--root tag-->
+
+    <head> <!--This is what the open tab of your browser will say-->
+        <title>Coolest Title I Ever Did See</title>
+    </head>
+
+    <body> <!--The actual content of the webpage goes in here-->
+        <h1>Hello HTML</h1> 
+        
+        <p>I just built my own webpage!</p> <p>I'm a front end developer now.</p>
+
+        <div>
+            <span>What's your favorite element?</span>
+            <span>Mine is a span...</span> <span>The rest are cool too.</span>
+            <!--"The rest are cool too" is a good time to show them hot reload-->
+        </div>
+
+    <br>
+
+    <table>
+        <thead> <!--The header row(s) of the table-->
+            <tr> <!--A row in the head-->
+                <th>Name</th> <!--Cell data for header cells-->
+                <th>Favorite Animal</th>
+            </tr>
+        </thead>
+
+        <tbody> <!--The body row(s) of the table-->
+            <tr> <!--A row in the body-->
+                <td>Alex</td> <!--"table data" the values in the row cells-->
+                <td>Kangaroo</td>
+            </tr>
+            <tr>
+                <td>Nancy</td>
+                <td>Penguin</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div>
+        <h2>Ben's Favorite Animals</h2>
+        <ol> <!--Ordered list-->
+            <li>Axolotl</li> <!--List item-->
+            <li>Dawg</li>
+            <li>Capybara</li>
+            <h3>Honorable Mentions:</h3> <!--Nested header-->
+            <ul> <!--Nested unordered list-->
+                <li>Hippo</li>
+                <li>Bippo</li>
+            </ul>
+        </ol>
+    </div>
+
+    <br>
+
+
+    <form>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Ex: John Smith">
+
+        <br>
+
+        <p>You must choose:</p>
+        <input type="radio" id="choice1" name="radio"> 
+        <label for="choice1">ok</label> 
+        <input type="radio" id="choice2" name="radio"> 
+        <label for="choice2">I will not choose!</label> 
+
+        <br>
+
+        <p>How do you feel about your decision?</p>
+        <input type="checkbox" id="choice1" name="checkbox"> 
+        <label for="choice1">Overjoyed</label> 
+        <input type="checkbox" id="choice2" name="checkbox"> 
+        <label for="choice2">Somber</label> 
+        <input type="checkbox" id="choice3" name="checkbox"> 
+        <label for="choice3">Pensive</label> 
+        <input type="checkbox" id="choice5" name="checkbox"> 
+        <label for="choice5">Indifferent</label>
+        <input type="checkbox" id="choice4" name="checkbox"> 
+        <label for="choice4">I would like to choose again but my fate is sealed</label> 
+    </form>
+
+    </body>
+</html>
