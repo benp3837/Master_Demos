@@ -37,7 +37,29 @@ func2(5, (x)=>{console.log("You gave the arrow function: " + x)});
 
 //in these two cases, func1 and the arrow function are the callback functions func2 is invoking!
 
-console.log("=========================================(Global Scope)");
+
+//Finally lets look at closures
+let HelloName = function (name){
+    return function (){
+      console.log("Hello "+name);
+    }
+}
+  
+let nameTim = HelloName("Tim");
+  
+nameTim(); 
+  
+HelloName = HelloName("Luke"); 
+//now we can never change the name value from Luke
+  
+HelloName(); 
+  
+let nameJohn = HelloName("John"); //this just causes helloName to run, with an argument it ignores.
+  
+//nameJohn(); //error: nameJohn is not a function! it's not recognized by the compiler
+
+
+console.log("================================(Global Scope)");
 
 console.log(a); //prints undefined because it was hoisted
 
@@ -54,7 +76,7 @@ let b = "b";
 console.log(b);
 
 
-console.log("=========================================(Local Scope)");
+console.log("===================================(Local Scope)");
 
 console.log(c); //undefined
 
