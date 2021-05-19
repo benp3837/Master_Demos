@@ -11,12 +11,15 @@ console.log(firstDiv); //the div's contents will print out
 //there's an actual style object you can set properties of for every element
 firstDiv.setAttribute("style", "background-color:pink;");
 
+console.log("=======================(events)")
+
 //now let's assign a variable that applies to all buttons
 let myButton = document.getElementsByTagName('button')[0];
 
 myButton.onclick = domFunc; //so now when a button is clicked, this function runs
 
 function domFunc(){
+    console.log("domFunc is running!");
     document.getElementById("b1").textContent = "Thanks for the click!";
     document.getElementById("p3").textContent = "Now I have content!";
 }
