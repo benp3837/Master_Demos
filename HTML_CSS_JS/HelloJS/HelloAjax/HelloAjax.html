@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFavPokemon</title>
+</head>
+<body>
+    <h2>This is my Favorite Pokemon</h2>
+    <br>
+    <input type="text" id="userInput" placeholder="Pokemon's Number">
+    <button id="btn">CLICK ME!</button>
+    <br>
+    <br>
+    <!--using "border" isn't formal HTML, but it works. Just a lil fun fact.-->
+    <table class="table" border = '1' style="border-collapse:collapse">
+      <thead>
+        <tr>
+          <th style="padding:5px">Name</th>
+          <th style="padding:5px">Type</th>
+          <th style="padding:5px">Pokedex ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!--These will be empty, to be filled using our JS logic-->
+          <td id="pokename"></td>
+          <td id="poketype"></td>
+          <td id="pokenum"></td>
+        </tr>
+      </tbody>
+    </table>
+    <!--The src of this img element will also be empty, and filled using our JS logic-->
+    <img id="pokepic" src="">
+    <script src="HelloAjax.js"></script>
+    
+</body>
+</html>
