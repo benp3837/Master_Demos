@@ -8,21 +8,18 @@ let pokepic = document.getElementById("pokepic");
 let button = document.getElementById('btn');
 button.addEventListener("click", ajaxFunc);
 
-//this function will 
+//this function will send the user input to the server, and get a request back. 
 function ajaxFunc(){
     let num = document.getElementById('userInput').value; //gather the user's input
 
-    let xhr = new XMLHttpRequest(); //the object that sends/recieves data
+    let xhr = new XMLHttpRequest(); //initialize the object that sends/recieves data
 
-    //this functionality will execute every time the event fires (since readystate changes)
+    //this functionality will execute every time the event listener fires (since readystate changes)
     xhr.onreadystatechange = function () {
-
         //if response is ready && if status = OK.
         if(this.readyState===4 && this.status===200){
-
         //this takes the JSON we get back and puts it into a JS object
         let data = JSON.parse(xhr.responseText);
-
         //see method below - takes our data variable and changes the HTML accordingly
         renderHTML(data);
         } 
@@ -43,7 +40,6 @@ function ajaxFunc(){
         if(data.types[1]){
             poketype.append(", " + data.types[1].type.name);
         }
-
 
 
         //lastly, this will print out to the console telling us the data we gathered
