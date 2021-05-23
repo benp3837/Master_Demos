@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class LogoutServlet extends HttpServlet {
 	
-	//we'll use a redirect here instead of a forward
+	//we'll use a redirect here instead of a forward	
 	
 	//btw, what's IOException?
 	//IOException happens when there is a failure during reading, writing, and searching file or directory operations

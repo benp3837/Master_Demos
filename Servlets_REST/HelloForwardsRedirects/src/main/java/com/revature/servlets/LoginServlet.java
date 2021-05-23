@@ -30,7 +30,7 @@ public class LoginServlet extends HttpServlet {
 		} else {
 			rd = req.getRequestDispatcher("index.html"); //if login fails, don't forward, resend the login page (index.html)
 			rd.include(req, res); //"this is the request you sent me, this is the HTML page I want to display as a response
-			pw.print("<span style='color:red; text-align:center'>Login Failed!<span>);"); //adds to response, tell the user they FAILED.	
+			pw.print("<p style='color:red; text-align:center'>Login Failed! );<p>"); //adds to response, tell the user they FAILED.	
 		}	
 	}
 }
