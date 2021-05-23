@@ -18,7 +18,6 @@
   
   <!-- This defines our servlet in the deployment descriptor -->
   <servlet>
-  	<description></description>
   	<display-name>HelloServlet</display-name>
   	<servlet-name>HelloServlet</servlet-name>
   	<servlet-class>com.revature.servlets.HelloServlet</servlet-class>

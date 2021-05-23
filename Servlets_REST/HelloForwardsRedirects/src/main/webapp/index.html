@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+</head>
+<body>
+	<div align="center"> <!-- Everything on the div is centered on the page -->
+		<h3>Log in (or else)</h3>
+		<form action="login" method="post"> <!-- This will send things to our base path/login --> <!-- Logins are posts -->
+			<table border="1">
+				<tr>
+					<td><input type="text" name="userId" placeholder="USERNAME"></td>
+				</tr>
+				<tr>
+					<td><input type="password" name="password" placeholder="PASSWORD"></td>
+				</tr>				
+				<tr>
+					<td><input type="submit" value ="login"></td> <!-- value defines the text on our submit button -->
+					<!-- So what this does, is it sends a request with the filled out form to url/ + login -->
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
