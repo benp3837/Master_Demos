@@ -25,7 +25,7 @@ public class LoginServlet extends HttpServlet {
 		//but for now we're just gonna hardcode a username and password, no database in this demo lol
 		if(username.equals("blandUsername") && password.equals("wasspord")) {
 			rd = req.getRequestDispatcher("success"); //if user and pass are good, initialize the RequestDispatcher object
-			//we also state the relative path I want to forward to as a String parameter (so url+success)
+			//we also state the relative path I want to forward to as a String parameter (so base url/ + success)
 			rd.forward(req, res); //forward the request and response objects to our success servlet, if successfully logged in.	
 		} else {
 			rd = req.getRequestDispatcher("index.html"); //if login fails, don't forward, resend the login page (index.html)

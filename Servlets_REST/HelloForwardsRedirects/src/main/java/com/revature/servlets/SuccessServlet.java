@@ -21,7 +21,7 @@ public class SuccessServlet extends HttpServlet {
 		PrintWriter pw = res.getWriter();
 		//this will be forwarded. It'll have the request that was originally sent with the login
 		pw.print("<h2>Welcome " + req.getParameter("userId") + "!</h2>"); //...so we can get the parameters sent with it! 
-		pw.print("<a href='logout'>Click Here to Log Out.</a>"); //when clicked, it'll send a request to url/+logout
+		pw.print("<a href='logout'>Click Here to Log Out.</a>"); //when clicked, it'll send a request to base url/+logout
 		//note how href works, you could send it anywhere, like www.google.com. But we're building a logout servlet.
 		
 
