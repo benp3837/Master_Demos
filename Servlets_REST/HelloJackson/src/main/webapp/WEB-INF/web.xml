@@ -18,7 +18,9 @@
 	
 	<servlet-mapping>
 		<servlet-name>DinoServlet</servlet-name>
-		<url-pattern>/dinos</url-pattern>
+		<url-pattern>/dinos/*</url-pattern> <!-- Change this from /dinos to /dinos/* after adding getOneDino -->
 	</servlet-mapping>
+	
+	
   
 </web-app>

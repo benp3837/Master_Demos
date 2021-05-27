@@ -12,20 +12,44 @@ import com.revature.service.DinoService;
 //the web package talks to the service package
 public class DinoServlet extends HttpServlet {
 	
-	private DinoService ds = new DinoService(); //1.) an object that we'll use to send requests to the services
+	private DinoService ds = new DinoService(); //2.) an object that we'll use to send requests to the DinoService
 	
-	//I'd like to return all dinos when I receive a get request
+	//1.) I'd like to return all dinos when I receive a get request
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		
-		res.setContentType("application/json"); //2.) this specifies what type of content is being sent
+		//remember to add the findOneDino functionality AFTER doing all the findAllDino functionality
+		//everything in the else block is the findAllDino functionality. just 3 lines.
 		
-		ds.getDinos(res); //3.) show them that you can just autocomplete this method (which we use to populate the res)
-						  //4.) then go fill out the appropriate service method
-		res.setStatus(200); //5.) set the status code that gets sent back
+		String URI = req.getRequestURI();
 		
-		//STOP HERE-- you can set up the servlet in the DD and show them the GET method working before moving on
-	
+		String possibleId = URI.replace("/HelloJackson/dinos/", "");
+		
+		if (!possibleId.equals("")) {
+			int id  = 0;
+
+			try {
+				id = Integer.parseInt(possibleId);
+			} catch (NumberFormatException e) {
+
+			}
+			if(id<1) {
+				res.setStatus(406);
+			}else {
+				ds.getOneDino(res, id);
+				res.setStatus(200);
+				res.setContentType("application/json");
+			}
+		} else {
+		
+		res.setContentType("application/json"); //3.) this specifies what type of content is being sent
+		
+		ds.getDinos(res); //4.) show them that you can just autocomplete this method (which we use to populate the res)
+						  //5.) then go fill out the appropriate service method
+		res.setStatus(200); //6.) set the status code that gets sent back
+		
+		//STOP HERE-- you can set up the servlet in the web.xml and show them the GET method working before moving on
+		}
 	}
 	
 	//ok that was awesome and exhilarating but NOW, let's use a POST request

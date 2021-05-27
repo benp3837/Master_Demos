@@ -15,10 +15,10 @@ public class ConnectionUtil {
 			e.printStackTrace();
 		}
 		
-		//run -> run configurations -> environment -> add the appropriate url, password, username
-		String url = System.getenv("url");
-		String username = System.getenv("username");
-		String password = System.getenv("password"); 
+		//to not hardcode: run -> run configurations -> environment -> add the appropriate url, password, username
+		String url = "jdbc:postgresql://localhost:5432/shield";
+		String username = "postgres";
+		String password = "Sparky2014!!"; 
 		
 		return DriverManager.getConnection(url, username, password);
 	}

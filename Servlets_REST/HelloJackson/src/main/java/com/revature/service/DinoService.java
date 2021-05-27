@@ -6,6 +6,7 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.dao.DinoDAO;
 import com.revature.models.Dinosaur;
@@ -61,8 +62,12 @@ public class DinoService {
 		
 		dd.inputDino(dino); //input our new dino using the DAO's inputDino method
 		
-		
-		
+	}
+
+	public void getOneDino(HttpServletResponse res, int id) throws IOException {
+		Dinosaur dino = dd.getDinoById(id);
+		String json = om.writeValueAsString(dino);
+		res.getWriter().print(json);
 	}
 
 	//IOException? Input/Output exception. It's trying to access something outside the Java application

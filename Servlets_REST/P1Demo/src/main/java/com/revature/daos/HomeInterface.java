@@ -8,10 +8,10 @@ public interface HomeInterface {
 
 	public List<Home> getHomes();
 	
-	public Home getHomeByName();
+	public Home getHomeByName(String name);
 	
-	public boolean addHome();
+	public boolean addHome(Home home);
 	
-	public boolean destroyHome();
+	public boolean destroyHome(String name);
 	
 }
