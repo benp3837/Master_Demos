@@ -8,11 +8,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.revature.controllers.AvengersController;
+import com.revature.controllers.LoginController;
 
 //Remember, this is our front controller. so ALL requests will come here first
 public class MasterServlet extends HttpServlet { //who remembers what I have to extend?
 	
 	private AvengersController ac = new AvengersController(); //First controller, handles Avengers stuff
+	private LoginController lc = new LoginController(); //only after finishing initial front end run
 	
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		
@@ -32,17 +34,26 @@ public class MasterServlet extends HttpServlet { //who remembers what I have to 
 		
 		switch (URI) { 
 		
-		case "avengers":
-			ac.getAllAvengers(res); //if the URI is avengers, execute the controller method and send it the response obj
-			
-		
-			
+		case "avengers": //add the if else and setStatus(403) AFTER you write the login/session logic in LoginController
+			if(req.getSession(false) != null) {
+				ac.getAllAvengers(res); //if the URI is avengers, execute the controller method and send it the response obj
+			} else {
+				res.setStatus(403); //forbidden (cause they aren't logged in in req.getSession() = null!)
+			}
+			break;
+		case "login":
+			lc.login(req, res); 
+			break;
 		}
 		
 	}
 
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		
+		doGet(req, res);
+		//this sends every request it gets to the doGet method, so we only have to write the switch statement once. 
+		//so basically every request ends up hitting the switch in the doGet 
+		//and we'll differentiate get from post in the controllers instead of the servlet
 	}
 	
 }

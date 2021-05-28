@@ -20,5 +20,15 @@
   	<servlet-name>MasterServlet</servlet-name>
   	<url-pattern>/*</url-pattern> <!-- Because we want every request that comes in through tomcat to go to this servlet -->
   </servlet-mapping>
+
+  <filter>
+  	<filter-name>Cors</filter-name>
+  	<filter-class>com.revature.web.filters.CorsFilter</filter-class>
+  </filter>
   
+  <filter-mapping>
+  	<filter-name>Cors</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+
 </web-app>

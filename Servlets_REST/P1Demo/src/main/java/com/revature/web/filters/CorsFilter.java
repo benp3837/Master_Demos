@@ -10,7 +10,6 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletResponse;
 
 public class CorsFilter implements Filter {
-	
 	/*
 	 * The idea of a Filter, is that before the request is delegated to a Servlet,
 	 * it must first pass through any and all filters
