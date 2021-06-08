@@ -12,6 +12,7 @@ import com.revature.models.Book;
 	//added a field in Author to reference Books with a OneTOMany relationship (found in models.Author) 
 		//thus, we had to change the boilerplate code and the Author constructor in the Launcher
 	//created the AuthorDAO
+	//fixed the infinite loop by changing the toString() method in Book.
 	//did some more experiments in the Launcher
 	
 
