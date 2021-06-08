@@ -28,9 +28,12 @@ public class Book {
 	@Column(name = "book_genre")
 	private String genre;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinColumn(name = "author_id") 
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@JoinColumn(name = "author_id")
 	private Author author;
+	
+	//btw, note that Hibernate may complain if you have both Book and Author eagerly loading. 
+	//in this case, just delete your closeSessions in the insert methods of the DAO, and switch Book back to Lazy.
 	
 	//woah woah woah what the heck is FetchType and CascadeType?
 	
@@ -41,7 +44,7 @@ public class Book {
 	/*Eager - returns the dependent object immediately with no proxy. This is generally less error prone
 	 * Why is it less error prone? For starters if you close a Session, proxy objects aren't available anymore*/
 	
-	//Cascade defines how the queries will maintain referential integrity. 
+	//CascadeType defines how the queries will maintain referential integrity. 
 	
 	//BTW, a proxy object is an "empty" object that gets filled only when it's needed
 	//Think of it as a "lightweight placeholder"
@@ -160,7 +163,8 @@ public class Book {
 
 	@Override
 	public String toString() {
-		return "Book [id=" + id + ", title=" + title + ", genre=" + genre + ", author=" + author + "]";
+		return "Book [id=" + id + ", title=" + title + ", genre=" + genre + ", author=" 
+	+ author.getFirstName() + " " + author.getLastName() + "]";
 	}
 	
 	
