@@ -44,7 +44,8 @@ public class Book {
 	/*Eager - returns the dependent object immediately with no proxy. This is generally less error prone
 	 * Why is it less error prone? For starters if you close a Session, proxy objects aren't available anymore*/
 	
-	//CascadeType defines how the queries will maintain referential integrity. 
+	//Cascade defines how the queries will maintain referential integrity. 
+	//So in the case of CascadeType.ALL, all changes made will cascade to dependent entities 
 	
 	//BTW, a proxy object is an "empty" object that gets filled only when it's needed
 	//Think of it as a "lightweight placeholder"

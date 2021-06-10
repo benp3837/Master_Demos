@@ -1,14 +1,51 @@
 package com.revature.models;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+
+
+@Entity
 public class Avenger {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int av_id;
+	
+	//We'll let Hibernate figure these fields out on its own :)
 	private String av_name;
 	private String av_power;
 	private String first_name;
 	private String last_name;
 	private int power_level;
+	
+	@ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
+	@JoinColumn(name="homeName")
 	private Home home_fk;
+	
+	@ManyToMany(cascade=CascadeType.ALL)
+	@JoinTable(joinColumns = @JoinColumn(name="av_id"), inverseJoinColumns=@JoinColumn(name="team_id"))
+	private List<Team> team;
+	/* With ManyToMany relationships, we need to specify a @JoinTable. 
+	 * @JoinTable defines the table we will create to handle the many to many relationship. 
+	 * The @JoinColumn value is the column in the entity that we are in that will be put in the join table. 
+	 * @inverseJoinColumns is the other column from the entity we share the relationship with. 
+	 * 
+	 * So in other words, JoinColumn is THIS side of the ManyToMany relationship,
+	 * and inverseJoinColumn is the OTHER side of the relationship.
+	 */
+	
+	
+	//boilerplate code------------------
 	
 	public Avenger() {
 		super();

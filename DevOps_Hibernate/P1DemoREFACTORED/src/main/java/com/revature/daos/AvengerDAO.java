@@ -72,6 +72,12 @@ public class AvengerDAO implements AvengerInterface {
 		// TODO Auto-generated method stub
 		return false;
 	}
+	
+	@Override
+	public boolean updateAvenger(Avenger a) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 
 	@Override
 	public boolean killAvenger(int id) {
@@ -79,7 +85,5 @@ public class AvengerDAO implements AvengerInterface {
 		return false;
 	}
 
-	
-	
 	
 }

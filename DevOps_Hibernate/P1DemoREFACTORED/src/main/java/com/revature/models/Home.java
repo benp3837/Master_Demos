@@ -1,12 +1,25 @@
 package com.revature.models;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Home {
 
+	@Id
+	//Note that we don't have a @GeneratedValue annotation here...
+	//The homeName is the Primary Key in this case! So it isn't a serial value that gets generated automatically.
 	private String homeName;
+	
+	//Leave Hibernate to handle these
 	private String stAddr;
 	private String city;
 	private String state;
 	private String zip;
+	
+	
+	
+	//boilerplate code-------------------
 	
 	public Home() {
 		super();

@@ -5,7 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>P1Demo</name>
-  <description>Avengers-based application that looks quite a bit like your P1</description>
+  <description>Avengers-based application that looks quite a bit like your P1 - Now with Hibernate!!</description>
   
   <properties>
 	<maven.compiler.source>1.8</maven.compiler.source>  
@@ -13,7 +13,7 @@
   </properties>
   
   <dependencies>
-  
+	
 	<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 	<dependency>
 		<groupId>javax.servlet</groupId>
@@ -40,6 +40,13 @@
 		<groupId>org.postgresql</groupId>
 		<artifactId>postgresql</artifactId>
 		<version>42.2.14</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-core</artifactId>
+		<version>5.4.26.Final</version>
 	</dependency>
 	
    </dependencies>

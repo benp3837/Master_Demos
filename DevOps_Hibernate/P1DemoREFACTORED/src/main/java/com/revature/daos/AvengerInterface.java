@@ -15,6 +15,8 @@ public interface AvengerInterface {
 	
 	public boolean addAvenger(Avenger a); //add an Avenger. Boolean instead of void so we can make sure it works
 	
+	public boolean updateAvenger(Avenger a);
+	
 	public boolean killAvenger(int id); //delete an Avenger. We'll just use the unique identifier instead of an Avenger
 	
 }

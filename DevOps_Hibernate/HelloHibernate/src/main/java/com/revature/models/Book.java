@@ -42,6 +42,7 @@ public class Book {
 	 * Why is it less error prone? For starters if you close a Session, proxy objects aren't available anymore*/
 	
 	//Cascade defines how the queries will maintain referential integrity. 
+	//So in the case of CascadeType.ALL, all changes made will cascade to dependent entities
 	
 	//BTW, a proxy object is an "empty" object that gets filled only when it's needed
 	//Think of it as a "lightweight placeholder"
