@@ -12,17 +12,30 @@ public class Car {
 	public double fuelLevel;
 
 	
-	//Some Constructors below----------------------------------------------------------------------
+	//Let's also give the Car class a method-------------------
+	
+	//This method will return a String. We do so with the "return" keyword
+	public String drive(int speed) {
+		return "You are going " + speed + " miles per hour in your Car";
+		//note that this isn't a System.out.println!!
+		//we'll see how return types work when we call this method in the Launcher.
+	}
+	
+	
+	
+	//Some boilerplate code below----------------------------------------------------------------------
+	//what do I mean by boilerplate?
+	//boilerplate code is code that is repeated in multiple places with little to no variation.
+	//In our case, our boilerplate code consists of constructors, getters/setters, hashcode, equals, and toString.
 	
 	//Remember, constructors are special methods that initialize the object
 	//In order words, they give values to the object's variables
 	
 	//No args constructor
 	//If you create a Car object without arguments, this no args constructor will be called
-	//Essentially providing default values to the Car object's fields.
+	//In this constructor, we provide default values to the Car object's fields.
 	public Car() {
-		super(); //The parent class of Car is Object (The root Class of all Objects - more on this later) 
-				 //thus, this super(); calls the no args constructor of the Object class
+		super();
 		this.tires = 4;
 		this.color = "white";
 		this.maxSpeed = 90;
@@ -68,15 +81,6 @@ public class Car {
 	//Notice!!! These 4 constructors have the same names, but different arguments
 	//This is METHOD OVERLOADING
 	
-	
-	//Let's also give the Car class a method-------------------
-	
-	//This method will return a String. We do so with the "return" keyword
-	public String drive(int speed) {
-		return "You are going " + speed + " miles per hour in your Car";
-		//note that this isn't a System.out.println!!
-		//we'll see how return types work when we call this method in the Launcher.
-	}
 	
 	//Let's use this method as a quick review on method components:
 	

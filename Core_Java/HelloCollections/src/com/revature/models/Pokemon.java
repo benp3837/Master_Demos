@@ -12,6 +12,10 @@ package com.revature.models;
 		}
 		
 		
+		//Some boilerplate code below----------------------------------------------------------------------
+		//what do I mean by boilerplate?
+		//boilerplate code is code that is repeated in multiple places with little to no variation.
+		//In our case, our boilerplate code consists of constructors, getters/setters, hashcode, equals, and toString.
 		
 		
 		public Pokemon() { //no args constructor
@@ -26,8 +30,9 @@ package com.revature.models;
 		}
 		
 		//Overloaded Constructors are an example of POLYMORPHISM
+		//Remember - overloading is whan you have the same method/constructor name, but different parameters
 	
-		//Hashcode will give each instantiated objects a hash value 
+		//Hashcode will give each instantiated object a hash value 
 		//(a unique value)	
 		@Override
 		public int hashCode() {
@@ -38,7 +43,8 @@ package com.revature.models;
 			return result;
 		}
 	
-		//Equals will let you compare your objects by hashcode	
+		//Equals will let you compare your objects by their hashcode 
+		//(That's why hashcode and equals are generated together)
 		@Override
 		public boolean equals(Object obj) {
 			if (this == obj)
