@@ -1,10 +1,14 @@
 package com.revature.models;
 
+import java.util.ArrayList;
+import java.util.List;
 
-//This CarDealership class will act as our fake database for now
+//This CarDealership class will contain a mock database of Cars
 //We're just going to instantiate an Array of Car objects. Essentially hardcoding a database to read/manipulate.
 public class CarDealership {
 
+	//this Array of Cars will act as our database
+	//in your P0, you'll have a DAO (Data Access Object) that directly accesses a SQL database with real data. 
 	Car[] carArray = { 
 		new Car(1, 4, "blue"),	
 		new Car(2, 4, "red"),
@@ -24,9 +28,10 @@ public class CarDealership {
 		return carArray[id - 1]; //-1 because Arrays are zero-indexed 
 	}
 	
+	//This is a relatively complicated method... Don't worry, this functionality will be easier when we use SQL/JDBC
 	public void addCar(Car car) {
 		
-		Car[] newCarArray = new Car[carArray.length+1]; //new Car array with one more Car than the other
+		Car[] newCarArray = new Car[carArray.length+1]; //make a new Car array with one more Car than the other
 		
 		//populate the new Array with the contens of the old one (note this will leave one null spot)
 		for(int i = 0; i<carArray.length; ++i) {
@@ -37,15 +42,21 @@ public class CarDealership {
 		
 		newCarArray[carArray.length] = car; //fill in the null spot with the new car
 		
-		carArray = newCarArray; //assign this new array to the main one we're using.
+		carArray = newCarArray; //assign the new array to the main carArray variable we're using.
 		
 	}
 	
 	
-	//TAKE HOME PROBLEM!!! Get them to implement this ______  method on their own, and add a menu option to call it.
-	//We'll talk about it tmrw...
-	//Don't overthink it, it's a bit easier than adding a car in my opinion.
-	public void deleteCar(int id) {
+	//TAKE HOME PROBLEM!!! Get them to implement this method on their own, and add a CLI option to call it.
+	//This is a sort of hard problem if you don't have much Java experience. We'll talk about it tmrw!
+	public void getCarsByColor(String color) {
+		
+	
+		for(Car c : carArray) {
+			if(c.color.equals(color)) {
+				System.out.println(c);
+			}
+		}
 		
 	}
 	

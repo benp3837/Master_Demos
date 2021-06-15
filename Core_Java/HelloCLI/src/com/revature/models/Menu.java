@@ -6,9 +6,12 @@ import java.util.Scanner;
 
 public class Menu {
 
+	//Instantiate a CarDealership object so that we can use CarDealership methods.
+	//We'll call different CarDealership methods depending on what menu option the user chooses.
 	CarDealership cd = new CarDealership();
 	
 	//All of the menu display options and control flow are contained in this method
+	//Based on user input, this menu will execute certain functionality
 	public void display() {
 		
 		boolean displayMenu = true; //this will toggle whether the menu continues after user input
@@ -30,7 +33,7 @@ public class Menu {
 			System.out.println("cars -> show all car");
 			System.out.println("carById -> get a car by it's id");
 			System.out.println("addCar -> add a car");
-			System.out.println("TBD...");
+			System.out.println("carsByColor -> show cars of certain colors");
 			System.out.println("exit -> exit car dealership");
 			
 			//parse user input after they ponder menu options
@@ -80,11 +83,19 @@ public class Menu {
 					
 				} catch (InputMismatchException e) {
 					
-					scan.nextLine(); //since the nextLine() in the try won't run if we get here
+					scan.nextLine(); //since the nextLine() in the try won't run if an exception is thrown
 					System.out.println("Something went wrong! Try again...");
 					
 				}
 				
+				break;
+			}
+			
+			case "carsByColor" : {
+				
+				System.out.println("What color car are you looking for?");
+				String color = scan.nextLine();
+				cd.getCarsByColor(color);
 				break;
 			}
 			
