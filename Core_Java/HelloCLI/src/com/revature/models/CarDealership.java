@@ -3,12 +3,12 @@ package com.revature.models;
 import java.util.ArrayList;
 import java.util.List;
 
-//This CarDealership class will contain a mock database of Cars
+//This CarDealership class will contain a mock database of Cars. In your P0, you will have a real database
 //We're just going to instantiate an Array of Car objects. Essentially hardcoding a database to read/manipulate.
-public class CarDealership {
+public class CarDealership implements CarDealershipInterface{
 
 	//this Array of Cars will act as our database
-	//in your P0, you'll have a DAO (Data Access Object) that directly accesses a SQL database with real data. 
+	//in your P0, you'll have a DAO (Data Access Object) Class that directly accesses a SQL database with its methods. 
 	Car[] carArray = { 
 		new Car(1, 4, "blue"),	
 		new Car(2, 4, "red"),
