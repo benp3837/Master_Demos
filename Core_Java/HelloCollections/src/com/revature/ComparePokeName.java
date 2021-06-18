@@ -14,5 +14,9 @@ public class ComparePokeName implements Comparator<Pokemon> {
 		//We want to sort the Pokemon by alphabetical order based on names
 		return o1.getName().compareTo(o2.getName());
 	}
+
+
+
+
 	
 }

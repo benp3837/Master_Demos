@@ -99,7 +99,7 @@ public class Launcher {
 		}
 		
 		//remember, sets have no order... what happens when we try to use .get()?
-		//myPokemonSet.get(4); nothing.
+		//myPokemonSet.get(4); nothing. Because there's no index to "get"
 		
 		
 		System.out.println("=====================================================(Maps)");
