@@ -1,1 +1,30 @@
-<p>todos-home works!</p>
+<!-- *ngIf is a structural directive! It will change the DOM structure based on a boolean -->
+<div *ngIf = "greeterDiv" >
+    <label for="yourName" >What's your name?</label>
+    <!--two way binding to assign the user input to this "name" variable-->
+    <input type="text" id="yourName" [(ngModel)]="name"/>
+    <!--event binding to perform a function when you click on it-->
+    <button (click)="submitName()">Submit</button> 
+</div>
+
+<br>
+<!--If the name variable is empty, it'll evaluate to false (since an empty string is falsey)-->
+<!--But if there IS something in the name variable, the *ngIf will display-->
+<h2 *ngIf="name">Welcome, {{name}}</h2>
+<br>
+
+<div class="grid-container">
+    <!-- Property binding! Using a TS variable's value-->
+    <div *ngFor = "let todo of todosArray" class="todo-card" [hidden]="hiddenToggle">
+        <!-- String interpolation!! Taking TS values and putting them in our HTML-->
+        <!-- Grabbing the these values from the todosArray index 0 -->
+        <h2>Todo #{{todo.id}}</h2> 
+        <p>Task: {{todo.content}}</p>
+        <p>Status: {{todo.status}}</p>
+        <label for="updateBox{{todo.id}}">Update Task:</label>
+        <input id="updateBox{{todo.id}}" [(ngModel)]="todo.content"/>
+    </div>
+</div>
+
+<!-- Property binding! We're binding a button click to a function in our TS. -->
+<button (click)="toggleVisibility()">See your todo list</button>
