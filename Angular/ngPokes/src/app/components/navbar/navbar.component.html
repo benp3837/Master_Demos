@@ -1,1 +1,13 @@
-<p>navbar works!</p>
+<nav class="navbar navbar-dark bg-dark navbar-expand-sm"> <!-- Some navbar classes I think look nice -->
+    <ul class="navbar-nav"> <!-- unordered list, to store the options in my navbar-->
+
+        <!-- The options in this navbar will have the class nav-link -->
+        <!-- Which will let us change the routerlink the user is on, thus using our routes! -->
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive='active' routerLink='welcome'>Welcome</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive='active' routerLink='pokedex'>Pokedex</a>
+      </li>
+    </ul>
+  </nav>

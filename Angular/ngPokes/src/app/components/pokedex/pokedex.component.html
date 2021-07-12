@@ -1,1 +1,27 @@
-<p>pokedex works!</p>
+<div class="row">
+    <!--Two way binding this input field to a variable called input in the pokedex.component.ts-->
+    <!-- In order to use ngModel I need to import the forms module in the app.module.ts-->
+    <input class="col" type="number" [(ngModel)]='input'/> 
+    <!-- Event binding on this button to call the getPoke() function in pokedex.component.ts-->
+    <button class="btn btn-primary" (click)="getPoke()">Favorite Pokemon?</button>
+  </div>
+  
+  <!--I want to create a table to hold the information of the Pokemon I want to display-->
+  <table class="table" *ngIf="pokemon"> <!-- If my pokemon has data, populate this HTML (null is falsy)-->
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Type</th>
+        <th scope="col">Sprite</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{pokemon.name}}</td>
+        <td>{{pokemon.types[0].type.name}}<span *ngIf="pokemon.types.length>1">{{pokemon.types[1].type.name | poketype}}</span></td>
+        <td><img src="{{pokemon.sprites.front_default}}"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <span *ngIf="pokemon.types.length>1">{{pokemon.types[1].type.name | poketype}}</span> -->
