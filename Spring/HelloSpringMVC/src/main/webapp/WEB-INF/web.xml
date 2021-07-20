@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  
+  <display-name>HelloSpringMVC</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- Send them this in BensBlocks too -->
+  
+  <!-- First, we want to tell our application how to build our ApplicationContext (our Spring IoC Container) -->
+   <context-param>
+  	<param-name>contextConfiguration</param-name>
+  	<param-value>/WEB-INF/applicationContext.xml</param-value> <!-- The location where we'll make our aC.xml -->
+  </context-param>
+  
+  <!-- ContextLoaderListener ties everything together - tomcat will be made aware of the ApplicationContext -->
+  <listener>
+  	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  
+  <!-- We don't have to design our servlet, but we still have to map the servlet that's under the hood -->
+  <servlet>
+  	<servlet-name>DispatcherServlet</servlet-name>
+  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  	<init-param>
+  		<!-- This stuff below defines where we put our configuration file for this Servlet -->
+  		<param-name>contextConfigLocation</param-name>
+  		<param-value>/WEB-INF/dispatcherContext.xml</param-value>
+  	</init-param>
+  </servlet>
+  
+  <!-- The usual... just mapping our servlet. Notice the URL pattern!! we don't actually need the * I learned -->
+  <servlet-mapping>
+  	<servlet-name>DispatcherServlet</servlet-name>
+  	<url-pattern>/</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
