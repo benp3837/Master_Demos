@@ -1,0 +1,144 @@
+2021-07-22 05:57:56 INFO  LoggingAspect:21 - Avenger [aveId=0, aveName=null, power=null, firstName=null, lastName=null, powerLevel=0]invoked void com.revature.models.Avenger.setAveId(int)
+2021-07-22 05:57:56 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=null, power=null, firstName=null, lastName=null, powerLevel=0]invoked void com.revature.models.Avenger.setAveName(String)
+2021-07-22 05:57:56 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=null, lastName=null, powerLevel=0]invoked void com.revature.models.Avenger.setFirstName(String)
+2021-07-22 05:57:56 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=Wanda, lastName=null, powerLevel=0]invoked void com.revature.models.Avenger.setLastName(String)
+2021-07-22 05:57:56 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=Wanda, lastName=Maximoff, powerLevel=0]invoked void com.revature.models.Avenger.setPower(String)
+2021-07-22 05:57:56 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=Scarlet Witch, power=Magic hands, firstName=Wanda, lastName=Maximoff, powerLevel=0]invoked void com.revature.models.Avenger.setPowerLevel(int)
+2021-07-22 12:42:10 INFO  LoggingAspect:21 - Avenger [aveId=0, aveName=null, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setAveId(int)
+2021-07-22 12:42:10 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=null, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setAveName(String)
+2021-07-22 12:42:10 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setFirstName(String)
+2021-07-22 12:42:10 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=Wanda, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setLastName(String)
+2021-07-22 12:42:10 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=Wanda, lastName=Maximoff, powerLevel=0] invoked void com.revature.models.Avenger.setPower(String)
+2021-07-22 12:42:10 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=Scarlet Witch, power=Magic hands, firstName=Wanda, lastName=Maximoff, powerLevel=0] invoked void com.revature.models.Avenger.setPowerLevel(int)
+2021-07-22 12:42:10 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=Scarlet Witch, power=Magic hands, firstName=Wanda, lastName=Maximoff, powerLevel=200] invoked String com.revature.models.Avenger.getAveName()
+2021-07-22 12:42:42 INFO  LoggingAspect:21 - Avenger [aveId=0, aveName=null, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setAveId(int)
+2021-07-22 12:42:42 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=null, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setAveName(String)
+2021-07-22 12:42:42 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setFirstName(String)
+2021-07-22 12:42:42 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=Wanda, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setLastName(String)
+2021-07-22 12:42:42 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=Wanda, lastName=Maximoff, powerLevel=0] invoked void com.revature.models.Avenger.setPower(String)
+2021-07-22 12:42:42 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=Scarlet Witch, power=Magic hands, firstName=Wanda, lastName=Maximoff, powerLevel=0] invoked void com.revature.models.Avenger.setPowerLevel(int)
+2021-07-22 12:42:42 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=Scarlet Witch, power=Magic hands, firstName=Wanda, lastName=Maximoff, powerLevel=200] invoked String com.revature.models.Avenger.getAveName()
+2021-07-22 12:43:03 INFO  LoggingAspect:21 - Avenger [aveId=0, aveName=null, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setAveId(int)
+2021-07-22 12:43:03 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=null, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setAveName(String)
+2021-07-22 12:43:03 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setFirstName(String)
+2021-07-22 12:43:03 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=Wanda, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setLastName(String)
+2021-07-22 12:43:03 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=Wanda, lastName=Maximoff, powerLevel=0] invoked void com.revature.models.Avenger.setPower(String)
+2021-07-22 12:43:03 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=Scarlet Witch, power=Magic hands, firstName=Wanda, lastName=Maximoff, powerLevel=0] invoked void com.revature.models.Avenger.setPowerLevel(int)
+2021-07-22 12:43:22 INFO  LoggingAspect:21 - Avenger [aveId=0, aveName=null, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setAveId(int)
+2021-07-22 12:43:22 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=null, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setAveName(String)
+2021-07-22 12:43:22 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setFirstName(String)
+2021-07-22 12:43:22 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=Wanda, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setLastName(String)
+2021-07-22 12:43:22 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=Wanda, lastName=Maximoff, powerLevel=0] invoked void com.revature.models.Avenger.setPower(String)
+2021-07-22 12:43:22 INFO  LoggingAspect:21 - Avenger [aveId=6, aveName=Scarlet Witch, power=Magic hands, firstName=Wanda, lastName=Maximoff, powerLevel=0] invoked void com.revature.models.Avenger.setPowerLevel(int)
+2021-07-22 12:48:32 INFO  LoggingAspect:23 - Avenger [aveId=0, aveName=null, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setAveId(int)
+2021-07-22 12:48:32 INFO  LoggingAspect:23 - Avenger [aveId=6, aveName=null, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setAveName(String)
+2021-07-22 12:48:32 INFO  LoggingAspect:23 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setFirstName(String)
+2021-07-22 12:48:32 INFO  LoggingAspect:23 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=Wanda, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setLastName(String)
+2021-07-22 12:48:32 INFO  LoggingAspect:23 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=Wanda, lastName=Maximoff, powerLevel=0] invoked void com.revature.models.Avenger.setPower(String)
+2021-07-22 12:48:32 INFO  LoggingAspect:23 - Avenger [aveId=6, aveName=Scarlet Witch, power=Magic hands, firstName=Wanda, lastName=Maximoff, powerLevel=0] invoked void com.revature.models.Avenger.setPowerLevel(int)
+2021-07-22 12:48:32 WARN  LoggingAspect:29 - com.revature.daos.AvengerDAO@34237b90 invoked String com.revature.daos.AvengerDAO.fight(Avenger,String,double) throwing class java.lang.ArithmeticException
+java.lang.ArithmeticException: null
+	at com.revature.daos.AvengerDAO.fight(AvengerDAO.java:41) ~[classes/:?]
+	at com.revature.daos.AvengerDAO$$FastClassBySpringCGLIB$$bd63e53a.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:62) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:55) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at com.revature.daos.AvengerDAO$$EnhancerBySpringCGLIB$$c4b2f077.fight(<generated>) [classes/:?]
+	at com.revature.Launcher.main(Launcher.java:37) [classes/:?]
+2021-07-22 12:51:57 INFO  LoggingAspect:23 - Avenger [aveId=0, aveName=null, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setAveId(int)
+2021-07-22 12:51:57 INFO  LoggingAspect:23 - Avenger [aveId=6, aveName=null, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setAveName(String)
+2021-07-22 12:51:57 INFO  LoggingAspect:23 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setFirstName(String)
+2021-07-22 12:51:57 INFO  LoggingAspect:23 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=Wanda, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setLastName(String)
+2021-07-22 12:51:57 INFO  LoggingAspect:23 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=Wanda, lastName=Maximoff, powerLevel=0] invoked void com.revature.models.Avenger.setPower(String)
+2021-07-22 12:51:57 INFO  LoggingAspect:23 - Avenger [aveId=6, aveName=Scarlet Witch, power=Magic hands, firstName=Wanda, lastName=Maximoff, powerLevel=0] invoked void com.revature.models.Avenger.setPowerLevel(int)
+2021-07-22 12:51:57 WARN  LoggingAspect:29 - com.revature.daos.AvengerDAO@34237b90 invoked String com.revature.daos.AvengerDAO.fight(Avenger,String,double) throwing class java.lang.ArithmeticException
+java.lang.ArithmeticException: null
+	at com.revature.daos.AvengerDAO.fight(AvengerDAO.java:41) ~[classes/:?]
+	at com.revature.daos.AvengerDAO$$FastClassBySpringCGLIB$$bd63e53a.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:62) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:55) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at com.revature.daos.AvengerDAO$$EnhancerBySpringCGLIB$$c4b2f077.fight(<generated>) [classes/:?]
+	at com.revature.Launcher.main(Launcher.java:37) [classes/:?]
+2021-07-22 12:53:18 INFO  LoggingAspect:23 - Avenger [aveId=0, aveName=null, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setAveId(int)
+2021-07-22 12:53:18 INFO  LoggingAspect:23 - Avenger [aveId=6, aveName=null, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setAveName(String)
+2021-07-22 12:53:18 INFO  LoggingAspect:23 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setFirstName(String)
+2021-07-22 12:53:18 INFO  LoggingAspect:23 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=Wanda, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setLastName(String)
+2021-07-22 12:53:18 INFO  LoggingAspect:23 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=Wanda, lastName=Maximoff, powerLevel=0] invoked void com.revature.models.Avenger.setPower(String)
+2021-07-22 12:53:18 INFO  LoggingAspect:23 - Avenger [aveId=6, aveName=Scarlet Witch, power=Magic hands, firstName=Wanda, lastName=Maximoff, powerLevel=0] invoked void com.revature.models.Avenger.setPowerLevel(int)
+2021-07-22 12:53:18 INFO  LoggingAspect:29 - com.revature.daos.AvengerDAO@781a9412 invoked String com.revature.daos.AvengerDAO.fight(Avenger,String,double) returning Captian America attacks a bad guy with Shield Smash from 18.0 feet away.
+2021-07-22 13:07:35 INFO  LoggingAspect:23 - Avenger [aveId=0, aveName=null, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setAveId(int)
+2021-07-22 13:07:35 INFO  LoggingAspect:23 - Avenger [aveId=6, aveName=null, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setAveName(String)
+2021-07-22 13:07:35 INFO  LoggingAspect:23 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setFirstName(String)
+2021-07-22 13:07:35 INFO  LoggingAspect:23 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=Wanda, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setLastName(String)
+2021-07-22 13:07:35 INFO  LoggingAspect:23 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=Wanda, lastName=Maximoff, powerLevel=0] invoked void com.revature.models.Avenger.setPower(String)
+2021-07-22 13:07:35 INFO  LoggingAspect:23 - Avenger [aveId=6, aveName=Scarlet Witch, power=Magic hands, firstName=Wanda, lastName=Maximoff, powerLevel=0] invoked void com.revature.models.Avenger.setPowerLevel(int)
+2021-07-22 13:07:35 INFO  LoggingAspect:30 - com.revature.daos.AvengerDAO@781a9412 invoked String com.revature.daos.AvengerDAO.fight(Avenger,String,double) returning Captian America attacks a bad guy with Shield Smash from 18.0 feet away.
+2021-07-22 13:07:35 WARN  LoggingAspect:36 - com.revature.daos.AvengerDAO@781a9412 invoked String com.revature.daos.AvengerDAO.fight(Avenger,String,double) throwing class java.lang.ArithmeticException
+java.lang.ArithmeticException: null
+	at com.revature.daos.AvengerDAO.fight(AvengerDAO.java:41) ~[classes/:?]
+	at com.revature.daos.AvengerDAO$$FastClassBySpringCGLIB$$bd63e53a.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:62) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:55) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at com.revature.daos.AvengerDAO$$EnhancerBySpringCGLIB$$c4b2f077.fight(<generated>) [classes/:?]
+	at com.revature.Launcher.main(Launcher.java:39) [classes/:?]
+2021-07-22 13:36:53 INFO  LoggingAspect:27 - Avenger [aveId=0, aveName=null, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setAveId(int)
+2021-07-22 13:36:53 INFO  LoggingAspect:27 - Avenger [aveId=6, aveName=null, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setAveName(String)
+2021-07-22 13:36:53 INFO  LoggingAspect:27 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setFirstName(String)
+2021-07-22 13:36:53 INFO  LoggingAspect:27 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=Wanda, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setLastName(String)
+2021-07-22 13:36:53 INFO  LoggingAspect:27 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=Wanda, lastName=Maximoff, powerLevel=0] invoked void com.revature.models.Avenger.setPower(String)
+2021-07-22 13:36:53 INFO  LoggingAspect:27 - Avenger [aveId=6, aveName=Scarlet Witch, power=Magic hands, firstName=Wanda, lastName=Maximoff, powerLevel=0] invoked void com.revature.models.Avenger.setPowerLevel(int)
+2021-07-22 13:36:53 INFO  LoggingAspect:47 - Captian America is about to throw down!
+2021-07-22 13:36:53 INFO  LoggingAspect:34 - com.revature.daos.AvengerDAO@aed0151 invoked String com.revature.daos.AvengerDAO.fight(Avenger,String,double) returning Captian America attacks a bad guy with Shield Smash from 18.0 feet away.
+2021-07-22 13:36:53 INFO  LoggingAspect:54 - I am happening after the fight
+2021-07-22 13:36:53 INFO  LoggingAspect:27 - Avenger [aveId=6, aveName=Scarlet Witch, power=Magic hands, firstName=Wanda, lastName=Maximoff, powerLevel=200] invoked String com.revature.models.Avenger.getAveName()
+2021-07-22 13:36:53 INFO  LoggingAspect:47 - Scarlet Witch is about to throw down!
+2021-07-22 13:36:53 INFO  LoggingAspect:27 - Avenger [aveId=6, aveName=Scarlet Witch, power=Magic hands, firstName=Wanda, lastName=Maximoff, powerLevel=200] invoked String com.revature.models.Avenger.getAveName()
+2021-07-22 13:36:53 WARN  LoggingAspect:50 - Scarlet Witch is violating proper social distancing; so much for being a hero. :(
+2021-07-22 13:37:32 INFO  LoggingAspect:27 - Avenger [aveId=0, aveName=null, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setAveId(int)
+2021-07-22 13:37:32 INFO  LoggingAspect:27 - Avenger [aveId=6, aveName=null, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setAveName(String)
+2021-07-22 13:37:32 INFO  LoggingAspect:27 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setFirstName(String)
+2021-07-22 13:37:32 INFO  LoggingAspect:27 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=Wanda, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setLastName(String)
+2021-07-22 13:37:32 INFO  LoggingAspect:27 - Avenger [aveId=6, aveName=Scarlet Witch, power=null, firstName=Wanda, lastName=Maximoff, powerLevel=0] invoked void com.revature.models.Avenger.setPower(String)
+2021-07-22 13:37:32 INFO  LoggingAspect:27 - Avenger [aveId=6, aveName=Scarlet Witch, power=Magic hands, firstName=Wanda, lastName=Maximoff, powerLevel=0] invoked void com.revature.models.Avenger.setPowerLevel(int)
+2021-07-22 13:37:32 INFO  LoggingAspect:47 - Captian America is about to throw down!
+2021-07-22 13:37:32 INFO  LoggingAspect:34 - com.revature.daos.AvengerDAO@aed0151 invoked String com.revature.daos.AvengerDAO.fight(Avenger,String,double) returning Captian America attacks a bad guy with Shield Smash from 18.0 feet away.
+2021-07-22 13:37:32 INFO  LoggingAspect:54 - I am happening after the fight
+2021-07-22 13:37:32 INFO  LoggingAspect:27 - Avenger [aveId=6, aveName=Scarlet Witch, power=Magic hands, firstName=Wanda, lastName=Maximoff, powerLevel=200] invoked String com.revature.models.Avenger.getAveName()
+2021-07-22 13:37:32 INFO  LoggingAspect:47 - Scarlet Witch is about to throw down!
+2021-07-22 13:37:32 INFO  LoggingAspect:27 - Avenger [aveId=6, aveName=Scarlet Witch, power=Magic hands, firstName=Wanda, lastName=Maximoff, powerLevel=200] invoked String com.revature.models.Avenger.getAveName()
+2021-07-22 13:37:32 WARN  LoggingAspect:50 - Scarlet Witch got too close!!! I can't let you get close. I'll throw an Exception
