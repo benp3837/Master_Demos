@@ -1,15 +1,13 @@
 package com.revature.models;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 
 @Entity //map this class as an entity
@@ -26,31 +24,47 @@ public class Pokemon {
 	private String type;
 	private int level;
 	
-	//Lombok doesn't have a super convenient way to make an all-args-minus-something-constructor
-	public Pokemon(String name, String type, int level) {
-		super();
-		this.name = name;
-		this.type = type;
-		this.level = level;
-	}
-
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@JoinColumn(name = "trainer_id")
+	private Trainer trainer;
+	
+	
+	
 	public Pokemon() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Pokemon(int id, String name, String type, int level) {
+
+
+	public Pokemon(int id, String name, String type, int level, Trainer trainer) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.type = type;
 		this.level = level;
+		this.trainer = trainer;
 	}
+
+
+
+	public Pokemon(String name, String type, int level, Trainer trainer) {
+		super();
+		this.name = name;
+		this.type = type;
+		this.level = level;
+		this.trainer = trainer;
+	}
+
+
 
 	@Override
 	public String toString() {
-		return "Pokemon [id=" + id + ", name=" + name + ", type=" + type + ", level=" + level + "]";
+		return "Pokemon [id=" + id + ", name=" + name + ", type=" + type + ", level=" + level + ", trainer=" + trainer
+				+ "]";
 	}
+
+
 
 	@Override
 	public int hashCode() {
@@ -59,9 +73,12 @@ public class Pokemon {
 		result = prime * result + id;
 		result = prime * result + level;
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((trainer == null) ? 0 : trainer.hashCode());
 		result = prime * result + ((type == null) ? 0 : type.hashCode());
 		return result;
 	}
+
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -81,6 +98,11 @@ public class Pokemon {
 				return false;
 		} else if (!name.equals(other.name))
 			return false;
+		if (trainer == null) {
+			if (other.trainer != null)
+				return false;
+		} else if (!trainer.equals(other.trainer))
+			return false;
 		if (type == null) {
 			if (other.type != null)
 				return false;
@@ -89,38 +111,67 @@ public class Pokemon {
 		return true;
 	}
 
+
+
 	public int getId() {
 		return id;
 	}
+
+
 
 	public void setId(int id) {
 		this.id = id;
 	}
 
+
+
 	public String getName() {
 		return name;
 	}
+
+
 
 	public void setName(String name) {
 		this.name = name;
 	}
 
+
+
 	public String getType() {
 		return type;
 	}
+
+
 
 	public void setType(String type) {
 		this.type = type;
 	}
 
+
+
 	public int getLevel() {
 		return level;
 	}
 
+
+
 	public void setLevel(int level) {
 		this.level = level;
 	}
-		
+
+
+
+	public Trainer getTrainer() {
+		return trainer;
+	}
+
+
+
+	public void setTrainer(Trainer trainer) {
+		this.trainer = trainer;
+	}
+	
+	
 	
 	
 }

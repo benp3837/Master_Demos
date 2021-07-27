@@ -53,7 +53,7 @@ public class PokemonController {
 	}
 	
 	@PostMapping
-	public ResponseEntity addAvenger(@RequestBody Pokemon p) {
+	public ResponseEntity addPokemon(@RequestBody Pokemon p) {
 		pDAO.save(p);
 		return ResponseEntity.status(201).build();
 	}
