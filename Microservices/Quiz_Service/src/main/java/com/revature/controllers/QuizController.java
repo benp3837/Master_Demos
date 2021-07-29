@@ -77,8 +77,8 @@ public class QuizController {
 	@GetMapping("/cards")
 	public ResponseEntity<List<Flashcard>> getCards() {
 		//getForObject() will send a GET request for a certain object, and specify what type to return the results as
-		//so now, this will send a get request to our flashcard service, which will get all our flashcards!!
-		List<Flashcard> all = this.restTemplate.getForObject("http://localhost:8090/flashcard", List.class);
+		//so now, this will send a get request to our gatewat, which will talk to our flashcard service and get all our flashcards!!
+		List<Flashcard> all = this.restTemplate.getForObject("http://localhost:8092/flashcard", List.class);
 		
 		if(all.isEmpty()) {
 			return ResponseEntity.noContent().build();
