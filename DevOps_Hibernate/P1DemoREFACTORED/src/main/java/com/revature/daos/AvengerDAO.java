@@ -7,9 +7,13 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Query;
+
+import org.hibernate.Session;
+
 import com.revature.models.Avenger;
-import com.revature.models.Home;
 import com.revature.utils.ConnectionUtil;
+import com.revature.utils.HibernateUtil;
 
 public class AvengerDAO implements AvengerInterface {
 
@@ -63,8 +67,14 @@ public class AvengerDAO implements AvengerInterface {
 
 	@Override
 	public Avenger getAvengerById(int id) {	
-		// TODO Auto-generated method stub
-		return null;
+		
+		Session session = HibernateUtil.getSession();
+		
+		Query query = session.createSQLQuery("CALL StoredProcedureTest(:parameter)")
+				.addEntity(Avenger.class)
+				.setParameter("parameter", parameter);
+
+				ArrayList<Avenger> results = query.toString();
 	}
 
 	@Override
