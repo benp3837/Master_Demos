@@ -42,13 +42,13 @@ public class DinoController {
             
             ctx.status(404);
             
-        }else{ //otherwise, turn the dino into JSON, and send it back to the user in the response
+        } else { //otherwise, turn the dino into JSON, and send it back to the user in the response
         	
             Gson gson = new Gson();
             
-            String bookJSON = gson.toJson(dino);
+            String JSONdino = gson.toJson(dino);
             
-            ctx.result(bookJSON);
+            ctx.result(JSONdino);
             
             ctx.status(200);
         }
@@ -71,8 +71,33 @@ public class DinoController {
         
         ctx.result(json); //optional - send back the dino object that we just inputted into the database
       
+        //ADD YOUR ERROR HANDLING
+        
 	};
 	
-	
+	public Handler deleteDinoByIdHandler = (ctx) -> {
+		
+		int id = Integer.parseInt(ctx.pathParam("id")); //take the given path param (id) and parse it into an int
+		
+		Dinosaur[] newArr = dao.deleteDinoById(id);
+		
+		if(newArr == null){ //if delete fails... send a message and 404 error code 
+        	
+            ctx.result("Dino failed to delete!");
+            
+            ctx.status(404);
+		
+		} else { 
+        	
+            Gson gson = new Gson();
+            
+            String JSONDinoArr = gson.toJson(newArr);
+            
+            ctx.result(JSONDinoArr);
+            
+            ctx.status(200);
+        }
+		
+	};
 	
 }

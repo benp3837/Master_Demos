@@ -24,7 +24,7 @@ public class DinoDAO {
 	//as we know, Arrays are fixed in size. So what if we want to add a new dino? (Well we should've used an ArrayList...)
 	//an ugly workaround will be to just create a new array with the existing and new values
 	//then we can assign the original dinoArray to this new array
-	public void inputDino(Dinosaur dino) {
+	public Dinosaur[] inputDino(Dinosaur dino) {
 		Dinosaur[] newArr = new Dinosaur[dinoArray.length+1]; //length of dinoArray plus one spot for the new dino
 		
 		for(int i = 0; i<dinoArray.length; ++i) {
@@ -36,6 +36,26 @@ public class DinoDAO {
 		newArr[dinoArray.length] = dino; //insert the new dino into the last index, which was null til now.
 		
 		dinoArray = newArr; //assign the OG dinoArray variable to this newArr.
-}
+		
+		return dinoArray;
+	}
+	
+	public Dinosaur[] deleteDinoById(int id) {
+		Dinosaur[] newArr = new Dinosaur[dinoArray.length]; //length of dinoArray minus one spot
+		
+		for(int i = 0; i<dinoArray.length; ++i) {
+			System.out.println(i);
+			if(dinoArray[i].getId() == id) { //skip the dino with an id equal to the id of the dino to delete
+				continue;
+			} else {
+ 				newArr[i] = dinoArray[i]; //populate the new array with the existing array, minus the skipped dino
+			}	
+		}
+		
+		dinoArray = newArr; //assign the OG dinoArray to this newArr
+		
+		return dinoArray;
+		
+	}
 	
 }
