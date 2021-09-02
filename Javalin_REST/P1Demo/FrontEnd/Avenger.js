@@ -1,4 +1,4 @@
-const url = 'http://localhost:8080/P1Demo/' //I grabbed this base URL from postman
+const url = 'http://localhost:8090/' //I grabbed this base URL from postman
 //it's also what shows up when you run as server and get your 404 page
 //Eventually, we'll use this base URL and make calls to the server by adding endpoints to it
 
