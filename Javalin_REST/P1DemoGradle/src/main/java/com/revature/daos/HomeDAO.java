@@ -65,10 +65,6 @@ public class HomeDAO implements HomeInterface {
 
 	
 	
-	
-	
-	
-	
 	//wont implement-----------------------------------------
 	@Override
 	public boolean addHome(Home home) {

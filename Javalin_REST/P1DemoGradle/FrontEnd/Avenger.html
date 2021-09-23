@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Secret Shield Database App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--I just googled "bootstrap cdn" and this ^^^ was in the second link under "CSS"-->
+    <!--Thanks to bootstrap, we can style elements using the class attribute-->
+</head>
+<body>
+    <div class="container" id="fullcontainer">
+        <!--We need a div called container to hold all the bootstrap stuff-->
+        <!--only to be added after adding login functionality in back end-->
+        <div id="login-row" class="row">
+            <h3 class="col-lg-12">Please enter your login credentials</h3>
+            <input id="username" type="text" placeholder="username" class="col-sm-4 form-control">
+            <input id="password" type="password" placeholder="password" class="col-sm-4 form-control">  
+            <button id="loginButton" class="btn btn-dark">Login</button>         
+        </div>
+        <!--only to be added after adding login functionality in back end-->
+        <div id="table-row" class="row">
+        <!--Then we need rows inside the container to organize it-->
+            <table id="avengerTable" class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Hero Name</th>
+                        <th>Hero Power</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Power Level</th>
+                        <th>Home Base</th>
+                    </tr>
+                </thead>
+                <tbody id="avengerBody">
+                    <!--We're going to leave the table body blank!-->
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <br>
+        <button id="getAvengerButton" class="btn btn-success">Avengers Assemble!</button> 
+    </div>
+    <script src="Avenger.js"></script>
+</body>
+</html>
