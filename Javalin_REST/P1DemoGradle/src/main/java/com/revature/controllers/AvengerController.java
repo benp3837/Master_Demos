@@ -19,15 +19,26 @@ public class AvengerController {
 	
 	public Handler getAllAvengersHandler = (ctx) -> {
 		
-		List<Avenger> allAvengers = as.getAllAvengers(); //we create an array with avenger data (using service to talk to dao)
+		if(ctx.req.getSession(false) != null) { //if a session exists...
+			
+			System.out.println("user is logged in and has a session");
+			
+			List<Avenger> allAvengers = as.getAllAvengers(); //we create an array with avenger data (using service to talk to dao)
+			
+			Gson gson = new Gson(); //instantiate a GSON object to make JSON <-> POJO conversions
+			
+			String JSONAvengers = gson.toJson(allAvengers); //convert any Java object or collection into a JSON String 
+			
+			ctx.result(JSONAvengers); //return our dinos
+			
+			ctx.status(200); //success :)
+			
+		} else {
+			System.out.println("user is NOT logged in and doesn't have a session");
+			ctx.status(403); //forbidden
+		}
 		
-		Gson gson = new Gson(); //instantiate a GSON object to make JSON <-> POJO conversions
-		
-		String JSONAvengers = gson.toJson(allAvengers); //convert any Java object or collection into a JSON String 
-		
-		ctx.result(JSONAvengers); //return our dinos
-		
-		ctx.status(200); //success :)
+
 		
 	};
 

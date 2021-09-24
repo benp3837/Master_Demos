@@ -41,7 +41,7 @@ public class ConnectionUtil {
 		
 //		//We need to provide our database credentials
 //		//We'll hardcode them for now, but we'll see how to hide this username/password in environment variables
-		String url = "jdbc:postgresql://localhost:5432/postgres?currentSchema=P1Demo";
+		String url = "jdbc:postgresql://localhost:5432/postgres?currentSchema=p1demo.avengers";
 		String username = "postgres";
 		String password = "Sparky2014!!"; //this will be whatever password you set in postgres (or RDS if you're using that)
 //									  //hopefully you just left it as password...

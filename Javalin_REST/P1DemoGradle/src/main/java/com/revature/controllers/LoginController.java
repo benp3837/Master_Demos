@@ -25,7 +25,7 @@ public class LoginController {
 		
 		Gson gson = new Gson(); //rememeber, we need this for JSON -> Java conversions
 		
-		LoginDTO LDTO = gson.fromJson(body, LoginDTO.class); //turn that JSON String into a Java Avenger Object
+		LoginDTO LDTO = gson.fromJson(body, LoginDTO.class); //turn that JSON String into a LoginDTO Object
 		
 		//----------------do this stuff below AFTER building the login service method--------------------------------
 		
@@ -33,8 +33,10 @@ public class LoginController {
 		
 		//execute the login() method of LoginController using the username and password in the newly created LoginDTO
 		if(ls.login(LDTO.username, LDTO.password)) { //if login from the LoginService is successful...
-
-		String jwt = JwtUtil.generate("demoMan","password"); //generate a Java Web Token to establish a session(???)
+			
+		String jwt = JwtUtil.generate("demoMan","password"); //generate a Java Web Token 
+		
+		ctx.req.getSession(); //create a user session
 		
 		ctx.status(200); //successful status code
 		

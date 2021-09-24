@@ -20,7 +20,8 @@ public static void main(String[] args) {
 		).start(8090);
 		
         //GET /avengers => return all avengers
-        app.get("/avengers", dc.getAllAvengersHandler);
+		
+        	app.get("/avengers", dc.getAllAvengersHandler);
 
         //app.get("/avengers/:id", dc.getAvengerByIdHandler);
 		
