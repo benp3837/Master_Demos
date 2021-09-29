@@ -8,7 +8,7 @@ import org.hibernate.cfg.Configuration;
 //Sessions manage the actual connection to our database.
 public class HibernateUtil {
 
-	//We use the SessionFactory interface in order to get a Session. 
+	//We use the SessionFactory interface in order to get a Session. It's a facotry for Sessions!  
 	//Note that we point it to the hibernate.cfg.xml file where our database credentials etc. are stored.
 	private static SessionFactory sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
 	

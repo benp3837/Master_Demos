@@ -2,38 +2,63 @@ package com.revature;
 
 import java.util.List;
 
-import com.revature.daos.BookDAO;
-import com.revature.models.Author;
-import com.revature.models.Book;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+
+import com.revature.daos.MovieDao;
+import com.revature.models.Director;
+import com.revature.models.Movie;
+import com.revature.utils.HibernateUtil;
 
 public class Launcher {
 
-	private static BookDAO bDAO = new BookDAO();
-	
-	//we're going to use the main method to insert Books into our Database
+	//we're going to use the main method to insert Movies into our DB
 	public static void main(String[] args) {
 		
-		//Think of the Book objects first, then make these
-		//This is just to make the Book instantiation easier... 
-		//but you could also just instantiate them in the Book constructors.
-		Author a1 = new Author("Ben", "Petruzziello", 1998);
-		Author a2 = new Author("Pen", "Betruzziello", 1889);
+		MovieDao mDao = new MovieDao();
 		
-		//(Get them to call out some real books to use)
-		Book b1 = new Book("CoolBook", "Fantasy", a1);
-		Book b2 = new Book("OldBook", "NonFiction", a2);
-
-		//insert our new books using the BookDAO method
-		bDAO.insertBook(b1);
-		bDAO.insertBook(b2);
-		
-		//use the findAll method of the BookDAO to populate a List of Books
-		List<Book> books = bDAO.findAllBooks();
-		
-		//print out all the books in the List.
-		for(Book b : books) {
-			System.out.println(b);
+		/*
+		try(Session ses = HibernateUtil.getSession()){
+			System.out.println("Hello you have a Connection to your DB with Hibernate!");
+			HibernateUtil.closeSession(); //if you want to leave this connection test in, close the session within the try
+		} catch (HibernateException e) {
+			System.out.println("DB connection failed!!");
 		}
+		 */
+		
+		//creating some directors
+		Director d1 = new Director("Stewart", "Hendler", 1978);
+		Director d2 = new Director("Quentin", "Tarantino", 1963);
+		Director d3 = new Director("David", "Lynch", 1946);
+		
+		//creating some movies
+		Movie m1 = new Movie("Forward Unto Dawn", "Action/Sci-FI", d1);
+		Movie m2 = new Movie("Pulp Fiction", "Drama", d2);
+		Movie m3 = new Movie("Blue Velvet", "Mystery/Thriller", d3);
+		
+		//insert our new movies into the database
+		mDao.insertMovie(m1);
+		mDao.insertMovie(m2);
+		mDao.insertMovie(m3);
+		//mDao.insertMovie(m1);
+		//mDao.insertMovie(m2);
+		
+		//retrieve our Movies from the DB
+		List<Movie> allMovies = mDao.findAllMovies();
+		
+		for(Movie m : allMovies) {
+			System.out.println(m);
+		}
+		
+		//finding movie by id
+		System.out.println(mDao.findMovieById(1));
+		
+		//updating movie
+		m1.setTitle("OOGABOOGABOOGABOOGA");
+		
+		mDao.updateMovie2(m1);
+		
+		System.out.println(mDao.findMovieById(1));
 		
 	}
 

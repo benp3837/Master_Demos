@@ -8,29 +8,29 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "authors")
-public class Author {
+@Table(name = "directors")
+public class Director {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "author_id")
+	@Column(name = "director_id")
 	private int id;
 	
-	//going to leave the rest of the fields for Hibernate to handle itself
+	//going to leave the rest of the fiels unannotated for Hibernate to handle itself
 	private String firstName;
 	private String lastName;
-	private int yearBorn; //because I'm lazy to implement a date
+	private int yearBorn;
+
 	
+	//boilerplate code below----------------------------------
 	
-	//boilerplate code below-------------------------------------
-	
-	public Author() {
+	public Director() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
 
-	public Author(int id, String firstName, String lastName, int yearBorn) {
+	public Director(int id, String firstName, String lastName, int yearBorn) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -39,19 +39,20 @@ public class Author {
 	}
 
 
-
-	public Author(String firstName, String lastName, int yearBorn) {
+	public Director(String firstName, String lastName, int yearBorn) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.yearBorn = yearBorn;
 	}
 
+
 	@Override
 	public String toString() {
-		return "Author [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", yearBorn=" + yearBorn
+		return "Director [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", yearBorn=" + yearBorn
 				+ "]";
 	}
+
 
 	@Override
 	public int hashCode() {
@@ -73,7 +74,7 @@ public class Author {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Author other = (Author) obj;
+		Director other = (Director) obj;
 		if (firstName == null) {
 			if (other.firstName != null)
 				return false;
@@ -96,33 +97,39 @@ public class Author {
 		return id;
 	}
 
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 
 	public String getFirstName() {
 		return firstName;
 	}
 
+
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
+
 
 	public String getLastName() {
 		return lastName;
 	}
 
+
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+
 
 	public int getYearBorn() {
 		return yearBorn;
 	}
 
+
 	public void setYearBorn(int yearBorn) {
 		this.yearBorn = yearBorn;
 	}
-	
 	
 }
