@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+<!-- We need the <beans> tag and its configurations in order for this xml to be used for Spring -->
+<!-- You can always looks this up if you need it -->
+
+	<!-- This is the only thing we need in our applicationContext.xml when using autowiring!!! -->
+	<context:component-scan base-package="com.revature"></context:component-scan>
+	
+	<!-- Here, we're declaring and wiring our beans in XML (which we usually don't prefer over autowiring...) -->
+	<!-- The only real reason you'd do it the old fashioned way is if you don't have access to the class to annotate -->
+	<!-- We'll still need the applicationContext.xml, just to indicate that we're scanning for annotations -->
+	
+<!-- 	 Account bean --> 
+<!-- 	<bean name="account" class="com.revature.models.Account" scope="prototype"></bean> -->
+	
+<!-- 	 User bean --> 
+<!-- 	<bean name="user" class="com.revature.models.User"> -->
+<!-- 		 The user has a reference to the account Class, so we need to WIRE the account --> 
+<!-- 		 name is the name of the field, ref is the name of the bean --> 
+<!-- 		<property name = "account" ref="account"></property> -->
+<!-- 	</bean> -->
+
+
+
+
+</beans>
