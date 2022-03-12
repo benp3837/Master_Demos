@@ -2,25 +2,16 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+//what does the App() function do?
 function App() {
+  //what does this mean?
   return (
+    //what happens if there's nothing in the return?
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello React!</h1>
     </div>
   );
 }
 
+//what's this?
 export default App;
