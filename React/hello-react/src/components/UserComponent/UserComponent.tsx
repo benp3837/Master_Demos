@@ -1,5 +1,6 @@
 import React from "react";
 
+import { PostComponent } from "../PostComponent/PostComponent";
 import { UserInterface } from "../../interfaces/UserInterface";
 
 export class UserComponent extends React.Component<any, UserInterface> {
@@ -35,6 +36,7 @@ export class UserComponent extends React.Component<any, UserInterface> {
                 <h2>{this.state.firstName} {this.state.lastName}</h2>
                 <h3>{this.state.username}</h3>
                 <h3>{this.state.email}</h3>
+                <PostComponent {...this.state}/>
             </div>
         );
     }

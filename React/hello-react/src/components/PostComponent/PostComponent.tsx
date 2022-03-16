@@ -2,12 +2,13 @@
 import React, {useEffect, useState} from "react";
 import { UserInterface } from "../../interfaces/UserInterface";
 
-//import CSS file that we'll style this component with
+//import the CSS file that we'll style this component with
+import './PostComponent.css';
 
 //note export CONST instead of export CLASS. This is a FUNCTIONAL component (not a class component)
 export const PostComponent: React.FC<UserInterface>=(user:UserInterface) => {
 
-    //you need to take some notes so that you can accurately comment this part
+    //you need to take some notes so that you can accurately comment on this part
 
     const {username} = user;
 
@@ -15,13 +16,21 @@ export const PostComponent: React.FC<UserInterface>=(user:UserInterface) => {
     let [content, setContent] = useState('');
 
     useEffect(() => {
+        //this 
         setUserName(username);
         setContent("We are setting this text in the useEffect function");
     }, [])
 
     return(
         <div className="post-container">
-            STILL DOING STUFF HERE
+            <div className="post-profile">
+                <img className="post-image" src='https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg'/>
+                <h3 className="post-username">{userName}</h3>
+            </div>
+
+            <div className="post-content">
+                <p>{content}</p>
+            </div>
         </div>
     );
 
