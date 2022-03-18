@@ -5,7 +5,7 @@ import { UserInterface } from "../../interfaces/UserInterface";
 
 export class UserComponent extends React.Component<any, UserInterface> {
 
-    //constructor that initializes the User variables to empty Strings (for now...)
+    //constructor that initializes the User variables to empty Strings (will be changed later...)
     constructor(props:any){
         super(props);
         this.state = {
@@ -19,7 +19,7 @@ export class UserComponent extends React.Component<any, UserInterface> {
     //who remembers? This lifecycle function is usually used for populating data after page load
     //in other words... upon initialization, the body of this function will execute.
     componentDidMount(){
-        //Imagine we're making a call to an api here to populate this info
+        //Imagine we're making a call to an api here to populate this info (with a fetch etc.)
         this.setState({
             firstName: 'Bon',
             lastName: 'Petruzziello',

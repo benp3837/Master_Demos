@@ -2,9 +2,10 @@ import React from "react";
 
 import { ChildComponent } from "../ChildComponent/ChildComponent";
 
+//note the end of this signature... this class may take ANY props and state
 export class ParentComponent extends React.Component<any, any>{
 
-    //this is a TS object, exact same syntax as a JS object. It has one property called color
+    //this is a TS state object, which is another way to initialize a class component's state
     state = {
         color: 'blue'
     }

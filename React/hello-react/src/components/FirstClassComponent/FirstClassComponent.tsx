@@ -10,7 +10,7 @@ export class FirstClassComponent extends React.Component<{},{}>{
     //Every class based component must contain the render method
     //This is what the component actually displays (aka renders) onto the webpage
     render() {
-        //the render method returns JSX... what's JSX again?
+        //this render method returns TSX... an HTML-like syntax that creates the view
         return ( 
             <div>
                 <h2>Hello from our first class based component!</h2>

@@ -4,11 +4,11 @@ import { FirstClassComponent } from './components/FirstClassComponent/FirstClass
 import { ParentComponent } from './components/ParentComponent/ParentComponent';
 import { UserComponent } from './components/UserComponent/UserComponent';
 
-//what does the App() function do?
+//The App.tsx file is where we put what we want displayed on the webpage
+//You can add standalone JSX/TSX, or entire components
 function App() {
-  //what does this mean?
-  return (
-    //what happens if there's nothing in the return?
+  //We put what we want to display in this return() method
+  return ( 
     <div className="App">
       <h1>Hello React!</h1>
       <FirstClassComponent/>
@@ -18,5 +18,5 @@ function App() {
   );
 }
 
-//what's this?
+//This lets us export this App.tsx to potentially be used in other modules
 export default App;
