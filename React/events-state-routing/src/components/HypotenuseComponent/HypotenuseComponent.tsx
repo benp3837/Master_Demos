@@ -1,4 +1,8 @@
 import React, {useState} from "react";
+import {ResultDisplay} from "../ResultDisplay/ResultDisplay";
+import { SideInput } from "../SideInput/SideInput";
+
+import './HypotenuseComponent.css'
 
 export const HypotenuseComponent: React.FC<any> = () => {
 
@@ -18,7 +22,9 @@ export const HypotenuseComponent: React.FC<any> = () => {
             }
         );
 
-        //the result of the hypotenuse calculation is the sum of each value to the second power
+        
+
+        //the result of the hypotenuse calculation is the sum of both values to the second power
         let result = Math.sqrt(
             Math.pow(values.first, 2) + Math.pow(values.second, 2)
         );
@@ -31,21 +37,20 @@ export const HypotenuseComponent: React.FC<any> = () => {
     }
 
     return(
-        <div>
+        /* This HypotenuseComponent will be displayed on the main page
+            and ask the user to enter the first and second side values
+            then calculate the Result every time the component changes.
+
+            Then, ResultComponent is called, using the two inserted values and the result
+        */
+        <div className="input-container">
             <h3>Calculator</h3>
-            <div>
-                Enter your first side value:
-                <input name="first" type="number" onChange={calculateResult}/>
-            </div>
-            <div>
-                Enter your second side value:
-                <input name="second" type="number" onChange={calculateResult}/>
-            </div>
-            <p>
-                {values.first && values.second ? `Result is: ${result}`
-                : `Enter both numbers above for a value`}
-            </p>
+            <SideInput name="first" onChange={calculateResult}/>
+            <SideInput name="second" onChange={calculateResult}/>
+            <ResultDisplay values={values} result={result} ></ResultDisplay>
         </div>
     );
+
+    
 
 }

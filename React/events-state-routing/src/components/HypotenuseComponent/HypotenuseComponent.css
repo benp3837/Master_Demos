@@ -1,0 +1,10 @@
+.input-container {
+    text-align: center;
+    border-radius: 1em;
+    border-style: double;
+    border-width: .5em;
+    padding: 2em;
+    width: 15em;
+    background-color: burlywood;
+    margin-left: 2em;
+}

@@ -1,0 +1,33 @@
+.post-container {
+    width: 500px;
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    padding: 25px;
+    border: 2px double #0e0b0b;
+    background-color: burlywood;
+}
+
+.post-image {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.post-profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.post-username {
+    margin-left: 15px;
+}
+
+.post-content {
+    margin-left: 75px;
+    margin-right: 75px;
+    margin-top: 10px;
+}
