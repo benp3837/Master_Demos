@@ -13,7 +13,7 @@ export const ResultDisplay: React.FC<any> = (props:any) => {
         */
    <div className="result-container">
       <p>
-        {props.values.first && props.values.second ? `Result is: ${props.result}`
+        {props.values.first && props.values.second ? `Hypotenuse is: ${props.result}`
         : `Enter both numbers for a value`}
       </p>
     </div>

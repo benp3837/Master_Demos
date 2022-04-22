@@ -1,5 +1,5 @@
 .post-container {
-    width: 500px;
+    width: fill;
     display: flex;
     height: fit-content;
     flex-direction: column;

@@ -1,0 +1,8 @@
+.fancy-border{
+    padding: 10px 10px;
+    border: 10px solid;
+}
+
+.fancy-border-blue{
+    border-color: blue;
+}
