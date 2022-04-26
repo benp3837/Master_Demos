@@ -1,8 +1,8 @@
 .fancy-border{
     padding: 10px 10px;
-    border: 10px solid;
+    margin: 50px;
+    border: 5px ridge;
+    background-color: burlywood;
 }
 
-.fancy-border-blue{
-    border-color: blue;
-}
+

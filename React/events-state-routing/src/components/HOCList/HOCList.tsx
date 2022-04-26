@@ -1,6 +1,7 @@
 import React from "react";
 
-//This is a higher order component; it takes in a component, and returns it with added functionality
+//This is our actual higher order component; 
+//it will get taken in by the Loading component, and returned it with added functionality
 export const HOCList:React.FC<any> = (props:any) => {
 
     const {list} = props;

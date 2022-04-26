@@ -10,6 +10,7 @@ import './App.css';
 import { HOCHolder } from './components/HOCHolder/HOCHolder';
 import { HypotenuseComponent } from './components/HypotenuseComponent/HypotenuseComponent';
 import { PostContainer } from './components/PostContainer/PostContainer';
+import { SignUpDialog } from './components/SignUpDialog/SignUpDialog';
 import { WelcomeDialog } from './components/WelcomeDialog/WelcomeDialog';
 import { data } from './data';
 
@@ -23,7 +24,7 @@ function App() {
       <Routes>
         <Route path="/posts" element={<PostContainer data={data}/>} />
         <Route path="/HOC" element={<HOCHolder/>}/>
-        <Route path="/welcome" element={<WelcomeDialog />}/>
+        <Route path="/welcome" element={<SignUpDialog />}/>
       </Routes>
 
     </Router>

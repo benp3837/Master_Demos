@@ -7,8 +7,9 @@ import './WelcomeDialog.css';
 export const WelcomeDialog: React.FC<any> = (props:any) => {
     return (
         <FancyBorder>
-            <h1 className='dialog-text'>Welcome</h1>
-            <p className='dialog-message'>Thank you for visiting this page. +20 Revature points</p>
+            <h1 className="dialog-title">{props.title}</h1>
+            <p className="dialog-message">{props.message}</p>
+            {props.children}
         </FancyBorder>
     )
 }
