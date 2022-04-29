@@ -9,10 +9,6 @@ import { AppState } from "./types";
 //the initial state of the application in the store will have a default user with no posts
 const initialState:AppState = {
     user: {
-        id:0,
-        firstName: '',
-        lastName: '',
-        email: '',
         username: '',
         password: '',
     },

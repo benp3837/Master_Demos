@@ -2,10 +2,6 @@ import { IUser } from "../Store/types";
 //we will import our action types here
 
 const initialState:IUser = {
-        id:0,
-        firstName: '',
-        lastName: '',
-        email: '',
         username: '',
         password: '',
 };

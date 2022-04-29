@@ -31,22 +31,35 @@ export const loginUser = (user:UserLogin) => async (dispatch:any) => {
     //catch(e) {
         //alert("it aint work");
     //}
+    
+    console.log(user.username)
+    console.log(user.password)
 
-     console.log(user.username);
-     console.log(user.password);
+    let loggedIn: IUser;
+    try {
+        const res = await axios.post('http://localhost:5000/login', user);
+        loggedIn = {
+            username: res.data.username,
+            password: res.data.password
+        }
+        
+        console.log(loggedIn)
 
-    try{
-        let res = await axios.get("https://pokeapi.co/api/v2/pokemon/torchic");
-        console.log(res.data);
         return dispatch({
-            type: GET_POKE,
-            payload: res.data
+            type: LOGIN_USER,
+            payload: loggedIn
         });
-    } catch (e) {
-        console.log("naurrrr");
+
+    } catch(e){
+        
+        loggedIn = {
+            username: '',
+            password: ''
+        }
+
         return dispatch({
-            type: GET_POKE,
-            paylod: []
-        })
+            type:LOGIN_USER,
+            payload:user
+        });
     }
 }
