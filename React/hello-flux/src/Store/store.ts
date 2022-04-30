@@ -6,15 +6,20 @@ import reducer from '../Reducers';
 
 import { AppState } from "./types";
 
-//the initial state of the application in the store will have a default user with no posts
+//the initial state of the application in the store will have a default user and empty poke
 const initialState:AppState = {
     user: {
-        username: '',
+        username: 'test',
         password: '',
     },
-    posts: []
+    poke: {
+        id: 0,
+        name: '',
+    }
 };
 
 const middleWare = [thunk];
 
-export const store = createStore(reducer, initialState, applyMiddleware(...middleWare));
+export const store = configureStore({
+    reducer
+});

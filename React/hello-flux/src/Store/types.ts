@@ -4,14 +4,12 @@ export interface IUser {
     password: string
 }
 
-export interface IPost {
+export interface IPoke {
     id: number,
-    username: string,
-    content: number,
-    likes?: number //the ? means
+    name: string
 }
 
 export type AppState = {
     user: IUser, //one user object
-    posts: IPost[] //an array of posts
+    poke: IPoke //one pokemon object
 }
