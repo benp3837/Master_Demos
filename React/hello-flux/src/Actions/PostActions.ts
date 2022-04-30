@@ -14,12 +14,13 @@ export const addPoke = (post:newPoke) => async (dispatch:any) => {
 }
 
 //no need for parameters, since we're just GETting data
-export const getPoke = () => async (dispatch:any) => {
+export const getPoke = (pokeID:number) => async (dispatch:any) => {
    
    let incomingPoke: IPoke;
+   console.log("pokeID is: " + pokeID)
 
     try{
-        const res = await axios.get("https://pokeapi.co/api/v2/pokemon/mudkip");
+        const res = await axios.get("https://pokeapi.co/api/v2/pokemon/" + pokeID);
         console.log(res.data);
 
         incomingPoke = {
@@ -27,7 +28,7 @@ export const getPoke = () => async (dispatch:any) => {
             name: res.data.name
         }
 
-        console.log(incomingPoke.id);
+        console.log("incoming Poke is: " + incomingPoke.name);
 
         return dispatch({
             type: GET_POKE,

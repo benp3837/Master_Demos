@@ -13,6 +13,7 @@ export const pokeReducer = (state:IPoke = initialState, action:Action) => {
         case GET_POKE:
             initialState = action.payload;
             console.log(action.payload.name + " in pokeReducer");
+            console.log(initialState)
             return {
                 initialState
             }

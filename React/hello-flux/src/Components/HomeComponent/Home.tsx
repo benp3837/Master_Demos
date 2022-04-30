@@ -11,9 +11,12 @@ export const Home: React.FC<any> = () => {
     const dispatch = useDispatch();
 
     let [loading, setLoading] = useState(true);
+    let [pokeID, setPokeId] = useState(5);
+
 
     useEffect(() => {
         console.log(appState)
+        console.log("poke in appState, id: " + appState.poke.id )
         if(appState.poke.id > 0){
             setLoading(false);
             loadPoke();
@@ -21,10 +24,17 @@ export const Home: React.FC<any> = () => {
         
     }, [appState.poke]);
 
+    const handleChange = (e:any) => {
+        if(e.target.name === "pokeSearch") {
+            console.log("handleChange: " + e.target.value)
+            setPokeId(e.target.value);
+        } 
+    }
+
     const loadPoke = async () => {
         console.log("in loadPoke")
         await dispatch(
-            getPoke() as any
+            getPoke(pokeID) as any
         );
     }
 
@@ -33,7 +43,8 @@ export const Home: React.FC<any> = () => {
     return(
         <div className='home-page'>
             <div className='home-container'>
-                {loading? <h1>loading</h1>: 
+                {loading? <input type="number" name="pokeSearch" placeholder="enter pokeID" onChange={handleChange}/>
+                : 
                     appState.poke.map((poke:any) => {
                         return (
                             <Poke poke={appState.poke} key={poke.pokeId}/>
