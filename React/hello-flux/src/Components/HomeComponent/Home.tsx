@@ -11,22 +11,23 @@ export const Home: React.FC<any> = () => {
     const dispatch = useDispatch();
 
     let [loading, setLoading] = useState(true);
-    let [pokeID, setPokeId] = useState(5);
+    let [pokeID, setPokeId] = useState(0);
 
 
     useEffect(() => {
         console.log(appState)
         console.log("poke in appState, id: " + appState.poke.id )
+        console.log("appstate poke: " + appState.poke.name)
         if(appState.poke.id > 0){
+            
             setLoading(false);
-            loadPoke();
+            //loadPoke();
         }
         
     }, [appState.poke]);
 
     const handleChange = (e:any) => {
         if(e.target.name === "pokeSearch") {
-            console.log("handleChange: " + e.target.value)
             setPokeId(e.target.value);
         } 
     }
@@ -38,21 +39,14 @@ export const Home: React.FC<any> = () => {
         );
     }
 
-    //WEIRD>>>>> loading? should return false (it's only true til we get a poke)
-    //so why does it seem to break the code to take out that conditional (error: appState.poke.map)
     return(
         <div className='home-page'>
             <div className='home-container'>
-                {loading? <input type="number" name="pokeSearch" placeholder="enter pokeID" onChange={handleChange}/>
-                : 
-                    appState.poke.map((poke:any) => {
-                        return (
-                            <Poke poke={appState.poke} key={poke.pokeId}/>
-                        )
-                    })
-                }
+                <input type="number" name="pokeSearch" placeholder="enter pokeID" onChange={handleChange}/>
+                <button className="poke-button" onClick={loadPoke}>Catch 'em all!</button>
+                <Poke poke={appState.poke} />           
             </div>
-            <button className="poke-button" onClick={loadPoke}>Catch 'em all!</button>
         </div>
-    )
+    );
+    
 }

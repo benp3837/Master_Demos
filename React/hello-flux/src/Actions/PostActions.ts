@@ -5,7 +5,8 @@ import { IPoke } from '../Store/types'
 
 interface newPoke{
     id: number,
-    name: string
+    name: string,
+    sprite: any
 }
 
 //maybe some kind of logic to add a poke to your team
@@ -25,10 +26,12 @@ export const getPoke = (pokeID:number) => async (dispatch:any) => {
 
         incomingPoke = {
             id: res.data.id,
-            name: res.data.name
+            name: res.data.name,
+            sprite: res.data.sprites.front_default
         }
 
         console.log("incoming Poke is: " + incomingPoke.name);
+        console.log("pokepic: " + incomingPoke.sprite)
 
         return dispatch({
             type: GET_POKE,

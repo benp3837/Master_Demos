@@ -6,7 +6,8 @@ export interface IUser {
 
 export interface IPoke {
     id: number,
-    name: string
+    name: string,
+    sprite: any
 }
 
 export type AppState = {

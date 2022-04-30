@@ -1,6 +1,6 @@
 Post.css
 
-.post-container {
+.poke-container {
     width: 1000px;
     display: flex;
     height: fit-content;
@@ -28,7 +28,7 @@ Post.css
 }
 
 .content {
-    margin-left: 75px;
-    margin-right: 75px;
-    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
 }

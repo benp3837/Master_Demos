@@ -15,10 +15,9 @@ const initialState:AppState = {
     poke: {
         id: 0,
         name: '',
+        sprite: null
     }
 };
-
-const middleWare = [thunk];
 
 export const store = configureStore({
     reducer
