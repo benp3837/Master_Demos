@@ -8,12 +8,9 @@ export const Poke: React.FC<any> = (props) => {
 
     let pokePic:any = props.poke.sprite;
 
-    return(
-        <div className='poke-container'>    
+    return(         
             <div className='content'>
-                <img src={pokePic} />
-                <h3>{props.poke.name}</h3>
+                    <img src={pokePic} alt="something"/> <h3>{props.poke.name}</h3>
             </div>
-        </div>
     )
 }

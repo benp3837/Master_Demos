@@ -11,8 +11,10 @@ export const PostComponent: React.FC<UserInterface>=(user:UserInterface) => {
 
     //you need to take some notes so that you can accurately comment on this part
 
-    //destructuring - we're breaking apart the prop we passed into the component, into a variable
-    //we're going to databind it in the return() below
+    //destructuring - 
+    //we're breaking apart the prop we passed into the component... 
+    //in this case, we're taking it's username variable and turning it into a local variable
+    //we're going to assign it to another variable below!
     const {username} = user;
 
     //useState allows you to store and manipulate state 
