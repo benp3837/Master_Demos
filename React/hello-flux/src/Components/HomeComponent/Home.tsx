@@ -41,12 +41,11 @@ export const Home: React.FC<any> = () => {
 
     return(
         <div className='home-page'>
-            
-                <div className='home-container'>
-                    <input type="number" name="pokeSearch" placeholder="enter pokeID" onChange={handleChange}/>
-                    <button className="poke-button" onClick={loadPoke}>Catch 'em all!</button>
-                    <Poke poke={appState.poke} />           
-                </div>
+            <div className='home-container'>
+                <input type="number" name="pokeSearch" placeholder="enter pokeID" onChange={handleChange}/>
+                <button className="poke-button" onClick={loadPoke}>Catch 'em all!</button>
+                <Poke poke={appState.poke} />           
+            </div>
         </div>
     );
     

@@ -3,6 +3,7 @@ import { LOGIN_USER } from "../Actions/actionTypes";
 //we will import our action types here
 
 let initialState:IUser = {
+        id: 0,
         username: '',
         password: '',
 };

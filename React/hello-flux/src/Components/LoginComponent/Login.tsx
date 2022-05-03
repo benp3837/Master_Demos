@@ -43,9 +43,9 @@ export const Login: React.FC<any> = () => {
     //this code runs when appState changes
     useEffect(() => {
         console.log(appState);
-        console.log("in useEffect");
-        if(appState.user.username === "trainer"){
-            console.log(appState.user.username)
+        console.log("user id: " + appState.user.id)
+        if(appState.user.id > 0){ 
+            console.log("useEffect: " + appState.user.username)
             navigate("/home");
         }
     }, [appState]);
@@ -53,19 +53,22 @@ export const Login: React.FC<any> = () => {
     return(
         <div className="login">
              <img className="ball" src={process.env.PUBLIC_URL+"pokeball.png"} alt="hello?"/>
-            <div className="text-container">     
-                <h1 className="login-h1">Welcome to PokeMart!</h1>
-                <h2>Sign in to browse Pokemanz!</h2>
-            </div>
+                <div className="text-container">     
+                    <h1 className="login-h1">Welcome to PokeMart!</h1>
+                    <h2>Sign in to browse Pokemanz!</h2>
+                </div>
             <form className="login-form">
                 <div className="input-div">
-                <input autoComplete="off" className="login-input" type="text" name="username" placeholder="Username" onChange={handleChange}/>
+                    <input autoComplete="off" className="login-input" type="text" name="username" placeholder="Username" onChange={handleChange}/>
                 </div>
                 <div className="input-div">
                     <input className="login-input" type="password" name="password" placeholder="Password" onChange={handleChange}/>
                 </div>
+                
             </form>
+
             <button className="login-button" onClick={login}>Login</button>
+  
         </div>
     );
 

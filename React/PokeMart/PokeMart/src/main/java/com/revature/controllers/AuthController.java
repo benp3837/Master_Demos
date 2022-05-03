@@ -20,9 +20,14 @@ public class AuthController {
 		if(lDTO.username.equals("trainer") && lDTO.password.equals("password")) {
 			ctx.status(202);
 			
+			//of course, we're hardcoding the user's id here, but if done with a DB, the users ID will definitely be > 0.
+			lDTO.id = 1;
+			
 			String JSONlogin = gson.toJson(lDTO);
 			
 			ctx.result(JSONlogin);
+		} else {
+			ctx.status(401);
 		}
 		
 	};

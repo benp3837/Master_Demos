@@ -3,7 +3,6 @@ import {ADD_USER, LOGIN_USER} from './actionTypes';
 import {IUser} from '../Store/types';
 import axios from 'axios';
 
-
 interface UserReg {
     firstName: string,
     lastName: string,
@@ -12,6 +11,7 @@ interface UserReg {
     password: string
 }
 
+//this models the user login creds that will be sent in the POST request 
 interface UserLogin {
     username: string,
     password: string
@@ -22,36 +22,43 @@ export const newUser = (user:UserReg) => async (dispatch:any) => {
 }
 
 //we send in an object of type UserLogin, since that's what we're sending in our POST
-export const loginUser = (user:UserLogin) => async (dispatch:any) => {
+export const loginUser = (loginCreds:UserLogin) => async (dispatch:any) => {
     
-    console.log(user.username)
-    console.log(user.password)
+    console.log(loginCreds.username)
+    console.log(loginCreds.password)
 
     let loggedIn: IUser;
     try {
-        const res = await axios.post('http://localhost:5000/login', user);
-        loggedIn = {
-            username: res.data.username,
-            password: res.data.password
-        }
+        const res = await axios.post('http://localhost:5000/login', loginCreds);
         
-        console.log(loggedIn.username + " in loginUser")
+        if(res.status === 202){
+        
+            loggedIn = {
+                id: res.data.id,
+                username: res.data.username,
+                password: res.data.password
+            }
+            
+            console.log(loggedIn.username + " in loginUser")
 
-        return dispatch({
-            type: LOGIN_USER,
-            payload: loggedIn
-        });
-
+            return dispatch({
+                type: LOGIN_USER,
+                payload: loggedIn
+            });
+        } 
     } catch(e){
         
+        console.log("USER LOGIN FAILED!!")
+
         loggedIn = {
+            id: 0,
             username: '',
             password: ''
         }
 
         return dispatch({
             type:LOGIN_USER,
-            payload:user
+            payload:loggedIn
         });
     }
 }
