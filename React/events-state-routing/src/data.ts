@@ -1,3 +1,4 @@
+//This TS file holds an array called data, which contains objects of user post data.
 export const data = [
     //name a franchise
 {

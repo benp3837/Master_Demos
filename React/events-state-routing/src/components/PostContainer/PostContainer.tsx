@@ -10,7 +10,7 @@ export const PostContainer:React.FC<any> = (data) => {
 
     //useEffect is a hook that allows you to perform some logic at specific points during runtime
     //can be used to watch for specific events to perform some logic
-    //here, 
+    //here, for every object in posts, put it's data in the posts array 
     useEffect(() => {
         setPosts(data.data);
     }, [posts])
@@ -18,10 +18,10 @@ export const PostContainer:React.FC<any> = (data) => {
     return(
         /* .map() is a function that lets you render a list of elements*/
         /* You're expected to provide a unique key for the element you're mapping through*/
-        /* So this is saying for every post in posts, render a Post component holding the data*/
+        /* So this is saying... 
+        //for every object (called post) in posts, render a Post component holding that data*/
         <div>
             {posts.map((post:any) => {
-            {console.log(post)}
             return <Post {...post} key={post.postId}/>
             })}
         </div>

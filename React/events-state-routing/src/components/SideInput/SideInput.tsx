@@ -11,4 +11,5 @@ export const SideInput: React.FC<any> = (props:any) => {
             <input name={props.name} type="number" onChange={props.onChange}/>
         </div>
     )
+    //name and the function called when the component changes are inherited from props
 }

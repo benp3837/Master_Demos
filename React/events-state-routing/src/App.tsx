@@ -3,7 +3,7 @@ import React from 'react';
 //routing dependencies, which we made available with: npm i --save-dev @types/react-router-dom
 import {
   BrowserRouter as Router,
-  Routes, Route, Link, BrowserRouter
+  Routes, Route, 
 } from 'react-router-dom';
 
 import './App.css';

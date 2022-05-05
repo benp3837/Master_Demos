@@ -12,6 +12,7 @@ const ListWithLoading = Loading(HOCList);
 //BETTER COMMENT THIS WELL... THIS IS ALL STUFF YOU RECOGNIZE
 export const HOCHolder:React.FC<any> = () => {
 
+    //instantiate an empty array that can hold ANYTHING!
     let arr: any[] = [];
 
     let [loading, setLoading] = useState(true);

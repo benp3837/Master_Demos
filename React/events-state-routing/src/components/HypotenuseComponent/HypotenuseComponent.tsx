@@ -11,18 +11,17 @@ export const HypotenuseComponent: React.FC<any> = () => {
     let [result, setResult] = useState(0)
     
     //declaring a function that takes in an object to calculate hypotenuse
-    const calculateResult = (e:any) => {
-        
+    const calculateResult = (e:any) => {  
         setValues(
             {
-                //need ... if you're referring to an object
+                //we need ... if you're referring to an object
                 ...values,
-                //I HAVE NO IDEA WHAT'S HAPPENING HERE
+                //the value inserted will be assigned to either "first" or "second" 
+                //depending on which of the SideInputs it was inserted into
+                //e.g. first:value OR second:value
                 [e.target.name]:e.target.value
             }
         );
-
-        
 
         //the result of the hypotenuse calculation is the sum of both values to the second power
         let resultCalc = Math.sqrt(
@@ -38,8 +37,8 @@ export const HypotenuseComponent: React.FC<any> = () => {
 
     return(
         /* This HypotenuseComponent will be displayed on the main page
-            and ask the user to enter the first and second side values
-            then calculate the Result every time the component changes.
+            and use the SideComponent tp ask the user to enter the first and second side values
+            then calculate the Result every time the value in the component changes.
 
             Then, ResultComponent is called, using the two inserted values and the result
         */
@@ -51,6 +50,5 @@ export const HypotenuseComponent: React.FC<any> = () => {
         </div>
     );
 
-    
 
 }
