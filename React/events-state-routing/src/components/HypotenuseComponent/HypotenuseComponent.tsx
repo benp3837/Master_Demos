@@ -15,7 +15,7 @@ export const HypotenuseComponent: React.FC<any> = () => {
         
         setValues(
             {
-                //varargs! So we can take any number of values
+                //need ... if you're referring to an object
                 ...values,
                 //I HAVE NO IDEA WHAT'S HAPPENING HERE
                 [e.target.name]:e.target.value
@@ -25,15 +25,15 @@ export const HypotenuseComponent: React.FC<any> = () => {
         
 
         //the result of the hypotenuse calculation is the sum of both values to the second power
-        let result = Math.sqrt(
+        let resultCalc = Math.sqrt(
             Math.pow(values.first, 2) + Math.pow(values.second, 2)
         );
 
         //round the result so it's a prettier number
-        result = Math.round(result * 100)/100;
+        resultCalc = Math.round(resultCalc * 100)/100;
 
         //finally, assign the result of our calculations to the result variable
-        setResult(result);
+        setResult(resultCalc);
     }
 
     return(
