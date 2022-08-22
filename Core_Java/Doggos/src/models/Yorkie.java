@@ -4,8 +4,8 @@ import models.Dog;
 
 public class Yorkie extends Dog {
 
-	String name;
-	int weight = 10;
+	public String name;
+	public int weight;
 	
 	@Override
 	public void bark() {

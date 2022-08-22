@@ -4,8 +4,8 @@ package models;
 
 public abstract class Dog {
 
-	String name;
-	int weight;
+	public String name;
+	public int weight;
 	
 	public abstract void bark();
 	
