@@ -4,7 +4,6 @@ public class Launcher {
 
     public static void main(String[] args) {
 
-        System.out.println("=======Algorithms in order of efficiency.");
         System.out.println("=========================================(Bubble Sort)");
 
         //A bubble sort goes through a sequence and compares each value to the value after it.
@@ -49,19 +48,28 @@ public class Launcher {
         }
 
         //Now, let's see a MERGE SORT-
-        //which is a more efficient algorithm when dealing with larger data sets
+        //which is a more efficient (faster) algorithm when dealing with larger data sets
         //we'll call it in a more sophisticated way too.
         System.out.println("===========================================(Merge Sort)");
 
-        //we call the sort() method of the MergeSort class, leaving a cleaner main method
-        //this is also the idea of CODE REUSABILITY - we wrote this method once, but can use it infinite times.
+        //we call the mergeSort() method of the MergeSort class, leaving a cleaner main method
+        //this is also the idea of CODE REUSABILITY - we wrote the mergeSort method once, but can use it infinite times.
 
         int[] inputArray = {2,5,3,7,2,4,9,6,5,1};
 
+        for(int i : inputArray){
+            System.out.println(i);
+        }
+
+        System.out.println("================");
+
         MergeSort ms = new MergeSort();
 
-        ms.sort(inputArray);
+        ms.mergeSort(inputArray);
 
+        for(int i : inputArray){
+            System.out.println(i);
+        }
 
 
     }//end of main method
