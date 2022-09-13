@@ -2,6 +2,8 @@ package com.revature;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -50,8 +52,10 @@ public class Launcher {
 		.sorted() //notice the Stream is sorted alphabetically, with capitals prioritized.
 		.forEach(element -> System.out.println(element));
 
-		//Something more interesting - we'll make a Stream from an ArrayList...
-		//...filter out duplicates, and we'll filter out a certain element
+		/*Something more interesting -
+		we'll make a Stream from an ArrayList, filter out duplicates, and filter out a certain element */
+
+		//here's the initial ArrayList
 		ArrayList<String> names = new ArrayList<String>(){{
 				add("Ben");
 				add("Jamie");
@@ -59,10 +63,15 @@ public class Launcher {
 				add("The Hamburglar");
 				add("Scooby Doo");
 		}};
-		names.stream() //same as Stream.of(names)
+
+		//Now we'll make a new ArrayList using streams!
+		List<String> newList = names.stream() //same as Stream.of(names)
 			.distinct() //knocks out the duplicate elements
 			.filter(element -> !element.startsWith("The")) //only include elements that DON'T start with "The"
-			.forEach(element -> System.out.println(element)); //print the stream out
+			.collect(Collectors.toList()); //return the Stream as an ArrayList
+
+		//observe the mutated List of names
+		System.out.println(newList);
 
 		//but notice the "names" ArrayList itself does not actually get manipulated
 		System.out.println(names);
