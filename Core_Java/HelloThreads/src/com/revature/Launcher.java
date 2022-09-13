@@ -41,17 +41,17 @@ public class Launcher {
 		IntStream
 				.range(1, 10) //...from 1 to 9...
 				.skip(3)//...but skip the first 3 elements...
-				.forEach(x -> System.out.println(x)); //...then print it out!
+				.forEach(x -> System.out.println(x)); //...and print out every element!
 
 
-		//Stream.of() is convenient because you can define whatever you want
+		//Stream.of() is convenient because you can define whatever you want in the Stream
 		//The elements must be of the same data type though.
 		Stream.of("Okay", "ben", "yuh", "hello", "bark")
 		.sorted() //notice the Stream is sorted alphabetically, with capitals prioritized.
 		.forEach(element -> System.out.println(element));
 
 		//Something more interesting - we'll make a Stream from an ArrayList...
-		//...filter out duplicates, and we'll skip a certain element
+		//...filter out duplicates, and we'll filter out a certain element
 		ArrayList<String> names = new ArrayList<String>(){{
 				add("Ben");
 				add("Jamie");
@@ -61,12 +61,8 @@ public class Launcher {
 		}};
 		names.stream() //same as Stream.of(names)
 			.distinct() //knocks out the duplicate elements
-			.forEach(element -> {
-				if(!element.startsWith("The")){ //everything besides "The Hamburglar" will print
-					System.out.println("======");
-					System.out.println(element);
-				}
-			});
+			.filter(element -> !element.startsWith("The")) //only include elements that DON'T start with "The"
+			.forEach(element -> System.out.println(element)); //print the stream out
 
 		//but notice the "names" ArrayList itself does not actually get manipulated
 		System.out.println(names);
@@ -76,9 +72,13 @@ public class Launcher {
 			.range(1, 11) //get elements 1-10
 			.map(x -> x * x * x) //cube them all
 			.average()
-			.ifPresent(System.out::println); //if the value is present, print it out
+			.ifPresent(System.out::println); //if the value is present (which is it in this case), print it out
 			//:: lets you invoke the println method with an anonymous parameter.
-			//so basically it's shorthand for x -> System.out.println(x)
+			//so basically it's shorthand for x -> System.out.println(x), like we do in .forEach()
+
+		//what's the point of ifPresent? Not much of a point here -
+		//but imagine you're trying to collect data from a file that may or may not be populated with data yet.
+		//then the usefulness of ifPresent() would be more apparent
 
 	} //end of main
 
