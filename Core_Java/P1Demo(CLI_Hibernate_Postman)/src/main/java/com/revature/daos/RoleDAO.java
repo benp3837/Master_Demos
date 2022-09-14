@@ -5,95 +5,66 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.revature.models.Employee;
 import com.revature.models.Role;
 import com.revature.utils.ConnectionUtil;
+import com.revature.utils.HibernateUtil;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import javax.persistence.Query;
 
 //This RoleDAO is responsible for communicating with the roles table in the database
 //Every DB table should have a DAO Class associated with it for organization.
 //We COULD just have one huge DAO Class with methods for every table, but that will be a longgggg scroll.
 public class RoleDAO implements RoleDAOInterface {
 
-    //This method takes in an int, and returns the Role with the role_id that matches the given int.
+    //Session methods are best used when you're SELECTing by the primary key
+    //because get() and load() both expect a serializable (which our PK is)
     @Override
     public Role getRoleById(int id) {
 
-        //use a try-with-resources to open a DB connection object
-        try(Connection conn = ConnectionUtil.getConnection()){
+        //open a Session object
+        Session ses = HibernateUtil.getSession();
 
-            //String that lays out the SQL query we want to run
-            //This String has a parameter for role_id, which we'll fill with our PreparedStatement
-            String sql = "select * from roles where role_id = ?;";
+        //SELECT a Movie by ID
+        Role role = ses.get(Role.class, id);
 
-            //we need a PreparedStatment object to fill in the variable above with setInt().
-            PreparedStatement ps = conn.prepareStatement(sql);
+        //close the Session
+        HibernateUtil.closeSession();
 
-            //insert a value for the variable in out SQL statement
-            ps.setInt(1, id); //1 == the first (and only) question mark, id == the parameter sent in to this method
-
-            //The data returned from a SELECT statment is known as a ResultSet
-            //We need a ResultSet OBJECT to hold our incoming data.
-            ResultSet rs = ps.executeQuery(); //execute the query into our new ResultSet
-
-            //the above code gets our data, and stores in a ResultSet object
-            //we have to ITERATE through our ResultSet to create a new Role object on the Java side (Java can't read SQL)
-
-            //while there are records in the ResultSet...
-            while(rs.next()) {
-
-                //we need to use the data in the ResultSet to fill a Role all-args constructor
-                //note we're getting data by calling each column name of our Role table
-                Role role = new Role(
-                        rs.getInt("role_id"),
-                        rs.getString("role_title"),
-                        rs.getInt("role_salary")
-                );
-
-                return role; //return the Role data to the user!
-
-                //In this case, we know we're only going to get one role, so we can return from within the while loop
-                //If we were getting multiple records (like in get all employees), we would do it a little different.
-            }
-
-        } catch (SQLException e) {
-            System.out.println("Get Role failed"); //tell the console it failed
-            e.printStackTrace(); //print an error log for debugs
-        }
-
-        return null;
+        //return the role
+        return role;
 
     } //end of select by id method
 
+    //updating role salary using HQL
+    //I prefer HQL when we're only updating one or two columns
+    //I prefer the merge() method when we're updating entire records
     @Override
     public boolean updateRoleSalary(String title, int salary) {
 
-        try(Connection conn = ConnectionUtil.getConnection()){
+        System.out.println(title);
 
-            //SQL String for our UPDATE command
-            String sql = "update roles set role_salary = ? where role_title = ?;";
+        Session ses = HibernateUtil.getSession();
 
-            //create our PreparedStatement to fill in the variables
-            PreparedStatement ps = conn.prepareStatement(sql);
+        //remember, updates and deletes must be in TRANSACTIONS
+        Transaction tran = ses.beginTransaction();
 
-            //input the appropriate values into our PreparedStatement
-            ps.setInt(1, salary);
-            ps.setString(2, title);
+        //Assign our query syntax to a query object
+        //note the triple quotes, the single quotes are for SQL, the double quotes are for our String concatenation
+        //it's like saying UPDATE Role SET salary = 'new salary' WHERE role_title = 'the given role';
+        Query q = ses.createQuery("UPDATE Role SET role_salary = '" + salary + "' WHERE role_title = '" + title + "'");
 
-            //execute the update!
-            ps.executeUpdate();
+        //we have to actually execute this update
+        q.executeUpdate();
 
-            //tell the console the update was successfully
-            System.out.println(title + " has been updated to " + salary);
+        //close the transaction and session
+        //we must commit the changes if we want them to actually save to the DB
+        tran.commit();
+        HibernateUtil.closeSession();
 
-            //if it succeeds, return true
-            return true;
-
-        } catch (SQLException e) {
-            System.out.println("FAILED TO UPDATE");
-            e.printStackTrace();
-        }
-
-
-        return false; //if update fails, return false
+        return true;
 
     }
 

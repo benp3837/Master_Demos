@@ -1,19 +1,35 @@
 package com.revature.models;
 
-//This Class models the employees table in our database
+import javax.persistence.*;
+
+@Entity //@Entity makes a Class a DB table (as long as you register it in the hibernate.cfg.xml)
+@Table(name = "employees") //@Table lets us change table values such as the table name
 public class Employee {
 
-    //variables for the employee class which must match the names of the columns of the employee DB table
+    @Id //This will make employee_id the primary key
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //this makes our PK serial
     private int employee_id;
+
+    //we can also set attributes like constraints with the @Column annotation
+    @Column(unique = true, nullable = false) //so now this column is unique and not null.
     private String first_name;
+
+    @Column
     private String last_name;
-    //Every employee in this application has a role, so we'll give a Role object as a variable
+
+    //Many to One relationship with the Role Class - Many Employees can have the same role.
+    //We need to make this a Foreign Key to the Director table
+    @ManyToOne(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
+    @JoinColumn(name = "role_id") //THIS is how you establish FK/PK relationships
+    //the name attribute must be equal to the name of the PK in Directors in the DB. (in this case, role_id)
+    //IMPORTANT NOTE: @Column will break this, because @JoinColumn already makes it a column
     private Role role;
 
-    //make a variable for int roleId for inserting Employees. This constructor will only be used when inserting
-    //because remember, the role_id_fk is an int on the DB side. This saves us from doing quirky conversions
-    private int role_id_fk;
+    //What is FetchType and CascadeType????
+    //BEN WILL NOT FORGET TO TALK ABOUT IT IN THE HIBERNATE NOTES
 
+    //helpful for inserting employee, we can just use the role_id instead of the entire role
+    private int role_id_fk;
 
     //boilerplate code----------------
 

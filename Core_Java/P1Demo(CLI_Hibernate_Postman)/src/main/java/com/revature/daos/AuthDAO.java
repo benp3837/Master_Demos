@@ -8,6 +8,10 @@ import java.sql.SQLException;
 import com.revature.models.User;
 import com.revature.utils.ConnectionUtil;
 
+//"I CANNOT HELP WITH LOGIN DAO. TALK TO EACH OTHER, FIGURE IT OUT."
+//the login DAO method will just take in the loginDTO, and check if the username/password == username/password
+//might even avoid using a user object to save time. can do it better for P2 demo.
+
 public class AuthDAO {
 
     //I should've made an Interface but it's ok.

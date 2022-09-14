@@ -1,9 +1,17 @@
 package com.revature.models;
 
+import javax.persistence.*;
+
+@Entity //@Entity makes a Class a DB table (as long as you register it in the hibernate.cfg.xml)
+@Table(name = "roles", schema = "krusty_krab") //@Table lets us change table values such as the table name
 public class Role {
 
+    @Id //This will make role_id the primary key
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //this makes our PK serial
     private int role_id;
+    @Column
     private String role_title;
+    @Column
     private int role_salary;
 
 
