@@ -46,7 +46,7 @@
 
 - Attributes are metadata used to **describe the elements**; you can think of them as parameters defining the specific element tag.
 - Attributes are defined **within a tag** of an element as a key/value pair.
-  - For instance, in an image tag, the browser needs to know the location of the image: `<img src=”[www.myimage.com/puppy/” ](http://www.myimage.com/puppy/)/>`
+  - For instance, in an image tag, the browser needs to know the location of the image: `<img src="www.myimage.com/puppy/"/>`
     - src is the attribute in this case, telling the browser where to find the image
     - Btw, you technically don’t need any closing tag for `<img>`, but you can still add it for clarity.
 - Global attributes are those that can be applied to any tag. These will be very useful when we start messing with CSS. Some include:
