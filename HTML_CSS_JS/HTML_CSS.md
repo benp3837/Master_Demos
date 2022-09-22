@@ -5,22 +5,11 @@
 **VSCode Extensions List (feel free to add comments on more)**
 
 -**Live server** (lets us right click an HTML file and open quickly “open with live server”
-
 -**vscode-icons** (lets us see better icons in our vscode)
-
 -**Prettier** (code formatter, makes your code look more sane)
-
 -**Intellicode** (gives us predictive options while writing our files)
 
--Better comments (gives us more options on comments)
-
--HTML CSS support (id and class attribute completion)
-
--Material Icon Theme (like vscode-icons but more options)
-
--Atom Keymap (gives support for useful keyboard shortcuts)
-
-**What is HTML?**
+####What is HTML?
 
 - **HyperText Markup Language (HTML)** is used to create web pages (User interface!)
   - A markup language (HTML, XML, etc) is **descriptive not programmatic.** In English, HTML is not a programming language. It’s… a markup language!
@@ -32,10 +21,10 @@
 **Syntax 1.) HTML Elements**
 
 - Elements provide the **structure of the document** and are defined by tags.
-  - Eg. <div> this is a div element, surrounded by the div tag </div>
+  - Eg. `<div> this is a div element, surrounded by the div tag </div>`
 - HTML must have it tags **properly nested** in order to be valid
-  - Correct: <div> <p> </p> </div>
-  - Incorrect:  <div> <p> </div> </p>
+  - Correct: `<div> <p> </p> </div>`
+  - Incorrect:  `<div> <p> </div> </p>`
 
 - There are two categories/types of elements: (QC loves to ask about the differences)
   - **Block elements:** These elements will **render as a block on the page**, meaning any following element will render on a new line by default. Basically, block elements take up an entire line for themselves. In other words, it **blocks a line for itself**.**   
@@ -131,7 +120,7 @@
 
 \---------------------------------------------------------
 
-**What is CSS?** 
+####What is CSS? 
 
 - **Cascading Style Sheet** - A language for **styling HTML documents**. 
 - It specifies certain rules for layout and display of HTML elements. 
