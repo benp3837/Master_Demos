@@ -148,7 +148,7 @@
 **CSS Box Model**
 
 - CSS treats each HTML element in the document as a “box”. Each box has its own 4 regions that can all be styled independently of one another.
-- ![](./imgs/boxmodel.png)
+- ![](https://codinglead.co/images/box-model.png)
 - **Margin:** The outermost layer. Useful for separating the element from its neighbors. The dimensions are given by the margin-box width and the margin-box height/width.
 
 - **Border:** The layer between the margin and padding, its dimensions are given by the width and height of the border. This is the element that is often given a |visible border|
