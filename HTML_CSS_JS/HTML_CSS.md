@@ -68,8 +68,6 @@
 
 \*We started our HTML/CSS demo here\*
 
-\*I HIGHLY RECOMMEND YOU INSTALL THE LIVE SERVER EXTENSION… It’ll let you launch your HTML onto a browser from VSCode, instead of having to go into your file explorer and find the HTML file\*
-
 
 **HTML Lists**
 
@@ -77,9 +75,9 @@
 - There are two types of lists: **Ordered and Unordered**
   - **Ordered lists** have a progression such as 1 2 3… etc.
   - **Unordered lists** have no order. They are all represented by the same character - usually a bullet.
-- Ordered lists use the **<ol>** tag
-- Unordered lists use the **<ul>** tag.
-- Items in both types of lists use the **<li>** tag.
+- Ordered lists use the `<ol>` tag
+- Unordered lists use the `<ul>` tag.
+- Items in both types of lists use the `<li>` tag.
 - Note: Lists of either type can be nested inside other lists.
 
 **HTML Tables**
@@ -87,14 +85,14 @@
 - Tables are an easy way to **structure our HTML pages and display information**. There was a time where almost all HTML pages were just giant tables. 
   - We looked at the spacejam website (1996) and she was very table centric and had other fun stuff to look into
 
-- To create a table, we begin with a **<table>** tag
-- **<thead> will define header rows**
-  - Inside that, we can have the **<tr>** which creates actual rows
-    - **<th>** will then give the actual cell data for that header cell
-- **<tbody> defines the body of a table**
-  - Each row of the table will have a <tr> tag
-    - Individual cells in the row will have a <td> tag
-- **<tfoot>** can be used to add a footer element to your table.
+- To create a table, we begin with a `<table>` tag
+- `<thead>` will define header rows`
+  - Inside that, we can have the `<tr>` which creates actual rows
+    - `<th>` will then give the actual cell data for that header cell
+- `<tbody>` defines the body of a table
+  - Each row of the table will have a `<tr>` tag
+    - Individual cells in the row will have a `<td>` tag
+- `<tfoot>` can be used to add a footer element to your table.
 
 **HTML Forms** 
 
