@@ -5,8 +5,11 @@
 **VSCode Extensions List (feel free to add comments on more)**
 
 -**Live server** (lets us right click an HTML file and open quickly “open with live server”
+
 -**vscode-icons** (lets us see better icons in our vscode)
+
 -**Prettier** (code formatter, makes your code look more sane)
+
 -**Intellicode** (gives us predictive options while writing our files)
 
 # What is HTML?
@@ -31,21 +34,21 @@
   - **Inline elements:** These elements can sit next to each other on the same line when rendered. Can be rendered **in** the same **line** as each other. 
 
 - Common HTML elements (NOT a comprehensive list): 
-  - div defines a “division” of the page. Often contains other elements. (block)
-  - h1 through h6 are header tags. 1 is the largest 6 is the smallest. (block)
-  - p defines a paragraph (block) 
-  - span standard inline element. 
-  - br line break (does not need a closing tag)  (inline)
-  - img displays an image (does not need closing tag) (inline)
-  - a anchor tag used to make a hyperlink. (inline)
+  - div: defines a “division” of the page. Often contains other elements. (block)
+  - h1 through h6: header tags. 1 is the largest 6 is the smallest. (block)
+  - p: defines a paragraph (block) 
+  - span: standard inline element. 
+  - br: line break (does not need a closing tag)  (inline)
+  - img: displays an image (does not need closing tag) (inline)
+  - a: anchor tag used to make a hyperlink. (inline)
 
 **Syntax 2.) HTML Attributes**
 
 - Attributes are metadata used to **describe the elements**; you can think of them as parameters defining the specific element tag.
 - Attributes are defined **within a tag** of an element as a key/value pair.
-  - For instance, in an image tag, the browser needs to know the location of the image: <img src=”[www.myimage.com/puppy/” ](http://www.myimage.com/puppy%E2%80%9D/)/>
+  - For instance, in an image tag, the browser needs to know the location of the image: `<img src=”[www.myimage.com/puppy/” ](http://www.myimage.com/puppy/)/>`
     - src is the attribute in this case, telling the browser where to find the image
-    - Btw, you technically don’t need any closing tag for <img>, but you can still add it for clarity.
+    - Btw, you technically don’t need any closing tag for `<img>`, but you can still add it for clarity.
 - Global attributes are those that can be applied to any tag. These will be very useful when we start messing with CSS. Some include:
   - class - you can group elements together under a class name
   - id - a good way to uniquely identify an element
