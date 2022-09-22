@@ -9,7 +9,7 @@
 -**Prettier** (code formatter, makes your code look more sane)
 -**Intellicode** (gives us predictive options while writing our files)
 
-####What is HTML?
+### What is HTML?
 
 - **HyperText Markup Language (HTML)** is used to create web pages (User interface!)
   - A markup language (HTML, XML, etc) is **descriptive not programmatic.** In English, HTML is not a programming language. It’s… a markup language!
@@ -120,7 +120,7 @@
 
 \---------------------------------------------------------
 
-####What is CSS? 
+### What is CSS? 
 
 - **Cascading Style Sheet** - A language for **styling HTML documents**. 
 - It specifies certain rules for layout and display of HTML elements. 
