@@ -9,7 +9,7 @@
 -**Prettier** (code formatter, makes your code look more sane)
 -**Intellicode** (gives us predictive options while writing our files)
 
-### What is HTML?
+# What is HTML?
 
 - **HyperText Markup Language (HTML)** is used to create web pages (User interface!)
   - A markup language (HTML, XML, etc) is **descriptive not programmatic.** In English, HTML is not a programming language. It’s… a markup language!
@@ -55,11 +55,12 @@
 
 **HTML Doctype Declaration & Root Tag**
 
-- <!DOCTYPE html> 
+- `<!DOCTYPE html>` 
   - This is the **doctype declaration.**  It informs the browser what type of document we are displaying (HTML) as well as the version if you want. The one above defines an HTML 5 document. 
   - **THIS IS NOT CONSIDERED A TAG!** It’s the doctype declaration.
 
-- The root tag of an HTML document is <html>. **All of your HTML must go in between the opening and closing tags of this element.**
+- The root tag of an HTML document is `<html>`. 
+  - **All of your HTML must go in between the opening and closing tags of this element.**
   - The HTML page is then further divided into a **<head>** section, usually for metadata, and the **<body>** section for actual content to be displayed. 
 
 \*We started our HTML/CSS demo here\*
@@ -120,7 +121,7 @@
 
 \---------------------------------------------------------
 
-### What is CSS? 
+# What is CSS? 
 
 - **Cascading Style Sheet** - A language for **styling HTML documents**. 
 - It specifies certain rules for layout and display of HTML elements. 
