@@ -118,9 +118,8 @@
   - **Placeholder** - this is a “hint” that describes what should be entered in the field. 
   - Required - This field must have an input in order for the form to be submitted. 
   - Min and Max - give minimum or maximum values that can be imputed into the field.
-- The <label> tag can be used to give a text label to an input field. 
+- The `<label>` tag can be used to give a text label to an input field. 
 
-\---------------------------------------------------------
 
 # What is CSS? 
 
@@ -149,13 +148,11 @@
 **CSS Box Model**
 
 - CSS treats each HTML element in the document as a “box”. Each box has its own 4 regions that can all be styled independently of one another.
-- ![](Aspose.Words.33f55164-15fe-472d-a381-df8de56034d5.001.png)
+- ![](./imgs/boxmodel.png)
 - **Margin:** The outermost layer. Useful for separating the element from its neighbors. The dimensions are given by the margin-box width and the margin-box height/width.
 
-- **Border:** The layer between the margin and padding, its dimensions are given by the width and height of the border. This is the element that is often given a 
+- **Border:** The layer between the margin and padding, its dimensions are given by the width and height of the border. This is the element that is often given a |visible border|
 
-|visible border|
-| :- |
 
 - **Padding:** The layer between the content and within the border box. Its dimensions are given by the width and height of the padding box.
 
