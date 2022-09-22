@@ -42,13 +42,13 @@
   - **Inline elements:** These elements can sit next to each other on the same line when rendered. Can be rendered **in** the same **line** as each other. 
 
 - Common HTML elements (NOT a comprehensive list): 
-  - <div> defines a “division” of the page. Often contains other elements. (block)
-  - <h1> through <h6> are header tags. 1 is the largest 6 is the smallest. (block)
-  - <p> defines a paragraph (block) 
-  - <span> standard inline element. 
-  - <br> line break (does not need a closing tag)  (inline)
-  - <img> displays an image (does not need closing tag) (inline)
-  - <a> anchor tag used to make a hyperlink. (inline)
+  - div defines a “division” of the page. Often contains other elements. (block)
+  - h1 through h6 are header tags. 1 is the largest 6 is the smallest. (block)
+  - p defines a paragraph (block) 
+  - span standard inline element. 
+  - br line break (does not need a closing tag)  (inline)
+  - img displays an image (does not need closing tag) (inline)
+  - a anchor tag used to make a hyperlink. (inline)
 
 **Syntax 2.) HTML Attributes**
 
