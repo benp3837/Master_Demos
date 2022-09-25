@@ -1,4 +1,4 @@
-﻿**What is JavaScript?** 
+﻿# What is JavaScript? 
 
 - Not Java. Not at all. A godless language.
 - JavaScript is a high-level scripting/programming language generally used for **front-end development**. It has built in support in all web browsers. 
@@ -14,7 +14,7 @@
 
 **JS Syntax**
 
-- Comments in JS are the same as in java: //this is a comment
+- Comments in JS are the same as in java: `//this is a comment`
 - JavaScript literals (primitives) are your typical non-object values; they can be numbers, strings, booleans, etc
   - **number** can hold multiple number types like integers or decimals.
   - **strings** are text, enclosed by either ‘single quotes’ or “double quotes”. If a number is enclosed in quotes, it’s a string.
@@ -24,7 +24,7 @@
 **JavaScript Variables**
 
 - Variables store data values. The “=” is used for the assignment operator
-  - E.g. var a = “I am a variable”
+  - E.g. `var a = “I am a variable”`
   - Identifiers (names of the variables) must start with either a letter, underscore, or $. They cannot start with numbers, though they can contain them. No spaces!!!
 - There are **3 ways to declare a variable in JS.** (let and const were added in ES6)
   - var - older, default declaration
@@ -55,7 +55,7 @@
   - **Eg false == 0 returns true, while false === 0 returns false;**
 - Logical: &&, ||, !
 - Assignment: =, +=, -=, \*=,  /=, %=
-- Ternary: <condition> ? <value1>:<value2>
+- Ternary: `<condition> ? <value1>:<value2>`
   - This is like a one line if/else statement. If the condition is true, value1 is the result, if false value2 is. 
 
 
@@ -65,12 +65,11 @@
 - for loops
   - There are 2 special types of for loops. 
     - **for-in**: iterates over an object’s keys
-      - let person = {name:”Bob”,age:25}; // this is a JS object
-      - for(let key in person) {console.log(person[key]);}
-        - //prints Bob and 25
+      - `let person = {name:”Bob”,age:25}; // this is a JS object`
+      - `for(let key in person) {console.log(person[key]);} //prints Bob and 25`
     - **for-of**: iterates over the values of an array.
-      - let arr = [12, “Susie”, true, 0];
-      - for (let value of arr) {console.log(value);}//print 12 then Susie then true then 0.  
+      - `let arr = [12, “Susie”, true, 0]; //this is a JS array`
+      - `for (let value of arr) {console.log(value);}//print 12 then Susie then true then 0.`  
     - Think for-in = objects, for-of = arrays. 
 - while loops/do-while loops
 - switch statement
