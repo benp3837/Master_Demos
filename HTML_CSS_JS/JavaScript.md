@@ -107,13 +107,15 @@
 
 - A function is a reusable group of code that can be called anywhere in the program. **Analogous to Java methods.**
 	- You declare a function using the “function” keyword. A function can take any number of parameters you choose.
-- Functions can return values using the “return” keyword. You do not have to specify a return type like in Java.
-- Javascript functions are objects and can be stored in variables
+		- `function myFunction(param1, param2){}`
+	- Functions can return values using the “return” keyword. You do not have to specify a return type like in Java.
+	- Javascript functions are objects and can be stored in variables
 
 - **Anonymous functions** have no identifier (name). Can be held in a variable still.
+	- E.g. `let anon = function(){}`
 - **Arrow functions** are “one time use” functions that are written inline
   - Analogous to lambdas in Java, they are called arrow functions because the syntax uses “=>” to make an arrow
-    - E.g. (var1) => {console.log(var1);}
+    - E.g. `(var1) => {console.log(var1);}`
 - **Callback functions** are functions that get passed into another function as a parameter, and then the original function executes the parameterized function. 
   - This is helpful in writing **asynchronous JS code.** Code generally runs from top to bottom of the file - **if code is not happening in sequence, it is considered asynchronous.** 
   - All functions in JS are objects, which means that can be passed in as parameters of other functions.
