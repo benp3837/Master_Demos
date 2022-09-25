@@ -245,8 +245,8 @@ this.age = age;
   - Big one: **response.json() - takes the response body as JSON and returns a JS object.** 
   - **response.text()** - returns the response as plain text. 
   - **response.status()** - returns the status code of the response.
- 	-response.status() is quite useful if you need to take different actions based on the status code returned. 
-	-E.g. `if(response.status() === 200) { //do something}` `else if(response.status() === 404) { //do something else}`
+ 	- response.status() is quite useful if you need to take different actions based on the status code returned. 
+	- E.g. `if(response.status() === 200) { //do something}` `else if(response.status() === 404) { //do something else}`
 	
 
 - Keywords
@@ -254,14 +254,14 @@ this.age = age;
   - **await** - in an asynchronous function, await will pause the function until the promise is returned
   - \*\*These two keywords will go hand in hand
 
-\*HelloFetch\*
+\*HelloFetch demo here\*
 
 **Timing Events**
 
-- Timing events are used to **automate or run tasks after certain intervals of time.** The two main timing event we see are setTimeout() and setInterval()
+- Timing events are used to **automate or run tasks after certain intervals of time.** Two common timing events you'll see are setTimeout() and setInterval()
 
 - **setTimeout** takes a certain function, and an amount of milliseconds to wait before executing that function.
-  - E.g. setTimeout(myFunction, 2000)
+  - E.g. `setTimeout(myFunction, 2000)`
     - myFunction will run 2 seconds after being called
 - **setInterval** takes a certain function, and executes it multiple times after a certain interval.
   - E.g. setInterval(myFunction, 2000)
@@ -278,7 +278,7 @@ this.age = age;
   - The **header** typically contains the token (which is JWT) and the signing algorithm being used (such as HMAC).
   - The **payload** contains **claims,** which is the actual data being transmitted. 
   - Finally, the signature verifies that the payload was not changed along the way.
-  - ![](Aspose.Words.7b5716e8-ba1e-4113-9261-3ca2baf0c4c5.002.png)
+  - ![](https://supertokens.com/static/b0172cabbcd583dd4ed222bdb83fc51a/9af93/what-is-jwt.png)
 - Although JWTs can be encrypted to provide secrecy between the front/backend, we will focus on **signed tokens**
   - **Signed tokens** can verify the integrity of claims contained within it. The signature certifies that only the party holding the private key is the one that signed it. 
 - Does that make sense? It didn’t to me. Think of JWTs sort of like a chip in a credit card. It allows the transaction, uniquely identifies the cardholder, and assures to the system that this transaction is legitimate. It’s an authentication and security step.
