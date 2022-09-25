@@ -145,12 +145,6 @@
   - This lets us do stuff like call functions before they appear in the code
 
 
-
-
-
-
-
-
 **“this” Keyword**
 
 - In JavaScript the “this” keyword has multiple meanings based on where it’s used.
@@ -192,20 +186,6 @@ this.age = age;
 
 ![](https://www.w3schools.com/js/pic_htmltree.gif)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - In JS, you **access the DOM with the “document” object.**
   - **DOM Selection** is **accessing the elements** of the HTML through the DOM object. 
     - `document.getElementById(“idName”)` will return a single element
@@ -214,9 +194,6 @@ this.age = age;
   - **DOM Manipulation** is JS **actually changing** the elements of the DOM during run time.
     - .setAttribute will actually change the attributes of a DOM element directly
     - .appendChild creates a new element as the direct child of another element
-
-
-\*Start HelloDOM\*
 
 **JS Events**
 
@@ -236,23 +213,24 @@ this.age = age;
 - **EventListener** is what we use to detect events and perform some action
   - The **addEventListener function** is built into JS to handle various events. 
     - It **“listens”** for a certain event to happen, then executes some logic.
-  - The syntax: element.addEventListener(event, function, useCapture)
+  - The syntax: `element.addEventListener(event, function, useCapture)`
     - **event -** type of event being listened for (see above for some options)
     - **function -** what code to run when the event happen** 
+    - useCapture how we tell the DOM how we want events to interact between parent/child elements. We won't go too deep on this.
 
-\*Finished HelloDOM\*
+\*HelloDOM demo here\*
 
 
-**JS Fetch API** 
+## JS Fetch API 
 
 - JS can use the Fetch API which is a modern and versatile means of **sending asynchronous requests.** 
   - Basically, this is how we send **HTTP Requests from the frontend.** 
-  - Fetch’s use of **promise objects** lets us gather HTTP Responses.
+  - Fetch’s use of **promise objects lets us gather HTTP Responses.**
 
 - We use the **fetch() method** on the window object, which **returns a promise** (see below). 
   - fetch() takes two parameters:
     - A **URL** that the request is sent to
-    - An **object** which can contain multiple options that define the request. This whole second parameter
+    - An **object** which can contain multiple options that define the HTTP Request. This whole second parameter
       - With it, you can set the HTTP verb, headers, body, etc.
 
 - A **promise object** represents a value that **may not be yet available, but will be resolved in the future.** Instead of receiving the value, you get a “promise” that it’ll come later. 
@@ -263,13 +241,13 @@ this.age = age;
   - If the HTTP request **fails** (the response has an error status code), the promise resolves and the **Fetch API rejects the promise object**
   - If we get a successful response, **the promise returns in the Response Body**
 
-- Methods to access response body: 
-  - **response.json() - takes the response body as JSON and returns a JS object.** 
+- We can extract the response data with these **methods to access response body: **
+  - Big one: **response.json() - takes the response body as JSON and returns a JS object.** 
   - **response.text()** - returns the response as plain text. 
   - **response.status()** - returns the status code of the response.
-  - response.formData() - returns the response as a form data object. 
-  - response.blob() - returns the response as a BLOB (Binary Large OBject) 
-  - response.arrayBuffer - returns the response as an ArrayBuffer (low level representation of binary data.)
+ 	-response.status() is quite useful if you need to take different actions based on the status code returned. 
+	-E.g. `if(response.status() === 200) { //do something}` `else if(response.status() === 404) { //do something else}`
+	
 
 - Keywords
   - **async** - this is added to functions to tell them to return a promise, rather than directly return a value
