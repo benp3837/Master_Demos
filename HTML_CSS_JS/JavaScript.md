@@ -61,7 +61,7 @@
 
 **Control Flow**
 
-- if/else if/else
+- The typical control flow statements you know from Java are the same with JS EXCEPT:
 - for loops
   - There are 2 special types of for loops. 
     - **for-in**: iterates over an object’s keys
@@ -71,28 +71,26 @@
       - `let arr = [12, “Susie”, true, 0]; //this is a JS array`
       - `for (let value of arr) {console.log(value);}//print 12 then Susie then true then 0.`  
     - Think for-in = objects, for-of = arrays. 
-- while loops/do-while loops
-- switch statement
 
 **Type Coercion**
 
 - Type coercion is **the process of converting a value from one data type to another.** There is explicit and implicit type coercion.
 
 - **Explicit type coercion** is when we specify that we want a type changed to another type. 
-  - E.g. number(“3”), String(123)
+  - E.g. `number(“3”), String(123)`
   - //we’re simply specifying explicitly what data type we want a certain value to change to.
 
 - **Implicit type coercion** is where JS will attempt to carry out your instructions by changing the type variable on its own. This happens when you apply operators to values of different types.
-  - E.g. “3” \* 2;
+  - E.g. `“3” \* 2;`
   - //number - JS chooses this for us. Likely because you wouldn’t multiply a String
-  - E.g. “3” + 2;
+  - E.g. `“3” + 2;`
   - //string - Likely because you commonly concatenate strings 
 - Type coercion is one of those areas where JS quirkiness really shines through
 
 
 \*Started HelloJS here\*
 
-**Truthy and Falsy Values (actually technical terms)**
+**Truthy and Falsy Values (these are actually technical terms lol)**
 
 - In JS, **any expression or value can be evaluated as a boolean.** We use the terms truthy and falsy to indicate what boolean something will be evaluated as even if they aren’t inherently booleans. 
 
@@ -108,11 +106,10 @@
 **JS Functions**
 
 - A function is a reusable group of code that can be called anywhere in the program. **Analogous to Java methods.**
-- You declare a function using the “function” keyword. A function can take any number of parameters you choose.
+	- You declare a function using the “function” keyword. A function can take any number of parameters you choose.
 - Functions can return values using the “return” keyword. You do not have to specify a return type like in Java.
 - Javascript functions are objects and can be stored in variables
 
-- There are various types of functions in JS:
 - **Anonymous functions** have no identifier (name). Can be held in a variable still.
 - **Arrow functions** are “one time use” functions that are written inline
   - Analogous to lambdas in Java, they are called arrow functions because the syntax uses “=>” to make an arrow
