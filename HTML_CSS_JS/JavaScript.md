@@ -155,17 +155,14 @@
 
 - In JavaScript the “this” keyword has multiple meanings based on where it’s used.
   - **“this” alone** refers to the global Object. (The window object)
-  - **“this” in event handlers** refers to the HTML element that receives the event. (See event handling above)
-    - E.g. <button onclick = this.style.color=”green”>click me</button>
+  - **“this” in event handlers** refers to the HTML element that receives the event. (See event handling below)
+    - E.g. `<button onclick = this.style.color=”green”>click me</button>`
     - As with other inline styling, this isn’t best practice
   - **“this” in Object Method Binding** (like a constructor) refers to the object.
-    - E.g. var people = function (name, age) {
-
+    - E.g. `var people = function (name, age) {
 this.name = name;
-
 this.age = age;
-
-}
+}`
 
 **JS Prototypal Inheritance**
 
@@ -183,9 +180,9 @@ this.age = age;
   - Here, you define a variable and then assign it to an object with the class keyword
 - Classes can have a special function in the class called a “constructor” that functions like a constructor in Java (initializes the object by assigning values to its variables.)
 
-\*IMAGE OF CLASS SYNTAX GOES HERE\*
+![](.imgs/JS_class_syntax.png)
 
-**Document Object Model (DOM)**
+## Document Object Model (DOM) 
 
 - When you attach JS to HTML via the <script> tag, it will read that document and **convert the HTML elements into a JS object that can then be manipulated.**
   - This is a good look into how JS and HTML interact under the hood.
@@ -193,7 +190,7 @@ this.age = age;
 
 - The DOM is created as a “tree” where the root element <html> is the root of the tree, and the other elements “branch” out from the root. **Each element in the HTML is an object in the DOM.**
 
-![](Aspose.Words.7b5716e8-ba1e-4113-9261-3ca2baf0c4c5.001.png)
+![](https://www.w3schools.com/js/pic_htmltree.gif)
 
 
 
@@ -211,12 +208,12 @@ this.age = age;
 
 - In JS, you **access the DOM with the “document” object.**
   - **DOM Selection** is **accessing the elements** of the HTML through the DOM object. 
-    - document.getElementById(“idName”) will return a single element
-    - document.getElementsByClassName(“className”) returns an Array of elements
+    - `document.getElementById(“idName”)` will return a single element
+    - `document.getElementsByClassName(“className”)` returns an Array of elements
     - And more!!!!!!
   - **DOM Manipulation** is JS **actually changing** the elements of the DOM during run time.
-    - .setAttribute will actually change a DOM element’s attribute directly
-    - .appendChild creates a new element as the direct of another
+    - .setAttribute will actually change the attributes of a DOM element directly
+    - .appendChild creates a new element as the direct child of another element
 
 
 \*Start HelloDOM\*
