@@ -279,7 +279,7 @@ this.age = age;
   - The **header** typically contains the token (which is JWT) and the signing algorithm being used (such as HMAC).
   - The **payload** contains **claims,** which is the actual data being transmitted. 
   - Finally, the signature verifies that the payload was not changed along the way.
-  - ![](https://supertokens.com/static/b0172cabbcd583dd4ed222bdb83fc51a/9af93/what-is-jwt.png)
+![](https://supertokens.com/static/b0172cabbcd583dd4ed222bdb83fc51a/9af93/what-is-jwt.png)
 - Although JWTs can be encrypted to provide secrecy between the front/backend, we will focus on **signed tokens**
   - **Signed tokens** can verify the integrity of claims contained within it. The signature certifies that only the party holding the private key is the one that signed it. 
 - Does that make sense? It didn’t to me. Think of JWTs sort of like a chip in a credit card. It allows the transaction, uniquely identifies the cardholder, and assures to the system that this transaction is legitimate. It’s an authentication and security step.
@@ -291,13 +291,13 @@ this.age = age;
 - **The Rest Operator is used in a function’s parameters.** It allows us to take values the user inputs into an **Array.** 
   - Sounds a little confusing, but this code snippet should make more sense.
 
-![](Aspose.Words.7b5716e8-ba1e-4113-9261-3ca2baf0c4c5.003.png) 
+![](rest_operator.png) 
 
 - This is a little more clear - the rest operator lets you put *the rest* of the inputted values into an Array to be used in the function. This allows for **code flexibility.**
 
 
 - **The Spread Operator** is a bit easier to understand. It lets you ***spread* iterators into individual values.** 
 
-![](Aspose.Words.7b5716e8-ba1e-4113-9261-3ca2baf0c4c5.004.png)
+![](spread_operator.png)
 
 - This lends to the concept of **destructuring assignment**, which is a Javascript expression that lets you unpack values from Arrays or other objects into individual values.
