@@ -246,7 +246,8 @@ this.age = age;
   - **response.text()** - returns the response as plain text. 
   - **response.status()** - returns the status code of the response.
  	- response.status() is quite useful if you need to take different actions based on the status code returned. 
-	- E.g. `if(response.status() === 200) { //do something}` `else if(response.status() === 404) { //do something else}`
+	- E.g. `if(response.status() === 200) { //do something}` 
+		- `else if(response.status() === 404) { //do something else}`
 	
 
 - Keywords
