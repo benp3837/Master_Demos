@@ -144,7 +144,7 @@
 
 `	`-skip git will bypass the automatic git repo that will be built
 
-`	`-Routing we’ll talk about late but this gives us the ability to navigate through components
+`	`-Routing we’ll talk about later but this gives us the ability to navigate through components
 
 `ng serve -o` (to bring (serve) your application to a browser tab)
 
@@ -411,18 +411,11 @@ constructor(**private** employeeService : EmployeeService) {
 
 **Dependency Injection (DI)**
 
-- Dependency Injection it’s a design pattern where **the class receives its dependencies (its data/functionality) from an external source instead of creating them itself.** 
+- Dependency Injection is a design pattern where **the class receives its dependencies (its data/functionality) from an external source instead of creating them itself.** 
   - Dependency Injection does not use the “new” keyword. We declare all of the necessary members (data/functions) in one class (the service) and give them to the injectee (the component)
-- Types of Dependency Injection 
-  - **Constructor Injection:** We tell our application in the constructor what dependencies we need and it will provide them when we create the object. **Angular uses EXCLUSIVELY Constructor Injection** 
+  - Angular only uses **Constructor Injection:** We tell our application in the constructor what dependencies we need and it will provide them when we create the object. **Angular uses EXCLUSIVELY Constructor Injection** 
 
 ![](Aspose.Words.b047aeec-acb9-40df-b513-eb7481f68b19.002.png)
-
-\*Remember, Angular doesn’t use these bottom two so there aren’t good visual examples. We’ll learn about them next week, it will take quite a few images that use things we haven’t seen yet. 
-
-- **Setter Injection:** We tell our application what setter we want it to use, and it will call the setter giving us our dependency that way. 
-- **Field Injection:** We tell our application what field we need to fill, and the injector injects into that field
-- There are other types if you want to look into them, though we won’t need them.
 
 
 **MVC Design Pattern in Angular**
@@ -456,6 +449,8 @@ constructor(**private** employeeService : EmployeeService) {
 
 - We have a **Subject (event channel) that maintains a list of Observers (subscribers).** It notifies the observers of any state changes (aka new published messages)
 - **Angular uses this design pattern with the HttpClient (see below) to manage HTTP requests.** This allows for the use of Observables instead of Promises!!! This is how we get away from promises. (Observables are generally considered better).
+
+# HTTP Requests in Angular
 
 **Observables**
 
