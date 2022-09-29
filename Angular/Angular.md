@@ -42,9 +42,7 @@
 
 `	`-ng version (no dash) to make sure it worked. WOW! Cool art. Very nice workmanship.
 
-**Angular**
-
-
+# Angular
 
 - Is a front end framework designed by Google, for developing **Single Page Applications (SPA).** It will make your webpage development a lot easier than what you’ve been using.
   - An SPA is a reactive webpage that may give the impression of being multiple webpages that a client navigates through, but is in fact a single webpage with “components” that move in and out responsively to change the user’s view. 
@@ -60,9 +58,8 @@
   - **Services are pure logic files. (Typescript files).** They hold functions and variables shared across components. They give our web pages functionality!**  
   - **Modules organize our application** by making collections of components, services, and even other modules (Analogous to Java packages) 
 
-- Angular’s CLI commands start with “ng”
-  - Eg. ng new to make a new application
-  - Or ng generate component [component-name]
+- Angular comes prepackaged with a CLI that helps us create projects and components with short commands! Angular’s CLI commands start with “ng”
+  - Eg.`ng generate component [component-folder]/[component-name]`
 
 
 **Single Page Applications (SPA)**
@@ -107,15 +104,15 @@
 - Because TS is a **strongly typed** language, we have to declare a datatype when we declare a variable
 - We tend to only use let or const, var is possible but it’s considered bad practice.
   - let variable-name : data-type = value;
-  - E.g. let myString : string = “I am a string!”;
-  - myString = 5; //this will throw an error! TS is not loosely typed like JS
+  - E.g. `let myString : string = “I am a string!”;`
+  - `myString = 5; //this will throw an error! TS is not loosely typed like JS`
 - **TypeScript has all the basic data types of JS** (number, string, etc) plus more:
   - **Any** - Because TS is transpiled into JS (which is loosely typed), sometimes we need the ability to declare a variable without a specific type. AKA it can be “any” type it needs to be. 
-    - E.g. let myString : any = “I am a string!”;
-    - myString = 5; //this will NOT throw an error! The data type is “any”
+    - E.g. `let myString : any = “I am a string!”;`
+    - `myString = 5; //this will NOT throw an error! The data type is “any”`
   - **Arrays** - Arrays in TS are typed like Arrays in Java. So, only values of the declared Array type are acceptable and they’re fixed in size.
-    - E.g. let fruits : string[] = [‘Apple’, ‘Banana’, ‘Pomegranate’, ‘Rambutan’]
-    - E.g. let fruit : any[] = [‘Apple’, 4, false, ‘Mango’]
+    - E.g. `let fruits : string[] = [‘Apple’, ‘Banana’, ‘Pomegranate’, ‘Rambutan’]`
+    - E.g. `let fruit : any[] = [‘Apple’, 4, false, ‘Mango’]`
   - **Never** & **Void:** These are function return types
     - **Void:** For a function that doesn’t return anything
     - **Never:** For a function will never return because it “raises” (throws)  an error. So you’d only really use this if you want to create a custom error.
@@ -125,7 +122,7 @@
 
 - TS is OOP - so it has support for Classes. It uses the “class” keyword to declare them, then the “new” keyword to create an object of that class.
 
-- class Person {
+- `class Person {
 
 //fields
 
@@ -149,7 +146,7 @@ function greetPerson():string {
 
 let person1 = new Person(“Andrew”);
 
-console.log(person1.greetPerson()) //prints “Hello, Andrew”
+console.log(person1.greetPerson()) //prints “Hello, Andrew”`
 
 - **TS has inheritance just like in Java**, and uses the “extends” keyword in the same way.
 - **Access Modifiers:** 
@@ -163,7 +160,7 @@ console.log(person1.greetPerson()) //prints “Hello, Andrew”
 
 \*Started todo list demo to look at angular anatomy\* 
 
-**#### Look here for common Angular CLI commands you’ll use often**
+### Look here for common Angular CLI commands you’ll use often
 
 \*when we installed angular, we got **Angular CLI**. It lets us generate angular projects, components, services, and more, all from the comfort of commands in git bash :)
 
@@ -184,6 +181,8 @@ console.log(person1.greetPerson()) //prints “Hello, Andrew”
 **\*To stop the server in git bash, (so we can build new components etc) the keyboard shortcut is ctrl + c**
 
 **ng generate component components/[component-name] (generate a new component)**
+
+###     
 
 **Angular File Structure** 
 
