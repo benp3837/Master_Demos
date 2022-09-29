@@ -122,32 +122,6 @@
 
 - TS is OOP - so it has support for Classes. It uses the “class” keyword to declare them, then the “new” keyword to create an object of that class.
 
-- class Person {
-
-//fields
-
-name:String;
-
-//constructor
-
-constructor(name:String) {}
-
-//functions
-
-function greetPerson():string {
-
-return “Hello, “ + this.name;
-
-}
-
-}
-
-//object creation syntax
-
-let person1 = new Person(“Andrew”);
-
-console.log(person1.greetPerson()) //prints “Hello, Andrew”
-
 - **TS has inheritance just like in Java**, and uses the “extends” keyword in the same way.
 - **Access Modifiers:** 
   - public - same as in Java, but this is also the default access modifier 
@@ -166,21 +140,20 @@ console.log(person1.greetPerson()) //prints “Hello, Andrew”
 
 -Git bash into the folder where you want your application to be. 
 
-**ng new hello-angular --skip-git --routing (this creates a new project)**
+`ng new hello-angular --skip-git --routing` (this creates a new project)
 
 `	`-skip git will bypass the automatic git repo that will be built
 
 `	`-Routing we’ll talk about late but this gives us the ability to navigate through components
 
-**ng serve -o (to bring (serve) your application to a browser tab)**
-**
+`ng serve -o` (to bring (serve) your application to a browser tab)
 
 
 \*we get sent to the default welcome page. click “Learn Angular” for a very good tutorial
 
 **\*To stop the server in git bash, (so we can build new components etc) the keyboard shortcut is ctrl + c**
 
-**ng generate component components/[component-name] (generate a new component)**
+`ng generate component components/[component-name]` (generate a new component)
 
 ###     
 
