@@ -155,7 +155,7 @@
 
 `ng generate component components/[component-name]` (generate a new component)
 
-###     
+#   
 
 **Angular File Structure** 
 
