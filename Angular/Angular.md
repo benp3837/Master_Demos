@@ -134,7 +134,7 @@
 
 \*Started todo list demo to look at angular anatomy\* 
 
-### Look here for common Angular CLI commands you’ll use often
+# Look here for common Angular CLI commands you’ll use often
 
 \*when we installed angular, we got **Angular CLI**. It lets us generate angular projects, components, services, and more, all from the comfort of commands in git bash :)
 
