@@ -123,17 +123,29 @@
 - TS is OOP - so it has support for Classes. It uses the “class” keyword to declare them, then the “new” keyword to create an object of that class.
 
 - class Person {
+
 //fields
+
 name:String;
+
 //constructor
+
 constructor(name:String) {}
+
 //functions
+
 function greetPerson():string {
+
 return “Hello, “ + this.name;
+
 }
+
 }
+
 //object creation syntax
+
 let person1 = new Person(“Andrew”);
+
 console.log(person1.greetPerson()) //prints “Hello, Andrew”
 
 - **TS has inheritance just like in Java**, and uses the “extends” keyword in the same way.
