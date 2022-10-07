@@ -132,7 +132,7 @@
 - Getters and Setters use the “get” and “set” keywords. 
 
 
-\*Started todo list demo to look at angular anatomy\* 
+\*Started hello-angular demo to look at angular anatomy\* 
 
 # Look here for common Angular CLI commands you’ll use often
 
@@ -194,7 +194,7 @@
 
 - Components are essentially **a “section” of a webpage that can be displayed or removed by our Angular application.** Think of all the different boxes that are displayed when you go onto facebook.com. Those are all components. Your newsfeed, ads, other sidebars, etc.
 - We can use the CLI to create a new component in our Angular application. **The command to create a component is “ng generate component <component-folder (optional)> <component-name>.** 
-  - This can be shortened to “ng g c <component-folder> <component-name>”
+  - This can be shortened to `ng g c <component-folder> <component-name>`
   - Creating a component through the CLI creates four files that make up the component: html, css, spec.ts, ts
 - **We can display components in two ways:**
   - 1.) **Statically** - Each component will have a selector associated with the @Component decorator. You can find it in the TS file. An HTML tag with the name of that selector will display that component on your webpage statically. 
@@ -245,24 +245,24 @@
   - **String Interpolation** (often just called interpolation) - **This displays the value of a component’s variable as text in the HTML.** 
     - Syntax is two curly braces: {{var name}} in the HTML
     - E.g. 
-      - TS file: let myVar = ‘Ben’; 
-      - HTML: <p> Hello {{myVar}} </p>
+      - TS file: `let myVar = ‘Ben’;` 
+      - HTML: `<p> Hello {{myVar}} </p>`
       - This displays a paragraph that says “Hello Ben” on the page.
   - **Property Binding** - **This binds values of component variables to the attributes of HTML elements.** When the value of the variables changes, the attribute will change accordingly.
     - Syntax is square brackets: [attribute] = “variable name”
       - (this is done in the HTML tag)
-    - E.g. <img [src] = “image”> assume image is a TS variable
+    - E.g. `<img [src] = “image”>` assume image is a TS variable
   - **Event Binding -** This allows us to **bind DOM events such as button clicks, mouse overs etc, to a function in the component.** Similar to how our event handlers/listeners work.
     - Syntax is parenthesis: (event) = “function name”
       - (this is done in the HTML tag)
-    - E.g. <input type=”submit” (click) = “submitFunction()”/>
+    - E.g. `<input type=”submit” (click) = “submitFunction()”/>`
 
 - **Two-way Binding combines property binding and event binding together.** It is very useful for **collecting data from the user**. Two-way binding **allows for user inputs to be reflected in the component’s TS class!!!** 
   - You can think of it like how the Java Scanner object can take user input and store it in a variable, to be used. 
 - **It requires us to import the FormsModule in the imports section of the NgModule in app.module.ts** in order to be available for use in your Angular application. 
   - Syntax is “banana in a boat”:  [(ngModel)] = “variable name”
-    - E.g. <input type=”text” [(ngModel)] = “name”/>
-    - <p> Hello, {{name}}! </p>	
+    - E.g. `<input type=”text” [(ngModel)] = “name”/>`
+    - `<p> Hello, {{name}}! </p>`	
     - What’s going on here? The user is getting prompted to enter some text that will be assigned to a variable called “name” in TS. We could then use String Interpolation to display their input in a later tag. 
 
 \*Went back into todos demos\*

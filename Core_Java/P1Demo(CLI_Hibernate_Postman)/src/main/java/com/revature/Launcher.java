@@ -1,5 +1,7 @@
 package com.revature;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -18,7 +20,7 @@ import io.javalin.Javalin;
 public class Launcher {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         //****These aren't being used anymore, DAO methods are now called in the Controller layer
         //Instantiate an EmployeeDAO and RoleDAO so we can use their methods
@@ -62,7 +64,7 @@ public class Launcher {
         RoleController rc = new RoleController();
 
         //Instantiate an AuthController... you know why hopefully :)
-        AuthController ac = new AuthController();
+        AuthController dog = new AuthController();
 
         //endpoint handlers below--------------------------
 
@@ -84,6 +86,19 @@ public class Launcher {
         app.delete("/delete/{id}", ec.deleteEmployeeHandler);
 
         app.post("/login", ac.loginHandler);
+
+        //getClass() returns an object that represents the object at runtime. (assume we have a Dog Class/object)
+        Class c = dog.getClass();
+
+        //getConstructor() returns an object representing the constructor used during instantiation
+        Constructor cons = c.getConstructor();
+
+        //getMethods() returns an Array representing the methods the object can use
+        Method[] methods = c.getMethods();
+
+        
+
+
 
     } //end of main method
 
