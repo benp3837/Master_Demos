@@ -1,0 +1,8 @@
+13:41:14.852 [main] INFO  com.revature.Calculator - added numbers 6 and 10
+13:41:14.855 [main] INFO  com.revature.Calculator - subtracted numbers 6 and 10
+13:41:14.855 [main] INFO  com.revature.Calculator - divided numbers 6 and 2
+13:41:14.856 [main] WARN  com.revature.Calculator - attempted to divide by zero!
+13:42:31.083 [main] INFO  com.revature.Calculator - added numbers 6 and 10
+13:42:31.087 [main] INFO  com.revature.Calculator - subtracted numbers 6 and 10
+13:42:31.087 [main] INFO  com.revature.Calculator - divided numbers 6 and 2
+13:42:31.087 [main] WARN  com.revature.Calculator - attempted to divide by zero!
