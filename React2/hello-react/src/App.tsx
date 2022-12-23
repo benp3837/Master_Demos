@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { FirstClassComponent } from './components/FirstClassComponent/FirstClassComponent';
 import { ParentComponent } from './components/ParentComponent/ParentComponent';
+import { UserComponent } from './components/UserComponent/UserComponent';
 
 /*
 The App.tsx is our MAIN PAGE in React. This is where the root of our application it
@@ -19,6 +20,8 @@ function App() {
       <FirstClassComponent></FirstClassComponent>
       <br />
       <ParentComponent></ParentComponent>
+      <br />
+      <UserComponent></UserComponent>
     </div>
   );
 }
