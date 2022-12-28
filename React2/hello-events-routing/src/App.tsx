@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Routes, Route, BrowserRouter} from 'react-router-dom';
 
-function App() {
+import './App.css';
+import { HypotenuseComponent } from './components/HypotenuseComponent/HypotenuseComponent';
+import { PostContainerComponent } from './components/PostContainerComponent/PostContainerComponent';
+import { data } from './data';
+
+//Remember, App.tsx is the main page we'll render stuff on. 
+//We can render TSX directly in the return(), or render entire Components 
+
+/*Note the syntax for Routing:
+The Router holds the different Routes tags, which each hold a different Route
+The Route tag will hold a url path and the component that gets rendered on that url */
+export function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/hyp" element={<HypotenuseComponent/>}/>
+        </Routes>
+        <Routes>
+        <Route path="/posts" element={<PostContainerComponent data={data}/>}></Route>
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }
