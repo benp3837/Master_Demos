@@ -17,13 +17,14 @@ public class Calculator {
     }
 
     public int divide(int x, int y){
-        try {
-            int i = x / y; //if y == 0, this will throw an exception and be caught by the catch
+        if(y != 0) {
+            int i = x / y; //if y == 0, this will throw an exception
             logger.info("divided numbers " + x + " and " + y);
             return i;
-        } catch(ArithmeticException e){
-            logger.warn("attempted to divide by zero!");
-            return 0;
+        } else {
+            logger.warn("about to divide by zero!");
+            return x / y; //this will throw an exception
+            //normally I'd want a try/catch here, but I want to use this for testing
         }
     }
 
