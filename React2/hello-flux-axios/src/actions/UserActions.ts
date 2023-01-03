@@ -23,7 +23,7 @@ export const loginUser = (loginCreds:UserLogin) => async (dispatch:any) => {
     try {
 
         //send my HTTP request with axios, and put it into a variable we can use
-        const response = await axios.post('http://localhost:5000/login', loginCreds);
+        const response = await axios.post('http://localhost:5000/auth', loginCreds);
 
         if(response.status === 202) { //if the login was successful...
             
