@@ -31,7 +31,7 @@ export class UserComponent extends React.Component<any, UserInterface> {
             }
         )
     }
-    //big picture of this code block: 
+    //big picture of the above code block: 
     //when this component renders, the state will be set due to the code executing in componentDidMount()
     //we the state object in this component to be a UserInterface object
 
