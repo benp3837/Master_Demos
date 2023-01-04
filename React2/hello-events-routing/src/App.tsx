@@ -2,7 +2,7 @@ import React from 'react';
 import {Routes, Route, BrowserRouter} from 'react-router-dom';
 
 import './App.css';
-import { HypotenuseComponent } from './components/HypotenuseComponent/HypotenuseComponent';
+import { HypotenuseComponent } from './components/MultiplyComponent/HypotenuseComponent';
 import { PostContainerComponent } from './components/PostContainerComponent/PostContainerComponent';
 import { data } from './data';
 
