@@ -20,9 +20,8 @@ export const PokeReducer = (state:IPoke = initialState, action:Action) => {
             initialState = action.payload
             return{
                 ...initialState 
-                //for some reason, React Redux needs "..." to send objects
-                //"property spread notation" in ES6
-                //supported with transpilation, spread the properties of the object out as props
+                //"property spread notation" (...) in ES6
+                //spread the properties of the object out as props
                 //saves us a BUNCH of code instead of having to individually assign each value
             }
         default:

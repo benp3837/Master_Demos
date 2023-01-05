@@ -1,18 +1,17 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react"
-import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
-import { loginUser } from "../../actions/UserActions"
-//import { Home } from "../Home/Home"
 
 import "./Login.css"
 
 export const Login: React.FC<any> = () => {
 
-    //this is how we access the state in the store. (The data in the universal data file).
-    const appState = useSelector<any, any>((state) => state);
-
-    //we need this object to actually dispatch data to our store
-    const dispatch = useDispatch();
+    //temporary variable to hold a logged in user
+    let loggedInUser = {
+        id:0,
+        username:"",
+        password:""
+    }
 
     //useState hooks to declare a state object, a mutator (which changed state), and a default value
     let [username, setUsername] = useState('');
@@ -25,33 +24,36 @@ export const Login: React.FC<any> = () => {
     //when user updates the username/password field, this function is called
     //when user updates the values, username OR password get updated as well
     //this is how we can send a username/password object to the loginUser Action
-    const handleChange = (e:any) => {
-        if(e.target.name === "username"){ //if the input is name=username...
-            setUsername(e.target.value) //set username to be the value that was inserted
+    const handleChange = (input:any) => {
+        if(input.target.name === "username"){ //if the input is name=username...
+            setUsername(input.target.value) //set username to be the value that was inserted
             console.log(username) //to show useState working
         } else {
-            setPassword(e.target.value) //otherwise, set the password with that value.
+            setPassword(input.target.value) //otherwise, set the password with that value.
         }
     }
 
-    //login functionality. we take the state objects and send them to the userLogin Action
-    //sending the data, aka dispatching the data
     const login = async () => {
-        await dispatch(
-            loginUser({username, password}) as any
-            //these are the states that were changed with handleChange
-            //we need "as any" to make it so that the return type can be any type
-        )
-    }
 
-    //useEffect hook that runs when appState changes
-    //based on whether the user successfully logged in, change the page or do nothing
-    useEffect(() => {
-        if(appState.user.id > 0){
-            navigate("/home"); //thanks to Routing in the App.tsx, this will switch the component.
+        //send my HTTP POST request with axios, and put it into a variable we can use
+        const response = await axios.post('http://localhost:5000/auth', {username, password});
+
+        if(response.status === 202) { //if the login was successful...
+            
+            console.log(response) //to see the data coming back
+
+            //populate our loggedInUser variable based on the data sent back from the server
+            loggedInUser = {
+                id: response.data.id,
+                username: response.data.username,
+                password: response.data.password
+            }
+
+            if(loggedInUser.id > 0){
+                navigate("/home"); //thanks to Routing in the App.tsx, this will switch the component.
+            }
         }
-    }, [appState])
-
+    }
 
     return(
         <div className="login">
