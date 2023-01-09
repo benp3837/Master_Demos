@@ -1,4 +1,4 @@
-import { LOGIN_USER } from "../actions/ActionTypes";
+import { ADD_USER, LOGIN_USER } from "../actions/ActionTypes";
 import { IUser } from "../store/types";
 
 //reducers are responsible for calculating and sending new state data to the store
@@ -9,8 +9,11 @@ let initialState:IUser = {
     password:"",
 }
 
-//this is an object that will determine what actions to take
-type Action = {type:string, payload:any};
+//this is an object that will determine what action to take below
+type Action = {
+    type:string, 
+    payload:any
+};
 
 //the reducer will take in an IUser object, which is meant to update intialState^
 //it will also take in an Action that contains what action to take, and what data it has (payload)
@@ -25,9 +28,9 @@ export const UserReducer = (state:IUser = initialState, action: Action) => {
             return {
                 ...initialState //return that object so it can be used in the view
             }
-        //THIS BROKE MY CODE BEFORE
-        //since there is no action when the application starts, we need a default case
-        //or else the application will break.
+        case ADD_USER:
+            //add user stuff would go here
+            break;
         default:
             return state
         }

@@ -5,9 +5,9 @@ import reducer from "../reducers/index";
 import { AppState } from "./types";
 
 //the initial state of the application in the store will have default user and poke
-//this variable contains the state for the ENTIRE application
+//contains the state in a globally visible object (visible to the ENTIRE application) 
 //when user or poke payload get dispatched here, this state will change
-const initialState:AppState = {
+const state:AppState = {
     user: {
         id:0,
         username:"",
@@ -24,7 +24,7 @@ const initialState:AppState = {
 
 //here, I'm just configuring our store to be able to use reducers so that we can dispatch new data. 
 //our entire folder of reducers is contained in this "reducer" object
-//so now, when store data changes, reducers AUTOMATICALLY notify components, which changes the user's view
+//so now, when store data changes, reducers AUTOMATICALLY notify components, and changes the user's view
 export const store = configureStore({
     reducer
 })

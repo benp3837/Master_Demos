@@ -5,7 +5,9 @@ import io.javalin.Javalin;
 
 public class Launcher {
 
+
     public static void main(String[] args) {
+
         Javalin app = Javalin.create(
                 config -> {
                     config.enableCorsForAllOrigins(); //this lets us take in any HTTP requests

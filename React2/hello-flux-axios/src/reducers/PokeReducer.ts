@@ -1,15 +1,19 @@
-import { GET_POKE } from "../actions/ActionTypes";
+import { ADD_POKE, GET_POKE } from "../actions/ActionTypes";
 import { IPoke } from "../store/types";
 
-//remember, reducers help us take in new data from actions, 
-//which gets calculated and sent to the store, which holds globally accessible data
+//remember, reducers help us take in new data from actions and sending that data to the store
+//this is the user reducer, which will help us calculate changes in the current User
 let initialState:IPoke = {
     id: 0,
     name:"",
     sprite:null
 }
 
-type Action = {type: string, payload: any}
+//this is an object that will determine what action to take below
+type Action = {
+    type: string, 
+    payload: any
+}
 
 export const PokeReducer = (state:IPoke = initialState, action:Action) => {
     switch(action.type){
@@ -24,7 +28,11 @@ export const PokeReducer = (state:IPoke = initialState, action:Action) => {
                 //spread the properties of the object out as props
                 //saves us a BUNCH of code instead of having to individually assign each value
             }
+        case ADD_POKE:
+            //add pokemon stuff would go here
+            break;
         default:
             return state
+            //if none of the cases are matches, return the unchanged state
     }
 }

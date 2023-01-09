@@ -28,8 +28,10 @@ export const Home: React.FC<any> = () => {
     //we need to actually send our pokeID state to the getPoke action
     const loadPoke = async () => {
         await dispatch(
-            getPoke(pokeID) as any //we send the pokeID state variable to the getPoke action
+            getPoke(pokeID) as any 
+            //we send the pokeID state variable to the getPoke action
             //"as any" because the component doesn't know what type this will return
+            //the incoming pokemon object will then get sent to the store
         )
     }
 

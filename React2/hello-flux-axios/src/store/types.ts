@@ -13,8 +13,8 @@ export interface IPoke {
     sprite: any; 
 }
 
-//AppState object that will store one of each interface.
-//note the type keyword... it's like calling something an object in java
+//the AppState object will store one of each interface.
+//note the type keyword... it lets us create a user-defined data type
 export type AppState = {
     user: IUser, //one empty user object
     poke: IPoke //one empty poke object
