@@ -3,6 +3,9 @@ package com.revature.services;
 import com.revature.models.User;
 import com.revature.daos.UserDAOInterface;
 
+//we haven't really talked much about service classes
+//but they sit between the controllers and DAOs, and contain extra business logic
+//for instance validating inputs (is the incoming data valid? etc.)
 public class UserService {
 
 	private UserDAOInterface dao;
@@ -12,31 +15,31 @@ public class UserService {
 		this.dao = dao;
 	}
 
-	public boolean loginWithId(int id, String password) {
+	public User loginWithId(int id, String password) {
 		User u = dao.findById(id);
 
 		try {
 			System.out.println(u);
 		if (u.getPassword().equals(password)) {
-			return true;
+			return u;
 		}} catch (Exception e) {
-			
+			System.out.println("oops...");
 		}
-		return false;
+		return null;
 	}
 
-	public boolean loginWithName(String name, String password) {
+	public User loginWithName(String name, String password) {
 		User u = dao.findByUsername(name);
 		
 		try {
 			System.out.println(u);
 		if (u.getPassword().equals(password)) {
-			return true;
+			return u;
 		}
 		} catch (Exception e) {
-			
+			System.out.println("oops...");
 		}
-		return false;
+		return null;
 	}
 
 }

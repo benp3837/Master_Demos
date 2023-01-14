@@ -1,7 +1,6 @@
 package com.revature.services;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 import static org.mockito.Matchers.anyInt;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.times;
@@ -16,50 +15,54 @@ import org.mockito.MockitoAnnotations;
 
 import com.revature.models.User;
 import com.revature.daos.UserDAOInterface;
+import org.mockito.Spy;
 
 //@RunWith(MockitoJUnitRunner.class)
 public class UserServiceTest {
 
-	@Mock
+	@Mock //mock instance
 	private UserDAOInterface mockedDao;
-	
+
+	@Spy //real instance that we can track, aka "spy" on with certain methods like verify()
 	private UserService testInstance  = new UserService(mockedDao);
+
 	private User u = new User(1, "kewlUsername", "password");
 	
 	
 	@Before
 	public void setUp() {
-		MockitoAnnotations.initMocks(this);
+		MockitoAnnotations.openMocks(this);
 		testInstance = new UserService(mockedDao);
-		
-	//u = new User(1, "kewlUsername", "password");
-		
+
+		//due to these two lines of code, the user returned will always be User u, declared above
 		when(mockedDao.findByUsername("kewlUsername")).thenReturn(u);
 		when(mockedDao.findById(1)).thenReturn(u);
-		//when(mockedDao.findByUsername(anyString())).thenReturn(null);
-		//when(mockedDao.findById(anyInt())).thenReturn(null);	
 	}
 	
 	@Test
 	public void testLoginByNameSuccess() {
-		 
-		assertTrue(testInstance.loginWithName("kewlUsername", "password"));
-		//verify(mockedDao, times(1)).findByUsername("kewlUsername");
+		assertTrue(testInstance.loginWithName("kewlUsername", "password").equals(u));
+
+		//make sure that the findByUsername method of the UserDAO ran once (test fails if not)
+		verify(mockedDao, times(1)).findByUsername("kewlUsername");
 	}
 	
 	@Test
 	public void testLoginByNameFail() {
-		assertFalse(testInstance.loginWithName("coolUsername", "password"));
+		assertNull(testInstance.loginWithName("coolUsername", "password"));
 	}
 	
 	@Test
 	public void testLoginByIdSuccess() {
-		assertTrue(testInstance.loginWithId(1, "password"));
+		assertTrue(testInstance.loginWithId(1, "password").equals(u));
+
+		//make sure that the findById method of the UserDAO ran once (test fails if not)
+		verify(mockedDao, times(1)).findById(1);
 	}
 	
 	@Test
 	public void testLoginByIdFail() {
-		assertFalse(testInstance.loginWithId(1, "sassword"));
+		assertNull(testInstance.loginWithId(1, "sassword"));
 	}
 	
 }
