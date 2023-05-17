@@ -1,4 +1,3 @@
-import exceptions.NotACookieException;
 import models.CookieEatingMonster;
 import models.Food;
 
