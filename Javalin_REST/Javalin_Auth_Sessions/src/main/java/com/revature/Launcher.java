@@ -1,6 +1,7 @@
 package com.revature;
 
 import com.revature.controllers.AuthController;
+import com.revature.controllers.GreetingController;
 import io.javalin.Javalin;
 
 public class Launcher {
@@ -8,6 +9,7 @@ public class Launcher {
     public static void main(String[] args) {
 
         AuthController ac = new AuthController();
+        GreetingController gc = new GreetingController();
 
         //In order to use Javalin in our application, we need a Javalin object!
         Javalin app = Javalin.create().start(3000);
@@ -17,6 +19,7 @@ public class Launcher {
         a port is like a parking space for an application, where messages etc. can find it */
 
         app.post("/auth", ac.LoginHandler);
+        app.get("/hello", gc.SayHiHandler);
 
     }
 
