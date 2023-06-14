@@ -1,0 +1,34 @@
+/*External Style Sheet - the "most accepted" way to style our HTML*/
+
+/*This will apply some style to every single element*/
+*{
+    background-color:darkslateblue; 
+ }
+ 
+ /*Need background colors or images?? you can style the entire body directly*/
+ body{
+     background-color:darkslateblue;
+ }
+ 
+ /*To call for elements by ID, we use the # symbol*/
+ #listDiv{
+     font-size: 25px;
+     transform:rotate(-7deg);
+     margin-left: 15%; 
+     border: 5px double green;
+     padding: 5%;
+ }
+ 
+ /*To call for elements by CLASS< we use the . symbol*/
+ 
+ .listHeader{
+     color:fuchsia;
+     font-family:cursive;
+     transform:rotate(160deg);
+ }
+ 
+ /*Bootstrap and CSS can coexist*/
+ .table{
+     margin-left: 20%;
+     margin-top: 10%;
+ }

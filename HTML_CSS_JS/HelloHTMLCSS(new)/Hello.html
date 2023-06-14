@@ -1,0 +1,162 @@
+<!DOCTYPE html> <!-- doctype declaration (not considered an element) - declares what kind of doc this is -->
+<html lang="en"> <!-- root tag, the first element in an HTML file. All of our HTML goes in here -->
+
+<head> <!-- The head is typically metadata, but the <title> element names our tab -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> <!--Changing this will change the title of your browser tab-->
+
+    <!--This is how we can link to our external CSS stylesheet (considered best practice for HTML styling)-->
+    <link rel="stylesheet" href="HelloHTMLCSS.css">
+
+    <!--This is all we need to do to use bootstrap in our HTML-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!--1 of 3 ways to style HTML: style tag in the head. not commonly used-->
+    <style>
+
+        /*Element selector - applies styling to every element selected*/
+        p{
+            font-family:'Times New Roman', Times, serif;
+            font-style: italic;
+            color:cadetblue;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body> <!-- The body is what contains the actual content of our webpage -->
+    
+    <h1 style="background-color:burlywood; color:midnightblue; border: 2px solid black">Hello HTML. I am a front end developer now.</h1> <!-- h1 is the largest header tag (h6 smallest) -->
+
+    <p>I just built a webpage!</p> <p>Despite being on the same line in HTML, we render on different lines!</p>
+    <!-- Recall that <p> are BLOCK elements, so they never share the same line -->
+
+   <!-- WHAT IF I want inline elements?? -->
+   <span>I am a span. </span><span>I am another span. </span><span>We are INLINE elements</span>
+
+   <br> <!-- Line breaks create a line of empty space on the webpage. Good for formatting in a pinch-->
+   <br><br><br>
+    
+   <!-- divs are your general divison tag. We usually nest elements inside them-->
+   <div>
+        <p>I am a paragaph element in a div</p>
+        <span>I am a span in a div </span> <span>I am another span in a div</span>
+   </div>
+
+   <!--Buttons are what we'll typically use for our click-based activities-->
+   <button>Click me!! Nothing will happen :)</button>
+
+   <!--(Lists)--------------------------------------------------->
+
+   <div id="listDiv">
+
+        <h2 class="listHeader">Our Favorite Animals</h2>
+
+        <ol id="orderedList">
+            <li>Capybara</li>
+            <li>Wolf</li>
+            <li>Owl</li>
+            <li>Lion</li>
+            <li>Tiger</li>
+            <li>Pangolin</li>
+        </ol>
+
+        <h3 class="listHeader">Honorable Mentions</h3>
+
+        <ul id="unorderedList">
+            <li>Raccoon</li>
+            <li>Fox</li>
+            <li>Houndoom</li>
+            <li>Scorpion</li>
+            <li>Red Panda</li>
+        </ul>
+
+   </div>
+
+   <!--(Tables)---------------------------------------------------->
+
+   <table class="table table-dark table-striped"> <!--Start a table with the table element-->
+
+     <thead> <!--Start the header row for the table-->
+        <tr> <!--tr makes an actual row in the table-->
+            <th>Name</th> <!--Data cells for header rows-->
+            <th>Favorite Movie</th>
+        </tr>
+     </thead>
+
+     <tbody>
+        <tr>
+            <td>Monae</td> <!--td makes a data cell in the BODY-->
+            <td>The Lorax</td>
+        </tr>
+        <tr>
+            <td>Keitron</td>
+            <td>DOOM</td>
+        </tr>
+        <tr>
+            <td>Zack</td>
+            <td>Terminator 2</td>
+        </tr>
+        <tr>
+            <td>Johan</td>
+            <td>Everything Everywhere All At Once</td>
+        </tr>
+     </tbody>
+
+   </table>
+
+    <!--Forms---------------------------------------------------------->
+
+   <br><br><br>
+
+   <!--Please don't use forms in your projects, you'll run into problems. But do know the input types below-->
+
+   <form> <!--A form is an (old) way of inserting user data-->
+
+    <!--These input types don't have to be in a form, they can be standalone-->
+
+        <p>Enter username here:</p>
+        <input type="text" placeholder="enter your username" required>
+
+        <p>Enter password here:</p>
+        <input type="password" placeholder="enter your password">
+
+        <p>How old are you?:</p>
+        <input type="number" placeholder="age"  min="18"> 
+
+        <!--Radio buttons only let you choose one of the options-->
+        <h2>You must choose:</h2>
+
+        <input type="radio" name="radio" id="radio1">
+        <label for="radio1">OPTION A</label>
+
+        <input type="radio" name="radio" id="radio2">
+        <label for="radio2">OPTION B</label>
+
+        <!--Checkboxes let you choose as many options as you want at once-->
+        <h4>How do you feel about your choice?</h4>
+
+        <input type="checkbox" name="checkbox" id="check1">
+        <label for="check1">Ecstatic</label>
+
+        <input type="checkbox" name="checkbox" id="check2">
+        <label for="check2">Somber</label>
+
+        <input type="checkbox" name="checkbox" id="check3">
+        <label for="check3">Pensive</label>
+
+        <input type="checkbox" name="checkbox" id="check4">
+        <label for="check4">Indifferent</label>
+
+        <input type="submit" value="Submit">
+
+   </form>
+
+   <p class="col-lg-3 border border-solid">I take up 1/4 of the viewport using the bootstrap grid</p>
+   <p class="col-lg-12 border border-solid">I take up the entire viewport using the bootstrap grid</p>
+
+</body>
+</html>
