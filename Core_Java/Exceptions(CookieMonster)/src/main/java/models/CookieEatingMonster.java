@@ -2,6 +2,9 @@ package models;
 
 import exceptions.NotACookieException;
 
+
+//This Class will model a monster that only eats cookies... A cookie monster if you will
+//It has methods that will take in a Food object, and throw an exception if that food is not a cookie (boolean isCookie == false)
 public class CookieEatingMonster {
 
 
