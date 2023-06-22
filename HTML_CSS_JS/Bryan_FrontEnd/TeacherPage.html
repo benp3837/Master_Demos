@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+
+        <h3>Hi. Do teacher things.</h3>
+
+        <div id="courseTable" class="row col-lg-8 mx-auto">
+
+            <h2>Courses:</h2>
+
+            <table id="coursesTable" class="table table-dark table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Credits</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tableBody">
+                    <!-- We'll leave the table body blank - it will be filled with data by our JS-->
+                </tbody>
+
+            </table>
+        </div>
+
+        <div id="createCourse" class="col-md-4 mx-auto">
+            <h3 id="welcomeHead">Enter New Course Details</h3>
+            <div class="col-md-8">
+                <input id="courseName" type="text" class="form-control" placeholder="Name">
+                <input id="courseDesc" type="text" class="form-control" placeholder="Description">
+                <input id="courseCreds" type="number" class="form-control" placeholder="Credits">
+                <button id="createCourseButton" class="btn btn-sm btn-dark">Create</button>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <button id="printJWTButton">Hi</button>
+
+
+    <script src="TeacherPage.js"></script>
+
+</body>
+</html>
