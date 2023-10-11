@@ -1,0 +1,9 @@
+01:03:03.414 [main] INFO  com.revature.Greeter - greeted the user!
+01:03:03.425 [main] INFO  com.revature.Greeter - User entered a name of: Bon
+01:03:03.425 [main] WARN  com.revature.Greeter - Invalid name was inserted!
+01:14:09.968 [main] WARN  com.revature.Greeter - Invalid name was inserted!
+01:14:09.987 [main] INFO  com.revature.Greeter - User entered a name of: Bon
+01:14:09.987 [main] INFO  com.revature.Greeter - greeted the user!
+01:14:29.653 [main] WARN  com.revature.Greeter - Invalid name was inserted!
+01:14:29.668 [main] INFO  com.revature.Greeter - User entered a name of: Bon
+01:14:29.675 [main] INFO  com.revature.Greeter - greeted the user!
