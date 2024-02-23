@@ -1,0 +1,43 @@
+type Query {
+    books: [Book]
+    bookById(bookId: ID): Book
+    booksByAuthorId(authorId: ID): [Book]
+    authors: [Author]
+    authorById(authorId: ID): Author
+}
+
+type Mutation {
+    createBook(book: BookInput): Book
+    updateAuthor(author: AuthorInput): Author
+    createAuthor(author: AuthorInput): Author
+}
+
+type ResourceNotFoundError {
+    message: String!
+}
+
+input BookInput {
+  bookId: ID
+  name: String
+  pageCount: Int
+  authorId: Int
+}
+
+input AuthorInput {
+    authorId: ID
+    firstName: String
+    lastName: String
+}
+
+type Book {
+    bookId: ID
+    name: String
+    pageCount: Int
+    author: Author
+}
+
+type Author {
+    authorId: ID
+    firstName: String
+    lastName: String
+}
