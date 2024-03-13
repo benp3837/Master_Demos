@@ -5,20 +5,16 @@ import com.ben.daos.AuthorDAO;
 import com.ben.daos.BookDAO;
 import com.ben.models.Author;
 import com.ben.models.Book;
-import com.ben.utils.CustomExceptionResolver;
 import graphql.GraphQLError;
-import graphql.GraphQLException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.*;
 import org.springframework.graphql.execution.ErrorType;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMethod;
 
-
-import java.net.BindException;
 import java.util.List;
 import java.util.NoSuchElementException;
-
-import static org.springframework.http.ResponseEntity.ok;
 
 @Controller
 public class BookController {
@@ -41,8 +37,12 @@ public class BookController {
     }
 
     @QueryMapping
-    public List<Book> books() {
+    public List<Book> getAllBooks() {
         return bookDAO.findAll();
+    }
+
+    @QueryMapping int numberOfBooks(){
+        return bookDAO.findAll().size();
     }
 
     @QueryMapping
@@ -58,6 +58,11 @@ public class BookController {
 
     @QueryMapping
     public List<Book> booksByAuthorId(@Argument int authorId) {
+
+        if(authorDAO.findById(authorId).isEmpty()) {
+            throw new IdNoGoodException("Author with ID " + authorId + " not found.");
+        }
+
         Author a = authorDAO.findById(authorId).get();
 
         return bookDAO.findByAuthor(a);
@@ -65,20 +70,20 @@ public class BookController {
     }
 
     @MutationMapping
-    public Book createBook(@Argument BookInput book) {
+    public Book createBook(@Argument BookInput bookInput) {
 
-        if(book.authorId() <= 0) {
+        if(bookInput.authorId() <= 0) {
             throw new IdNoGoodException("Author ID must be greater than zero.");
         }
 
-        if(authorDAO.findById(book.authorId()).isEmpty()) {
-            throw new IdNoGoodException("Author with ID " + book.authorId() + " not found.");
+        if(authorDAO.findById(bookInput.authorId()).isEmpty()) {
+            throw new IdNoGoodException("Author with ID " + bookInput.authorId() + " not found.");
         }
 
-        Book b = new Book(book.bookId(),
-                book.name(),
-                book.pageCount(),
-                authorController.authorById(book.authorId));
+        Book b = new Book(bookInput.bookId(),
+                bookInput.name(),
+                bookInput.pageCount(),
+                authorController.authorById(bookInput.authorId));
 
         //TODO: null checks, author ID exists check, greater-than-zero page count check, etc.
 
@@ -89,15 +94,29 @@ public class BookController {
         return null;
     }
 
-    //TODO: delete Book
+    @MutationMapping
+    public Object deleteBook(@Argument int bookId) {
+        try {
+            Book b = bookDAO.findById(bookId).get();
+            System.out.println("BOOOOOOOOK: " + b);
+            bookDAO.delete(b);
+            return b;
+        }
+        catch (NoSuchElementException e) {
+            throw new IdNoGoodException("Book with ID " + bookId + " not found.");
+        }
+    }
 
     //Utility Methods------------------------------------------------------
 
+    //This maps Authors to books. When a Book requires an Author, this will be called automatically.
     @SchemaMapping
     public Author author(Book book) {
         return authorController.authorById(book.getAuthor().getAuthorId());
     }
 
+    //We can handle and send back errors in this way.
+    //This can get rather bloated... Consider a dedicated Exception handling class in the utils package.
     @GraphQlExceptionHandler
     public GraphQLError handleIdNoGood(IdNoGoodException ex) {
         System.out.println("IdNoGoodException CAUGHT!------------------------");

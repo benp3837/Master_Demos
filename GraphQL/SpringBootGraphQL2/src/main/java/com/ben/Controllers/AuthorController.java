@@ -7,6 +7,7 @@ import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 
@@ -34,8 +35,10 @@ public class AuthorController {
     }
 
     @MutationMapping
-    public Author createAuthor(@Argument AuthorInput author) {
-        Author a = new Author(author.authorId(), author.firstName(), author.lastName());
+    public Author createAuthor(@Argument AuthorInput authorInput) {
+        Author a = new Author(authorInput.authorId(), authorInput.firstName(), authorInput.lastName());
+
+
 
         if(aDAO.save(a) != null) {
             return a;
@@ -46,8 +49,8 @@ public class AuthorController {
 
     //TODO: just a thought, the FRONT END is responsible for differentiating update from add. Secure accordingly.
     @MutationMapping
-    public Author updateAuthor(@Argument AuthorInput author) {
-        Author a = new Author(author.authorId(), author.firstName(), author.lastName());
+    public Author updateAuthor(@Argument AuthorInput authorInput) {
+        Author a = new Author(authorInput.authorId(), authorInput.firstName(), authorInput.lastName());
 
         if(aDAO.save(a) != null) {
             return a;

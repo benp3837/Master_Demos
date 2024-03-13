@@ -14,7 +14,7 @@ public class Book {
     private String name;
     private int pageCount;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "authorId")
     private Author author;
 

@@ -1,5 +1,6 @@
 type Query {
-    books: [Book]
+    getAllBooks: [Book]
+    numberOfBooks: Int
     bookById(bookId: ID): Book
     booksByAuthorId(authorId: ID): [Book]
     authors: [Author]
@@ -7,15 +8,13 @@ type Query {
 }
 
 type Mutation {
-    createBook(book: BookInput): Book
-    updateAuthor(author: AuthorInput): Author
-    createAuthor(author: AuthorInput): Author
+    createBook(bookInput: BookInput): Book
+    deleteBook(bookId: ID): Book
+    updateAuthor(authorInput: AuthorInput): Author
+    createAuthor(authorInput: AuthorInput): Author
 }
 
-type ResourceNotFoundError {
-    message: String!
-}
-
+#This input type makes our lives easier. We don't need to define an entire author when sending a new book!
 input BookInput {
   bookId: ID
   name: String
@@ -23,6 +22,8 @@ input BookInput {
   authorId: Int
 }
 
+#This is identical to the Author type - so technically not needed...
+#but it's good practice to use input types for any and all data input
 input AuthorInput {
     authorId: ID
     firstName: String
