@@ -86,7 +86,7 @@ console.log(a); //so now, after it's been given a value, it's no longer undefine
 
 let b = 10;
 
-console.log(b); //this, however, is legal 
+console.log(b); //this, of course, is legal since b has been defined above this
 
 console.log("(Local Scopes)==========================================")
 
@@ -118,5 +118,5 @@ scopeTest();
 /*
     The main difference between block/functional scope is...
     -vars are NOT visible outside the function they were declared in
-    -BUT they are visible outside of any non-function blocks
+    -BUT they are visible outside of any non-function blocks they were declared in
 */
