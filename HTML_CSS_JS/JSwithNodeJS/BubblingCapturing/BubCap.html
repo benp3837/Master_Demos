@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello Event Propagation</title>
+  <style>
+    #inner, #outer, #middle, #othermiddle{
+      text-align: center;
+      padding: 10px;
+      font-weight: 600;
+      font-size: 40px;
+    }
+    #inner{
+      background-color: blue;
+    }
+    #middle{
+      background-color: beige;
+    }
+    #othermiddle{
+      background-color: red;
+    }
+    #outer{
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+
+    <h2>Event Prop Demo</h2>
+
+    <div id="outer">
+      OUTER
+      <div id="middle">
+        MIDDLE
+        <div id="inner">
+          INNER
+        </div>
+      </div>
+    </div>
+    
+    <script src="HelloProp.js"></script>
+</body>
+</html>
