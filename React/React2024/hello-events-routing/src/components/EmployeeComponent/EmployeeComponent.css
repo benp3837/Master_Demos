@@ -1,0 +1,19 @@
+.employee-container{
+    width: 50%;
+    display: flex;
+    margin-top: 1%;
+    margin-left:1%;
+    border: 5px double black;
+    background-color: burlywood;
+    flex-direction: column;
+}
+
+.employee-name{
+    display:flex;
+    margin-left: 2%;
+    justify-content: start;
+}
+
+.employee-data{
+    margin-left:2%;
+}
