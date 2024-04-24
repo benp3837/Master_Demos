@@ -6,6 +6,7 @@
     border: 5px double black;
     background-color: burlywood;
     flex-direction: column;
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.5); /* Shadow */
 }
 
 .employee-name{

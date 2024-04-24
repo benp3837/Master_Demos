@@ -25,13 +25,13 @@ export const EmployeeContainerComponent: React.FC<any> = (incomingData:any) => {
             })}
         </div>
         /* Looks confusing, let me elaborate. We use .map on our employees state variable. 
-        So, for every element in the employees Array (which holds the data from data.ts),
-        Render one EmployeeComponent! 
-        In that EmployeeComponent, we send the appropriate employee and key*/
+        "For every element in the employees Array (which holds the data from data.ts),
+        Render one EmployeeComponent!" 
+        In that EmployeeComponent, we send the appropriate employee and key (userId)*/
 
         //what is ...employee again? This means "the entire object" 
-        //... is known as the "spread operator". It "spreads" the data across the function
-        //we are sending an entire employeee object as props to the EmployeeComponent
+        //... is known as the "spread operator". It "spreads" an object into individual elements
+        //we used ... to send an entire employeee object as props to the EmployeeComponent
     )
 
 }

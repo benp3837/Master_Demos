@@ -4,7 +4,7 @@ import './App.css';
 import { EmployeeContainerComponent } from './components/EmployeeContainerComponent/EmployeeContainerComponent';
 import { data } from './data';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { MultiplyComponent } from './components/MultiplyComponent/MultiplyComponent';
+import { MultiplyComponent } from './components/HypotenuseComponent/MultiplyComponent';
 
 
 //To establish routes, we need <BrowserRouter>, followed by <Routes>, followed by individual Route(s) 

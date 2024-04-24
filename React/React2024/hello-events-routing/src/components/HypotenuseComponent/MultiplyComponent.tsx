@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import "./MultiplyComponent.css"
 import { InputComponent } from '../InputComponent/InputComponent'
-import { ResultComponent } from '../ResultComponent/ResultComponent'
+
 
 export const MultiplyComponent: React.FC<any> = () => {
 
@@ -30,8 +30,10 @@ export const MultiplyComponent: React.FC<any> = () => {
     //this function will find the hypotenuse given firstValue and secondValue
     const calculateHypotenuse = () => {
 
-        //use the mutator of result to store the hypotenuse
-        setResult(Math.sqrt(Math.pow(firstValue, 2) + Math.pow(secondValue, 2)));
+        //calculate the hypotenuse, then use the mutator of result to store the hypotenuse
+        let hypotenuse:number = Math.sqrt(Math.pow(firstValue, 2) + Math.pow(secondValue, 2));
+
+        setResult(hypotenuse);
 
     }
 
@@ -41,10 +43,20 @@ export const MultiplyComponent: React.FC<any> = () => {
     return(
         <div className="input-container">
             <h3>Hypotenuse Calculator!</h3>
+
             <InputComponent name="first" onChange={storeValues}/>
             <InputComponent name="second" onChange={storeValues}/>
-            <ResultComponent first={firstValue} second={secondValue} result={result}/>
+
+            {/* This last part could have been stored in a ResultComponent to modularize even further*/}
+
+            <p style={{color:"red"}}>
+                {firstValue && secondValue ? '' : "Please Enter Both Numbers!"} 
+            </p>
+            <div>
+                {result ? <p> You Calculated: {result}</p> : ""}
+            </div>
             <button onClick={calculateHypotenuse}>Calculate!</button>
+
         </div>
     )
 }

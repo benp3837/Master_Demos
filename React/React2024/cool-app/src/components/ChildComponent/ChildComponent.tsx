@@ -1,5 +1,6 @@
 /*In this compoennt, props is of <any>, type. This allows ANY type of data to be sent in to the component.
-Why? It's good for scalability/flexibility. We could specify props of a specific data type if we wanted.*/
+Why? It's good for scalability/flexibility. 
+We COULD specify props of a specific data type if we wanted to be more strict.*/
 
 //ParentComponent will send a state containing color and animal. ChildComponent accepts props of "any" type.
 //The state coming from the ParentComponent will ALWAYS be the props in the ChildComponent
