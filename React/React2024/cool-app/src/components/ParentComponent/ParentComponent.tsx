@@ -4,8 +4,7 @@ import { ChildComponent } from "../ChildComponent/ChildComponent"
 export const ParentComponent: React.FC = () => {
 
 
-
-/*  
+/*  State is an object that stores data that can easily be passed to a child component
 
     useState allows us to store and manipulate a component's state
     We declare: 
