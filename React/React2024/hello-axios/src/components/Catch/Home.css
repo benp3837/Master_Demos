@@ -13,15 +13,26 @@
     margin-top: 50px;
 }
 
+.poke-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .poke-button{
     width: 60%;
     background: #00a1e4; 
-    margin-left: auto;
-    margin-right:auto;
     border-color: #02040F;
     border-radius: 25px;
-    padding: auto;
     margin-top: 10px;
+}
+
+.poke-button2{
+    width: 60%;
+    background: #00a1e4; 
+    border-color: #02040F;
+    border-radius: 25px;
+    margin-top: 55%;
 }
 
 input {

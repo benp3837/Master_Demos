@@ -19,6 +19,9 @@ export const Home: React.FC<any> = () => {
         image:"",
     })
 
+    //we'll have another useState to toggle the catch button's visibility
+    const [catchButton, setCatchButton] = useState(false);
+
 
     //a function that stores the user inputted PokeId (Which we need for our GET request)
     const gatherInput = (input:any) => {
@@ -47,7 +50,23 @@ export const Home: React.FC<any> = () => {
         setPokemon((pokemon) => ({...pokemon, name: response.data.name}))
         setPokemon((pokemon) => ({...pokemon, image: response.data.sprites.front_default}))
 
+        //Catch button toggle---------------------
+
+        // Show the "Catch" button
+        setCatchButton(true);
+
+        // Hide the "Catch" button after 5 seconds
+        setTimeout(() => {
+        setCatchButton(false);
+        }, 5000);
+
     }
+
+    //a function that sends a pokemon object to the backend
+    const catchPokemon = async () => {
+        alert("placeholder for catching " + pokemon.name)
+    }
+
 
     return(
         <div className="home-page">   
@@ -56,8 +75,13 @@ export const Home: React.FC<any> = () => {
                 <h3>Search for your Pokemon</h3>
                 <input type="number" name="pokeSearch" placeholder="Enter Pokemon Id" onChange={gatherInput}/>
                 <button className="poke-button" onClick={getPokemon}>Find Pokemon</button>
-                <Pokemon pokemon={pokemon}></Pokemon>
-                <button className="poke-button" onClick={()=>{navigate("/collection")}}>See All Pokemon</button>
+
+                <div className="poke-container">
+                    {catchButton && <button className="poke-button" onClick={catchPokemon}>Catch</button>}
+                    <Pokemon pokemon={pokemon}></Pokemon>
+                </div>
+
+                <button className="poke-button2" onClick={()=>{navigate("/collection")}}>See All Pokemon</button>
             </div>
 
         </div>
