@@ -13,6 +13,9 @@ function App() {
   return (
     <div className="App">
 
+      <h3 style={{backgroundColor: "white"}}>Welcome. Imagine I'm a navbar that you could click to change the URL to a valid endpoint. We'll see the useNavigate() hook in the next demo</h3>
+
+
     <BrowserRouter>
       <Routes>
         <Route path="/emp" element={<EmployeeContainerComponent data={data}/>}></Route>
