@@ -3,7 +3,6 @@ import { UserInterface } from "../../interfaces/UserInterface";
 import "./PostComponent.css"
 
 //This component has props of UserInterface, so it can only accept UserInterface objects from a parent
-//It also has a state of UserInterface, so it can only ever hold a state object of UserInterface fields
 export const PostComponent: React.FC<UserInterface> = (user:UserInterface) => {
 
     /*Another way to accomplish Destructuring - In the code 

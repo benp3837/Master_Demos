@@ -3,13 +3,11 @@ import { UserInterface } from "../../interfaces/UserInterface";
 import { PostComponent } from "../PostComponent/PostComponent";
 
 //This component has props of "any" so it could take any data from a parent class (none in this case)
-//It also has a state of UserInterface, so it can only ever hold a state object with those fields
-    //(UserInterface: firstName, lastName, username, email)
-export const UserComponent: React.FC<any> = (props:UserInterface) => {
+export const UserComponent: React.FC<any> = () => {
 
-    //Defining a useState hook so we can manipulate the incoming user data. 
+    //Defining a useState hook for user data defined in UserInterface. 
     //Setting the values to empty strings for now 
-    const [user, setUser] = useState({
+    const [user, setUser] = useState<UserInterface>({
         firstName: '',
         lastName: '',
         username: '',
