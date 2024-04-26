@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Login } from './components/Login/Login';
 import { Home } from './components/Catch/Home';
 import { Collection } from './components/Collection/Collection';
+import { Register } from './components/Login/Register/Register';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="" element={<Login/>}></Route> 
             <Route path="/catch" element={<Home/>}/>
             <Route path="/collection" element={<Collection/>}/>
+            <Route path="/register" element={<Register/>}/>
           </Routes>
         </BrowserRouter>
     </div>

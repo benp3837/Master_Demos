@@ -10,36 +10,31 @@ export const Home: React.FC<any> = () => {
 
     const navigate = useNavigate()
 
+    //stores the user input when they search for a pokemon
+    let userInput:number = 0
+
     //we need a useState hook to store incoming Pokemon info, to send it to the PokemonComponent
     //setting an object in useState can be cleaner, but can complicate mutations... see below 
     const [pokemon, setPokemon] = useState<PokemonInterface>({
         name:"",
-        number:0,
-        type:"",
         image:"",
     })
-
-    //we'll have another useState to toggle the catch button's visibility
-    const [catchButton, setCatchButton] = useState(false);
 
 
     //a function that stores the user inputted PokeId (Which we need for our GET request)
     const gatherInput = (input:any) => {
         
-        /* use the mutator to save the user-inputted ID to pokeId. 
-        With an object stored in state, we must spread the original object (...) 
-        ...and then specify which values to change. In this, pokeId. */
-        setPokemon((pokemon) => ({...pokemon, number:input.target.value}))
+        userInput = input.target.value
     }
 
-    //a function that makes an axios HTTP GET Request
+    //a function that makes an axios HTTP GET Request to get a pokemon from pokeAPI
     const getPokemon = async () => {
 
         console.log("state: " + state.JWT)
 
         //Getting a certain pokemon by its Id (using the pokeId state attribute)
         //remember, we need to AWAIT anything that returns a promise
-        const response = await axios.get("https://pokeapi.co/api/v2/pokemon/" + pokemon.number, 
+        const response = await axios.get("https://pokeapi.co/api/v2/pokemon/" + userInput, 
         {headers: {Authorization: "Bearer: " + state.JWT}})
 
         //note the Authorization header!!^^ You can set any header you want with the headers object
@@ -50,38 +45,36 @@ export const Home: React.FC<any> = () => {
         setPokemon((pokemon) => ({...pokemon, name: response.data.name}))
         setPokemon((pokemon) => ({...pokemon, image: response.data.sprites.front_default}))
 
-        //Catch button toggle---------------------
-
-        // Show the "Catch" button
-        setCatchButton(true);
-
-        // Hide the "Catch" button after 5 seconds
-        setTimeout(() => {
-        setCatchButton(false);
-        }, 5000);
-
     }
 
     //a function that sends a pokemon object to the backend
     const catchPokemon = async () => {
-        alert("placeholder for catching " + pokemon.name)
+
+        //hardcoding every pokemon to user 1 until we talk about login
+        const response = await axios.post("http://localhost:8080/pokemon/1", pokemon)
+
+        alert(response.data.user.username + " caught " + response.data.name)
+
     }
 
 
     return(
         <div className="home-page">   
 
+            <div className="navbar">
+                <button className="poke-button" onClick={()=>{navigate("/collection")}}>See All Pokemon</button>
+                <button className="poke-button" onClick={()=>{navigate("/")}}>Back to Login</button>
+            </div>
+
             <div className="home-container">
                 <h3>Search for your Pokemon</h3>
-                <input type="number" name="pokeSearch" placeholder="Enter Pokemon Id" onChange={gatherInput}/>
+                <input type="number" name="poke-search" placeholder="Enter Pokemon Id" onChange={gatherInput}/>
                 <button className="poke-button" onClick={getPokemon}>Find Pokemon</button>
 
                 <div className="poke-container">
-                    {catchButton && <button className="poke-button" onClick={catchPokemon}>Catch</button>}
+                    {pokemon.name ? <button className="poke-button" onClick={catchPokemon}>Catch</button>:''}
                     <Pokemon pokemon={pokemon}></Pokemon>
                 </div>
-
-                <button className="poke-button2" onClick={()=>{navigate("/collection")}}>See All Pokemon</button>
             </div>
 
         </div>

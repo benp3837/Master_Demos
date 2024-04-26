@@ -25,10 +25,10 @@
     padding-left: 15px;
 }
 
-.login-button {
+.login-button {  
     background: #00a1e4; 
-    width: 15%;
-    margin-left: 1%;
+    width: 12%;
+    margin-left:2px;
     margin-right:auto;
     border-color: #02040F;
     border-radius: 25px;
@@ -37,7 +37,7 @@
     padding: auto;
     margin-top: 10px;
     margin-bottom: 10px;
-    
+
 }
 
 .login-button:hover {

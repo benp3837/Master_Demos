@@ -66,11 +66,11 @@ export const Login: React.FC<any> = () => {
 
                 <button className="login-button" onClick={login}>Login</button>
 
-                <button className="login-button">Create Account</button>
+                <button className="login-button" onClick={() => navigate("/register")}>Create Account</button>
+
             </div>
 
         </div>
     )
-    /* TODO: white outer glow */
 
 }

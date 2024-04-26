@@ -1,7 +1,13 @@
 .home-page{
     display:flex;
+    flex-direction: column;
     justify-content:center;
     align-items: center;
+}
+
+.navbar{
+    display:flex;
+    justify-content:end;
 }
 
 .home-container{
