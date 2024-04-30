@@ -20,7 +20,7 @@ export const Collection: React.FC<any> = () => {
 
     const getAllPokemon = async () => {
         //send a GET to get all pokemon
-        const response = await axios.get("http://localhost:8080/pokemon")
+        const response = await axios.get("http://localhost:8080/pokemon", {withCredentials:true})
 
         //populate the pokemon state object, giving us an Array of the user's pokemon
         setPokemon(response.data)

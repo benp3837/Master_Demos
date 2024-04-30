@@ -30,7 +30,7 @@ export const Home: React.FC<any> = () => {
     //a function that makes an axios HTTP GET Request to get a pokemon from pokeAPI
     const getPokemon = async () => {
 
-        console.log("state: " + state.JWT)
+        console.log("state: " + state.userSessionData.userId)
 
         //Getting a certain pokemon by its Id (using the pokeId state attribute)
         //remember, we need to AWAIT anything that returns a promise
@@ -50,8 +50,11 @@ export const Home: React.FC<any> = () => {
     //a function that sends a pokemon object to the backend
     const catchPokemon = async () => {
 
-        //hardcoding every pokemon to user 1 until we talk about login
-        const response = await axios.post("http://localhost:8080/pokemon/1", pokemon)
+        //no need to specify user ID, because it's already saved in the backend
+        const response = await axios.post("http://localhost:8080/pokemon", 
+            pokemon, 
+            {withCredentials:true}
+        )
 
         alert(response.data.user.username + " caught " + response.data.name)
 

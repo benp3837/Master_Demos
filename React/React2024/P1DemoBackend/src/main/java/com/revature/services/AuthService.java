@@ -38,5 +38,25 @@ public class AuthService {
         return authDAO.save(newUser);
     }
 
+    //login user
+    public User loginUser(LoginRegisterDTO dto) {
+
+        //two checks to make sure username and password are not empty
+
+        //we could also check for usernames that already exist, vulgar names, etc
+
+        if(dto.getUsername() == null || dto.getUsername().trim().equals("")) {
+            throw new IllegalArgumentException("Invalid username!");
+        }
+
+        if(dto.getPassword() == null || dto.getPassword().trim().equals("")) {
+            throw new IllegalArgumentException("Invalid password!");
+        }
+
+        //if all checks pass, return a user OR NULL and send it to the DAO
+        //user gets returned if the username/password match. Null if they don't.
+        return authDAO.findByUsernameAndPassword(dto.getUsername(), dto.getPassword());
+    }
+
 
 }

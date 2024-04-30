@@ -7,5 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AuthDAO extends JpaRepository<User, Integer>{
 
+    public User findByUsernameAndPassword(String username, String password);
 
 }

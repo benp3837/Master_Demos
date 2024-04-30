@@ -5,6 +5,7 @@ import com.revature.DAOs.PokeDAO;
 import com.revature.models.DTOs.IncomingPokeDTO;
 import com.revature.models.Pokemon;
 import com.revature.models.User;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -43,8 +44,9 @@ public class PokeService {
     }
 
     //get all pokemon
-    public List<Pokemon> getAllPokemon() {
-        return pokeDAO.findAll();
+    public List<Pokemon> getAllPokemon(int userId) {
+
+        return pokeDAO.findAllByUserUserId(userId);
     }
 
 }

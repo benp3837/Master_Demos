@@ -28,14 +28,21 @@ export const Login: React.FC<any> = () => {
     //this function will gather the user input for username/password, and send a POST request to our backend
     const login = async () => {
 
-        //send an HTTP POST request with axios, and store the response in a variable that we can use
-        const response = await axios.post("http://localhost:8080/auth/login", {username, password})
+        //send an HTTP POST request with axios, and store the response in a variable 
+        const response = await axios.post("http://localhost:8080/auth/login", 
+        {username, password}, 
+        {withCredentials:true}
+    )
         .then((response) => {
                 //if the login was successful, log the user in and store the JWT
-                state.JWT = response.data.accessToken //STORED IN GLOBAL STATE IN STORE.TS
+                //state.JWT = response.data.accessToken //STORED IN GLOBAL STATE IN STORE.TS
 
-                console.log(state.JWT) //the store.ts file has been changed! And now we can use JWT in our auth headers.
-                console.log(response.data.accessToken)
+                //console.log(state.JWT) //the store.ts file has been changed! And now we can use JWT in our auth headers.
+
+                //if the login was successful, log the user in and store the data in global state 
+                state.userSessionData = response.data
+
+                alert("Welcome, " + state.userSessionData.username)
 
 
                 //we can use the useNavigate variable above to switch URLs (thus switching components)
