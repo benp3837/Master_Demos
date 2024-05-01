@@ -35,7 +35,7 @@ export const Collection: React.FC<any> = () => {
         
         const response = axios.delete("http://localhost:8080/pokemon/" + pokeId, {withCredentials:true})
         .then((response) => alert(response.data))
-        .then(() => {getAllPokemon()})
+        .then(() => {getAllPokemon()}) //this will refresh the list after a deletion
 
         //TODO: error handling if the pokemon can't delete 
         //(unlikely since each delete button is associated with a valid pokeId)
