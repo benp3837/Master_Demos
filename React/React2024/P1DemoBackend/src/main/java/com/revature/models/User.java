@@ -63,6 +63,14 @@ public class User {
         this.password = password;
     }
 
+    public List<Pokemon> getPokemon() {
+        return pokemon;
+    }
+
+    public void setPokemon(List<Pokemon> pokemon) {
+        this.pokemon = pokemon;
+    }
+
     @Override
     public String toString() {
         return "User{" +

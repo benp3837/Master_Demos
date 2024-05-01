@@ -1,6 +1,7 @@
 package com.revature.controllers;
 
 import com.revature.models.DTOs.IncomingPokeDTO;
+import com.revature.models.DTOs.OutgoingPokeDTO;
 import com.revature.models.Pokemon;
 import com.revature.services.PokeService;
 import jakarta.servlet.http.HttpSession;
@@ -46,11 +47,22 @@ public class PokeController {
 
     //GetMapping for getting all pokemon
     @GetMapping
-    public ResponseEntity<List<Pokemon>> getAllPokemon(HttpSession session) {
+    public ResponseEntity<List<OutgoingPokeDTO>> getAllPokemon(HttpSession session) {
 
         int userId = (int) session.getAttribute("userId");
 
         return ResponseEntity.ok(pokeService.getAllPokemon(userId));
+    }
+
+    //delete a pokemon by Id
+    @DeleteMapping("/{pokeId}")
+    public ResponseEntity<String> deletePokemon(@PathVariable int pokeId) {
+        try {
+            String pokeName = pokeService.deletePokemon(pokeId);
+            return ResponseEntity.ok(pokeName + " deleted");
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 
 }

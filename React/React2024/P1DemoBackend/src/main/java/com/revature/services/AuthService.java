@@ -58,5 +58,4 @@ public class AuthService {
         return authDAO.findByUsernameAndPassword(dto.getUsername(), dto.getPassword());
     }
 
-
 }
