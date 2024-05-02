@@ -56,7 +56,11 @@ export const Home: React.FC<any> = () => {
             {withCredentials:true}
         )
 
-        alert(response.data.user.username + " caught " + response.data.name)
+        state.lastCaughtPokemon = pokemon
+
+        console.log(state.lastCaughtPokemon)
+
+        alert(state.userSessionData.username + " caught " + pokemon.name)
 
     }
 

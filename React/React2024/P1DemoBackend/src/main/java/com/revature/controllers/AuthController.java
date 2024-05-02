@@ -56,4 +56,15 @@ public class AuthController {
 
     }
 
+    //delete a user by id
+    @DeleteMapping("/{userId}")
+    public ResponseEntity<String> deleteUser(@PathVariable int userId) {
+        try {
+            authService.deleteUser(userId);
+            return ResponseEntity.ok("User deleted");
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
 }

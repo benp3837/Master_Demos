@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import "./Login.css"
 import axios from 'axios'
 import { state } from '../../store'
+import { Pokemon } from '../Pokemon/Pokemon'
 
 export const Login: React.FC<any> = () => {
 
@@ -76,6 +77,11 @@ export const Login: React.FC<any> = () => {
                 <button className="login-button" onClick={() => navigate("/register")}>Create Account</button>
 
             </div>
+
+            {state.lastCaughtPokemon ? <div>
+                <h3>Last Caught Pokemon: </h3>
+                <img src={state.lastCaughtPokemon.image} alt="poke pic" />
+            </div>:""}
 
         </div>
     )

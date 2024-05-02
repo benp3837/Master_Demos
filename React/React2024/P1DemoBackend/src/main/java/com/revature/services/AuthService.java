@@ -6,6 +6,8 @@ import com.revature.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class AuthService {
 
@@ -56,6 +58,16 @@ public class AuthService {
         //if all checks pass, return a user OR NULL and send it to the DAO
         //user gets returned if the username/password match. Null if they don't.
         return authDAO.findByUsernameAndPassword(dto.getUsername(), dto.getPassword());
+    }
+
+    //TODO: get all users
+    public List<User> getAllUsers() {
+        return authDAO.findAll();
+    }
+
+    //delete user
+    public void deleteUser(int userId) {
+        authDAO.deleteById(userId);
     }
 
 }

@@ -45,6 +45,9 @@ export const Collection: React.FC<any> = () => {
         
         <div className="collection-container">
 
+            <h3>Hi Hi</h3>
+
+            
             {/* For every pokemon in the array (called "p"), render a Pokemon Component with its data*/}
             {pokemon.map((p, index) => (
                 <div key={index}>
