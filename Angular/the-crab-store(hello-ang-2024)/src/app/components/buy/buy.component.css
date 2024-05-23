@@ -1,0 +1,10 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#crab-pic{
+    width:40%
+}

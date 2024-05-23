@@ -1,0 +1,15 @@
+<h4>this is a dynamically displayed buy-crabs component</h4>
+
+<!--just 3 headers w string interpolation and *ngFor-->
+<div class="row">
+    <div class="col-md-4" *ngFor="let crab of crabList">
+      <div class="card">
+        <img id="crab-pic" class="card-img-top " src="../../../assets/crabbo.png" alt="CRAB PIC HERE"> <!-- Replace with your image source -->
+        <div class="card-body">
+          <h5 class="card-title">{{crab.Type}}</h5>
+          <p class="card-text">Price: {{crab.Price}}</p>
+          <button class="btn btn-primary">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,10 @@
+#header {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+}
+
+.crab{
+    height:6em
+}
+
