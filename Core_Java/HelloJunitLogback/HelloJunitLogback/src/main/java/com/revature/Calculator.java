@@ -7,7 +7,7 @@ public class Calculator {
 
     private static final Logger logger = LoggerFactory.getLogger(Calculator.class);
     public int add(int x, int y){
-        logger.info("added numbers " + x + " and " + y);
+        logger.info("adding numbers " + x + " and " + y);
         return x + y;
     }
 
@@ -19,7 +19,7 @@ public class Calculator {
     public int divide(int x, int y){
         if(y != 0) {
             int i = x / y; //if y == 0, this will throw an exception
-            logger.info("divided numbers " + x + " and " + y);
+            logger.info("dividing numbers " + x + " and " + y);
             return i;
         } else {
             logger.warn("about to divide by zero!");

@@ -1,7 +1,6 @@
 package com.revature;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -90,5 +89,6 @@ public class Launcher {
 		//then the usefulness of ifPresent() would be more apparent
 
 	} //end of main
+
 
 }

@@ -7,5 +7,8 @@ public class NeglectedThread implements Runnable {
 		//this is the other way to create a Thread...
 		//but alas, we used the Runnable Interface method instead
 	}
+
+
+
 	
 }

@@ -16,7 +16,7 @@
         </encoder>
     </appender>
 
-    <!--Note the Log level specified here!-->
+    <!--All logs from DEBUG level down will get generated-->
     <root level="debug">
         <appender-ref ref="FILE" />
         <appender-ref ref="STDOUT" />

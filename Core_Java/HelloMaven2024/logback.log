@@ -1,0 +1,10 @@
+21:42:47.088 [main] INFO  com.revature.Calculator - Adding 5 and 10
+21:42:47.096 [main] INFO  com.revature.Calculator - Dividing 10 by 2
+21:42:47.096 [main] WARN  com.revature.Calculator - User tried to divide by zero... get a load of this guy hahahaha
+21:43:35.740 [main] INFO  com.revature.Calculator - Adding 5 and 10
+21:43:35.754 [main] INFO  com.revature.Calculator - Dividing 10 by 2
+21:43:35.755 [main] WARN  com.revature.Calculator - User tried to divide by zero... get a load of this guy hahahaha
+22:01:48.794 [main] WARN  com.revature.Calculator - User tried to divide by zero... get a load of this guy hahahaha
+22:01:48.818 [main] INFO  com.revature.Calculator - Adding 5 and 10
+22:01:48.826 [main] INFO  com.revature.Calculator - Adding 5 and 10
+22:01:48.832 [main] INFO  com.revature.Calculator - Dividing 10 by 2
