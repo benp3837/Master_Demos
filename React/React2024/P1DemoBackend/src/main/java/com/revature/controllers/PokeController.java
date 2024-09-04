@@ -38,8 +38,6 @@ public class PokeController {
         try{
             int userId = (int) session.getAttribute("userId");
             pokeDTO.setUserId(userId);
-
-
             Pokemon p = pokeService.addPokemon(pokeDTO);
             return ResponseEntity.ok(p);
         } catch (Exception e) {
