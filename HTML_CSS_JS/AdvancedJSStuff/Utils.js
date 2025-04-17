@@ -4,7 +4,17 @@ export function learnSkill(person, skillToLearn, yearsTaken = 5){
 
     console.log(person + " has chosen to learn: " + skillToLearn)
 
-    console.log(yearsTaken + " years later... " + person + " is a master of "  + skillToLearn)
+    //setInterval - performs an action repeatedly at a set interval
+    let yearCount = 0
+
+    let interval = setInterval(() => {
+        yearCount++
+        console.log(person + " is on year " + yearCount)
+        if(yearCount === yearsTaken){
+            clearInterval(interval) //break the cycle once the amount of years is met
+            console.log(yearsTaken + " years later... " + person + " is a master of "  + skillToLearn)
+        }
+    }, 1000); //runs every second (1000 milliseconds)
 
 }
 

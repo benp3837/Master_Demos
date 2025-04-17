@@ -57,3 +57,8 @@ const food = {
 console.log(food)
 
 //other advanced object literal shorthands to look into: methods and computed properties
+
+//setTimeout is a good way to enforce a wait time
+setTimeout(() => {
+    console.log('This runs after 10 seconds!');
+  }, 10000);
