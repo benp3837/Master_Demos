@@ -1,0 +1,31 @@
+<h4>Hello from Parent Component! Here's a String Interpolated message: {{message}}</h4>
+    
+<p>-Now look at my children:</p>
+
+<div style="border: 2px dashed darkgreen" >
+    <!-- *ngFor - great for DYNAMICALLY RENDERING MULTIPLE COMPONENTS -->
+    <app-child-component *ngFor="let num of arr"/>
+</div>
+
+
+<!-- *ngIf - great for CONDITIONAL RENDERING -->
+<p *ngIf="arr.length > 0">
+    <!-- STRING INTERPOLATION - rendering a value of a variable defined in the TS file -->
+    I have {{arr.length}} children :) I am very tired
+</p>
+
+<!-- EVENT BINDING - attaching a function that runs when you (click) this button -->
+<button (click)="toggleHideDiv()">Click for a surprise... </button>
+ 
+<!-- PROPERTY BINDING - using the value of a variable defined in the TS file as an attribute's value-->
+<div [hidden] = "hideDiv">
+    <p>SURPRISE!</p>
+</div>
+
+<p>Lastly, what's your name?</p>
+
+<!-- TWO-WAY BINDING - Lets you take user input and save it in a variable defined in the TS file -->
+<input type="text" [(ngModel)]="name">
+
+<!-- YOU TELL ME - How can I render a greeting if and only if the user has typed a value in the input box? -->
+ <p *ngIf="name">Hello {{name}}</p>
