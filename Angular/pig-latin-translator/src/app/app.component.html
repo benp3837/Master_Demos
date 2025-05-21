@@ -1,0 +1,22 @@
+<div style="max-width: 600px; margin: 0 auto; padding: 1rem; border: 1px solid #ccc; border-radius: 8px;">
+  <h2 style="text-align: center; margin-bottom: 1rem;">English ➡️ Pig Latin Translator</h2>
+
+  <label for="inputText">Enter your English text:</label>
+  <textarea
+    id="inputText"
+    [(ngModel)]="englishText"
+    rows="4"
+    style="width: 100%; padding: 0.5rem; margin-top: 0.25rem; margin-bottom: 1rem; border-radius: 4px; border: 1px solid #aaa;"
+  ></textarea>
+
+  <button
+    (click)="translate()"
+    style="padding: 0.5rem 1rem; background-color: #007bff; color: white; border: none; border-radius: 4px;"
+  >
+    Translate
+  </button>
+
+  <div *ngIf="pigLatinText" style="margin-top: 1rem; padding: 1rem; background-color: #e6ffe6; border: 1px solid #b2ffb2; border-radius: 4px;">
+    <strong>Pig Latin:</strong> {{ pigLatinText }}
+  </div>
+</div>
