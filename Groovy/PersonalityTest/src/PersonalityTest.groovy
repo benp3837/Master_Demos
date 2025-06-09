@@ -1,41 +1,42 @@
-// Import for reading user input - Groovy can use any Java library!
-import java.util.Scanner
-
-// Set up our scanner which will take user input
+// Set up our Scanner (from Java.util!) which will take user input
 def scanner = new Scanner(System.in)
 
-// Welcome message
+// Welcome and name input gathering
 println "Welcome to the Personality Quiz!"
 print "What is your name? "
 def name = scanner.nextLine()
 
+// String interpolation to use a variable's value in a string
 println "\nHi, $name! Answer the following questions by typing A, B, or C:"
 
-// Define questions and options
+// Define questions and their options
 def questions = [
         [
-                prompt: "1. What’s your ideal weekend activity?",
-                options: [
-                        A: "Reading",
-                        B: "Hiking",
-                        C: "Partying"
-                ]
+            prompt: "1. What’s your ideal weekend activity?",
+            options:
+            [
+                    A: "Reading",
+                    B: "Hiking",
+                    C: "Partying"
+            ]
         ],
         [
-                prompt: "2. What do you do if you're stressed?",
-                options: [
-                        A: "Journal or talk it out",
-                        B: "Sleep",
-                        C: "Exercise"
-                ]
+            prompt: "2. What do you do if you're stressed?",
+            options:
+            [
+                    A: "Journal or talk it out",
+                    B: "Sleep",
+                    C: "Exercise"
+            ]
         ],
         [
-                prompt: "3. What do you strive for the most in life?",
-                options: [
-                        A: "Personal growth",
-                        B: "Achieving goals",
-                        C: "Making others happy"
-                ]
+            prompt: "3. What do you strive for the most in life?",
+            options:
+            [
+                    A: "Personal growth",
+                    B: "Achieving goals",
+                    C: "Making others happy"
+            ]
         ]
 ]
 
@@ -51,7 +52,6 @@ questions.each { question ->
 
     def answer
     while (true) {
-        print "Your answer: "
         answer = scanner.nextLine().toUpperCase()
         if (['A', 'B', 'C'].contains(answer)) break
         println "Please enter A, B, or C."
