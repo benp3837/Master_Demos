@@ -60,10 +60,11 @@ async def subtract_item_quantity(item_name: str, subtract_quantity: int):
         if item.item_name == item_name:
             if item.item_quantity - subtract_quantity < 0:
                 raise HTTPException(status_code=400, detail="Insufficient item quantity")
-            item.item_quantity -= subtract_quantity
+            else:
+                item.item_quantity -= subtract_quantity
             return item
-    else:
-        raise HTTPException(status_code=404, detail="Item not found")
+        else:
+            raise HTTPException(status_code=404, detail="Item not found")
 
 # example with query params
 @router.get("/items")

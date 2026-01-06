@@ -13,8 +13,14 @@ user_database = {}
 
 @router.post("/", status_code=201)
 async def create_user(user: UserModel):
+
+    # add one mock user to user_database
+    # user_database[1] = user
+
     # Make sure username and email are unique
     for existing_user in user_database.values():
+
+        # for each value in the user objects, check if username or email matches
         if existing_user.username == user.username:
             raise HTTPException(status_code=409, detail="Username already exists")
         if existing_user.email == user.email:
