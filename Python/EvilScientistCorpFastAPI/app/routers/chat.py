@@ -63,9 +63,9 @@ async def analyze_csv(chat: ChatRequest):
         with open("app/files_to_load/q1sales.csv", "r", encoding="utf-8") as file:
             reader = csv.DictReader(file)
             csv_text = ", ".join(reader.fieldnames) + "\n"  # Add headers
-            csv_text = "\n".join([", ".join(row.values()) for row in reader]) # Add rows
+            csv_text += "\n".join([", ".join(row.values()) for row in reader]) # Add rows
 
-        # Construct a grounded prompt so the LLM doesn't make something up
+        # A grounding prompt so the LLM doesn't hallucinate
         prompt = f"""
         You are analyzing sales data. Use the following data to answer the user's question.
         Only use the data provided below. If the answer cannot be determined from the data, respond with "I don't know."
