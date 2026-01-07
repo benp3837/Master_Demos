@@ -1,6 +1,8 @@
+from langchain_classic.chains.llm_math.base import LLMMathChain
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_ollama import ChatOllama
 
+# Here's our general-purpose chain, used for conversation and general tasks
 def get_chain():
     llm = ChatOllama(
         model="llama3.2:3b",
@@ -23,3 +25,21 @@ def get_chain():
     chain = prompt | llm
 
     return chain
+
+
+# This one is a specialized chain for math calculations
+def get_math_chain():
+    llm = ChatOllama(
+        model="llama3.2:3b",
+        temperature=0.2
+    )
+
+    prompt = ChatPromptTemplate.from_messages([
+        ("system", "You are a specialized assistant that only answers mathematical questions."
+                   "If the question is not mathematical, respond with 'I can only assist with mathematical queries' "
+                   "If the information required to answer is unavailable, respond with 'I don't have that information' and tease the user briefly."),
+        ("user", "{user_input}")
+    ])
+
+    math_chain = LLMMathChain.from_llm(llm, prompt=prompt)
+    return math_chain
