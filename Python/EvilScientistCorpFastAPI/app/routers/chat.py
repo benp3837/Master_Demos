@@ -4,30 +4,30 @@ from fastapi import APIRouter, HTTPException, UploadFile
 from langchain_community.document_loaders import TextLoader, PyPDFLoader
 from pydantic import BaseModel
 
-from app.services.chain_service import get_chain, get_math_chain
+from app.services.chain_service import get_chain, get_simple_sequential_chain
 
 router = APIRouter(
     prefix="/chat",
     tags=["chat"],
 )
 
-# Just to get user_input in the request body instead of a query param
+# Just to get user input in the request body instead of a query param
 # Yes, this could have been a model, but we're taking a shortcut :)
 class ChatRequest(BaseModel):
-    user_input: str
+    input: str
 
 # grab an instance of our chain from our service (clean + portable behavior!)
 chain = get_chain()
-math_chain = get_math_chain()
+simple_sequential_chain = get_simple_sequential_chain()
 
 @router.post("/")
 async def general_chat(chat: ChatRequest):
-    response = chain.invoke({"user_input": chat.user_input})
+    response = chain.invoke({"input": chat.input})
     return response
 
 @router.get("/recs")
 async def get_evil_item_recommendations():
-    response = chain.invoke({"user_input":"Share some of the most popular evil items on the market today."
+    response = chain.invoke({"input":"Share some of the most popular evil items on the market today."
                              "Format it like this:"
                              "Item Name: <name>"
                              "Description: <brief description>"
@@ -49,7 +49,7 @@ async def load_and_summarize_evil_plans():
         evil_plans_text = documents[0].page_content
 
         # Pass the content to the chain for summarization
-        response = chain.invoke({"user_input": f"Concisely summarize the following evil plans from my boss in a concise manner:\n{evil_plans_text}"})
+        response = chain.invoke({"input": f"Concisely summarize the following evil plans from my boss in a concise manner:\n{evil_plans_text}"})
         return response
     except FileNotFoundError:
         raise HTTPException(status_code=404, detail="The evil plans file was not found.")
@@ -72,10 +72,15 @@ async def analyze_csv(chat: ChatRequest):
         Data:
         {csv_text}
         Question:
-        {chat.user_input}
+        {chat.input}
         """
 
-        response = chain.invoke({"user_input": prompt})
+        response = chain.invoke({"input": prompt})
         return response
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"An error occurred: {str(e)}")
+
+@router.post("/support")
+async def customer_support_reply(chat: ChatRequest):
+    response = simple_sequential_chain.invoke({"input": chat.input})
+    return response.content
