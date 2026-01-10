@@ -26,24 +26,26 @@ prompt = ChatPromptTemplate.from_messages([
     ("user", "{input}")
 ])
 
+# Output Parsers - these help us get specific types of outputs from the LLM
+str_output_parser = StrOutputParser() # when we just want a string response
+
+
 # Here's our general-purpose chain, used for conversation or other general tasks
 def get_chain():
 
     # this basic chain is just:
         # our prompt (what we're saying to the LLM)
         # and the LLM itself (which generates the response)
-    chain = prompt | llm
+    chain = prompt | llm | str_output_parser
 
     return chain
 
 # Here's a more complex chain - it uses two LLM calls sequentially for better responses
 def get_simple_sequential_chain():
 
-    output_parser = StrOutputParser()
-
     # First, we get a response from the general prompt + llm
     # The output parser ensures we just get back a string response
-    draft_chain = prompt | llm | output_parser
+    draft_chain = prompt | llm | str_output_parser
 
     # Then, we define a new prompt and create a second chain
     improved_prompt = ChatPromptTemplate.from_messages([
@@ -52,25 +54,21 @@ def get_simple_sequential_chain():
                    "Feel free to stay slightly evil in tone but stick to the point. "),
         ("user", "Initial Reply: {input}")
     ])
-    improved_chain = improved_prompt | llm
+    improved_chain = improved_prompt | llm | str_output_parser
 
     # Finally, combine both chains into a single sequential chain
     return draft_chain | improved_chain
 
 
-# # This one is a specialized chain for math calculations
-# def get_math_chain():
-#     llm = ChatOllama(
-#         model="llama3.2:3b",
-#         temperature=0.2
-#     )
-#
-#     prompt = ChatPromptTemplate.from_messages([
-#         ("system", "You are a specialized assistant that only answers mathematical questions."
-#                    "If the question is not mathematical, respond with 'I can only assist with mathematical queries' "
-#                    "If the information required to answer is unavailable, respond with 'I don't have that information' and tease the user briefly."),
-#         ("user", "{input}")
-#     ])
-#
-#     math_chain = LLMMathChain.from_llm(llm, prompt=prompt)
-#     return math_chain
+# This one is a specialized chain for math calculations
+def get_math_chain():
+
+    math_prompt = ChatPromptTemplate.from_messages([
+        ("system", "You are a specialized assistant that only answers mathematical questions."
+                   "If the question is not mathematical, respond with 'I can only assist with mathematical queries' "
+                   "If the information required to answer is unavailable, respond with 'I don't have that information'."),
+        ("user", "{input}")
+    ])
+
+    math_chain = LLMMathChain.from_llm(llm, prompt=prompt)
+    return math_prompt | math_chain | str_output_parser
