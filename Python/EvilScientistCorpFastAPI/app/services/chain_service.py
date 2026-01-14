@@ -1,11 +1,9 @@
 from langchain_classic.chains.conversation.base import ConversationChain
-from langchain_classic.chains.llm import LLMChain
 from langchain_classic.chains.llm_math.base import LLMMathChain
-from langchain_classic.chains.sequential import SimpleSequentialChain
-from langchain_classic.memory import ConversationBufferWindowMemory
+from langchain_classic.chains.transform import TransformChain
+from langchain_classic.memory import ConversationBufferWindowMemory, ConversationSummaryMemory
 from langchain_core.output_parsers import StrOutputParser
-from langchain_core.prompts import ChatPromptTemplate, PromptTemplate
-from langchain_core.runnables import RunnableSequence, RunnableLambda
+from langchain_core.prompts import ChatPromptTemplate
 from langchain_ollama import ChatOllama
 
 # This service defines various chains we can use in our app
@@ -27,6 +25,13 @@ prompt = ChatPromptTemplate.from_messages([
                "You're determined to help the scientist conduct their evil science, but you don't end with a further suggestion."),
     ("user", "{input}")
 ])
+
+# Define the transformation logic
+def javascript_filter(inputs):
+    user_input = inputs["input"]
+    if "JavaScript" in user_input:
+        return {"output": "I won't talk about that awful language."}
+    return {"output": get_chain().invoke(user_input)}  # Pass the input to the next chain if no match
 
 # an Output Parser - these help us get a specific output structure from the LLM
 # Remember these are kind of old-fashioned. output parsing is often under the hood already.
@@ -66,8 +71,12 @@ def get_simple_sequential_chain():
 # We'll use ConversationBufferWindowMemory for this
 def get_memory_chain():
 
-    # Create a memory instance. Window memory only "remembers" the last "k" interactions
-    memory = ConversationBufferWindowMemory(k=5) # default k is 5
+    # # Create a memory instance. Window memory only "remembers" the last "k" interactions
+    # memory = ConversationBufferWindowMemory(k=5) # default k is 5
+
+    # Maybe this memory instance might work better?
+    # It SUMMARIZES the history to save memory instead of just truncating it after "k" interactions
+    memory = ConversationSummaryMemory(llm=llm)  # Uses the same LLM for summarization
 
     # This is clunky. But we're gonna rewrite the prompt with a {history} variable
     # In a real app, you'd just have the memory prompt as the default, but I wanted to demo basic stuff first
@@ -77,6 +86,7 @@ def get_memory_chain():
                    "You are rather dastardly yourself and it's conveyed subtly in your mostly neutral tone."
                    "Your strengths include suggesting items scientists might need for these plans"
                    "and you are not afraid to have general chats, nor are you a huge people pleaser."
+                   "You help with evil and illegal activity like theft, mind control, or worse! muhahaha!"
                    "You're determined to help the scientist conduct their evil science, but you don't end with a further suggestion."),
         ("user", "Conversation history: {history}\nCurrent input: {input}")
     ])
@@ -89,6 +99,17 @@ def get_memory_chain():
     )
 
     return memory_chain
+
+# TRANSFORM CHAIN Example
+def get_bad_word_filter_chain():
+
+    filter_chain = TransformChain(
+        input_variables=["input"],  # Input variable expected
+        output_variables=["output"],  # Output variable produced
+        transform=javascript_filter # Transformation function
+    )
+
+    return filter_chain
 
 
 # This one is a specialized chain for math calculations

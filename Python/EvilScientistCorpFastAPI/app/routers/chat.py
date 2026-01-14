@@ -7,7 +7,8 @@ from langchain_core.output_parsers import PydanticOutputParser
 from pydantic import BaseModel
 
 from app.models.item_model import ItemModel
-from app.services.chain_service import get_chain, get_simple_sequential_chain, get_math_chain, get_memory_chain
+from app.services.chain_service import get_chain, get_simple_sequential_chain, get_math_chain, get_memory_chain, \
+    get_bad_word_filter_chain
 
 router = APIRouter(
     prefix="/chat",
@@ -27,6 +28,7 @@ class ItemList(BaseModel):
 chain = get_chain()
 simple_sequential_chain = get_simple_sequential_chain()
 memory_chain = get_memory_chain()
+filter_chain = get_bad_word_filter_chain()
 math_chain = get_math_chain()
 
 @router.post("/")
@@ -117,7 +119,15 @@ async def conversational_chat(chat: ChatRequest):
 
     # That's it! The LLM will remember the last "k" interactions automatically
     # Remember k is determined by what we set in the get_memory_chain function in chain_service.py
-    return memory_chain.run(input=chat.input)
+    return memory_chain.invoke(input=chat.input)
+
+
+# An endpoint that hates javascript
+@router.post("/hate-js")
+async def hate_javascript(chat: ChatRequest):
+    # Example usage
+    return filter_chain.invoke({"input": chat.input})
+
 
 # An endpoint that uses the math chain for calculations
 @router.post("/math")
