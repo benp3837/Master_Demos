@@ -1,15 +1,13 @@
 import csv
 from typing import List
 
-from fastapi import APIRouter, HTTPException, UploadFile
-from langchain_classic.agents.structured_chat.output_parser import StructuredChatOutputParser
-from langchain_classic.output_parsers import StructuredOutputParser, ResponseSchema
-from langchain_community.document_loaders import TextLoader, PyPDFLoader
-from langchain_core.output_parsers import CommaSeparatedListOutputParser, PydanticOutputParser
+from fastapi import APIRouter, HTTPException
+from langchain_community.document_loaders import TextLoader
+from langchain_core.output_parsers import PydanticOutputParser
 from pydantic import BaseModel
 
 from app.models.item_model import ItemModel
-from app.services.chain_service import get_chain, get_simple_sequential_chain, get_math_chain
+from app.services.chain_service import get_chain, get_simple_sequential_chain, get_math_chain, get_memory_chain
 
 router = APIRouter(
     prefix="/chat",
@@ -28,6 +26,7 @@ class ItemList(BaseModel):
 # grab an instance of our chain from our service (clean + portable behavior!)
 chain = get_chain()
 simple_sequential_chain = get_simple_sequential_chain()
+memory_chain = get_memory_chain()
 math_chain = get_math_chain()
 
 @router.post("/")
@@ -38,21 +37,25 @@ async def general_chat(chat: ChatRequest):
 @router.get("/recs")
 async def get_evil_item_recommendations(amount: int = 3):
 
-    # Define the base prompt
-    base_prompt = f"""
+    # Define the base prompt, with a variable for the amount of items to return
+    prompt = f"""
     Share {amount} of the most popular evil items on the market today.
-    Format the item like this into a list of JSON called "items" so I can parse into pydantic
+    Format the response as a JSON object with a single key "items", 
+    where the value is a list of JSON objects.
+    
+    Each object in the list should have the following fields:
     id: conint(gt=0)
     item_name: constr(strip_whitespace=True, min_length=1, max_length=50)
     item_quantity: conint(ge=0)
     price: conint(gt=0)
     description: constr(strip_whitespace=True, max_length=200)
-    Return ONLY valid JSON that matches this schema exactly.
+    
+    Return ONLY the JSON object. Do not include any other text.
     """
 
-    # Pydantic has its own output parser! How convenient.
+    # Pydantic has its own output parser! How convenient. We'll use our ItemList model.
     parser = PydanticOutputParser(pydantic_object=ItemList)
-    response = chain.invoke({"input": base_prompt})
+    response = chain.invoke({"input": prompt}) # get the LLM response
 
     # Parse the response into our list of Pydantic ItemModel objects and return it
     parsed_output = parser.parse(response)
@@ -102,8 +105,22 @@ async def analyze_csv(chat: ChatRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"An error occurred: {str(e)}")
 
+# An endpoint that uses the simple sequential chain for customer support replies
 @router.post("/support")
-async def customer_support_reply(chat: ChatRequest):
+async def customer_support(chat: ChatRequest):
     response = simple_sequential_chain.invoke({"input": chat.input})
     return response.content
 
+# An endpoint that uses the memory chain for better conversational chat
+@router.post("/memory-chat")
+async def conversational_chat(chat: ChatRequest):
+
+    # That's it! The LLM will remember the last "k" interactions automatically
+    # Remember k is determined by what we set in the get_memory_chain function in chain_service.py
+    return memory_chain.run(input=chat.input)
+
+# An endpoint that uses the math chain for calculations
+@router.post("/math")
+async def mathematical_support(chat: ChatRequest):
+    response = math_chain.invoke({"question": chat.input})
+    return response

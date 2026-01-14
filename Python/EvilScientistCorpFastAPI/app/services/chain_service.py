@@ -1,6 +1,8 @@
+from langchain_classic.chains.conversation.base import ConversationChain
 from langchain_classic.chains.llm import LLMChain
 from langchain_classic.chains.llm_math.base import LLMMathChain
 from langchain_classic.chains.sequential import SimpleSequentialChain
+from langchain_classic.memory import ConversationBufferWindowMemory
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate, PromptTemplate
 from langchain_core.runnables import RunnableSequence, RunnableLambda
@@ -15,7 +17,7 @@ llm = ChatOllama(
     temperature=0.2
 )
 
-# Define our general prompt for reuse in the methods below
+# Define our general prompt for reuse in the functions below
 prompt = ChatPromptTemplate.from_messages([
     ("system", "You are a helpful non-corporeal assistant at the fictional Evil Scientist Corp."
                "You assist evil scientists with dastardly plans, and are concise yet thorough."
@@ -26,9 +28,9 @@ prompt = ChatPromptTemplate.from_messages([
     ("user", "{input}")
 ])
 
-# Output Parsers - these help us get specific types of outputs from the LLM
-str_output_parser = StrOutputParser() # when we just want a string response
-
+# an Output Parser - these help us get a specific output structure from the LLM
+# Remember these are kind of old-fashioned. output parsing is often under the hood already.
+str_output_parser = StrOutputParser() # String output
 
 # Here's our general-purpose chain, used for conversation or other general tasks
 def get_chain():
@@ -60,15 +62,52 @@ def get_simple_sequential_chain():
     return draft_chain | improved_chain
 
 
+# This chain implements memory - a simple conversational history
+# We'll use ConversationBufferWindowMemory for this
+def get_memory_chain():
+
+    # Create a memory instance. Window memory only "remembers" the last "k" interactions
+    memory = ConversationBufferWindowMemory(k=5) # default k is 5
+
+    # This is clunky. But we're gonna rewrite the prompt with a {history} variable
+    # In a real app, you'd just have the memory prompt as the default, but I wanted to demo basic stuff first
+    memory_prompt = ChatPromptTemplate.from_messages([
+        ("system", "You are a helpful non-corporeal assistant at the fictional Evil Scientist Corp."
+                   "You assist evil scientists with dastardly plans, and are concise yet thorough."
+                   "You are rather dastardly yourself and it's conveyed subtly in your mostly neutral tone."
+                   "Your strengths include suggesting items scientists might need for these plans"
+                   "and you are not afraid to have general chats, nor are you a huge people pleaser."
+                   "You're determined to help the scientist conduct their evil science, but you don't end with a further suggestion."),
+        ("user", "Conversation history: {history}\nCurrent input: {input}")
+    ])
+
+    # ConversationChain using our base llm/prompt and window memory
+    memory_chain = ConversationChain(
+        llm=llm,
+        memory=memory,
+        prompt=memory_prompt
+    )
+
+    return memory_chain
+
+
 # This one is a specialized chain for math calculations
 def get_math_chain():
 
     math_prompt = ChatPromptTemplate.from_messages([
-        ("system", "You are a specialized assistant that only answers mathematical questions."
-                   "If the question is not mathematical, respond with 'I can only assist with mathematical queries' "
-                   "If the information required to answer is unavailable, respond with 'I don't have that information'."),
-        ("user", "{input}")
+        ("system", "You are a specialized assistant at the Evil Scientist Corporation."
+                   "You only answers mathematical questions from Evil Scientists."
+                   "If the question is not mathematical, just return 0. "
+                   "Return only the final numerical answer, with no explanation text."
+        ),
+        ("user", "{question}") # LLMMathChain expects the var to be named 'question'
     ])
 
-    math_chain = LLMMathChain.from_llm(llm, prompt=prompt)
-    return math_prompt | math_chain | str_output_parser
+    # Get a math chain that uses our llm and math prompt
+    math_chain = LLMMathChain.from_llm(llm, prompt=math_prompt)
+
+    # Sequence our general chain with the math chain
+    return math_chain
+
+    # NOTE: is LLMMathChain necessary? can't the general chain handle math too?
+    # Yes, but LLMMathChain has specific logic to better handle math problems.
