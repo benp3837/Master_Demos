@@ -1,11 +1,23 @@
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI, HTTPException
 from starlette.requests import Request
 from starlette.responses import JSONResponse
 
-from app.routers import users, items, chat
+from app.routers import users, items, chat, vector
+from app.services.vectordb_service import init_vectorstore
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # store the vectorstore in app state for access in endpoints
+    app.state.vectorstore = init_vectorstore()
+    yield # pause here and run the app
+    # optional: clean up resources here if needed
+
 
 # Set up FastAPI. We'll use this "app" variable to do FastAPI stuff below.
-app = FastAPI()
+app = FastAPI(lifespan=lifespan)
 
 # Custom exception handler for HTTPException
 @app.exception_handler(HTTPException)
@@ -24,6 +36,7 @@ origins = [
 app.include_router(users.router)
 app.include_router(items.router)
 app.include_router(chat.router)
+app.include_router(vector.router)
 
 # Generic sample endpoint - just returns a message when a GET request is made to "/"
 @app.get("/")
