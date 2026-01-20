@@ -5,19 +5,18 @@ from starlette.requests import Request
 from starlette.responses import JSONResponse
 
 from app.routers import users, items, chat, vector
-from app.services.vectordb_service import init_vectorstore
 
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    # store the vectorstore in app state for access in endpoints
-    app.state.vectorstore = init_vectorstore()
-    yield # pause here and run the app
-    # optional: clean up resources here if needed
+# @asynccontextmanager
+# async def lifespan(app: FastAPI):
+#     # store the vectorstore in app state for access in endpoints
+#     app.state.vectorstore = init_vectorstore()
+#     yield # pause here and run the app
+#     # optional: clean up resources here if needed
 
 
 # Set up FastAPI. We'll use this "app" variable to do FastAPI stuff below.
-app = FastAPI(lifespan=lifespan)
+app = FastAPI()
 
 # Custom exception handler for HTTPException
 @app.exception_handler(HTTPException)
