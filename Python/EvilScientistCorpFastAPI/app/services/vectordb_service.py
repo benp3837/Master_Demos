@@ -1,6 +1,7 @@
 import hashlib
 from typing import List, Dict, Any
 
+import spacy
 from langchain_chroma import Chroma
 from langchain_ollama import OllamaEmbeddings
 from langchain_core.documents import Document
@@ -108,3 +109,18 @@ def search(query: str, k: int = 3, collection:str = COLLECTION) -> List[Dict[str
         }
         for doc in results
     ]
+
+# Uses NER to extract entities from text
+# Load a pre-trained spaCy NER model
+nlp = spacy.load("en_core_web_sm")
+
+def extract_entities(text: str) -> List[Dict[str, str]]:
+    """
+    Extract named entities from the given text.
+    """
+    doc = nlp(text)
+    entities = [
+        {"text": ent.text, "label": ent.label_}
+        for ent in doc.ents
+    ]
+    return entities

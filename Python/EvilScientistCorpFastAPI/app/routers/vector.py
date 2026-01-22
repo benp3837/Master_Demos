@@ -4,7 +4,7 @@ from fastapi import APIRouter
 from pydantic import BaseModel
 
 from app.services.chain_service import get_chain
-from app.services.vectordb_service import ingest_items, search, ingest_boss_plans
+from app.services.vectordb_service import ingest_items, search, ingest_boss_plans, extract_entities
 
 router = APIRouter(
     prefix="/vectors",
@@ -62,4 +62,37 @@ def search_boss_plans(req: SearchRequest):
     )
 
     # Invoke the chain with the constructed prompt
+    return chain.invoke({"input": prompt})
+
+
+# Using NER to extract entities (people, places, orgs, etc.) from the boss's plans
+@router.post("/ner-boss-plans")
+def ner_demo(req:SearchRequest):
+    """
+    Extract named entities from the text stored in the boss_plans collection.
+    """
+    # Search the boss_plans collection for relevant text
+    results = search(req.query, req.k, "boss_plans")
+
+    # Combine the text content from the search results
+    combined_text = "\n\n".join([result["text"] for result in results])
+
+    # Extract entities from the combined text
+    entities = extract_entities(combined_text)
+
+    # return {
+    #     "combined": combined_text,
+    #     "query": req.query,
+    #     "entities": entities,
+    # }
+
+    # Query the LLM to answer questions about the extracted entities
+    prompt = (
+        f"Based on the following extracted entities from my boss's plans:\n"
+        f"{entities}\n\n"
+        f"Answer the user's NER-based question:\n{req.query}"
+        f"Format your answer as a list of JSON objects with 'entity' and 'description' fields."
+        f"Return ONLY the JSON list, no extra text or line breaks."
+    )
+
     return chain.invoke({"input": prompt})
