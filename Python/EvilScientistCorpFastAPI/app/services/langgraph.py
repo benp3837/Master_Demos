@@ -34,7 +34,6 @@ class GraphState(TypedDict, total=False):
 # ----------------------------
 # 2) Define NODES (each node is a simple function)
 # ----------------------------
-# TODO: Try to get the LLM to decide the route instead of matching keywords!!!!!!!
 def route_node(state: GraphState) -> GraphState:
     """
     Decide which path to take:
@@ -45,7 +44,11 @@ def route_node(state: GraphState) -> GraphState:
     This is a VERY simple heuristic router based on keywords.
     It's good for a first demo because students can understand it immediately.
     """
+
     query = state["query"].lower()
+
+    # TODO: For now, just some keyword matching to determine what process to invoke next
+    # TODO: Try to get the LLM to decide the route instead of matching keywords!!!!!!!
 
     # If the question sounds like "internal plans / boss schemes"
     if any(word in query for word in ["plan", "plans", "scheme", "boss", "boss's", "operation"]):
