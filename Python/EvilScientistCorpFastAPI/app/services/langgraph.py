@@ -4,8 +4,9 @@
 
 from typing import TypedDict, List, Dict, Any, Annotated
 
+from langchain_core.messages import BaseMessage, HumanMessage, AIMessage
 from langgraph.checkpoint.memory import MemorySaver
-from langgraph.graph import StateGraph, END
+from langgraph.graph import StateGraph, END, add_messages
 
 from app.services.vectordb_service import search
 from app.services.chain_service import llm  # <-- adjust to your file name
@@ -32,7 +33,7 @@ class GraphState(TypedDict, total=False):
     interaction_count: int
 
     # This field stores conversation history with a reducer to keep it manageable
-    # message_memory: Annotated[list]
+    message_memory: Annotated[list[BaseMessage], add_messages]
 
 
 # ----------------------------
@@ -126,7 +127,11 @@ def answer_with_context_node(state: GraphState) -> GraphState:
     # Chat models usually return an object with `.content`.
     # answer_text = resp.content if hasattr(resp, "content") else str(resp)
 
-    return {"answer": response_text}
+    return {"answer": response_text,
+            "message_memory": [
+                HumanMessage(content=state.get('query','')),
+                AIMessage(content=response_text)]
+            }
 
 
 def general_chat_node(state: GraphState) -> GraphState:
@@ -135,14 +140,23 @@ def general_chat_node(state: GraphState) -> GraphState:
     prompt = (
         f"""You are an internal assistant at the Evil Scientist Corp.
         You are pretty evil yourself, but still helpful.
-        You have context from the previous interaction: \n{state.get('answer', 'query')}
+        You have context from the previous interaction: \n{state.get('message_memory')}
         Answer the User's Query to the best of your ability.
         User Query:\n{state.get('query','')}
         Answer: """
     )
 
+    # Storing the LLM response up here since we'll use it twice below
+    answer_text = llm.invoke(prompt).content
+
+    # NOTE: in our return, we'll give the LLM access to the message_memory stored in State
+
     # Invoke the LLM and return the response (which adds it to state too)
-    return {"answer":llm.invoke(prompt).content}
+    return {"answer":answer_text,
+            "message_memory": [
+                HumanMessage(content=state.get('query','')),
+                AIMessage(content=answer_text)]
+            }
 
 
 # ----------------------------
@@ -192,15 +206,12 @@ def build_graph():
     builder.add_edge("answer", END)
     builder.add_edge("chat", END)
 
-    # Finally, add a memory checkpointer to store interactions in memory
-    checkpointer = MemorySaver()
+    # Finally, add a memory checkpointer to store interactions in memory, and
+    # Compile creates the runnable graph object - now with the checkpointer
+    return builder.compile(checkpointer=MemorySaver())
 
     # NOTE: we'll hardcode the thread ID in the endpoint for demo simplicity.
-        # This means every user's request will share the same memory. Maybe not great.
-
-    # Compile creates the runnable graph object - now with the checkpointer
-    return builder.compile(checkpointer=checkpointer)
-
+    # This means every user's request will share the same memory. Maybe not great.
 
 # Create one graph instance (like a singleton)
 graph = build_graph()

@@ -29,4 +29,5 @@ def ask(req: AskRequest):
         "route": result.get("route"),
         "answer": result.get("answer"),
         "sources": result.get("docs", []),  # optional, but great for teaching
+        "message_memory": result.get("message_memory", [])  # optional, for transparency
     }
