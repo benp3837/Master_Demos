@@ -2,8 +2,9 @@
 # LANGGRAPH DEMO: Route to one of two vector collections
 # ----------------------------
 
-from typing import TypedDict, List, Dict, Any
+from typing import TypedDict, List, Dict, Any, Annotated
 
+from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import StateGraph, END
 
 from app.services.vectordb_service import search
@@ -29,6 +30,9 @@ class GraphState(TypedDict, total=False):
 
     # A counter for the number of user interactions (just for demo purposes)
     interaction_count: int
+
+    # This field stores conversation history with a reducer to keep it manageable
+    # message_memory: Annotated[list]
 
 
 # ----------------------------
@@ -126,12 +130,19 @@ def answer_with_context_node(state: GraphState) -> GraphState:
 
 
 def general_chat_node(state: GraphState) -> GraphState:
-    """
-    Fallback path: just answer normally (no vector DB).
-    """
-    resp = llm.invoke(state["query"])
-    answer_text = resp.content if hasattr(resp, "content") else str(resp)
-    return {"answer": answer_text}
+
+    # Define the prompt
+    prompt = (
+        f"""You are an internal assistant at the Evil Scientist Corp.
+        You are pretty evil yourself, but still helpful.
+        You have context from the previous interaction: \n{state.get('answer', 'query')}
+        Answer the User's Query to the best of your ability.
+        User Query:\n{state.get('query','')}
+        Answer: """
+    )
+
+    # Invoke the LLM and return the response (which adds it to state too)
+    return {"answer":llm.invoke(prompt).content}
 
 
 # ----------------------------
@@ -181,8 +192,14 @@ def build_graph():
     builder.add_edge("answer", END)
     builder.add_edge("chat", END)
 
-    # Compile creates the runnable graph object
-    return builder.compile()
+    # Finally, add a memory checkpointer to store interactions in memory
+    checkpointer = MemorySaver()
+
+    # NOTE: we'll hardcode the thread ID in the endpoint for demo simplicity.
+        # This means every user's request will share the same memory. Maybe not great.
+
+    # Compile creates the runnable graph object - now with the checkpointer
+    return builder.compile(checkpointer=checkpointer)
 
 
 # Create one graph instance (like a singleton)

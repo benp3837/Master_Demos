@@ -11,7 +11,15 @@ class AskRequest(BaseModel):
 def ask(req: AskRequest):
     # We start the graph by giving it the initial state.
     # The only thing we MUST provide is the user's query (stored in State.query)
-    result = graph.invoke({"query": req.question})
+    result = graph.invoke(
+        {"query": req.question},
+        config={
+            "configurable":{
+                "thread_id":"hardcoded_thread_id" # hardcoded for simplicity
+                # realistically, this could be a logged-in user's ID or session ID
+            }
+        }
+    )
 
     # result now contains the accumulated state:
     # - route chosen
