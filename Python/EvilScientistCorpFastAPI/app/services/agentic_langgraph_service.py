@@ -4,12 +4,18 @@
 
 from typing import TypedDict, List, Dict, Any, Annotated
 
-from langchain_core.messages import BaseMessage, HumanMessage, AIMessage
+from langchain_core.messages import BaseMessage, HumanMessage, AIMessage, SystemMessage
+from langchain_core.tools import tool
+from langchain_ollama import ChatOllama
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import StateGraph, END, add_messages
 
 from app.services.vectordb_service import search
-from app.services.chain_service import llm  # <-- adjust to your file name
+
+llm = ChatOllama(
+    model="llama3.2:3b",
+    temperature=0.2
+)
 
 # ----------------------------
 # 1) Define the shape of the STATE that flows through the graph
@@ -36,57 +42,81 @@ class GraphState(TypedDict, total=False):
     message_memory: Annotated[list[BaseMessage], add_messages]
 
 
-# ----------------------------
-# 2) Define NODES (each node is a simple function)
-# ----------------------------
-def route_node(state: GraphState) -> GraphState:
-    """
-    Decide which path to take:
-    - "plans" -> search boss_plans collection
-    - "items" -> search evil_items collection
-    - "chat"  -> skip vector DB and just chat normally
+# TOOLS ================== (The agentic_router below will use one of these per user query)
 
-    This is a VERY simple heuristic router based on keywords.
-    It's good for a first demo because students can understand it immediately.
-    """
+""" Major differences from non-agentic service:
+The @tool decorator - making these functions tools the agent can call
+The args and return types - since the agent calls these, they don't use state directly 
+IMPORTANT: tools need '''docstrings''' that describe what they do for the agent
+"""
+@tool
+def retrieve_plans(query:str) -> list[dict[str, Any]]:
+    """Retrieve relevant boss plans/schemes from the boss_plans collection."""
+    return search(query, k=10, collection="boss_plans")
 
-    query = state["query"].lower()
+@tool
+def retrieve_items(query:str) -> list[dict[str, Any]]:
+    """Retrieve relevant evil items/products from the evil_items collection."""
+    return search(query, k=5, collection="evil_items")
 
-    # TODO: For now, just some keyword matching to determine what process to invoke next
-    # TODO: Try to get the LLM to decide the route instead of matching keywords!!!!!!!
+# List of available tools for the map below
+TOOLS = [retrieve_items, retrieve_plans]
 
-    # If the question sounds like "internal plans / boss schemes"
-    if any(word in query for word in ["plan", "plans", "scheme", "boss", "boss's", "operation"]):
-        return {"route": "plans"}
+# Map tool names to tool functions... in a scalable way!
+# We need this to call the tools by name in the agent router node
+TOOL_MAP = {tool.name: tool for tool in TOOLS}
 
-    # If the question sounds like "products/items"
-    if any(word in query for word in ["item", "items", "product", "recommend", "buy", "similar", "price"]):
-        return {"route": "items"}
+# Get a version of the LLM that is aware of its toolbox
+llm_with_tools = llm.bind_tools(TOOLS)
 
-    # Otherwise just do normal chat
-    return {"route": "chat"}
+# NODES=====================================================
 
+# First, the AGENT that decides whether to get items, get plans, or just chat
+def agent_router_node(state: GraphState) -> GraphState:
 
-def retrieve_plans_node(state: GraphState) -> GraphState:
-    """
-    Retrieve relevant chunks from the 'boss_plans' vector collection.
-    This node does NOT talk to the LLM.
-    It just fetches context.
-    """
-    query = state["query"]
-    results = search(query, k=5, collection="boss_plans")
-    return {"docs": results}
+    # I just wanna try this prompt structure for chat models
+    # Feel free to just use a simple string prompt like we've been doing
+    messages = [
+        SystemMessage(content=(
+            "You are an internal assistant.\n"
+            "Decide whether retrieval is needed.\n\n"
+            "If the user is asking about internal boss plans/schemes/operations, call retrieve_plans_node.\n"
+            "If the user is asking about products/items/recommendations/prices, call retrieve_items_node.\n"
+            "If neither applies, it's a general chat. DO NOT call a tool.\n\n"
+            "If you call a tool, call EXACTLY ONE tool.\n"
+        )),
+        HumanMessage(content=state.get("query", "")),
+    ]
 
+    # First LLM call decides which tool to call
+    agentic_response = llm_with_tools.invoke(messages)
 
-def retrieve_items_node(state: GraphState) -> GraphState:
-    """
-    Retrieve relevant chunks from the 'evil_items' vector collection.
-    """
-    query = state["query"]
-    results = search(query, k=5, collection="evil_items")
-    return {"docs": results}
+    # if there was no tool call, route to general chat
+    tool_calls = getattr(agentic_response, "tool_calls", None) or []
+    if not tool_calls:
+        return {"route": "chat"}
 
+    # If a tool WAS called, invoke it and store results in state
+    tool_call = tool_calls[0] # should be only one tool called
+    tool_name = tool_call["name"] # should match one of TOOL_MAP's keys
+    tool_args = tool_call.get("args", {})  # get the args dict from the tool call
 
+    # Ollama wraps arguments in a {"value": ...} dict. Thanks. We need to unwrap it
+    query = tool_args.get("query", "")
+    if isinstance(query, dict) and "value" in query:
+        tool_args["query"] = query["value"]
+
+    # Finally, invoke the tool and get the results (evil items or boss plans)
+    results = TOOL_MAP[tool_name].invoke(tool_args)
+
+    # Automatically set the route to the answer_with_context node
+    # ...and Store the retrieved docs in state
+    return {
+        "route": "answer",
+        "docs": results,
+    }
+
+# This one stays the same :) just a regular node.
 def answer_with_context_node(state: GraphState) -> GraphState:
     """
     Build a prompt that includes retrieved context, then ask the LLM to answer.
@@ -130,10 +160,10 @@ def answer_with_context_node(state: GraphState) -> GraphState:
     return {"answer": response_text,
             "message_memory": [
                 HumanMessage(content=state.get('query','')),
-                AIMessage(content=response_text)]
+                AIMessage(content=response_text.content)]
             }
 
-
+# This one also stays the same - general chat fallback node
 def general_chat_node(state: GraphState) -> GraphState:
 
     # Define the prompt
@@ -158,7 +188,6 @@ def general_chat_node(state: GraphState) -> GraphState:
                 AIMessage(content=answer_text)]
             }
 
-
 # ----------------------------
 # 3) Build the GRAPH (connect nodes with edges)
 # ----------------------------
@@ -173,9 +202,7 @@ def build_graph():
     builder = StateGraph(GraphState)
 
     # Register each node under a name
-    builder.add_node("route", route_node)
-    builder.add_node("retrieve_plans", retrieve_plans_node)
-    builder.add_node("retrieve_items", retrieve_items_node)
+    builder.add_node("route", agent_router_node)
     builder.add_node("answer", answer_with_context_node)
     builder.add_node("chat", general_chat_node)
 
@@ -190,17 +217,12 @@ def build_graph():
         lambda state: state["route"],
         # How does it know "state"? Because we defined GraphState as the state type!
 
-        # Map that key to the next node name
+        # If the route is answer or chat, go to that respective node
         {
-            "plans": "retrieve_plans",
-            "items": "retrieve_items",
+            "answer": "answer",
             "chat": "chat",
         }
     )
-
-    # After either retrieval node runs, go to the answer node
-    builder.add_edge("retrieve_plans", "answer")
-    builder.add_edge("retrieve_items", "answer")
 
     # After answer or chat, we are done
     builder.add_edge("answer", END)
@@ -214,4 +236,4 @@ def build_graph():
     # This means every user's request will share the same memory. Maybe not great.
 
 # Create one graph instance (like a singleton)
-graph = build_graph()
+agentic_graph = build_graph()
