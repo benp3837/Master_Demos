@@ -74,6 +74,8 @@ llm_with_tools = llm.bind_tools(TOOLS)
 # First, the AGENT that decides whether to get items, get plans, or just chat
 def agent_router_node(state: GraphState) -> GraphState:
 
+    query = state.get("query", "")
+
     # I just wanna try this prompt structure for chat models
     # Feel free to just use a simple string prompt like we've been doing
     messages = [
@@ -85,7 +87,7 @@ def agent_router_node(state: GraphState) -> GraphState:
             "If neither applies, it's a general chat. DO NOT call a tool.\n\n"
             "If you call a tool, call EXACTLY ONE tool.\n"
         )),
-        HumanMessage(content=state.get("query", "")),
+        HumanMessage(content=query),
     ]
 
     # First LLM call decides which tool to call
@@ -99,15 +101,15 @@ def agent_router_node(state: GraphState) -> GraphState:
     # If a tool WAS called, invoke it and store results in state
     tool_call = tool_calls[0] # should be only one tool called
     tool_name = tool_call["name"] # should match one of TOOL_MAP's keys
-    tool_args = tool_call.get("args", {})  # get the args dict from the tool call
+    # tool_args = tool_call.get("args", {})  # get the args dict from the tool call
 
-    # Ollama wraps arguments in a {"value": ...} dict. Thanks. We need to unwrap it
-    query = tool_args.get("query", "")
-    if isinstance(query, dict) and "value" in query:
-        tool_args["query"] = query["value"]
+    # # Ollama wraps arguments in a {"value": ...} dict. Thanks. We need to unwrap it
+    # query = tool_args.get("query", "")
+    # if isinstance(query, dict) and "value" in query:
+    #     tool_args["query"] = query["value"]
 
     # Finally, invoke the tool and get the results (evil items or boss plans)
-    results = TOOL_MAP[tool_name].invoke(tool_args)
+    results = TOOL_MAP[tool_name].invoke({"query":query})
 
     # Automatically set the route to the answer_with_context node
     # ...and Store the retrieved docs in state
