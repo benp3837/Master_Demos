@@ -26,11 +26,11 @@ export const FirstComponent:React.FC = () => {
 
     //Notice the data binding of the message variable in the view
     return(
-        <>
+        <div style={{ border: "2px solid black", padding: "10px", borderRadius: "5px" }}>
             <h4>Hi from FirstComponent! Click this button, I dare you</h4>
             <button onClick={showMessage}>Click me! Click meeeeee</button>
             <p>Click Count: {count}</p>
-        </>
+        </div>
     )
 
 }
