@@ -1,0 +1,101 @@
+"Documents" to ingest in chroma:
+
+
+[
+  {
+    "id": "cloak-1",
+    "text": "Invisibility Cloak: bends light around the wearer, allowing them to move unseen during stealth operations.",
+    "metadata": { "category": "stealth" }
+  },
+  {
+    "id": "boots-1",
+    "text": "Silent Boots: absorb sound and vibration, making footsteps nearly impossible to detect.",
+    "metadata": { "category": "stealth" }
+  },
+  {
+    "id": "ray-1",
+    "text": "Shrink Ray: reduces the size of objects or targets for easier transport or containment.",
+    "metadata": { "category": "weapons" }
+  },
+  {
+    "id": "scanner-1",
+    "text": "X-Ray Vision Goggles: allow the wearer to see through walls and solid objects to locate hidden items or people.",
+    "metadata": { "category": "surveillance" }
+  },
+  {
+    "id": "jammer-1",
+    "text": "Signal Jammer: disrupts wireless communications and tracking signals in a localized area.",
+    "metadata": { "category": "electronics" }
+  },
+  {
+    "id": "drone-1",
+    "text": "Autonomous Recon Drone: quietly scouts environments and transmits visual data back to the operator.",
+    "metadata": { "category": "surveillance" }
+  },
+  {
+    "id": "freezer-1",
+    "text": "Cryogenic Freeze Ray: instantly freezes targets, immobilizing them without permanent damage.",
+    "metadata": { "category": "weapons" }
+  },
+  {
+    "id": "teleporter-1",
+    "text": "Personal Teleportation Device: instantly relocates the user to a preconfigured safe location.",
+    "metadata": { "category": "transport" }
+  },
+  {
+    "id": "mask-1",
+    "text": "Voice Mimicry Mask: alters the wearer’s voice to perfectly imitate another person.",
+    "metadata": { "category": "disguise" }
+  },
+  {
+    "id": "lab-1",
+    "text": "Mobile Secret Laboratory: a concealed, self-contained lab for conducting experiments in remote locations.",
+    "metadata": { "category": "infrastructure" }
+  }
+]
+
+
+
+
+
+BOSS PLANS 1
+
+Alright minions, don't be alarmed by this one - there will be no victims. This genius plan involves disconnecting Florida from the contiguous United States. Just think of the endless possibilities! The peninsula will become an island. And then.... and then..... just think of the possibilities! With Florida as its own island, the united stated will have no Peninsula. No Peninsula! Think of the possibilities! 
+
+People will have to swim to Disney! No more driving from Florida to Georgia! Floridians will have to get their peaches shipped! Muahahahaha! We're going to recruit a fleet of handsaw experts, millions of them, to start sawing away at Northern Florida, which is sure to disconnect it from the rest of the Continent. The operation will take at least a couple hours, so we'll make sure to do it at night and provide juiceboxes so the fleet of sawmen won't get too eepy sleepy. Once Florida is removed, the sawmen will get their pay AND get to live on their new Floridian Island. They'll see... they'll all see!                       
+
+
+BOSS PLANS 2
+
+Alright minions, lean in — this one is purely conceptual, gloriously impractical, and exquisitely unnecessary. We turn the sun purple. Not hotter. Not colder. Not altered in any measurable, scientific, peer-reviewable way. Just… purple. A deep, confident purple that makes everyone pause mid-sip of their morning beverage and stare at the sky like it owes them an explanation. Imagine sunrise. It’s wrong immediately. News stations scramble for words that don’t exist yet. Astronomers quietly restart their software. Philosophers feel vindicated for the first time in years. Is it violet? Is it amethyst? Is it technically still yellow but going through something emotionally? No one knows, and that’s the joy. Calendars still work, gravity still behaves, but daylight feels like it’s performing. Artists cancel meetings. Sunglasses become controversial. Weather apps issue updates that say nothing useful. Children accept it instantly. Adults form committees. Someone insists it’s always been this way and everyone else gaslights themselves into almost believing it. Nothing breaks. No one is harmed. The sun simply decides to express itself. This isn’t science. This isn’t power. This is aesthetic dominance. A cosmic reminder that reality is optional, certainty is fragile, and even the most fundamental constants can, on occasion, choose drama. Let the sun glow purple. Let daylight feel theatrical. Let the universe accessorize. Muahahahaha.
+
+
+
+
+
+
+
+
+
+
+
+
+
+BOSS PLANS 3
+
+
+In mid February, we're going to pull off the most impressive pinecone heist the East Coast has ever seen! The pinecones you find at the park are free - you can just take them. Our master plan comes in three movements with an interlude which doubles as a bathroom break. Step one, we go to the park. We sit down, have a quick two hour picnic followed by siesta, then we whip out our Pinecone Collectinators from Dyson, our biggest sponsor. Once we've accrued 500 tonnes of pinecones, we'll sit down for our second picnic which doubles as siesta. This plan will take two weeks and end in early March. We will then take an 8 month sabbatical with a company trip to Aspen in the June. When we crack our knuckles after that short break, act 2 will begin. We'll turn the pinecones into potpourri! Muahahahaha! Just think about it. The number of grandmothers in the world is only growing. Humanity is a living grandmother factory! We've accomplished the infinite grandmother glitch! Who buys potpourri? Grandmothers. What is the population of grandmothers doing? Increasing to infinity. We're talking infinite money, my minions. An EVIL potpourri company. *The orchestral interlude begins and ends here*.\n\n Finally, after the 10 month orchestral interlude, we'll be ready for act 3: The Proliferation. The soil at Yosemite National Park is free for anybody to plant stuff in. It's true, you should try it! I've been developing a seed... The key to this whole dang thing. The potpourri seed. We'll drive from the East Coast to Yosemite National Park, in condor formation because it looks cool. We plant the potpourri seeds. We watch our money, thus our power, grow before our eyes!! Or realistically over the course of many years since the trees need to grow to produce pinecones. 
+
+
+
+You are pretty evil yourself, but still helpful, and you don't cause serious harm, 
+rather mild inconveniences.
+
+
+
+
+
+
+
+
+
