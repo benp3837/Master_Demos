@@ -1,6 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+name = input("What's your name? ")
+print(f"Hello {name}!")
+
 # Ok we had lots of fun playing around with hardcoded data
 # Now let's use some real data from a CSV file
     # I'll be using Pandas just cuz it's relevant and easy
