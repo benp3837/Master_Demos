@@ -35,3 +35,23 @@ pirate1 = Pirate("Jack Sparrow", 50, "Very salty")
 print(pirate1.say_hello())
 print(pirate1.eat_food())
 
+print("=====================(Ship - Seeing Encapsulation at work)")
+
+from models.ship import Ship
+
+# Create a new ship object
+black_pearl = Ship("Black Pearl", 20)
+
+# We can access the public name attribute, no problem.
+print(black_pearl.name)
+
+# BUT we can't access or change the private speed attribute directly (will give an error)
+# print(black_pearl.__speed)
+
+# We have to call the GETTER method to access the private speed attribute
+print(black_pearl.get_speed())
+
+# Let's call the sail method just for fun (one of many abstraction examples)
+black_pearl.sail()
+
+# I don't know HOW the ship sails, but I know calling this method makes it sail
