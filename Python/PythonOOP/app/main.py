@@ -54,4 +54,4 @@ print(black_pearl.get_speed())
 # Let's call the sail method just for fun (one of many abstraction examples)
 black_pearl.sail()
 
-# I don't know HOW the ship sails, but I know calling this method makes it sail
+# I don't know HOW the ship sails (the code), but I know calling this method makes it sail
