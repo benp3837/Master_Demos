@@ -1,3 +1,10 @@
+"""
+This demo will be your reference for the 4 Pillars of OOP in a real code example -
+
+We'll see Inheritance and Polymorphism in our Person and Pirate Classes
+Then we'll explore Encapsulation and Abstraction with our Ship Class
+"""
+
 # We'll play around with our objects here, and see how they differ
 from models.person import Person
 from models.pirate import Pirate

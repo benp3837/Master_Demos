@@ -1,6 +1,7 @@
 # This is a SUBCLASS of Person - It inherits all the attributes and methods of Person.
 # BUT we can change the methods to do something different, and add new stuff too!
-from models.person import Person
+# OOP CONCEPTS - INHERITANCE AND POLYMORPHISM
+from .person import Person
 
 class Pirate(Person):
     # We can change the constructor method to add new attributes
