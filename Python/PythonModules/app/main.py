@@ -19,7 +19,13 @@ print(fryer.fry())
 print(fryer.set_temperature(350))
 print(fryer.register_user("Chef123"))
 
-# Raise the exceptions too, if you'd like
+# Raise the exceptions too
+
+try:
+    print(fryer.register_user("JavaScriptLover"))
+except ValueError as e:
+    print(f"Caught an error: {e}")
+
 try:
     print(fryer.set_temperature(50))
 except ValueError as e:

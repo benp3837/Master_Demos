@@ -1,0 +1,3 @@
+2026-05-15 15:00:46,508 - INFO - The frying process has started.
+2026-05-15 15:00:46,508 - WARNING - Attempted to register username 'JavaScriptLover' - contains 'javascript'.
+2026-05-15 15:00:46,508 - ERROR - Attempted to set temperature to 50 - too low.
