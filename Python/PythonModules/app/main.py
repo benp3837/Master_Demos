@@ -5,13 +5,13 @@ We'll have two different classes in this app -
     -See some modules in action (math, logging, regex)
     -write some tests with the Pytest module
     -TODO: If possible, time permitting, we'll use the JSON and pylint modules as well
+    -TODO: maybe have them try to use pylint themselves and report their findings
 2) AirFryerTests - A Test Suite where we'll write the tests for AirFryer's methods
 
 We can call the AirFryer methods below if we have time, and just for fun (also shows logging)
 """
 
 from models.airfryer import AirFryer
-
 
 fryer = AirFryer()
 

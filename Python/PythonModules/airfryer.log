@@ -1,3 +1,14 @@
 2026-05-15 15:00:46,508 - INFO - The frying process has started.
 2026-05-15 15:00:46,508 - WARNING - Attempted to register username 'JavaScriptLover' - contains 'javascript'.
 2026-05-15 15:00:46,508 - ERROR - Attempted to set temperature to 50 - too low.
+2026-05-15 15:04:05,713 - INFO - The frying process has started.
+2026-05-15 15:04:05,713 - WARNING - Attempted to register username 'JavaScriptLover' - contains 'javascript'.
+2026-05-15 15:04:05,713 - ERROR - Attempted to set temperature to 50 - too low.
+2026-05-15 15:04:26,907 - INFO - Adding 5 and 7.
+2026-05-15 15:04:26,907 - INFO - The frying process has started.
+2026-05-15 15:04:26,907 - WARNING - Attempted to register username 'JavaScriptLover' - contains 'javascript'.
+2026-05-15 15:04:26,907 - ERROR - Attempted to set temperature to 50 - too low.
+INFO:root:Adding 5 and 7.
+INFO:root:The frying process has started.
+WARNING:root:Attempted to register username 'JavaScriptLover' - contains 'javascript'.
+ERROR:root:Attempted to set temperature to 50 - too low.
