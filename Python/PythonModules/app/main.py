@@ -32,4 +32,4 @@ except ValueError as e:
     print(f"Caught an error: {e}")
 
 # tip calc
-fryer.calculate_tip(10)
+print(fryer.calculate_tip(10))

@@ -55,13 +55,16 @@ class AirFryer:
 
     # Showing the math module - Calculate a tip after cook time based on food weight
     # This horribly dystopian function urges the user to tip the air fryer company after cooking
-    # TODO: This would be a great mini-assignment for them to do in the day
+    # TODO: This could be a great, semi tricky mini-assignment for them to do in the day
     # TODO: See if they can come up with a reasonable math function to use
     # TODO: OR just explore the docs/google together and see what we think makes sense
     def calculate_tip(self, weight):
-        tip_rate = 0.18
-        tip = weight * tip_rate
+        tip = weight * .18
 
+        #.2f formats the number to 2 decimal places!
         print(f"Suggested tip of ${tip:.2f} will be charged automatically.")
-        print(f"Would you like to round up to ${math.ceil(tip)}?")
-        print(f"Or you can round down to ${math.floor(tip)} if you watch an ad >:D")
+        print(f"You may round up to ${math.ceil(tip)} for no extra benefit.")
+        print(f"You may round down to ${math.floor(tip)} if you watch an ad >:D")
+
+        # Return tip as a float rounded to 2 decimal places
+        return round(tip, 2)
