@@ -69,4 +69,5 @@ print(f"Std deviation:    {np.std(january_sales):.1f}")
 jan_avg = np.mean(january_sales)
 above_average = january_sales[january_sales > jan_avg]
 print(f"\nDays above average in January: {len(above_average)} out of {len(january_sales)}")
-print(f"Those sales figures: {above_average}")
+print(f"Days above average with 15% boost: "
+      f"{len(boosted_january[boosted_january > jan_avg])} out of {len(boosted_january)}")
