@@ -30,6 +30,7 @@ But I just wanted to show some bells and whistles
 
 categories = ['A', 'B', 'C', 'D', 'E']
 values = [5, 7, 3, 8, 6]
+
 plt.bar(categories, values, color='skyblue')
 plt.title('Bar Chart Example', fontsize=16, fontweight='bold')
 plt.xlabel('Categories')

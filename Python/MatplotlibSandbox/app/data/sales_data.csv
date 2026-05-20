@@ -1,8 +1,8 @@
 month,product,region,units_sold,revenue,returns,avg_rating
-1,Laptop,North,142,213000,8,4.2
-1,Laptop,South,98,147000,5,4.1
-1,Laptop,East,115,172500,6,4.3
-1,Laptop,West,87,130500,4,4.0
+1,Null,North,142,213000,8,4.2
+1,Laptop,South,-98,147000,5,4.1
+1,Laptop,East,-115,172500,6,4.3
+1,Laptop,West,-87,500000,4,4.0
 1,Headphones,North,310,46500,12,4.5
 1,Headphones,South,275,41250,9,4.4
 1,Headphones,East,290,43500,11,4.6
