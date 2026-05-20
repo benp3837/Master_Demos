@@ -1,7 +1,7 @@
 import numpy as np
 import time
 
-"""Here's our first look at "Why NumPy?" - SPEED!
+"""Here's our first answer to "Why NumPy?" - SPEED!
 NumPy performs operations on entire datasets at once, without loops.
 This superpower is called "vectorization"
 
@@ -16,7 +16,7 @@ numpy_array = np.array(plain_list)
 
 # Plain Python loop
 start = time.time()
-result = [x * 2 for x in plain_list]
+result = [x * 2 for x in plain_list] # not saving this anywhere, just timing it
 python_time = time.time() - start
 
 # NumPy vectorized
@@ -30,7 +30,7 @@ print(f"NumPy array:       {numpy_time:.4f} seconds")
 print(f"NumPy was {python_time / numpy_time:.1f}x faster!")
 
 
-# More "real-world" example ----------------------
+# A more "real-world" example ----------------------
 
 # Defining two months of daily sales figures (PASTE THIS IN FOR THEM PLS LOL)
 

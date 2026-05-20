@@ -1,5 +1,5 @@
 month,product,region,units_sold,revenue,returns,avg_rating
-1,Null,North,142,213000,8,4.2
+1,N/A,North,142,213000,8,4.2
 1,Laptop,South,-98,147000,5,4.1
 1,Laptop,East,-115,172500,6,4.3
 1,Laptop,West,-87,500000,4,4.0
