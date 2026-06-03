@@ -104,3 +104,46 @@ plt.legend()
 plt.grid(True, alpha=0.3)
 plt.tight_layout()
 plt.show()
+
+
+
+"""
+FILE I/O stuff
+"""
+
+"""
+FILE I/O — CREATING/READING/UPDATING/DELETING Files (CRUD operations)
+
+Now that we've cleaned and analyzed our data, we can save our work.
+We'll write the cleaned data and a summary report to new files
+And we'll change and delete files as we go
+"""
+
+# Save a cleaned version of the data to a file
+df.to_csv("data/sales_data_cleaned.csv", index=False)
+print("CREATED FILE: sales_data_cleaned.csv")
+
+# Enriching the data with calculated values!
+monthly_product_sales["above_average"] = monthly_product_sales["units_sold"] > overall_avg
+
+# Save the enriched summary
+monthly_product_sales.to_csv("data/monthly_summary.csv", index=False)
+print("CREATED: monthly_summary.csv")
+
+# Append a row to the bottom of the file
+with open("data/monthly_summary.csv", "a") as file: # "a" for append mode
+    file.write("I'M AN EXTRA ROWWWWW")
+
+"""
+FILE I/O — DELETE
+
+Let's clean up the temp file we no longer need
+"""
+
+# Delete the cleaned file - we didn't need it after all
+# This is the "D" in CRUD
+import os
+
+if os.path.exists("data/sales_data_cleaned.csv"):
+    os.remove("data/sales_data_cleaned.csv")
+    print("DELETED OLD: sales_data_cleaned.csv")
