@@ -59,7 +59,8 @@ class AirFryer:
     # TODO: See if they can come up with a reasonable math function to use
     # TODO: OR just explore the docs/google together and see what we think makes sense
     def calculate_tip(self, weight):
-        tip = weight * .18
+        # Heavier meal = exponentially larger tip. dystopia babyyyy
+        tip = math.pow(weight, 1.2) * .18
 
         #.2f formats the number to 2 decimal places!
         print(f"Suggested tip of ${tip:.2f} will be charged automatically.")

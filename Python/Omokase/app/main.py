@@ -1,7 +1,7 @@
 # Gotta import the functions from their own file to use them here!
 import restaurant_functions as rf
 
-""" An Omokase is a Japanese dining experience
+""" Omakase is a Japanese dining experience
 where the chef selects and prepares a series of dishes for the customer.
 The word "omakase" translates to "I'll leave it up to you".
 
