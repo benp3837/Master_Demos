@@ -49,3 +49,40 @@ def get_videogame_by_id(id):
 
     # Return the game to the user
     return game
+
+def insert_videogame(game_data):
+
+    # Validate that game title is present
+    if not game_data.get("title"):
+        raise ValueError("Game title is required!")
+
+    # Validate that sales is a non-negative integer
+    if not isinstance(game_data["sales"], int) or game_data["sales"] < 0:
+        raise TypeError("Sales must be a non-negative integer!")
+
+    # Insert the game into the DB
+    new_game = repo.insert_videogame(game_data)
+
+    # Return the newly inserted game to the user
+    return new_game
+
+# update game
+def update_videogame(id, updated_data):
+
+    # Validate that the ID is a positive integer
+    if not isinstance(id, int) or id <= 0:
+        raise TypeError("ID must be a positive integer!")
+
+    # Validate that sales is a non-negative integer (if it's being updated)
+    if "sales" in updated_data and (not isinstance(updated_data["sales"], int) or updated_data["sales"] < 0):
+        raise TypeError("Sales must be a non-negative integer!")
+
+    # Update the game in the DB
+    updated_game = repo.update_videogame(id, updated_data)
+
+    # If the game doesn't exist, raise an exception
+    if not updated_game:
+        raise ValueError(f"No game found with ID {id}!")
+
+    # Return the updated game to the user
+    return updated_game
