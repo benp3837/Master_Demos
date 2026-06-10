@@ -1,0 +1,73 @@
+CREATE TABLE nests(
+  nest_id SERIAL PRIMARY KEY,
+  nest_location text
+);
+
+CREATE TABLE birds(
+   bird_id SERIAL PRIMARY KEY,
+   bird_species text,
+   nest_id_fk BIGINT UNSIGNED,
+   CONSTRAINT nest_fk FOREIGN KEY (nest_id_fk) REFERENCES nests(nest_id)
+);
+
+
+-- ---------------------------------
+
+-- 5 nests, 5 birds
+INSERT INTO nests (nest_location)
+VALUES ('Oak Tree'), ('Fence Post'), ('Roof Gutter'), ('Abandoned Car'), ('Chimney');       
+
+-- (some nests have multiple birds, some nests have none)
+INSERT INTO birds (bird_species, nest_id_fk)
+VALUES ('Sparrow', 1), ('Sparrow', 1), ('Sparrow', 1), ('Blue Jay', 2), ('Cardinal', 3), ('Wren', 5);    
+
+SELECT * FROM nests;
+SELECT * FROM birds;
+
+-- --------------------
+-- TRANSACTTIONS REVIEW
+-- --------------------
+
+-- A bird has created a new nest! 
+-- Both inserts need to succeed, or the entire transaction rolls back (which reverts the changes)
+
+START TRANSACTION;
+
+    -- Step 1 — add a new nest
+    INSERT INTO nests (nest_location)
+    VALUES ('Log');
+
+    -- Step 2 — assign a bird to that new nest
+    INSERT INTO birds (bird_species, nest_id_fk)
+    VALUES ('Finch', LAST_INSERT_ID()); -- Look at this cool trick I found
+
+COMMIT;
+
+select * from nests; select * from birds;
+
+
+-- -------------------------------------------------------------------------
+-- TRIGGER - When you want something to happen after a certain thing happens
+-- -------------------------------------------------------------------------
+
+-- We'll make an update statement that gets TRIGGERED by an insert
+
+-- First, let's add a bird_count column to the table (practicing ALTER)
+ALTER TABLE nests ADD COLUMN bird_count INT;
+
+-- UPDATE the new column with current birds
+UPDATE nests n SET bird_count = (SELECT COUNT(*) FROM birds b where b.nest_id_fk = n.nest_id);
+
+-- Ok here's the trigger:
+CREATE TRIGGER increment_bird_count AFTER INSERT ON birds
+FOR EACH ROW
+BEGIN
+	UPDATE nests SET bird_count = bird_count + 1
+    WHERE nest_id = NEW.nest_id_fk; -- NEW is the row that was just inserted. Crafty!
+END;
+
+select * from nests;
+
+INSERT INTO birds (bird_species, nest_id_fk) VALUES ('Tufted Titmouse', 2);
+
+SELECT * FROM nests;
