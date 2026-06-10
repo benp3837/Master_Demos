@@ -71,3 +71,24 @@ select * from nests;
 INSERT INTO birds (bird_species, nest_id_fk) VALUES ('Tufted Titmouse', 2);
 
 SELECT * FROM nests;
+
+-- -------------------
+-- STORED PROCEDURE - when you want something like a function, that you can just call
+-- --------------------
+
+-- These are good for uglier queries. Check out this twice-nested subquery lol
+
+SELECT AVG(bird_count) FROM nests;
+
+CREATE PROCEDURE GetBirdsInBusyNests()
+BEGIN
+
+    -- Find all birds whose nest has more birds than the average
+    SELECT bird_species, nest_id_fk FROM birds WHERE nest_id_fk IN (
+         SELECT nest_id FROM nests WHERE bird_count > (
+             SELECT AVG(bird_count) FROM nests WHERE bird_count > 0));
+    
+END;
+
+
+CALL GetBirdsInBusyNests();
