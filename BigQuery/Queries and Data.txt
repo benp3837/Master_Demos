@@ -3,11 +3,70 @@ First BigQuery Demo Queries:
 (NYC Citibike)
 
 -- Initial query (stations ordered by number of trips descending)
+SELECT
+  start_station_name,
+  start_station_latitude,
+  start_station_longitude,
+  ST_GEOGPOINT(start_station_longitude, start_station_latitude) AS geo_location,
+  COUNT(*) AS num_trips
+FROM
+  `bigquery-public-data.new_york.citibike_trips`
+GROUP BY -- 1, 2, 3 lets us avoid writing the names of the columns in the select
+  1,
+  2,
+  3
+ORDER BY
+  num_trips DESC
+LIMIT
+  25;
+
+-- Trips by Customer Type
+SELECT
+  usertype,
+  COUNT(*) AS num_trips,
+  ROUND(AVG(tripduration) / 60, 2) AS avg_trip_minutes
+FROM
+  `bigquery-public-data.new_york.citibike_trips`
+GROUP BY
+  usertype
+ORDER BY
+  num_trips DESC;
+
+-- Find busiest months (in 2016)
+SELECT
+  EXTRACT(MONTH FROM starttime) AS month,
+  COUNT(*) AS num_trips
+FROM
+  `bigquery-public-data.new_york.citibike_trips`
+WHERE
+  EXTRACT(YEAR FROM starttime) = 2016
+GROUP BY
+  month
+ORDER BY
+  month ASC;
+
+
+-- Joins - # of trips by station, + average trip time
+
+SELECT
+  s.name AS station_name,
+  COUNT(*) AS num_trips,
+  ROUND(AVG(t.tripduration) / 60, 2) AS avg_trip_minutes
+FROM
+  `bigquery-public-data.new_york.citibike_trips` t
+JOIN
+  `bigquery-public-data.new_york.citibike_stations` s
+  ON t.start_station_name = s.name -- no PK/FK! Denormalized!
+GROUP BY
+  s.name
+ORDER BY
+  num_trips DESC
+LIMIT 20;
 
 
 
 
-Next Queries (heavy on window functions):
+Next Queries (heavy on window functions):------------------------------
 
 (Chicago Taxi Trips)
 
@@ -177,3 +236,4 @@ CREATE TABLE our_dataset_name.sales_data (
   unit_price FLOAT64,
   order_date DATE
 );
+
