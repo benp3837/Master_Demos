@@ -101,42 +101,60 @@ ORDER BY
   total_revenue DESC
 LIMIT 10;
 
--- Running total of trips by hour using SUM() window function
+-- Window function that exceeds peak use limit
+-- Tries to get a running total of all trips, grouping by start time
 SELECT
-  EXTRACT(HOUR FROM trip_start_timestamp) AS hour_of_day,
-  COUNT(*) AS trips_that_hour,
-  SUM(COUNT(*)) OVER (
-    ORDER BY EXTRACT(HOUR FROM trip_start_timestamp)
-  ) AS running_total_trips
+  trip_start_timestamp,
+  COUNT(*) AS trips_at_this_timestamp,
+  SUM(COUNT(*)) OVER (ORDER BY trip_start_timestamp) AS running_total_trips
 FROM
   `bigquery-public-data.chicago_taxi_trips.taxi_trips`
 WHERE
-  EXTRACT(YEAR FROM trip_start_timestamp) = 2023
-  AND fare > 0
+  fare > 0
 GROUP BY
-  hour_of_day
+  trip_start_timestamp
 ORDER BY
-  hour_of_day;
+  trip_start_timestamp
+LIMIT 20;
 
--- Rank companies by trips per month using RANK() window function and PARTITION BY
+-- The fix: Only do this for a single year!
+--This heavily narrows the results, and we can complete the query
 SELECT
-  company,
+  trip_start_timestamp,
+  COUNT(*) AS trips_at_this_timestamp,
+  SUM(COUNT(*)) OVER (ORDER BY trip_start_timestamp) AS running_total_trips
+FROM
+  `bigquery-public-data.chicago_taxi_trips.taxi_trips`
+WHERE
+  fare > 0
+  AND EXTRACT(YEAR FROM trip_start_timestamp) = 2023
+GROUP BY
+  trip_start_timestamp
+ORDER BY
+  trip_start_timestamp
+LIMIT 20;
+
+Use RANK with a window function to find the company with the most trip volume each month
+-- Find the company with the most trips each month in 2023 (RANK window function)
+SELECT
+  company AS top_ranked_company,
   EXTRACT(MONTH FROM trip_start_timestamp) AS month,
-  COUNT(*) AS num_trips,
-  RANK() OVER (
-    PARTITION BY EXTRACT(MONTH FROM trip_start_timestamp)
-    ORDER BY COUNT(*) DESC
-  ) AS rank_that_month
+  COUNT(*) AS num_trips
 FROM
   `bigquery-public-data.chicago_taxi_trips.taxi_trips`
 WHERE
   company IS NOT NULL
+  AND fare > 0
   AND EXTRACT(YEAR FROM trip_start_timestamp) = 2023
 GROUP BY
   company, month
+-- Qualify is an easy way to filter results based on a window function
+-- Rank() is our window function here, giving us the company with the most trips each month
+QUALIFY RANK() OVER (PARTITION BY month ORDER BY COUNT(*) DESC) = 1
+-- We will only get records that have a rank of 1 within their month, meaning the single highest trip-count company for that month
 ORDER BY
-  month, rank_that_month
-LIMIT 50;
+  month;
+
 
 
 Final Queries: Our own sales dataset, in GDrive
