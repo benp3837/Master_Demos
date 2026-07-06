@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   
     constructor(private router: Router) { }
+
+    crabPic = "../../../assets/crabbo.png"
   
     navigateToCart() {
       this.router.navigate(['/cart']);

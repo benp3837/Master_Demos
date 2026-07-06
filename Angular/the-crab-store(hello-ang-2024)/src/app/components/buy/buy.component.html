@@ -1,13 +1,10 @@
 <h4>this is a dynamically displayed buy-crabs component (it can leave the page)</h4>
 
-<input type="text" placeholder="Search for a crab">
-<button>Search</button>
-
 <!--just 3 headers w string interpolation and *ngFor-->
 <div class="row">
     <div class="col-md-4 my-4" *ngFor="let crab of crabList">
       <div class="card">
-        <img id="crab-pic" class="card-img-top " src="../../../assets/crabbo.png" alt="CRAB PIC HERE"> <!-- Replace with your image source -->
+        <img id="crab-pic" class="card-img-top " [src]=crab.Image alt="CRAB PIC HERE"> <!-- Replace with your image source -->
         <div class="card-body">
           <h5 class="card-title">{{crab.Type}}</h5>
           <p class="card-text">${{crab.Price}}</p>
@@ -16,3 +13,7 @@
       </div>
     </div>
   </div>
+
+<h4>Leave a Review (Oooo I can't wait to use 2 way binding to take user input)</h4>
+<input type="text" placeholder="Be nice to me">
+<button class="btn btn-sm btn-dark">Submit</button>

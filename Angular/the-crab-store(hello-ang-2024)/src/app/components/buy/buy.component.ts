@@ -14,9 +14,9 @@ export class BuyComponent {
   //let's define some crabs that will be for sale when this component loads
   //in a real app, we'd probably pull this data from the backend/database
   crabList = [
-    {ID:1, Type:"Bay Crab", Price:300},
-    {ID:2, Type:"Horseshoe Crab", Price:3000},
-    {ID:3, Type:"Spider Crab", Price:1000},
+    {ID:1, Type:"Bay Crab", Price:300, Image:"../../../assets/crabbo.png"},
+    {ID:2, Type:"Horseshoe Crab", Price:3000, Image:"../../../assets/crabbo.png"},
+    {ID:3, Type:"Spider Crab", Price:1000, Image:"../../../assets/crabbo.png"},
   ]
 
   //When a crab is clicked, add it to the cart in the OrderService

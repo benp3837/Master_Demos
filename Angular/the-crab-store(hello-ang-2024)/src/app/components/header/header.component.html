@@ -1,9 +1,9 @@
 <!-- Using [ngStyle] here, just to show it -->
 <div class=container-fluid [ngStyle]="{'margin': '0'}" style="border-style: dashed;">
     <div id="header">
-        <img class="crab" src="../../../assets/crabbo.png" alt="CRAB">
+        <img class="crab" [src]="crabPic" alt="CRAB">
         <h3>Welcome to the Crab Shop. Craaaaaaabbbbbb </h3>
-        <img class="crab" src="../../../assets/crabbo.png" alt="CRAB">
+        <img class="crab" [src]="crabPic" alt="CRAB">
     </div>
     <h5>This is a statically displayed header component (it won't leave the page)</h5>
 

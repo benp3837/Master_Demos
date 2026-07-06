@@ -14,7 +14,7 @@ export class CartComponent {
   /*Computed display-friendly view of the raw cart
   "get" is SUPER useful cuz it lets us use this function as if it's a variable
   See how we call it in the HTML*/
- get cartSummary(): any {
+ get cartSummary(): any[] {
   const counts: any = {};
   for (let crab of this.orderService.cart) {
     if (counts[crab.Type]) {
@@ -27,12 +27,13 @@ export class CartComponent {
 }
 
 
-  deleteItem(){
-    
+  deleteItem(type: String){
+    this.orderService.cart = this.orderService.cart.filter((crab:any) => crab.Type !== type);
   }
 
   makePurchase(){
-
+    alert("You have purchased alllll those crabs")
+    this.orderService.cart = []
   }
 
 }
