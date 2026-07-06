@@ -1,3 +1,4 @@
+<!-- Using [ngStyle] here, just to show it -->
 <div class=container-fluid [ngStyle]="{'margin': '0'}" style="border-style: dashed;">
     <div id="header">
         <img class="crab" src="../../../assets/crabbo.png" alt="CRAB">
@@ -5,4 +6,9 @@
         <img class="crab" src="../../../assets/crabbo.png" alt="CRAB">
     </div>
     <h5>This is a statically displayed header component.</h5>
+
+    <div id="cart">
+        <button (click)="navigateToCart()">CART</button>
+    </div>
 </div>
+
