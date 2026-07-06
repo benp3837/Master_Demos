@@ -11,6 +11,9 @@ export class BuyComponent {
   //We need to CONSTRUCTOR INJECT the order service to use its data/functions
   constructor(private orderService: OrderService){}
 
+  //Feedback is blank until submitted
+  feedbackInput = ""
+
   //let's define some crabs that will be for sale when this component loads
   //in a real app, we'd probably pull this data from the backend/database
   crabList = [
@@ -23,6 +26,11 @@ export class BuyComponent {
   addItem(crab:any){
       this.orderService.cart.push(crab)
       alert("Added " + crab.Type)
+  }
+
+  //Just spits the user's input back at them
+  submitFeedback(){
+    alert("Thanks for saying: " + this.feedbackInput)
   }
 
 }

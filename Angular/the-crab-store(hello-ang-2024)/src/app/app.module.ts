@@ -7,6 +7,7 @@ import { HelloComponent } from './components/hello/hello.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BuyComponent } from './components/buy/buy.component';
 import { CartComponent } from './components/cart/cart.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CartComponent } from './components/cart/cart.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

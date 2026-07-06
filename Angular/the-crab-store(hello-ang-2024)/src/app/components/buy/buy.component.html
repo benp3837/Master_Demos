@@ -15,5 +15,5 @@
   </div>
 
 <h4>Leave a Review (Oooo I can't wait to use 2 way binding to take user input)</h4>
-<input type="text" placeholder="Be nice to me">
-<button class="btn btn-sm btn-dark">Submit</button>
+<input type="text" placeholder="Be nice to me" [(ngModel)] = feedbackInput>
+<button class="btn btn-sm btn-dark" (click)="submitFeedback()">Submit</button>
