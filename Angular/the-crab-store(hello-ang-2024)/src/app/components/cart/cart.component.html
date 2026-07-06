@@ -1,1 +1,18 @@
-<p>cart works!</p>
+<div class="col-md-4 mx-auto" *ngIf="!orderService.cart[0]">
+    <h2>Cart Empty!</h2>
+</div>
+
+<div class="col-md-4 mx-auto" *ngIf="orderService.cart[0]">
+    <h2>Your Cart:</h2>
+    <div *ngFor="let crab of cartSummary">
+        
+        <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{crab.Type}}</h5>
+            <p class="card-text">${{crab.Price}}</p>
+            <p class="card-text">Quantity: {{crab.quantity}}</p>
+            <p class="card-text">Subtotal: ${{crab.Price * crab.quantity}}</p>
+        </div>
+        </div>
+    </div>
+</div>
