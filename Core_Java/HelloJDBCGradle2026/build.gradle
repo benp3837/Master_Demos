@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    // Here's the PostgreSQL Driver dependency, grabbed from mvnrepository.com
+    // We need this to accomplish JDBC!
+    implementation("org.postgresql:postgresql:42.7.11")
+
+    // And the Javalin dependency, so we can handle HTTP requests
+    implementation("io.javalin:javalin:7.2.2")
+
+    // This is a logger that Javalin needs to print stuff to the console
+    // We have to add this for Javalin to work. (It's a "helper" dependency)
+    implementation("org.slf4j:slf4j-simple:2.0.17")
+
+    //One more helper dependency, allows JSON <-> Java conversions
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.21.2")
+}
+
+test {
+    useJUnitPlatform()
+}
