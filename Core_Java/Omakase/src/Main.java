@@ -10,8 +10,8 @@ import java.util.Scanner;
  * 4. Methods (to organize our code and make it reusable)
  */
 
-// TODO: an assignment for them: add a functionality for _______
-// TODO: (or make them come up with their own extra functionality!)
+// TODO: an assignment for you - 
+    //add a functionality for the user saying "maybe" when asked if they're still hungry
 
 public class Main{
     public static void main(String[] args) {
