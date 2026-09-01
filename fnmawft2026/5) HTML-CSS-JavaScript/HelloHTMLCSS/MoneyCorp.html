@@ -1,0 +1,172 @@
+<!-- THIS is an HTML comment (just hit ctrl + /) -->
+<!-- To generate an HTML skeleton, just type "!" and hit enter -->
+
+<!DOCTYPE html> <!-- This is the DOCTYPE Declaration (not considered an element) Declares what TYPE of DOC this is -->
+<html lang="en"> <!-- This is the ROOT element. All of our HTML goes in here. -->
+
+<!-- The head element, which is typically metadata <title> defines the name you see on a browser tab-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$MONEYCORP$</title>
+
+    <style>
+        /* We could have written CSS here, but I won't */
+    </style>
+
+    <!-- Linking an EXTERNAL STYLESHEET (best practice) -->
+    <link rel="stylesheet" href="MoneyCorp.css">
+
+    <!-- Using Bootstrap for premade stylings -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+
+<!-- The body contains all of the actual content you'll see on the webpage -->
+<!-- In other words, this is where all of your elements live -->
+<body>
+    
+    <!-- h1 through h6 are your "header" elements. Basically bold text. h1 is the biggest -->
+    <!-- INLINE STYLING with CSS (not great practice) -->
+    <h1 style="color: darkgreen;">Welcome to MONEY CORP!</h1>
+
+    <h3>Q3 Goals: Make a lot of money!!!</h3>
+
+
+    <!-- divs are the main way to group elements (they're a division of the page) -->
+    <div id="div1">
+        <!-- paragraphs (p) are your generic text type -->
+        <p>I'm a paragraph in a div!</p> <p>I'm another paragraph next to the 1st one</p>
+
+        <p>p elements are BLOCK elements. they always BLOCK a line for themselves on the page</p>
+    </div>
+
+    <div id="div2">
+        <!-- spans are your generic INLINE text types -->
+        <span>I'm a span in a div!</span> <span>I'm a span right next to that <= one</span>
+
+        <span>Spans are inline elements! We live IN the same LINE until we're out of space</span>
+    </div>
+
+    <!-- These are line breaks, they just make empty lines on the page -->
+    <br><br><br> 
+
+
+    <!-- LISTS -------------------------------------------- -->
+
+    <!-- A list of things. Can be ordered or unordered. We'll see these often in navbars and sidebars -->
+
+    <h3>Our BTS Biases</h3>
+
+    <ol class="list">
+        <li>Suga</li>
+        <li>Jimin</li>
+        <li>Jungkook</li>
+    </ol>
+
+    <h4>Honorable Mentions</h4>
+
+    <ul class="list">
+        <li>RM</li>
+        <li>V</li>
+        <li>J-Hope</li>
+        <li>Jin</li>
+        <li>Hitman Bang</li>
+    </ul>
+
+
+    <!-- TABLES ------------------------------------------ -->
+
+    <table class="table table-primary table-hover w-50">
+        <thead> <!--Header row for the table-->
+            <tr>
+                <th>Associate Name</th>
+                <th>Favorite Gif</th>
+            </tr>
+        </thead>
+        <tbody> <!--The body of the table (the data)-->
+            <tr>
+                <td>Kush</td>
+                <td>Puttar?</td>
+            </tr>
+            <tr>
+                <td>Aneesh</td>
+                <td>SON SON</td>
+            </tr>
+            <tr>
+                <td>Joshua</td>
+                <td>Minions Clapping</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- INPUT TYPES ---------------------------- -->
+
+    <br><br><br> 
+
+
+    <p>Enter your Username:</p>
+    <input type="text" placeholder="E.g. johndoe">
+
+    <p>Enter your Password:</p>
+    <input type="password">
+
+    <p>Enter your age:</p>
+    <input type="number" min="18">
+
+    <!-- Multi-choice options (radio buttons, checkboxes, dropdowns) -->
+
+    <!-- Radio Buttons let you choose ONE option -->
+    <h3>Choose an Option:</h3>
+
+    <input type="radio" name="radiogroup" id="radio1">
+    <label for="radio1">A lot of money</label>
+
+    <input type="radio" name="radiogroup" id="radio2">
+    <label for="radio2">A little of money</label>
+
+
+    <!-- Checkboxes let you choose mutliple options -->
+    <!-- I'm putting these in divs for easy styling later -->
+    <div>
+
+        <h3>How are you feeling today?</h3>
+
+        <div>
+            <input type="checkbox" name="checkgroup" id="check1">
+            <label for="check1">Ready to work!</label>
+        </div>
+
+        <div>
+            <input type="checkbox" name="checkgroup" id="check2">
+            <label for="check2">VERY ready to work!</label>
+        </div>
+
+        <div>
+            <input type="checkbox" name="checkgroup" id="check3">
+            <label for="check3">My feelings are irrelevant because all I think about is increasing shareholder value :3</label>
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <!-- The "select" element gives us a dropdown -->
+     <select name="Clockout Options" id="COO">
+
+        <option value="" disabled selected>Choose a Clockout Time:</option>
+        <option value="9">9:00 pm</option>
+        <option value="10">10:00 pm</option>
+        <option value="11">11:00 pm</option>
+        <option value="12">12:00 pm</option>
+        <option value="never">never</option>
+
+     </select>
+
+     <br><br><br>
+
+     <button>Click me! I won't do anything because no JavaScript</button>
+
+</body>
+
+</html>

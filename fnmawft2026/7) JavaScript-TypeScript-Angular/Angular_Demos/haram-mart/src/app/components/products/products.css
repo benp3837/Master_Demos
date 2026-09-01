@@ -1,0 +1,5 @@
+/* Easier to uniformly size images in CSS */
+img{
+    width:25%;
+    height: 25%;
+}

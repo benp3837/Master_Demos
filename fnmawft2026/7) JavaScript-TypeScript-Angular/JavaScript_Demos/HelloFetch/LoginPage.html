@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="et"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 420px;
+            background-color: rgb(243, 157, 157);
+            border: 1px solid rgba(155, 40, 17, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+        }
+
+        .brand-icon {
+            width: 72px;
+            height: 72px;
+            margin: auto;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .form-control {
+            border-radius: 12px;
+            padding: 0.75rem;
+        }
+
+        .input-group-text {
+            border-radius: 12px 0 0 12px;
+        }
+
+        .btn-login {
+            border-radius: 12px;
+            padding: 0.75rem;
+            font-weight: 600;
+        }
+
+        .text-light-muted {
+            color: rgba(255,255,255,0.8);
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="login-card">
+    <div class="text-center mb-4">
+        <i class="bi bi-shield-lock-fill fs-1"></i>
+        <h1 class="h2 fw-bold mt-2">Welcome Back</h1>
+        <p>Sign in to Catch Pokemon</p>
+    </div>
+
+    <form>
+        <div class="mb-3">
+            <label class="form-label">Username</label>
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="bi bi-envelope"></i>
+                </span>
+                <input
+                    id="username"
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter username">
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="bi bi-lock"></i>
+                </span>
+                <input
+                    id="password"
+                    type="password"
+                    class="form-control"
+                    placeholder="Enter password">
+            </div>
+        </div>
+
+        <div class="d-grid">
+            <button id="loginButton" class="btn btn-primary">
+                Sign In
+            </button>
+        </div>
+
+        <div class="text-center mt-3">
+            Don't have an account?
+            <a href="#" class="text-white fw-bold">
+                Sign Up
+            </a>
+        </div>
+    </form>
+</div>
+
+<script src="LoginPage.js"></script>

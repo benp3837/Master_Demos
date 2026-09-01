@@ -1,0 +1,33 @@
+@keyframes float {
+    0% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+    100% {
+      opacity: .5;
+      transform: translate(calc(420px * var(--cos-angle)), calc(105px * var(--sin-angle)));
+    }
+  }
+  
+  .float {
+    position: absolute;
+    animation: float 1.5s ease-out;
+    pointer-events: none;
+    font-size: 50px;
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-2px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .bounce {
+    animation: bounce 0.1s;
+  }

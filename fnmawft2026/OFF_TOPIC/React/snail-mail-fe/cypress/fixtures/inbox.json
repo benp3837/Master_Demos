@@ -1,0 +1,20 @@
+[
+    {
+        "sender":"beetle@snailmail.com",
+        "recipient":"me@snailmail.com",
+        "subject":"I am a beetle",
+        "body":"*beetle noises*"
+    },
+    {
+        "sender":"ladybug@snailmail.com",
+        "recipient":"me@snailmail.com",
+        "subject":"I am a ladybug",
+        "body":"I am called ladybug but I am actually a dude"
+    },
+    {
+        "sender":"worm@snailmail.com",
+        "recipient":"me@snailmail.com",
+        "subject":"...",
+        "body":"*worm noises*"
+    }
+]

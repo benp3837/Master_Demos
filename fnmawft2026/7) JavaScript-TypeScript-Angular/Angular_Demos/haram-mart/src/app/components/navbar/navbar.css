@@ -1,0 +1,17 @@
+img {
+    width: 350px;
+    height: 100px;
+}
+
+#header {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+}
+
+#cart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+}

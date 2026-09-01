@@ -1,0 +1,13 @@
+<!-- Render a product card for each item -->
+<div class="row">
+    <div class="col-md-4" *ngFor="let item of itemList">
+        <div class="card my-2 text-center">
+            <img [src]="item.image" alt="product image" class="card-img-top mx-auto d-block">
+            <div class="card-body">
+                <h5 class="card-title">{{item.name}}</h5>
+                <p class="card-text">${{item.price}}</p>
+                <button class="btn btn-sm btn-dark" (click)="addToCart(item)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>

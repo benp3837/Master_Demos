@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Linking bootstrap for easy styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
+</head>
+<body class="container-fluid">
+    
+    <h2 id="header">Search for a Pokemon:</h2>
+
+    <input type="number" id="userInput" placeholder="Poke ID">
+    <button id="btn">Search!</button>
+
+    <!-- We'll render the incoming Pokemon data in a table -->
+    <table class="mt-5 table table-primary w-50">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- These will get filled after pokemon GET -->
+                <td id="name"></td>
+                <td id="type"></td>
+                <td>
+                    <button>Catch</button>
+                    <button>Run</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <img id="sprite" src="" alt="pokemon pic">
+
+    <!-- TODO: something here to save caught pokemon -->
+
+    <!-- Remember to link your JS to HTML! -->
+    <script src="HelloFetch.js"></script>
+
+</body>
+</html>

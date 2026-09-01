@@ -1,0 +1,14 @@
+.input-container {
+    border-radius: 10%;
+    border-style: groove;
+    border-width: 5px;
+    width: 50%;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: rgb(112, 112, 130);
+    box-shadow: 0 0 100px rgb(40, 34, 155); /* Shadow */
+}
+
+input{
+    width:60%
+}

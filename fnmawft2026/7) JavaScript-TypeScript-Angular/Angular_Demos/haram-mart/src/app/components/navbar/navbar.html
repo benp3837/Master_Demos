@@ -1,0 +1,11 @@
+<!-- Using [ngStyle] here, just to show it. It makes the header change color when clicked! -->
+<div [ngStyle]="{'color': headerColor}" (click)="changeColor()" 
+style="border-style: double; border-width: 8px;"> 
+    <img [src]="logo" alt="haram-mart" routerLink="/">
+    <h4 id="header">This is a statically displayed navbar component (it won't leave the page)</h4>
+
+    <div id="cart">
+        <!-- Check out this bootstrap button. (remember bootstrap styling goes in the class attribute)-->
+        <button class="btn btn-danger" routerLink="/cart">CART</button>
+    </div>
+</div>

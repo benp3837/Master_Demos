@@ -1,0 +1,4 @@
+11:07:13.238 [Test worker] INFO  AirFryer - Attempting to insert food
+11:07:13.251 [Test worker] INFO  AirFryer - User inserted: Potato
+11:07:13.315 [Test worker] INFO  AirFryer - Attempting to insert food
+11:07:13.316 [Test worker] WARN  AirFryer - User inserted no food!!

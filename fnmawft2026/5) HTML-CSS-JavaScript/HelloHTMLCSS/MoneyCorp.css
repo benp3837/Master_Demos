@@ -1,0 +1,36 @@
+/* ELEMENT SELECTOR - styles every instance of the selected element*/
+p {
+    color:blue;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+/* ID SELECTOR (#) good for uniquely styling single elements */
+
+#div1{
+    background-color: dodgerblue;
+}
+
+#div2{
+    background-color:tomato;
+}
+
+
+/* CLASS SELECTOR (.) good for styling multiple elements */
+/* This is our BOX MODEL example */
+.list{
+    /* MARGIN - make space between different elements */
+    margin:100px;
+    /* BORDER - a visible border around the element */
+    border:groove 15px plum;
+    border-radius: 100%; /*rounds the edges of the border*/
+    /* PADDING - make space between the content and the border */
+    padding:100px;
+}
+
+/* UNIVERSAL SELECTOR (*) */
+* {
+    background-color: chartreuse;
+}

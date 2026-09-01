@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.fnma'
+version = '0.0.1-SNAPSHOT'
+description = 'Demo project for Spring Boot'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    maven {
+        url 'https://nexusrepository.fanniemae.com/nexus/content/groups/public/'
+        allowInsecureProtocol = true
+    }
+}
+
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter:3.5.5'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:3.4.5'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

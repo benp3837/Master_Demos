@@ -1,0 +1,27 @@
+<h4>Hello from Parent Component</h4>
+
+<!-- This is {{String Interpolation}} - taking a value from the TS, and rending in the HTML -->
+<p>I have {{arr.length}} Child Components (components rendered in a component):</p>
+
+<!-- ngIf - renders something based on a condition -->
+<!-- directives like ngFor and ngIf need to be IMPORTED in the TS (import CommonModule) -->
+<div *ngIf = "arr.length > 0">
+    <!-- ngFor - great for rendering a LIST of elements -->
+    <!-- Rendering a Child Component for every value in the Array, and sending it an index -->
+    <app-child-component *ngFor="let num of arr" [index]="num"/>
+</div>
+
+<!-- This is an example of (event binding) - we attach a function from the TS to an event in the HTML -->
+<button (click)="showSurprise()">Click Me!</button>
+
+<!-- This is an example of [property binding] - we define an element's attribute based on a value in the TS -->
+<h1 [hidden]="hideHeader">SURPRISE</h1>
+
+<h3>Wait a minute... who ARE you?</h3>
+
+<!-- [(TWO WAY BINDING)] - Lets you take user input and save it in a TS variable -->
+<!-- To use this, we need to import FormsModule -->
+<input type="text" placeholder="Name" [(ngModel)]="name">
+
+<p>Hello, {{name}}</p>
+
