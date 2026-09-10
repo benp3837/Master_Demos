@@ -1008,3 +1008,1013 @@
 2026-09-10 13:13:26 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 499: Transaction flagged for review. Amount exceeded threshold: $11931
 2026-09-10 13:13:26 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 500: Transaction failed. Reason: Duplicate transaction detected
 2026-09-10 13:13:26 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Log simulation complete.
+2026-09-10 14:19:30 [main] INFO  c.b.SplunkDemo.SplunkDemoApplication - Starting SplunkDemoApplication using Java 17.0.10 with PID 20824 (C:\Users\BenjaminPetruzziello\Documents\Revature\Master_Demos\Splunk\SplunkDemo\build\classes\java\main started by BenjaminPetruzziello in C:\Users\BenjaminPetruzziello\Documents\Revature\Master_Demos\Splunk\SplunkDemo)
+2026-09-10 14:19:30 [main] INFO  c.b.SplunkDemo.SplunkDemoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-09-10 14:19:31 [main] INFO  c.b.SplunkDemo.SplunkDemoApplication - Started SplunkDemoApplication in 1.602 seconds (process running for 2.181)
+2026-09-10 14:19:31 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Starting log simulation - 500 iterations
+2026-09-10 14:19:31 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 1: Transaction processed successfully. Amount: $4296
+2026-09-10 14:19:31 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 2: Transaction flagged for review. Amount exceeded threshold: $12893
+2026-09-10 14:19:31 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 3: Transaction flagged for review. Amount exceeded threshold: $12848
+2026-09-10 14:19:31 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 4: Transaction processed successfully. Amount: $8515
+2026-09-10 14:19:31 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 5: Transaction flagged for review. Amount exceeded threshold: $11714
+2026-09-10 14:19:31 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 6: Transaction processed successfully. Amount: $6148
+2026-09-10 14:19:31 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 7: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:19:31 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 8: Transaction flagged for review. Amount exceeded threshold: $11418
+2026-09-10 14:19:31 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 9: Transaction processed successfully. Amount: $1897
+2026-09-10 14:19:31 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 10: Transaction processed successfully. Amount: $3436
+2026-09-10 14:19:31 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 11: Transaction processed successfully. Amount: $7101
+2026-09-10 14:19:31 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 12: Transaction processed successfully. Amount: $7215
+2026-09-10 14:19:31 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 13: Transaction failed. Reason: Connection timeout
+2026-09-10 14:19:31 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 14: Transaction processed successfully. Amount: $5433
+2026-09-10 14:19:31 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 15: Transaction flagged for review. Amount exceeded threshold: $11578
+2026-09-10 14:19:31 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 16: Transaction processed successfully. Amount: $1282
+2026-09-10 14:19:31 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 17: Transaction processed successfully. Amount: $2678
+2026-09-10 14:19:31 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 18: Transaction processed successfully. Amount: $9432
+2026-09-10 14:19:31 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 19: Transaction processed successfully. Amount: $2665
+2026-09-10 14:19:31 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 20: Transaction flagged for review. Amount exceeded threshold: $11925
+2026-09-10 14:19:31 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 21: Transaction processed successfully. Amount: $7599
+2026-09-10 14:19:31 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 22: Transaction flagged for review. Amount exceeded threshold: $9503
+2026-09-10 14:19:31 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 23: Transaction processed successfully. Amount: $4311
+2026-09-10 14:19:31 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 24: Transaction flagged for review. Amount exceeded threshold: $11444
+2026-09-10 14:19:31 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 25: Transaction processed successfully. Amount: $3146
+2026-09-10 14:19:31 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 26: Transaction flagged for review. Amount exceeded threshold: $11511
+2026-09-10 14:19:31 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 27: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:19:31 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 28: Transaction processed successfully. Amount: $1156
+2026-09-10 14:19:31 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 29: Transaction processed successfully. Amount: $7153
+2026-09-10 14:19:31 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 30: Transaction flagged for review. Amount exceeded threshold: $9771
+2026-09-10 14:19:32 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 31: Transaction flagged for review. Amount exceeded threshold: $11532
+2026-09-10 14:19:32 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 32: Transaction flagged for review. Amount exceeded threshold: $10764
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 33: Transaction processed successfully. Amount: $6400
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 34: Transaction processed successfully. Amount: $4008
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 35: Transaction processed successfully. Amount: $1940
+2026-09-10 14:19:32 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 36: Transaction flagged for review. Amount exceeded threshold: $13112
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 37: Transaction processed successfully. Amount: $4869
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 38: Transaction processed successfully. Amount: $9341
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 39: Transaction processed successfully. Amount: $9892
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 40: Transaction processed successfully. Amount: $9275
+2026-09-10 14:19:32 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 41: Transaction flagged for review. Amount exceeded threshold: $11401
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 42: Transaction processed successfully. Amount: $4098
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 43: Transaction processed successfully. Amount: $6664
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 44: Transaction processed successfully. Amount: $8298
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 45: Transaction processed successfully. Amount: $5638
+2026-09-10 14:19:32 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 46: Transaction flagged for review. Amount exceeded threshold: $12554
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 47: Transaction processed successfully. Amount: $5040
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 48: Transaction processed successfully. Amount: $3333
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 49: Transaction processed successfully. Amount: $9688
+2026-09-10 14:19:32 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 50: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 51: Transaction processed successfully. Amount: $6062
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 52: Transaction processed successfully. Amount: $1751
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 53: Transaction processed successfully. Amount: $4327
+2026-09-10 14:19:32 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 54: Transaction flagged for review. Amount exceeded threshold: $12906
+2026-09-10 14:19:32 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 55: Transaction flagged for review. Amount exceeded threshold: $12276
+2026-09-10 14:19:32 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 56: Transaction failed. Reason: Connection timeout
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 57: Transaction processed successfully. Amount: $7113
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 58: Transaction processed successfully. Amount: $7648
+2026-09-10 14:19:32 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 59: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 60: Transaction processed successfully. Amount: $7902
+2026-09-10 14:19:32 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 61: Transaction flagged for review. Amount exceeded threshold: $13753
+2026-09-10 14:19:32 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 62: Transaction flagged for review. Amount exceeded threshold: $11906
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 63: Transaction processed successfully. Amount: $5481
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 64: Transaction processed successfully. Amount: $6858
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 65: Transaction processed successfully. Amount: $2021
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 66: Transaction processed successfully. Amount: $7338
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 67: Transaction processed successfully. Amount: $1993
+2026-09-10 14:19:32 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 68: Transaction flagged for review. Amount exceeded threshold: $10862
+2026-09-10 14:19:32 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 69: Transaction failed. Reason: Invalid account number
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 70: Transaction processed successfully. Amount: $2545
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 71: Transaction processed successfully. Amount: $6634
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 72: Transaction processed successfully. Amount: $9304
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 73: Transaction processed successfully. Amount: $8166
+2026-09-10 14:19:32 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 74: Transaction flagged for review. Amount exceeded threshold: $10871
+2026-09-10 14:19:32 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 75: Transaction flagged for review. Amount exceeded threshold: $11995
+2026-09-10 14:19:32 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 76: Transaction flagged for review. Amount exceeded threshold: $12445
+2026-09-10 14:19:32 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 77: Transaction failed. Reason: Invalid account number
+2026-09-10 14:19:32 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 78: Transaction flagged for review. Amount exceeded threshold: $13238
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 79: Transaction processed successfully. Amount: $1394
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 80: Transaction processed successfully. Amount: $4773
+2026-09-10 14:19:32 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 81: Transaction flagged for review. Amount exceeded threshold: $12968
+2026-09-10 14:19:32 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 82: Transaction failed. Reason: Authorization failed
+2026-09-10 14:19:32 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 83: Transaction flagged for review. Amount exceeded threshold: $9834
+2026-09-10 14:19:32 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 84: Transaction flagged for review. Amount exceeded threshold: $12994
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 85: Transaction processed successfully. Amount: $1303
+2026-09-10 14:19:32 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 86: Transaction failed. Reason: Invalid account number
+2026-09-10 14:19:32 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 87: Transaction flagged for review. Amount exceeded threshold: $11220
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 88: Transaction processed successfully. Amount: $6815
+2026-09-10 14:19:32 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 89: Transaction processed successfully. Amount: $2029
+2026-09-10 14:19:32 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 90: Transaction flagged for review. Amount exceeded threshold: $10240
+2026-09-10 14:19:32 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 91: Transaction flagged for review. Amount exceeded threshold: $13606
+2026-09-10 14:19:32 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 92: Transaction flagged for review. Amount exceeded threshold: $9610
+2026-09-10 14:19:33 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 93: Transaction flagged for review. Amount exceeded threshold: $10804
+2026-09-10 14:19:33 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 94: Transaction flagged for review. Amount exceeded threshold: $11691
+2026-09-10 14:19:33 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 95: Transaction failed. Reason: Authorization failed
+2026-09-10 14:19:33 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 96: Transaction flagged for review. Amount exceeded threshold: $12132
+2026-09-10 14:19:33 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 97: Transaction flagged for review. Amount exceeded threshold: $9471
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 98: Transaction processed successfully. Amount: $5195
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 99: Transaction processed successfully. Amount: $4524
+2026-09-10 14:19:33 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 100: Transaction flagged for review. Amount exceeded threshold: $9189
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 101: Transaction processed successfully. Amount: $4678
+2026-09-10 14:19:33 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 102: Transaction flagged for review. Amount exceeded threshold: $12360
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 103: Transaction processed successfully. Amount: $4452
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 104: Transaction processed successfully. Amount: $7242
+2026-09-10 14:19:33 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 105: Transaction failed. Reason: Connection timeout
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 106: Transaction processed successfully. Amount: $1586
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 107: Transaction processed successfully. Amount: $9782
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 108: Transaction processed successfully. Amount: $9641
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 109: Transaction processed successfully. Amount: $1498
+2026-09-10 14:19:33 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 110: Transaction flagged for review. Amount exceeded threshold: $10964
+2026-09-10 14:19:33 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 111: Transaction flagged for review. Amount exceeded threshold: $12880
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 112: Transaction processed successfully. Amount: $6273
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 113: Transaction processed successfully. Amount: $3782
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 114: Transaction processed successfully. Amount: $7732
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 115: Transaction processed successfully. Amount: $7373
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 116: Transaction processed successfully. Amount: $7581
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 117: Transaction processed successfully. Amount: $8946
+2026-09-10 14:19:33 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 118: Transaction flagged for review. Amount exceeded threshold: $10599
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 119: Transaction processed successfully. Amount: $1184
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 120: Transaction processed successfully. Amount: $2375
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 121: Transaction processed successfully. Amount: $9735
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 122: Transaction processed successfully. Amount: $8663
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 123: Transaction processed successfully. Amount: $3469
+2026-09-10 14:19:33 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 124: Transaction flagged for review. Amount exceeded threshold: $13566
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 125: Transaction processed successfully. Amount: $4215
+2026-09-10 14:19:33 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 126: Transaction failed. Reason: Invalid account number
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 127: Transaction processed successfully. Amount: $2365
+2026-09-10 14:19:33 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 128: Transaction failed. Reason: Connection timeout
+2026-09-10 14:19:33 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 129: Transaction flagged for review. Amount exceeded threshold: $9903
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 130: Transaction processed successfully. Amount: $4394
+2026-09-10 14:19:33 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 131: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:19:33 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 132: Transaction failed. Reason: Invalid account number
+2026-09-10 14:19:33 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 133: Transaction flagged for review. Amount exceeded threshold: $11430
+2026-09-10 14:19:33 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 134: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:19:33 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 135: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:19:33 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 136: Transaction failed. Reason: Authorization failed
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 137: Transaction processed successfully. Amount: $3722
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 138: Transaction processed successfully. Amount: $2507
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 139: Transaction processed successfully. Amount: $3168
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 140: Transaction processed successfully. Amount: $8006
+2026-09-10 14:19:33 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 141: Transaction flagged for review. Amount exceeded threshold: $13135
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 142: Transaction processed successfully. Amount: $6093
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 143: Transaction processed successfully. Amount: $5658
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 144: Transaction processed successfully. Amount: $2762
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 145: Transaction processed successfully. Amount: $4225
+2026-09-10 14:19:33 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 146: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:19:33 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 147: Transaction flagged for review. Amount exceeded threshold: $13952
+2026-09-10 14:19:33 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 148: Transaction flagged for review. Amount exceeded threshold: $11264
+2026-09-10 14:19:33 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 149: Transaction flagged for review. Amount exceeded threshold: $12902
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 150: Transaction processed successfully. Amount: $1473
+2026-09-10 14:19:33 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 151: Transaction failed. Reason: Invalid account number
+2026-09-10 14:19:33 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 152: Transaction flagged for review. Amount exceeded threshold: $11548
+2026-09-10 14:19:33 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 153: Transaction processed successfully. Amount: $7942
+2026-09-10 14:19:33 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 154: Transaction flagged for review. Amount exceeded threshold: $13908
+2026-09-10 14:19:33 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 155: Transaction flagged for review. Amount exceeded threshold: $10563
+2026-09-10 14:19:34 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 156: Transaction flagged for review. Amount exceeded threshold: $10739
+2026-09-10 14:19:34 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 157: Transaction flagged for review. Amount exceeded threshold: $9821
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 158: Transaction processed successfully. Amount: $3324
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 159: Transaction processed successfully. Amount: $5260
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 160: Transaction processed successfully. Amount: $2109
+2026-09-10 14:19:34 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 161: Transaction failed. Reason: Authorization failed
+2026-09-10 14:19:34 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 162: Transaction flagged for review. Amount exceeded threshold: $9216
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 163: Transaction processed successfully. Amount: $8643
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 164: Transaction processed successfully. Amount: $1892
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 165: Transaction processed successfully. Amount: $8950
+2026-09-10 14:19:34 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 166: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 167: Transaction processed successfully. Amount: $4339
+2026-09-10 14:19:34 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 168: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 169: Transaction processed successfully. Amount: $9072
+2026-09-10 14:19:34 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 170: Transaction failed. Reason: Connection timeout
+2026-09-10 14:19:34 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 171: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 172: Transaction processed successfully. Amount: $3099
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 173: Transaction processed successfully. Amount: $1109
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 174: Transaction processed successfully. Amount: $8896
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 175: Transaction processed successfully. Amount: $4255
+2026-09-10 14:19:34 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 176: Transaction flagged for review. Amount exceeded threshold: $13223
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 177: Transaction processed successfully. Amount: $8249
+2026-09-10 14:19:34 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 178: Transaction flagged for review. Amount exceeded threshold: $13015
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 179: Transaction processed successfully. Amount: $6995
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 180: Transaction processed successfully. Amount: $9861
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 181: Transaction processed successfully. Amount: $1483
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 182: Transaction processed successfully. Amount: $6774
+2026-09-10 14:19:34 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 183: Transaction flagged for review. Amount exceeded threshold: $13946
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 184: Transaction processed successfully. Amount: $6102
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 185: Transaction processed successfully. Amount: $1075
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 186: Transaction processed successfully. Amount: $8704
+2026-09-10 14:19:34 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 187: Transaction flagged for review. Amount exceeded threshold: $12889
+2026-09-10 14:19:34 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 188: Transaction flagged for review. Amount exceeded threshold: $11880
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 189: Transaction processed successfully. Amount: $5436
+2026-09-10 14:19:34 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 190: Transaction flagged for review. Amount exceeded threshold: $10957
+2026-09-10 14:19:34 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 191: Transaction failed. Reason: Authorization failed
+2026-09-10 14:19:34 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 192: Transaction flagged for review. Amount exceeded threshold: $13533
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 193: Transaction processed successfully. Amount: $9433
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 194: Transaction processed successfully. Amount: $3220
+2026-09-10 14:19:34 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 195: Transaction flagged for review. Amount exceeded threshold: $12933
+2026-09-10 14:19:34 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 196: Transaction flagged for review. Amount exceeded threshold: $9309
+2026-09-10 14:19:34 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 197: Transaction flagged for review. Amount exceeded threshold: $10993
+2026-09-10 14:19:34 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 198: Transaction flagged for review. Amount exceeded threshold: $9187
+2026-09-10 14:19:34 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 199: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 200: Transaction processed successfully. Amount: $3060
+2026-09-10 14:19:34 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 201: Transaction failed. Reason: Connection timeout
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 202: Transaction processed successfully. Amount: $1347
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 203: Transaction processed successfully. Amount: $4172
+2026-09-10 14:19:34 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 204: Transaction flagged for review. Amount exceeded threshold: $9080
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 205: Transaction processed successfully. Amount: $7149
+2026-09-10 14:19:34 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 206: Transaction flagged for review. Amount exceeded threshold: $11926
+2026-09-10 14:19:34 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 207: Transaction flagged for review. Amount exceeded threshold: $13112
+2026-09-10 14:19:34 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 208: Transaction failed. Reason: Connection timeout
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 209: Transaction processed successfully. Amount: $1840
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 210: Transaction processed successfully. Amount: $8491
+2026-09-10 14:19:34 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 211: Transaction failed. Reason: Connection timeout
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 212: Transaction processed successfully. Amount: $7401
+2026-09-10 14:19:34 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 213: Transaction flagged for review. Amount exceeded threshold: $10659
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 214: Transaction processed successfully. Amount: $2686
+2026-09-10 14:19:34 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 215: Transaction flagged for review. Amount exceeded threshold: $10921
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 216: Transaction processed successfully. Amount: $2196
+2026-09-10 14:19:34 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 217: Transaction processed successfully. Amount: $4022
+2026-09-10 14:19:35 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 218: Transaction flagged for review. Amount exceeded threshold: $10418
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 219: Transaction processed successfully. Amount: $4902
+2026-09-10 14:19:35 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 220: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:19:35 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 221: Transaction flagged for review. Amount exceeded threshold: $12852
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 222: Transaction processed successfully. Amount: $5713
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 223: Transaction processed successfully. Amount: $6061
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 224: Transaction processed successfully. Amount: $3649
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 225: Transaction processed successfully. Amount: $3530
+2026-09-10 14:19:35 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 226: Transaction flagged for review. Amount exceeded threshold: $11679
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 227: Transaction processed successfully. Amount: $6480
+2026-09-10 14:19:35 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 228: Transaction flagged for review. Amount exceeded threshold: $10854
+2026-09-10 14:19:35 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 229: Transaction failed. Reason: Invalid account number
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 230: Transaction processed successfully. Amount: $9484
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 231: Transaction processed successfully. Amount: $2104
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 232: Transaction processed successfully. Amount: $4913
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 233: Transaction processed successfully. Amount: $9622
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 234: Transaction processed successfully. Amount: $4209
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 235: Transaction processed successfully. Amount: $5189
+2026-09-10 14:19:35 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 236: Transaction flagged for review. Amount exceeded threshold: $12487
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 237: Transaction processed successfully. Amount: $9494
+2026-09-10 14:19:35 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 238: Transaction failed. Reason: Connection timeout
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 239: Transaction processed successfully. Amount: $8796
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 240: Transaction processed successfully. Amount: $1704
+2026-09-10 14:19:35 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 241: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:19:35 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 242: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 243: Transaction processed successfully. Amount: $9480
+2026-09-10 14:19:35 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 244: Transaction flagged for review. Amount exceeded threshold: $13959
+2026-09-10 14:19:35 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 245: Transaction failed. Reason: Authorization failed
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 246: Transaction processed successfully. Amount: $6065
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 247: Transaction processed successfully. Amount: $7011
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 248: Transaction processed successfully. Amount: $7295
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 249: Transaction processed successfully. Amount: $9742
+2026-09-10 14:19:35 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 250: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 251: Transaction processed successfully. Amount: $5243
+2026-09-10 14:19:35 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 252: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 253: Transaction processed successfully. Amount: $9023
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 254: Transaction processed successfully. Amount: $8055
+2026-09-10 14:19:35 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 255: Transaction flagged for review. Amount exceeded threshold: $9784
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 256: Transaction processed successfully. Amount: $4306
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 257: Transaction processed successfully. Amount: $2545
+2026-09-10 14:19:35 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 258: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 259: Transaction processed successfully. Amount: $7162
+2026-09-10 14:19:35 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 260: Transaction failed. Reason: Invalid account number
+2026-09-10 14:19:35 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 261: Transaction failed. Reason: Connection timeout
+2026-09-10 14:19:35 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 262: Transaction flagged for review. Amount exceeded threshold: $10336
+2026-09-10 14:19:35 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 263: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 264: Transaction processed successfully. Amount: $8402
+2026-09-10 14:19:35 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 265: Transaction flagged for review. Amount exceeded threshold: $10677
+2026-09-10 14:19:35 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 266: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:19:35 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 267: Transaction failed. Reason: Authorization failed
+2026-09-10 14:19:35 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 268: Transaction flagged for review. Amount exceeded threshold: $11678
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 269: Transaction processed successfully. Amount: $9601
+2026-09-10 14:19:35 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 270: Transaction flagged for review. Amount exceeded threshold: $13875
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 271: Transaction processed successfully. Amount: $8724
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 272: Transaction processed successfully. Amount: $9716
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 273: Transaction processed successfully. Amount: $1797
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 274: Transaction processed successfully. Amount: $3446
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 275: Transaction processed successfully. Amount: $9929
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 276: Transaction processed successfully. Amount: $1213
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 277: Transaction processed successfully. Amount: $7446
+2026-09-10 14:19:35 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 278: Transaction processed successfully. Amount: $8902
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 279: Transaction processed successfully. Amount: $5881
+2026-09-10 14:19:36 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 280: Transaction flagged for review. Amount exceeded threshold: $13694
+2026-09-10 14:19:36 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 281: Transaction flagged for review. Amount exceeded threshold: $12900
+2026-09-10 14:19:36 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 282: Transaction flagged for review. Amount exceeded threshold: $10962
+2026-09-10 14:19:36 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 283: Transaction failed. Reason: Authorization failed
+2026-09-10 14:19:36 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 284: Transaction flagged for review. Amount exceeded threshold: $12477
+2026-09-10 14:19:36 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 285: Transaction flagged for review. Amount exceeded threshold: $11635
+2026-09-10 14:19:36 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 286: Transaction failed. Reason: Authorization failed
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 287: Transaction processed successfully. Amount: $4749
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 288: Transaction processed successfully. Amount: $1248
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 289: Transaction processed successfully. Amount: $5709
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 290: Transaction processed successfully. Amount: $7697
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 291: Transaction processed successfully. Amount: $6795
+2026-09-10 14:19:36 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 292: Transaction failed. Reason: Connection timeout
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 293: Transaction processed successfully. Amount: $5602
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 294: Transaction processed successfully. Amount: $3310
+2026-09-10 14:19:36 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 295: Transaction failed. Reason: Connection timeout
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 296: Transaction processed successfully. Amount: $9296
+2026-09-10 14:19:36 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 297: Transaction flagged for review. Amount exceeded threshold: $12185
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 298: Transaction processed successfully. Amount: $2992
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 299: Transaction processed successfully. Amount: $2046
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 300: Transaction processed successfully. Amount: $4325
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 301: Transaction processed successfully. Amount: $6702
+2026-09-10 14:19:36 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 302: Transaction flagged for review. Amount exceeded threshold: $10073
+2026-09-10 14:19:36 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 303: Transaction failed. Reason: Invalid account number
+2026-09-10 14:19:36 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 304: Transaction flagged for review. Amount exceeded threshold: $13372
+2026-09-10 14:19:36 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 305: Transaction flagged for review. Amount exceeded threshold: $10412
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 306: Transaction processed successfully. Amount: $6461
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 307: Transaction processed successfully. Amount: $6435
+2026-09-10 14:19:36 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 308: Transaction failed. Reason: Connection timeout
+2026-09-10 14:19:36 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 309: Transaction flagged for review. Amount exceeded threshold: $11842
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 310: Transaction processed successfully. Amount: $9125
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 311: Transaction processed successfully. Amount: $8746
+2026-09-10 14:19:36 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 312: Transaction flagged for review. Amount exceeded threshold: $10258
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 313: Transaction processed successfully. Amount: $7296
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 314: Transaction processed successfully. Amount: $2993
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 315: Transaction processed successfully. Amount: $2220
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 316: Transaction processed successfully. Amount: $2444
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 317: Transaction processed successfully. Amount: $2008
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 318: Transaction processed successfully. Amount: $7563
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 319: Transaction processed successfully. Amount: $3879
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 320: Transaction processed successfully. Amount: $9898
+2026-09-10 14:19:36 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 321: Transaction failed. Reason: Authorization failed
+2026-09-10 14:19:36 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 322: Transaction flagged for review. Amount exceeded threshold: $13184
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 323: Transaction processed successfully. Amount: $2444
+2026-09-10 14:19:36 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 324: Transaction failed. Reason: Invalid account number
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 325: Transaction processed successfully. Amount: $6635
+2026-09-10 14:19:36 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 326: Transaction flagged for review. Amount exceeded threshold: $11327
+2026-09-10 14:19:36 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 327: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:19:36 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 328: Transaction flagged for review. Amount exceeded threshold: $9906
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 329: Transaction processed successfully. Amount: $4020
+2026-09-10 14:19:36 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 330: Transaction flagged for review. Amount exceeded threshold: $9081
+2026-09-10 14:19:36 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 331: Transaction flagged for review. Amount exceeded threshold: $9750
+2026-09-10 14:19:36 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 332: Transaction flagged for review. Amount exceeded threshold: $10094
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 333: Transaction processed successfully. Amount: $2037
+2026-09-10 14:19:36 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 334: Transaction flagged for review. Amount exceeded threshold: $11161
+2026-09-10 14:19:36 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 335: Transaction flagged for review. Amount exceeded threshold: $9423
+2026-09-10 14:19:36 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 336: Transaction flagged for review. Amount exceeded threshold: $10576
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 337: Transaction processed successfully. Amount: $8049
+2026-09-10 14:19:36 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 338: Transaction processed successfully. Amount: $8500
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 339: Transaction processed successfully. Amount: $5716
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 340: Transaction processed successfully. Amount: $5651
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 341: Transaction processed successfully. Amount: $8768
+2026-09-10 14:19:37 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 342: Transaction flagged for review. Amount exceeded threshold: $13775
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 343: Transaction processed successfully. Amount: $2328
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 344: Transaction processed successfully. Amount: $6419
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 345: Transaction processed successfully. Amount: $6321
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 346: Transaction processed successfully. Amount: $5957
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 347: Transaction processed successfully. Amount: $7824
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 348: Transaction processed successfully. Amount: $1909
+2026-09-10 14:19:37 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 349: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 350: Transaction processed successfully. Amount: $2376
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 351: Transaction processed successfully. Amount: $2668
+2026-09-10 14:19:37 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 352: Transaction flagged for review. Amount exceeded threshold: $10297
+2026-09-10 14:19:37 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 353: Transaction flagged for review. Amount exceeded threshold: $12807
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 354: Transaction processed successfully. Amount: $2229
+2026-09-10 14:19:37 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 355: Transaction failed. Reason: Authorization failed
+2026-09-10 14:19:37 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 356: Transaction flagged for review. Amount exceeded threshold: $9641
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 357: Transaction processed successfully. Amount: $4333
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 358: Transaction processed successfully. Amount: $4115
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 359: Transaction processed successfully. Amount: $2615
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 360: Transaction processed successfully. Amount: $1073
+2026-09-10 14:19:37 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 361: Transaction failed. Reason: Connection timeout
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 362: Transaction processed successfully. Amount: $3185
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 363: Transaction processed successfully. Amount: $8830
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 364: Transaction processed successfully. Amount: $8599
+2026-09-10 14:19:37 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 365: Transaction flagged for review. Amount exceeded threshold: $11884
+2026-09-10 14:19:37 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 366: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 367: Transaction processed successfully. Amount: $6482
+2026-09-10 14:19:37 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 368: Transaction failed. Reason: Connection timeout
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 369: Transaction processed successfully. Amount: $8091
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 370: Transaction processed successfully. Amount: $7280
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 371: Transaction processed successfully. Amount: $7724
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 372: Transaction processed successfully. Amount: $4275
+2026-09-10 14:19:37 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 373: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 374: Transaction processed successfully. Amount: $4332
+2026-09-10 14:19:37 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 375: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 376: Transaction processed successfully. Amount: $6792
+2026-09-10 14:19:37 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 377: Transaction flagged for review. Amount exceeded threshold: $13216
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 378: Transaction processed successfully. Amount: $8353
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 379: Transaction processed successfully. Amount: $6547
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 380: Transaction processed successfully. Amount: $5158
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 381: Transaction processed successfully. Amount: $2520
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 382: Transaction processed successfully. Amount: $2209
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 383: Transaction processed successfully. Amount: $7501
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 384: Transaction processed successfully. Amount: $3061
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 385: Transaction processed successfully. Amount: $5212
+2026-09-10 14:19:37 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 386: Transaction flagged for review. Amount exceeded threshold: $9993
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 387: Transaction processed successfully. Amount: $5014
+2026-09-10 14:19:37 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 388: Transaction failed. Reason: Invalid account number
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 389: Transaction processed successfully. Amount: $9506
+2026-09-10 14:19:37 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 390: Transaction flagged for review. Amount exceeded threshold: $11169
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 391: Transaction processed successfully. Amount: $1065
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 392: Transaction processed successfully. Amount: $2117
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 393: Transaction processed successfully. Amount: $4826
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 394: Transaction processed successfully. Amount: $2416
+2026-09-10 14:19:37 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 395: Transaction processed successfully. Amount: $1381
+2026-09-10 14:19:38 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 396: Transaction failed. Reason: Authorization failed
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 397: Transaction processed successfully. Amount: $6382
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 398: Transaction processed successfully. Amount: $4442
+2026-09-10 14:19:38 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 399: Transaction flagged for review. Amount exceeded threshold: $11296
+2026-09-10 14:19:38 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 400: Transaction failed. Reason: Authorization failed
+2026-09-10 14:19:38 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 401: Transaction failed. Reason: Authorization failed
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 402: Transaction processed successfully. Amount: $1172
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 403: Transaction processed successfully. Amount: $7709
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 404: Transaction processed successfully. Amount: $9276
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 405: Transaction processed successfully. Amount: $7728
+2026-09-10 14:19:38 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 406: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 407: Transaction processed successfully. Amount: $7717
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 408: Transaction processed successfully. Amount: $9298
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 409: Transaction processed successfully. Amount: $3756
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 410: Transaction processed successfully. Amount: $7219
+2026-09-10 14:19:38 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 411: Transaction flagged for review. Amount exceeded threshold: $9399
+2026-09-10 14:19:38 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 412: Transaction flagged for review. Amount exceeded threshold: $13184
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 413: Transaction processed successfully. Amount: $2458
+2026-09-10 14:19:38 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 414: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 415: Transaction processed successfully. Amount: $7945
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 416: Transaction processed successfully. Amount: $3493
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 417: Transaction processed successfully. Amount: $9231
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 418: Transaction processed successfully. Amount: $6908
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 419: Transaction processed successfully. Amount: $3942
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 420: Transaction processed successfully. Amount: $3291
+2026-09-10 14:19:38 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 421: Transaction flagged for review. Amount exceeded threshold: $13519
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 422: Transaction processed successfully. Amount: $7738
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 423: Transaction processed successfully. Amount: $5567
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 424: Transaction processed successfully. Amount: $7533
+2026-09-10 14:19:38 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 425: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 426: Transaction processed successfully. Amount: $2902
+2026-09-10 14:19:38 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 427: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:19:38 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 428: Transaction flagged for review. Amount exceeded threshold: $10162
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 429: Transaction processed successfully. Amount: $4617
+2026-09-10 14:19:38 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 430: Transaction flagged for review. Amount exceeded threshold: $12851
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 431: Transaction processed successfully. Amount: $6899
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 432: Transaction processed successfully. Amount: $3762
+2026-09-10 14:19:38 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 433: Transaction flagged for review. Amount exceeded threshold: $12753
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 434: Transaction processed successfully. Amount: $7318
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 435: Transaction processed successfully. Amount: $7020
+2026-09-10 14:19:38 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 436: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 437: Transaction processed successfully. Amount: $7987
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 438: Transaction processed successfully. Amount: $8550
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 439: Transaction processed successfully. Amount: $6685
+2026-09-10 14:19:38 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 440: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:19:38 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 441: Transaction flagged for review. Amount exceeded threshold: $13927
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 442: Transaction processed successfully. Amount: $2076
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 443: Transaction processed successfully. Amount: $8489
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 444: Transaction processed successfully. Amount: $2618
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 445: Transaction processed successfully. Amount: $4695
+2026-09-10 14:19:38 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 446: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:19:38 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 447: Transaction failed. Reason: Authorization failed
+2026-09-10 14:19:38 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 448: Transaction failed. Reason: Authorization failed
+2026-09-10 14:19:38 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 449: Transaction failed. Reason: Connection timeout
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 450: Transaction processed successfully. Amount: $9141
+2026-09-10 14:19:38 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 451: Transaction flagged for review. Amount exceeded threshold: $12389
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 452: Transaction processed successfully. Amount: $4336
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 453: Transaction processed successfully. Amount: $2015
+2026-09-10 14:19:38 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 454: Transaction processed successfully. Amount: $3957
+2026-09-10 14:19:39 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 455: Transaction failed. Reason: Authorization failed
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 456: Transaction processed successfully. Amount: $5418
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 457: Transaction processed successfully. Amount: $6782
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 458: Transaction processed successfully. Amount: $2298
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 459: Transaction processed successfully. Amount: $8947
+2026-09-10 14:19:39 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 460: Transaction failed. Reason: Authorization failed
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 461: Transaction processed successfully. Amount: $9974
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 462: Transaction processed successfully. Amount: $3926
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 463: Transaction processed successfully. Amount: $4384
+2026-09-10 14:19:39 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 464: Transaction failed. Reason: Invalid account number
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 465: Transaction processed successfully. Amount: $8245
+2026-09-10 14:19:39 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 466: Transaction failed. Reason: Invalid account number
+2026-09-10 14:19:39 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 467: Transaction flagged for review. Amount exceeded threshold: $11764
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 468: Transaction processed successfully. Amount: $4663
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 469: Transaction processed successfully. Amount: $1351
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 470: Transaction processed successfully. Amount: $5523
+2026-09-10 14:19:39 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 471: Transaction flagged for review. Amount exceeded threshold: $11961
+2026-09-10 14:19:39 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 472: Transaction flagged for review. Amount exceeded threshold: $11460
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 473: Transaction processed successfully. Amount: $8134
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 474: Transaction processed successfully. Amount: $7955
+2026-09-10 14:19:39 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 475: Transaction flagged for review. Amount exceeded threshold: $9332
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 476: Transaction processed successfully. Amount: $2173
+2026-09-10 14:19:39 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 477: Transaction flagged for review. Amount exceeded threshold: $9996
+2026-09-10 14:19:39 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 478: Transaction flagged for review. Amount exceeded threshold: $13610
+2026-09-10 14:19:39 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 479: Transaction flagged for review. Amount exceeded threshold: $10933
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 480: Transaction processed successfully. Amount: $4299
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 481: Transaction processed successfully. Amount: $2901
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 482: Transaction processed successfully. Amount: $4381
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 483: Transaction processed successfully. Amount: $7172
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 484: Transaction processed successfully. Amount: $6422
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 485: Transaction processed successfully. Amount: $9472
+2026-09-10 14:19:39 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 486: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 487: Transaction processed successfully. Amount: $5159
+2026-09-10 14:19:39 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 488: Transaction failed. Reason: Connection timeout
+2026-09-10 14:19:39 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 489: Transaction failed. Reason: Invalid account number
+2026-09-10 14:19:39 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 490: Transaction flagged for review. Amount exceeded threshold: $12804
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 491: Transaction processed successfully. Amount: $3889
+2026-09-10 14:19:39 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 492: Transaction flagged for review. Amount exceeded threshold: $13448
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 493: Transaction processed successfully. Amount: $3813
+2026-09-10 14:19:39 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 494: Transaction flagged for review. Amount exceeded threshold: $10332
+2026-09-10 14:19:39 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 495: Transaction failed. Reason: Invalid account number
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 496: Transaction processed successfully. Amount: $5132
+2026-09-10 14:19:39 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 497: Transaction flagged for review. Amount exceeded threshold: $10965
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 498: Transaction processed successfully. Amount: $5918
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 499: Transaction processed successfully. Amount: $3483
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 500: Transaction processed successfully. Amount: $8234
+2026-09-10 14:19:39 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Log simulation complete.
+2026-09-10 14:20:45 [main] INFO  c.b.SplunkDemo.SplunkDemoApplication - Starting SplunkDemoApplication using Java 17.0.10 with PID 31588 (C:\Users\BenjaminPetruzziello\Documents\Revature\Master_Demos\Splunk\SplunkDemo\build\classes\java\main started by BenjaminPetruzziello in C:\Users\BenjaminPetruzziello\Documents\Revature\Master_Demos\Splunk\SplunkDemo)
+2026-09-10 14:20:45 [main] INFO  c.b.SplunkDemo.SplunkDemoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-09-10 14:20:46 [main] INFO  c.b.SplunkDemo.SplunkDemoApplication - Started SplunkDemoApplication in 1.451 seconds (process running for 2.025)
+2026-09-10 14:20:46 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Starting log simulation - 500 iterations
+2026-09-10 14:20:46 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 1: Transaction processed successfully. Amount: $3382
+2026-09-10 14:20:46 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 2: Transaction processed successfully. Amount: $7082
+2026-09-10 14:20:46 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 3: Transaction processed successfully. Amount: $3548
+2026-09-10 14:20:46 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 4: Transaction failed. Reason: Authorization failed
+2026-09-10 14:20:46 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 5: Transaction flagged for review. Amount exceeded threshold: $9630
+2026-09-10 14:20:46 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 6: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:20:46 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 7: Transaction processed successfully. Amount: $6678
+2026-09-10 14:20:46 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 8: Transaction processed successfully. Amount: $8815
+2026-09-10 14:20:46 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 9: Transaction processed successfully. Amount: $3246
+2026-09-10 14:20:46 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 10: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:20:46 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 11: Transaction processed successfully. Amount: $5690
+2026-09-10 14:20:46 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 12: Transaction processed successfully. Amount: $3700
+2026-09-10 14:20:46 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 13: Transaction processed successfully. Amount: $1543
+2026-09-10 14:20:46 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 14: Transaction processed successfully. Amount: $6965
+2026-09-10 14:20:46 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 15: Transaction processed successfully. Amount: $8620
+2026-09-10 14:20:46 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 16: Transaction processed successfully. Amount: $6040
+2026-09-10 14:20:46 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 17: Transaction failed. Reason: Authorization failed
+2026-09-10 14:20:46 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 18: Transaction flagged for review. Amount exceeded threshold: $10627
+2026-09-10 14:20:46 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 19: Transaction failed. Reason: Authorization failed
+2026-09-10 14:20:46 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 20: Transaction processed successfully. Amount: $1074
+2026-09-10 14:20:46 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 21: Transaction flagged for review. Amount exceeded threshold: $12791
+2026-09-10 14:20:46 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 22: Transaction flagged for review. Amount exceeded threshold: $10107
+2026-09-10 14:20:46 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 23: Transaction flagged for review. Amount exceeded threshold: $12524
+2026-09-10 14:20:46 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 24: Transaction processed successfully. Amount: $3620
+2026-09-10 14:20:46 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 25: Transaction processed successfully. Amount: $1328
+2026-09-10 14:20:46 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 26: Transaction processed successfully. Amount: $7076
+2026-09-10 14:20:46 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 27: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:20:46 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 28: Transaction flagged for review. Amount exceeded threshold: $10514
+2026-09-10 14:20:46 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 29: Transaction processed successfully. Amount: $8680
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 30: Transaction processed successfully. Amount: $1638
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 31: Transaction processed successfully. Amount: $5616
+2026-09-10 14:20:47 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 32: Transaction flagged for review. Amount exceeded threshold: $13842
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 33: Transaction processed successfully. Amount: $8247
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 34: Transaction processed successfully. Amount: $2405
+2026-09-10 14:20:47 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 35: Transaction flagged for review. Amount exceeded threshold: $11329
+2026-09-10 14:20:47 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 36: Transaction flagged for review. Amount exceeded threshold: $13500
+2026-09-10 14:20:47 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 37: Transaction failed. Reason: Connection timeout
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 38: Transaction processed successfully. Amount: $7245
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 39: Transaction processed successfully. Amount: $8587
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 40: Transaction processed successfully. Amount: $7009
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 41: Transaction processed successfully. Amount: $8787
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 42: Transaction processed successfully. Amount: $3421
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 43: Transaction processed successfully. Amount: $5009
+2026-09-10 14:20:47 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 44: Transaction flagged for review. Amount exceeded threshold: $11006
+2026-09-10 14:20:47 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 45: Transaction flagged for review. Amount exceeded threshold: $9709
+2026-09-10 14:20:47 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 46: Transaction flagged for review. Amount exceeded threshold: $10526
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 47: Transaction processed successfully. Amount: $1960
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 48: Transaction processed successfully. Amount: $6135
+2026-09-10 14:20:47 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 49: Transaction flagged for review. Amount exceeded threshold: $11437
+2026-09-10 14:20:47 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 50: Transaction flagged for review. Amount exceeded threshold: $10299
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 51: Transaction processed successfully. Amount: $8415
+2026-09-10 14:20:47 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 52: Transaction flagged for review. Amount exceeded threshold: $9726
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 53: Transaction processed successfully. Amount: $5663
+2026-09-10 14:20:47 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 54: Transaction flagged for review. Amount exceeded threshold: $12577
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 55: Transaction processed successfully. Amount: $1728
+2026-09-10 14:20:47 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 56: Transaction flagged for review. Amount exceeded threshold: $11411
+2026-09-10 14:20:47 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 57: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:20:47 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 58: Transaction flagged for review. Amount exceeded threshold: $9765
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 59: Transaction processed successfully. Amount: $9470
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 60: Transaction processed successfully. Amount: $3755
+2026-09-10 14:20:47 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 61: Transaction flagged for review. Amount exceeded threshold: $13212
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 62: Transaction processed successfully. Amount: $4210
+2026-09-10 14:20:47 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 63: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 64: Transaction processed successfully. Amount: $9562
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 65: Transaction processed successfully. Amount: $2122
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 66: Transaction processed successfully. Amount: $2722
+2026-09-10 14:20:47 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 67: Transaction flagged for review. Amount exceeded threshold: $13282
+2026-09-10 14:20:47 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 68: Transaction flagged for review. Amount exceeded threshold: $13355
+2026-09-10 14:20:47 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 69: Transaction flagged for review. Amount exceeded threshold: $10911
+2026-09-10 14:20:47 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 70: Transaction flagged for review. Amount exceeded threshold: $13730
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 71: Transaction processed successfully. Amount: $8063
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 72: Transaction processed successfully. Amount: $7277
+2026-09-10 14:20:47 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 73: Transaction flagged for review. Amount exceeded threshold: $9321
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 74: Transaction processed successfully. Amount: $2144
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 75: Transaction processed successfully. Amount: $6435
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 76: Transaction processed successfully. Amount: $7940
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 77: Transaction processed successfully. Amount: $4529
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 78: Transaction processed successfully. Amount: $2598
+2026-09-10 14:20:47 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 79: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 80: Transaction processed successfully. Amount: $2712
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 81: Transaction processed successfully. Amount: $9545
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 82: Transaction processed successfully. Amount: $6406
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 83: Transaction processed successfully. Amount: $5709
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 84: Transaction processed successfully. Amount: $6902
+2026-09-10 14:20:47 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 85: Transaction flagged for review. Amount exceeded threshold: $12749
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 86: Transaction processed successfully. Amount: $6333
+2026-09-10 14:20:47 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 87: Transaction failed. Reason: Connection timeout
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 88: Transaction processed successfully. Amount: $3682
+2026-09-10 14:20:47 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 89: Transaction flagged for review. Amount exceeded threshold: $11365
+2026-09-10 14:20:47 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 90: Transaction processed successfully. Amount: $3474
+2026-09-10 14:20:47 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 91: Transaction flagged for review. Amount exceeded threshold: $10995
+2026-09-10 14:20:48 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 92: Transaction flagged for review. Amount exceeded threshold: $10263
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 93: Transaction processed successfully. Amount: $2583
+2026-09-10 14:20:48 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 94: Transaction failed. Reason: Invalid account number
+2026-09-10 14:20:48 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 95: Transaction failed. Reason: Connection timeout
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 96: Transaction processed successfully. Amount: $4939
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 97: Transaction processed successfully. Amount: $6950
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 98: Transaction processed successfully. Amount: $1410
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 99: Transaction processed successfully. Amount: $3302
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 100: Transaction processed successfully. Amount: $3350
+2026-09-10 14:20:48 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 101: Transaction flagged for review. Amount exceeded threshold: $9983
+2026-09-10 14:20:48 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 102: Transaction flagged for review. Amount exceeded threshold: $12789
+2026-09-10 14:20:48 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 103: Transaction flagged for review. Amount exceeded threshold: $11659
+2026-09-10 14:20:48 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 104: Transaction flagged for review. Amount exceeded threshold: $13896
+2026-09-10 14:20:48 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 105: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 106: Transaction processed successfully. Amount: $2798
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 107: Transaction processed successfully. Amount: $3921
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 108: Transaction processed successfully. Amount: $4984
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 109: Transaction processed successfully. Amount: $9298
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 110: Transaction processed successfully. Amount: $7700
+2026-09-10 14:20:48 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 111: Transaction failed. Reason: Connection timeout
+2026-09-10 14:20:48 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 112: Transaction flagged for review. Amount exceeded threshold: $9129
+2026-09-10 14:20:48 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 113: Transaction flagged for review. Amount exceeded threshold: $12486
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 114: Transaction processed successfully. Amount: $3595
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 115: Transaction processed successfully. Amount: $9007
+2026-09-10 14:20:48 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 116: Transaction failed. Reason: Connection timeout
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 117: Transaction processed successfully. Amount: $9993
+2026-09-10 14:20:48 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 118: Transaction flagged for review. Amount exceeded threshold: $10504
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 119: Transaction processed successfully. Amount: $5400
+2026-09-10 14:20:48 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 120: Transaction flagged for review. Amount exceeded threshold: $10963
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 121: Transaction processed successfully. Amount: $6521
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 122: Transaction processed successfully. Amount: $3377
+2026-09-10 14:20:48 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 123: Transaction flagged for review. Amount exceeded threshold: $10147
+2026-09-10 14:20:48 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 124: Transaction flagged for review. Amount exceeded threshold: $9161
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 125: Transaction processed successfully. Amount: $7399
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 126: Transaction processed successfully. Amount: $7375
+2026-09-10 14:20:48 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 127: Transaction flagged for review. Amount exceeded threshold: $13157
+2026-09-10 14:20:48 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 128: Transaction failed. Reason: Connection timeout
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 129: Transaction processed successfully. Amount: $4748
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 130: Transaction processed successfully. Amount: $1957
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 131: Transaction processed successfully. Amount: $7430
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 132: Transaction processed successfully. Amount: $7037
+2026-09-10 14:20:48 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 133: Transaction failed. Reason: Connection timeout
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 134: Transaction processed successfully. Amount: $9192
+2026-09-10 14:20:48 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 135: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 136: Transaction processed successfully. Amount: $7085
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 137: Transaction processed successfully. Amount: $2826
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 138: Transaction processed successfully. Amount: $9030
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 139: Transaction processed successfully. Amount: $2243
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 140: Transaction processed successfully. Amount: $6959
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 141: Transaction processed successfully. Amount: $3633
+2026-09-10 14:20:48 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 142: Transaction flagged for review. Amount exceeded threshold: $10521
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 143: Transaction processed successfully. Amount: $6672
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 144: Transaction processed successfully. Amount: $7402
+2026-09-10 14:20:48 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 145: Transaction flagged for review. Amount exceeded threshold: $11813
+2026-09-10 14:20:48 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 146: Transaction flagged for review. Amount exceeded threshold: $12963
+2026-09-10 14:20:48 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 147: Transaction flagged for review. Amount exceeded threshold: $12813
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 148: Transaction processed successfully. Amount: $5814
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 149: Transaction processed successfully. Amount: $3754
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 150: Transaction processed successfully. Amount: $2641
+2026-09-10 14:20:48 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 151: Transaction processed successfully. Amount: $2163
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 152: Transaction processed successfully. Amount: $7971
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 153: Transaction processed successfully. Amount: $7695
+2026-09-10 14:20:49 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 154: Transaction failed. Reason: Connection timeout
+2026-09-10 14:20:49 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 155: Transaction flagged for review. Amount exceeded threshold: $11022
+2026-09-10 14:20:49 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 156: Transaction flagged for review. Amount exceeded threshold: $10839
+2026-09-10 14:20:49 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 157: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 158: Transaction processed successfully. Amount: $1383
+2026-09-10 14:20:49 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 159: Transaction flagged for review. Amount exceeded threshold: $10123
+2026-09-10 14:20:49 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 160: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:20:49 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 161: Transaction failed. Reason: Invalid account number
+2026-09-10 14:20:49 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 162: Transaction flagged for review. Amount exceeded threshold: $10514
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 163: Transaction processed successfully. Amount: $4001
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 164: Transaction processed successfully. Amount: $5705
+2026-09-10 14:20:49 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 165: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:20:49 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 166: Transaction flagged for review. Amount exceeded threshold: $12209
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 167: Transaction processed successfully. Amount: $9642
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 168: Transaction processed successfully. Amount: $9386
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 169: Transaction processed successfully. Amount: $5325
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 170: Transaction processed successfully. Amount: $2689
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 171: Transaction processed successfully. Amount: $7248
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 172: Transaction processed successfully. Amount: $4236
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 173: Transaction processed successfully. Amount: $7237
+2026-09-10 14:20:49 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 174: Transaction flagged for review. Amount exceeded threshold: $12077
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 175: Transaction processed successfully. Amount: $4410
+2026-09-10 14:20:49 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 176: Transaction failed. Reason: Invalid account number
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 177: Transaction processed successfully. Amount: $6773
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 178: Transaction processed successfully. Amount: $1070
+2026-09-10 14:20:49 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 179: Transaction flagged for review. Amount exceeded threshold: $9718
+2026-09-10 14:20:49 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 180: Transaction flagged for review. Amount exceeded threshold: $9404
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 181: Transaction processed successfully. Amount: $8265
+2026-09-10 14:20:49 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 182: Transaction flagged for review. Amount exceeded threshold: $12169
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 183: Transaction processed successfully. Amount: $8670
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 184: Transaction processed successfully. Amount: $7717
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 185: Transaction processed successfully. Amount: $9911
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 186: Transaction processed successfully. Amount: $2695
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 187: Transaction processed successfully. Amount: $3821
+2026-09-10 14:20:49 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 188: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 189: Transaction processed successfully. Amount: $2439
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 190: Transaction processed successfully. Amount: $3726
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 191: Transaction processed successfully. Amount: $7009
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 192: Transaction processed successfully. Amount: $6001
+2026-09-10 14:20:49 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 193: Transaction failed. Reason: Connection timeout
+2026-09-10 14:20:49 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 194: Transaction failed. Reason: Invalid account number
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 195: Transaction processed successfully. Amount: $1288
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 196: Transaction processed successfully. Amount: $9610
+2026-09-10 14:20:49 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 197: Transaction flagged for review. Amount exceeded threshold: $9675
+2026-09-10 14:20:49 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 198: Transaction flagged for review. Amount exceeded threshold: $11344
+2026-09-10 14:20:49 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 199: Transaction flagged for review. Amount exceeded threshold: $9109
+2026-09-10 14:20:49 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 200: Transaction flagged for review. Amount exceeded threshold: $11344
+2026-09-10 14:20:49 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 201: Transaction flagged for review. Amount exceeded threshold: $13801
+2026-09-10 14:20:49 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 202: Transaction flagged for review. Amount exceeded threshold: $10463
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 203: Transaction processed successfully. Amount: $4201
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 204: Transaction processed successfully. Amount: $7765
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 205: Transaction processed successfully. Amount: $6695
+2026-09-10 14:20:49 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 206: Transaction flagged for review. Amount exceeded threshold: $11375
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 207: Transaction processed successfully. Amount: $4564
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 208: Transaction processed successfully. Amount: $8807
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 209: Transaction processed successfully. Amount: $2991
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 210: Transaction processed successfully. Amount: $2203
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 211: Transaction processed successfully. Amount: $7563
+2026-09-10 14:20:49 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 212: Transaction processed successfully. Amount: $4216
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 213: Transaction processed successfully. Amount: $3013
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 214: Transaction processed successfully. Amount: $8744
+2026-09-10 14:20:50 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 215: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:20:50 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 216: Transaction failed. Reason: Invalid account number
+2026-09-10 14:20:50 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 217: Transaction failed. Reason: Connection timeout
+2026-09-10 14:20:50 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 218: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 219: Transaction processed successfully. Amount: $9232
+2026-09-10 14:20:50 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 220: Transaction flagged for review. Amount exceeded threshold: $13249
+2026-09-10 14:20:50 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 221: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:20:50 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 222: Transaction flagged for review. Amount exceeded threshold: $13075
+2026-09-10 14:20:50 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 223: Transaction flagged for review. Amount exceeded threshold: $12894
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 224: Transaction processed successfully. Amount: $4396
+2026-09-10 14:20:50 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 225: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 226: Transaction processed successfully. Amount: $7229
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 227: Transaction processed successfully. Amount: $4643
+2026-09-10 14:20:50 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 228: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 229: Transaction processed successfully. Amount: $7451
+2026-09-10 14:20:50 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 230: Transaction flagged for review. Amount exceeded threshold: $12030
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 231: Transaction processed successfully. Amount: $2103
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 232: Transaction processed successfully. Amount: $2606
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 233: Transaction processed successfully. Amount: $4264
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 234: Transaction processed successfully. Amount: $4711
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 235: Transaction processed successfully. Amount: $2038
+2026-09-10 14:20:50 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 236: Transaction failed. Reason: Invalid account number
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 237: Transaction processed successfully. Amount: $1303
+2026-09-10 14:20:50 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 238: Transaction failed. Reason: Connection timeout
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 239: Transaction processed successfully. Amount: $6029
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 240: Transaction processed successfully. Amount: $6195
+2026-09-10 14:20:50 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 241: Transaction flagged for review. Amount exceeded threshold: $10171
+2026-09-10 14:20:50 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 242: Transaction failed. Reason: Authorization failed
+2026-09-10 14:20:50 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 243: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 244: Transaction processed successfully. Amount: $1511
+2026-09-10 14:20:50 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 245: Transaction flagged for review. Amount exceeded threshold: $11207
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 246: Transaction processed successfully. Amount: $4990
+2026-09-10 14:20:50 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 247: Transaction flagged for review. Amount exceeded threshold: $12603
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 248: Transaction processed successfully. Amount: $5281
+2026-09-10 14:20:50 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 249: Transaction failed. Reason: Authorization failed
+2026-09-10 14:20:50 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 250: Transaction failed. Reason: Authorization failed
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 251: Transaction processed successfully. Amount: $1319
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 252: Transaction processed successfully. Amount: $6093
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 253: Transaction processed successfully. Amount: $4319
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 254: Transaction processed successfully. Amount: $5615
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 255: Transaction processed successfully. Amount: $3003
+2026-09-10 14:20:50 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 256: Transaction failed. Reason: Connection timeout
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 257: Transaction processed successfully. Amount: $8100
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 258: Transaction processed successfully. Amount: $7226
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 259: Transaction processed successfully. Amount: $8145
+2026-09-10 14:20:50 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 260: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 261: Transaction processed successfully. Amount: $3127
+2026-09-10 14:20:50 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 262: Transaction flagged for review. Amount exceeded threshold: $13587
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 263: Transaction processed successfully. Amount: $3025
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 264: Transaction processed successfully. Amount: $8237
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 265: Transaction processed successfully. Amount: $6263
+2026-09-10 14:20:50 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 266: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 267: Transaction processed successfully. Amount: $8534
+2026-09-10 14:20:50 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 268: Transaction flagged for review. Amount exceeded threshold: $10301
+2026-09-10 14:20:50 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 269: Transaction flagged for review. Amount exceeded threshold: $11388
+2026-09-10 14:20:50 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 270: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:20:50 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 271: Transaction flagged for review. Amount exceeded threshold: $10574
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 272: Transaction processed successfully. Amount: $6647
+2026-09-10 14:20:50 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 273: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:20:50 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 274: Transaction processed successfully. Amount: $2813
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 275: Transaction processed successfully. Amount: $9128
+2026-09-10 14:20:51 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 276: Transaction flagged for review. Amount exceeded threshold: $9140
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 277: Transaction processed successfully. Amount: $2095
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 278: Transaction processed successfully. Amount: $3274
+2026-09-10 14:20:51 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 279: Transaction flagged for review. Amount exceeded threshold: $9157
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 280: Transaction processed successfully. Amount: $4197
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 281: Transaction processed successfully. Amount: $8328
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 282: Transaction processed successfully. Amount: $3595
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 283: Transaction processed successfully. Amount: $8321
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 284: Transaction processed successfully. Amount: $2614
+2026-09-10 14:20:51 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 285: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:20:51 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 286: Transaction flagged for review. Amount exceeded threshold: $11866
+2026-09-10 14:20:51 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 287: Transaction flagged for review. Amount exceeded threshold: $10328
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 288: Transaction processed successfully. Amount: $9996
+2026-09-10 14:20:51 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 289: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:20:51 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 290: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:20:51 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 291: Transaction flagged for review. Amount exceeded threshold: $10035
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 292: Transaction processed successfully. Amount: $8145
+2026-09-10 14:20:51 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 293: Transaction flagged for review. Amount exceeded threshold: $13186
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 294: Transaction processed successfully. Amount: $7334
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 295: Transaction processed successfully. Amount: $2867
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 296: Transaction processed successfully. Amount: $8293
+2026-09-10 14:20:51 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 297: Transaction flagged for review. Amount exceeded threshold: $11257
+2026-09-10 14:20:51 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 298: Transaction failed. Reason: Invalid account number
+2026-09-10 14:20:51 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 299: Transaction flagged for review. Amount exceeded threshold: $12202
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 300: Transaction processed successfully. Amount: $7940
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 301: Transaction processed successfully. Amount: $9615
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 302: Transaction processed successfully. Amount: $3765
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 303: Transaction processed successfully. Amount: $8262
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 304: Transaction processed successfully. Amount: $9084
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 305: Transaction processed successfully. Amount: $2111
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 306: Transaction processed successfully. Amount: $8058
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 307: Transaction processed successfully. Amount: $2903
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 308: Transaction processed successfully. Amount: $9245
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 309: Transaction processed successfully. Amount: $2308
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 310: Transaction processed successfully. Amount: $7972
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 311: Transaction processed successfully. Amount: $2758
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 312: Transaction processed successfully. Amount: $5841
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 313: Transaction processed successfully. Amount: $9374
+2026-09-10 14:20:51 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 314: Transaction flagged for review. Amount exceeded threshold: $12602
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 315: Transaction processed successfully. Amount: $1830
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 316: Transaction processed successfully. Amount: $6619
+2026-09-10 14:20:51 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 317: Transaction flagged for review. Amount exceeded threshold: $12277
+2026-09-10 14:20:51 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 318: Transaction flagged for review. Amount exceeded threshold: $13939
+2026-09-10 14:20:51 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 319: Transaction flagged for review. Amount exceeded threshold: $10741
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 320: Transaction processed successfully. Amount: $5457
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 321: Transaction processed successfully. Amount: $2290
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 322: Transaction processed successfully. Amount: $7020
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 323: Transaction processed successfully. Amount: $5833
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 324: Transaction processed successfully. Amount: $8532
+2026-09-10 14:20:51 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 325: Transaction flagged for review. Amount exceeded threshold: $12450
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 326: Transaction processed successfully. Amount: $1840
+2026-09-10 14:20:51 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 327: Transaction flagged for review. Amount exceeded threshold: $10732
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 328: Transaction processed successfully. Amount: $5197
+2026-09-10 14:20:51 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 329: Transaction failed. Reason: Invalid account number
+2026-09-10 14:20:51 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 330: Transaction flagged for review. Amount exceeded threshold: $13303
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 331: Transaction processed successfully. Amount: $5577
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 332: Transaction processed successfully. Amount: $2503
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 333: Transaction processed successfully. Amount: $7127
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 334: Transaction processed successfully. Amount: $9730
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 335: Transaction processed successfully. Amount: $1623
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 336: Transaction processed successfully. Amount: $3945
+2026-09-10 14:20:51 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 337: Transaction processed successfully. Amount: $1191
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 338: Transaction processed successfully. Amount: $5386
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 339: Transaction processed successfully. Amount: $8139
+2026-09-10 14:20:52 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 340: Transaction flagged for review. Amount exceeded threshold: $10891
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 341: Transaction processed successfully. Amount: $3247
+2026-09-10 14:20:52 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 342: Transaction failed. Reason: Connection timeout
+2026-09-10 14:20:52 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 343: Transaction flagged for review. Amount exceeded threshold: $12367
+2026-09-10 14:20:52 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 344: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:20:52 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 345: Transaction failed. Reason: Authorization failed
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 346: Transaction processed successfully. Amount: $2547
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 347: Transaction processed successfully. Amount: $3656
+2026-09-10 14:20:52 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 348: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:20:52 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 349: Transaction flagged for review. Amount exceeded threshold: $13068
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 350: Transaction processed successfully. Amount: $5427
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 351: Transaction processed successfully. Amount: $8145
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 352: Transaction processed successfully. Amount: $6415
+2026-09-10 14:20:52 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 353: Transaction failed. Reason: Authorization failed
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 354: Transaction processed successfully. Amount: $8489
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 355: Transaction processed successfully. Amount: $1130
+2026-09-10 14:20:52 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 356: Transaction failed. Reason: Connection timeout
+2026-09-10 14:20:52 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 357: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:20:52 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 358: Transaction flagged for review. Amount exceeded threshold: $12393
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 359: Transaction processed successfully. Amount: $5453
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 360: Transaction processed successfully. Amount: $7902
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 361: Transaction processed successfully. Amount: $9689
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 362: Transaction processed successfully. Amount: $7178
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 363: Transaction processed successfully. Amount: $4181
+2026-09-10 14:20:52 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 364: Transaction failed. Reason: Connection timeout
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 365: Transaction processed successfully. Amount: $7438
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 366: Transaction processed successfully. Amount: $2101
+2026-09-10 14:20:52 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 367: Transaction flagged for review. Amount exceeded threshold: $9598
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 368: Transaction processed successfully. Amount: $6583
+2026-09-10 14:20:52 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 369: Transaction flagged for review. Amount exceeded threshold: $13017
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 370: Transaction processed successfully. Amount: $7356
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 371: Transaction processed successfully. Amount: $9090
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 372: Transaction processed successfully. Amount: $5541
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 373: Transaction processed successfully. Amount: $7600
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 374: Transaction processed successfully. Amount: $4598
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 375: Transaction processed successfully. Amount: $6168
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 376: Transaction processed successfully. Amount: $1562
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 377: Transaction processed successfully. Amount: $8648
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 378: Transaction processed successfully. Amount: $7943
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 379: Transaction processed successfully. Amount: $1820
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 380: Transaction processed successfully. Amount: $3755
+2026-09-10 14:20:52 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 381: Transaction flagged for review. Amount exceeded threshold: $11649
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 382: Transaction processed successfully. Amount: $9482
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 383: Transaction processed successfully. Amount: $2300
+2026-09-10 14:20:52 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 384: Transaction flagged for review. Amount exceeded threshold: $13765
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 385: Transaction processed successfully. Amount: $7342
+2026-09-10 14:20:52 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 386: Transaction flagged for review. Amount exceeded threshold: $9393
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 387: Transaction processed successfully. Amount: $2463
+2026-09-10 14:20:52 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 388: Transaction failed. Reason: Invalid account number
+2026-09-10 14:20:52 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 389: Transaction flagged for review. Amount exceeded threshold: $13643
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 390: Transaction processed successfully. Amount: $6480
+2026-09-10 14:20:52 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 391: Transaction flagged for review. Amount exceeded threshold: $13637
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 392: Transaction processed successfully. Amount: $9495
+2026-09-10 14:20:52 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 393: Transaction flagged for review. Amount exceeded threshold: $11847
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 394: Transaction processed successfully. Amount: $5295
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 395: Transaction processed successfully. Amount: $6739
+2026-09-10 14:20:52 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 396: Transaction flagged for review. Amount exceeded threshold: $10468
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 397: Transaction processed successfully. Amount: $5041
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 398: Transaction processed successfully. Amount: $1559
+2026-09-10 14:20:52 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 399: Transaction processed successfully. Amount: $6302
+2026-09-10 14:20:53 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 400: Transaction flagged for review. Amount exceeded threshold: $11566
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 401: Transaction processed successfully. Amount: $2581
+2026-09-10 14:20:53 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 402: Transaction flagged for review. Amount exceeded threshold: $13761
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 403: Transaction processed successfully. Amount: $5893
+2026-09-10 14:20:53 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 404: Transaction flagged for review. Amount exceeded threshold: $10212
+2026-09-10 14:20:53 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 405: Transaction flagged for review. Amount exceeded threshold: $11014
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 406: Transaction processed successfully. Amount: $9060
+2026-09-10 14:20:53 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 407: Transaction flagged for review. Amount exceeded threshold: $9080
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 408: Transaction processed successfully. Amount: $4344
+2026-09-10 14:20:53 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 409: Transaction flagged for review. Amount exceeded threshold: $11211
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 410: Transaction processed successfully. Amount: $4454
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 411: Transaction processed successfully. Amount: $8717
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 412: Transaction processed successfully. Amount: $6974
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 413: Transaction processed successfully. Amount: $1491
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 414: Transaction processed successfully. Amount: $2231
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 415: Transaction processed successfully. Amount: $8559
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 416: Transaction processed successfully. Amount: $9380
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 417: Transaction processed successfully. Amount: $1018
+2026-09-10 14:20:53 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 418: Transaction failed. Reason: Invalid account number
+2026-09-10 14:20:53 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 419: Transaction failed. Reason: Authorization failed
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 420: Transaction processed successfully. Amount: $9514
+2026-09-10 14:20:53 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 421: Transaction flagged for review. Amount exceeded threshold: $9708
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 422: Transaction processed successfully. Amount: $9846
+2026-09-10 14:20:53 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 423: Transaction failed. Reason: Authorization failed
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 424: Transaction processed successfully. Amount: $3721
+2026-09-10 14:20:53 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 425: Transaction failed. Reason: Insufficient funds
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 426: Transaction processed successfully. Amount: $6655
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 427: Transaction processed successfully. Amount: $5622
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 428: Transaction processed successfully. Amount: $7758
+2026-09-10 14:20:53 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 429: Transaction flagged for review. Amount exceeded threshold: $11723
+2026-09-10 14:20:53 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 430: Transaction failed. Reason: Authorization failed
+2026-09-10 14:20:53 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 431: Transaction failed. Reason: Invalid account number
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 432: Transaction processed successfully. Amount: $5133
+2026-09-10 14:20:53 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 433: Transaction flagged for review. Amount exceeded threshold: $9978
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 434: Transaction processed successfully. Amount: $9569
+2026-09-10 14:20:53 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 435: Transaction flagged for review. Amount exceeded threshold: $12867
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 436: Transaction processed successfully. Amount: $4127
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 437: Transaction processed successfully. Amount: $7274
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 438: Transaction processed successfully. Amount: $6345
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 439: Transaction processed successfully. Amount: $4648
+2026-09-10 14:20:53 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 440: Transaction flagged for review. Amount exceeded threshold: $13007
+2026-09-10 14:20:53 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 441: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:20:53 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 442: Transaction failed. Reason: Connection timeout
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 443: Transaction processed successfully. Amount: $1465
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 444: Transaction processed successfully. Amount: $4646
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 445: Transaction processed successfully. Amount: $5020
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 446: Transaction processed successfully. Amount: $6387
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 447: Transaction processed successfully. Amount: $9218
+2026-09-10 14:20:53 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 448: Transaction flagged for review. Amount exceeded threshold: $13308
+2026-09-10 14:20:53 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 449: Transaction flagged for review. Amount exceeded threshold: $10201
+2026-09-10 14:20:53 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 450: Transaction failed. Reason: Connection timeout
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 451: Transaction processed successfully. Amount: $5683
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 452: Transaction processed successfully. Amount: $4240
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 453: Transaction processed successfully. Amount: $9475
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 454: Transaction processed successfully. Amount: $2274
+2026-09-10 14:20:53 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 455: Transaction failed. Reason: Connection timeout
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 456: Transaction processed successfully. Amount: $5468
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 457: Transaction processed successfully. Amount: $7744
+2026-09-10 14:20:53 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 458: Transaction flagged for review. Amount exceeded threshold: $13874
+2026-09-10 14:20:53 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 459: Transaction flagged for review. Amount exceeded threshold: $13588
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 460: Transaction processed successfully. Amount: $2100
+2026-09-10 14:20:53 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 461: Transaction processed successfully. Amount: $3698
+2026-09-10 14:20:54 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 462: Transaction flagged for review. Amount exceeded threshold: $12494
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 463: Transaction processed successfully. Amount: $9484
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 464: Transaction processed successfully. Amount: $4733
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 465: Transaction processed successfully. Amount: $3905
+2026-09-10 14:20:54 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 466: Transaction flagged for review. Amount exceeded threshold: $11203
+2026-09-10 14:20:54 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 467: Transaction flagged for review. Amount exceeded threshold: $13733
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 468: Transaction processed successfully. Amount: $2992
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 469: Transaction processed successfully. Amount: $3259
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 470: Transaction processed successfully. Amount: $8789
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 471: Transaction processed successfully. Amount: $1488
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 472: Transaction processed successfully. Amount: $7470
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 473: Transaction processed successfully. Amount: $6990
+2026-09-10 14:20:54 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 474: Transaction flagged for review. Amount exceeded threshold: $12163
+2026-09-10 14:20:54 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 475: Transaction failed. Reason: Invalid account number
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 476: Transaction processed successfully. Amount: $4610
+2026-09-10 14:20:54 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 477: Transaction flagged for review. Amount exceeded threshold: $12977
+2026-09-10 14:20:54 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 478: Transaction flagged for review. Amount exceeded threshold: $9781
+2026-09-10 14:20:54 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 479: Transaction flagged for review. Amount exceeded threshold: $11021
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 480: Transaction processed successfully. Amount: $2716
+2026-09-10 14:20:54 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 481: Transaction failed. Reason: Duplicate transaction detected
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 482: Transaction processed successfully. Amount: $2071
+2026-09-10 14:20:54 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 483: Transaction failed. Reason: Authorization failed
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 484: Transaction processed successfully. Amount: $3099
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 485: Transaction processed successfully. Amount: $2111
+2026-09-10 14:20:54 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 486: Transaction failed. Reason: Connection timeout
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 487: Transaction processed successfully. Amount: $3461
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 488: Transaction processed successfully. Amount: $2167
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 489: Transaction processed successfully. Amount: $8412
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 490: Transaction processed successfully. Amount: $5199
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 491: Transaction processed successfully. Amount: $4637
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 492: Transaction processed successfully. Amount: $1478
+2026-09-10 14:20:54 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 493: Transaction flagged for review. Amount exceeded threshold: $13558
+2026-09-10 14:20:54 [main] ERROR com.ben.SplunkDemo.SplunkDemo - Iteration 494: Transaction failed. Reason: Authorization failed
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 495: Transaction processed successfully. Amount: $2138
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 496: Transaction processed successfully. Amount: $5005
+2026-09-10 14:20:54 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 497: Transaction flagged for review. Amount exceeded threshold: $11658
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 498: Transaction processed successfully. Amount: $7016
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Iteration 499: Transaction processed successfully. Amount: $8330
+2026-09-10 14:20:54 [main] WARN  com.ben.SplunkDemo.SplunkDemo - Iteration 500: Transaction flagged for review. Amount exceeded threshold: $13876
+2026-09-10 14:20:54 [main] INFO  com.ben.SplunkDemo.SplunkDemo - Log simulation complete.
