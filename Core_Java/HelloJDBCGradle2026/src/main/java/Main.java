@@ -62,5 +62,6 @@ public class Main {
         System.out.println(uDAO.getUserById(1));
         System.out.println(uDAO.insertUser(new User("password", "role", "username")));
         System.out.println(uDAO.updateUser(new User(1, "newpassword", "newrole", "newusername")));
-        }
+
     }
+}

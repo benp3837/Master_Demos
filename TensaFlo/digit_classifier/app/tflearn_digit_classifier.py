@@ -44,7 +44,7 @@ net = tflearn.regression(
 # This replaces tf.keras.Model() from Keras
 model = tflearn.DNN(
     net,
-    tensorboard_verbose=3  # hook up TensorBoard automatically!
+    tensorboard_verbose=3  # hook up TensorBoard automatically! 
 )
 
 # Train — notice show_metric=True gives us live accuracy during training
